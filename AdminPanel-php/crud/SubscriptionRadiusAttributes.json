@@ -1,0 +1,50 @@
+{
+  "fields": [
+    {
+      "name": "subscription_id",
+      "type": "integer#unsigned"
+    },
+
+    {
+      "name": "attribute",
+      "type": "string"
+    },
+    {
+      "name": "op",
+      "type": "string"
+    },
+
+    {
+      "name": "value",
+      "type": "string"
+    },
+
+    {
+      "name": "description",
+      "type": "longtext"
+    },
+
+    {
+      "name": "status",
+      "type": "boolean"
+    }
+
+
+  ],
+  "relationships": [
+    {
+      "name": "subscriptions",
+      "type": "belongsTo",
+      "class": "App\\Subscription"
+    }
+
+
+  ],
+  "foreign_keys": [
+    {
+      "column": "subscription_id",
+      "references": "id",
+      "on": "subscriptions"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "fields": [
+    {
+      "name": "uuid",
+      "type": "string"
+    },
+    {
+      "name": "subscription_name",
+      "type": "string"
+    },
+    {
+      "name": "monthly_price",
+      "type": "decimal"
+    },
+    {
+      "name": "period_price",
+      "type": "decimal"
+    },
+
+    {
+      "name": "currency_type",
+      "type": "string"
+    },
+
+    {
+      "name": "traffic_size",
+      "type": "bigint"
+    },
+
+    {
+      "name": "rate_limit",
+      "type": "bigint"
+    },
+
+    {
+      "name": "max_connections",
+      "type": "integer"
+    },
+
+    {
+      "name": "available_for_android",
+      "type": "boolean"
+    },
+
+    {
+      "name": "available_for_ios",
+      "type": "boolean"
+    },
+    {
+      "name": "create_time",
+      "type": "timestamp"
+    },
+    {
+      "name": "is_default",
+      "type": "boolean"
+    },
+    {
+      "name": "period_length",
+      "type": "integer"
+    },
+    {
+      "name": "order_num",
+      "type": "integer"
+    },
+    {
+      "name": "product_id",
+      "type": "integer"
+    }
+  ]
+}

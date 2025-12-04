@@ -1,0 +1,66 @@
+{
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "type",
+      "type": "string"
+    },
+    {
+      "name": "amount",
+      "type": "double"
+    },
+    {
+      "name": "is_recurring",
+      "type": "boolean"
+    },
+    {
+      "name": "is_autobill",
+      "type": "boolean"
+    },
+    {
+      "name": "setup_fee",
+      "type": "double"
+    },
+    {
+      "name": "purchase_date",
+      "type": "date"
+    },
+    {
+      "name": "renewal_date",
+      "type": "date"
+    },
+    {
+      "name": "notify",
+      "type": "boolean"
+    },
+    {
+      "name": "notify_days",
+      "type": "integer"
+    },
+    {
+      "name": "service_provider_id",
+      "type": "integer#unsigned"
+    },
+    {
+      "name": "notes",
+      "type": "longtext"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "service_provider",
+      "type": "belongsTo",
+      "class": "App\\ServiceProvider"
+    }
+  ],
+  "foreign_keys": [
+    {
+      "column": "service_provider_id",
+      "references": "id",
+      "on": "service_providers"
+    }
+  ]
+}

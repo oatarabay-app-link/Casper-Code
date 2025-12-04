@@ -1,0 +1,56 @@
+<?php
+
+namespace App\Console\Commands;
+
+use App\Models\Auth\User;
+use App\Payment;
+use App\Payments_Check;
+use App\Subscription;
+use App\UserSubscription;
+use Illuminate\Console\Command;
+
+class CasperTestIOSCheck extends Command
+{
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'CasperTest:IOSReceipt';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'A Test IOS to Test For Token is it is working for us';
+
+    /**
+     * Create a new command instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    /**
+     * Execute the console command.
+     *
+     * @return mixed
+     */
+    public function handle()
+    {
+
+
+
+
+
+        //dd($purchase);
+
+
+
+    }
+
+}

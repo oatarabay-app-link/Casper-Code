@@ -1,0 +1,346 @@
+{
+  "fields": [
+    {
+      "name": "uuid",
+      "type": "string"
+    },
+    {
+      "name": "subscription_uuid",
+      "type": "string"
+    },
+    {
+      "name": "subscription_id",
+      "type": "integer#unsigned"
+    },
+
+    {
+      "name": "payments_table_id",
+      "type": "integer#unsigned"
+    },
+    {
+      "name": "user_id",
+      "type": "integer#unsigned"
+    },
+    {
+      "name": "check_code_id",
+      "type": "integer#unsigned"
+    },
+    {
+      "name": "period_in_months",
+      "type": "integer"
+    },
+    {
+      "name": "payment_id",
+      "type": "string"
+    },
+    {
+      "name": "status",
+      "type": "string"
+    },
+    {
+      "name": "payment_sum",
+      "type": "float"
+    },
+    {
+      "name": "details",
+      "type": "longtext"
+    },
+    {
+      "name": "check_code",
+      "type": "longtext"
+    },
+    {
+      "name": "sid",
+      "type": "string"
+    },
+    {
+      "name": "key",
+      "type": "string"
+    },
+    {
+      "name": "demo",
+      "type": "string"
+    },
+    {
+      "name": "total",
+      "type": "string"
+    },
+    {
+      "name": "quantity",
+      "type": "string"
+    },
+    {
+      "name": "fixed",
+      "type": "string"
+    },
+    {
+      "name": "submit",
+      "type": "string"
+    },
+    {
+      "name": "email",
+      "type": "string"
+    },
+    {
+      "name": "expiryDateFormat",
+      "type": "longtext"
+    },
+    {
+      "name": "country",
+      "type": "string"
+    },
+    {
+      "name": "city",
+      "type": "string"
+    },
+    {
+      "name": "state",
+      "type": "string"
+    },
+    {
+      "name": "zip",
+      "type": "string"
+    },
+    {
+      "name": "phone",
+      "type": "string"
+    },
+    {
+      "name": "lang",
+      "type": "string"
+    },
+    {
+      "name": "currency_code",
+      "type": "string"
+    },
+    {
+      "name": "isautorenew",
+      "type": "string"
+    },
+    {
+      "name": "originalTransactionId",
+      "type": "string"
+    },
+    {
+      "name": "notificationType",
+      "type": "string"
+    },
+    {
+      "name": "appleAPI",
+      "type": "longtext"
+    },
+    {
+      "name": "custom_check_code_uuid",
+      "type": "longtext"
+    },
+    {
+      "name": "custom_is_landing",
+      "type": "string"
+    },
+    {
+      "name": "order_number",
+      "type": "string"
+    },
+    {
+      "name": "product_description",
+      "type": "string"
+    },
+    {
+      "name": "invoice_id",
+      "type": "string"
+    },
+    {
+      "name": "product_id",
+      "type": "string"
+    },
+    {
+      "name": "credit_card_processed",
+      "type": "string"
+    },
+    {
+      "name": "pay_method",
+      "type": "string"
+    },
+    {
+      "name": "cart_tangible",
+      "type": "string"
+    },
+    {
+      "name": "merchant_product_id",
+      "type": "string"
+    },
+    {
+      "name": "merchant_order_id",
+      "type": "string"
+    },
+    {
+      "name": "card_holder_name",
+      "type": "string"
+    },
+    {
+      "name": "middle_initial",
+      "type": "string"
+    },
+    {
+      "name": "cart_weight",
+      "type": "string"
+    },
+    {
+      "name": "first_name",
+      "type": "string"
+    },
+    {
+      "name": "last_name",
+      "type": "string"
+    },
+    {
+      "name": "street_address",
+      "type": "string"
+    },
+    {
+      "name": "street_address2",
+      "type": "string"
+    },
+    {
+      "name": "expiry_date",
+      "type": "string"
+    },
+    {
+      "name": "ip_country",
+      "type": "string"
+    },
+    {
+      "name": "environment",
+      "type": "string"
+    },
+    {
+      "name": "adam_id",
+      "type": "string"
+    },
+    {
+      "name": "app_item_id",
+      "type": "string"
+    },
+    {
+      "name": "application_version",
+      "type": "string"
+    },
+    {
+      "name": "bundle_id",
+      "type": "string"
+    },
+    {
+      "name": "download_id",
+      "type": "string"
+    },
+    {
+      "name": "in_app",
+      "type": "string"
+    },
+    {
+      "name": "original_application_version",
+      "type": "string"
+    },
+    {
+      "name": "original_purchase_date",
+      "type": "string"
+    },
+    {
+      "name": "original_purchase_date_ms",
+      "type": "string"
+    },
+    {
+      "name": "original_purchase_date_pst",
+      "type": "string"
+    },
+    {
+      "name": "receipt_creation_date",
+      "type": "string"
+    },
+    {
+      "name": "receipt_creation_date_ms",
+      "type": "string"
+    },
+    {
+      "name": "receipt_creation_date_pst",
+      "type": "string"
+    },
+    {
+      "name": "receipt_type",
+      "type": "string"
+    },
+    {
+      "name": "request_date",
+      "type": "string"
+    },
+    {
+      "name": "request_date_ms",
+      "type": "string"
+    },
+    {
+      "name": "request_date_pst",
+      "type": "string"
+    },
+    {
+      "name": "version_external_identifier",
+      "type": "string"
+    },
+    {
+      "name": "receipt_data_base64",
+      "type": "longtext"
+    },
+    {
+      "name": "receipt_data",
+      "type": "longtext"
+    },
+    {
+      "name": "isrecurring",
+      "type": "string"
+    },
+    {
+      "name": "app_version",
+      "type": "string"
+    },
+    {
+      "name": "google_subscription_token",
+      "type": "string"
+    },
+    {
+      "name": "apple_check",
+      "type": "string"
+    },
+    {
+      "name": "raw_json",
+      "type": "longtext"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "subscriptions",
+      "type": "belongsTo",
+      "class": "App\\Subscription"
+    },
+    {
+      "name": "users",
+      "type": "belongsTo",
+      "class": "App\\Models\\Auth\\User"
+    }
+  ],
+  "foreign_keys": [
+    {
+      "column": "subscription_id",
+      "references": "id",
+      "on": "subscriptions"
+    },
+    {
+      "column": "check_code_id",
+      "references": "id",
+      "on": "payments__checks"
+    },
+    {
+      "column": "user_id",
+      "references": "id",
+      "on": "users"
+    }
+  ]
+}

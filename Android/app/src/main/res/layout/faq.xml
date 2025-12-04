@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    custom:context=".screens.FAQ">
+
+    <include
+        layout="@layout/toolbar_title_and_menu"
+        android:id="@+id/AppBarLayout"/>
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <com.caspervpn.vpn.helper.MyTextView
+                        style="@style/ParagraphTitleNoIcon"
+                        android:text="@string/WhatisVPN"/>
+
+                </LinearLayout>
+
+                <com.caspervpn.vpn.helper.MyJustifiedTextView
+                    style="@style/ParagraphText"
+                    android:text="@string/WhatisVPN_Data"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            style="@style/ParagraphTitleNoIcon"
+                            android:text="@string/IsVpnLegal" />
+
+                    </LinearLayout>
+
+                    <com.caspervpn.vpn.helper.MyJustifiedTextView
+                        style="@style/ParagraphText"
+                        android:text="@string/IsVpnLegal_Data" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            style="@style/ParagraphTitleNoIcon"
+                            android:text="@string/AreVPNsecure" />
+
+                    </LinearLayout>
+
+                    <com.caspervpn.vpn.helper.MyJustifiedTextView
+                        style="@style/ParagraphText"
+                        android:text="@string/AreVPNsecure_Data" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            style="@style/ParagraphTitleNoIcon"
+                            android:text="@string/CanVpnProvidersSeeMyTraffic" />
+
+                    </LinearLayout>
+
+                    <com.caspervpn.vpn.helper.MyJustifiedTextView
+                        style="@style/ParagraphText"
+                        android:text="@string/CanVpnProvidersSeeMyTraffic_Data" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            style="@style/ParagraphTitleNoIcon"
+                            android:text="@string/DoesMyIspSeeThatIAmConnectedToAVpn" />
+
+                    </LinearLayout>
+
+                    <com.caspervpn.vpn.helper.MyJustifiedTextView
+                        style="@style/ParagraphText"
+                        android:text="@string/DoesMyIspSeeThatIAmConnectedToAVpn_Data" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            style="@style/ParagraphTitleNoIcon"
+                            android:text="@string/HowCanIStartUsingCasperVPN" />
+
+                    </LinearLayout>
+
+                    <com.caspervpn.vpn.helper.MyJustifiedTextView
+                        style="@style/ParagraphText"
+                        android:text="@string/HowCanIStartUsingCasperVPN_Data"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+

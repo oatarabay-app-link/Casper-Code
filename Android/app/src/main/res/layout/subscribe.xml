@@ -1,0 +1,657 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <include
+            layout="@layout/toolbar_title_and_menu"/>
+
+        <LinearLayout
+            android:id="@+id/OneMonth"
+            android:background="@color/UltraLightGray"
+            style="@style/MenuItem"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/SubscribePadding"
+                        android:layout_marginTop="@dimen/SubscribePadding">
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            android:id="@+id/OneMtxt"
+                            style="@style/SubscribeTitle1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/OneMonth" />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/SubscribePadding"
+                        android:layout_marginTop="@dimen/SubscribePadding">
+
+                        <ImageView style="@style/SubscribeCheck" />
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            android:id="@+id/OneMDevicestxt"
+                            style="@style/SubscribeMiddleWithMarginnormal"
+                            android:text="@string/Devices" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/SubscribePadding"
+                        android:layout_marginTop="@dimen/SubscribePadding">
+
+                        <ImageView style="@style/SubscribeCheck" />
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            android:id="@+id/ua1"
+                            style="@style/SubscribeMiddleWithMarginnormal"
+                            android:text="@string/UnlimitedAccessToAllServers" />
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/SubscribePadding"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="@dimen/SubscribeWidth"
+                            android:layout_height="match_parent"
+                            />
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            style="@style/SubscribePrice"
+                            android:id="@+id/OneMonthPrice"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/MonthlyPrice"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="@dimen/SubscribeButtonWidth"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        style="@style/shiled"
+                        android:layout_width="@dimen/SubscribeButtonWidth" />
+
+                    <com.caspervpn.vpn.helper.MyButton
+                        style="@style/SubscribeButtonTextWhite"
+                        android:id="@+id/OneMonthSubscribeBtn"
+                        android:text="@string/Package"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="2dp"
+                android:layout_marginBottom="@dimen/PopupTitleMarginBottomLogin"
+                android:background="@color/DarkBlue"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SixMonths"
+            android:background="@color/White"
+            style="@style/MenuItem"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/SubscribePadding"
+                        android:layout_marginTop="@dimen/SubscribePadding">
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            android:id="@+id/SixMtxt"
+                            style="@style/SubscribeTitle1"
+                            android:text="@string/SixMonth" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/SubscribePadding"
+                        android:layout_marginTop="@dimen/SubscribePadding">
+
+                        <ImageView style="@style/SubscribeCheck" />
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            android:id="@+id/SixMDevicestxt"
+                            style="@style/SubscribeMiddleWithMarginnormal"
+                            android:text="@string/Devices" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/SubscribePadding"
+                        android:layout_marginTop="@dimen/SubscribePadding">
+
+                        <ImageView style="@style/SubscribeCheck" />
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            android:id="@+id/ua2"
+                            style="@style/SubscribeMiddleWithMarginnormal"
+                            android:text="@string/UnlimitedAccessToAllServers" />
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/SubscribePadding"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="@dimen/SubscribeWidth"
+                            android:layout_height="match_parent"
+                            />
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            android:id="@+id/SixMonthPrice"
+                            style="@style/SubscribePrice"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/HalfYearPrice" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="@dimen/SubscribeButtonWidth"
+                    android:layout_height="wrap_content">
+
+                    <com.caspervpn.vpn.helper.MyTextView
+                        style="@style/SubscribeSubTitle1"
+                        android:layout_width="wrap_content"
+                        android:text="@string/HalfYearSave"
+                        android:textColor="@color/DarkBlue" />
+
+
+                    <com.caspervpn.vpn.helper.MyTextView
+                        style="@style/SubscribeSubTitle1"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/DarkBlue" />
+
+                    <ImageView
+                        style="@style/shiled"
+                        android:layout_width="@dimen/SubscribeButtonWidth" />
+
+                    <com.caspervpn.vpn.helper.MyButton
+                        style="@style/SubscribeButtonTextWhite"
+                        android:id="@+id/SixMonthsSubscribeBtn"
+                        android:text="@string/Package"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="2dp"
+                android:background="@color/DarkBlue"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/UltraLightGray"
+            style="@style/MenuItem"
+            android:id="@+id/TwelveMonths"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/SubscribePadding"
+                        android:layout_marginTop="@dimen/SubscribePadding">
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            style="@style/SubscribeTitle1"
+                            android:id="@+id/twMtxt"
+                            android:text="@string/OneYear"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/SubscribePadding"
+                        android:layout_marginTop="@dimen/SubscribePadding">
+
+                        <ImageView style="@style/SubscribeCheck" />
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            android:id="@+id/twMDevicestxt"
+                            style="@style/SubscribeMiddleWithMarginnormal"
+                            android:text="@string/Devices" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/SubscribePadding"
+                        android:layout_marginTop="@dimen/SubscribePadding">
+
+                        <ImageView style="@style/SubscribeCheck" />
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            android:id="@+id/ua3"
+                            style="@style/SubscribeMiddleWithMarginnormal"
+                            android:text="@string/UnlimitedAccessToAllServers" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/SubscribePadding"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="@dimen/SubscribeWidth"
+                            android:layout_height="match_parent"
+                            />
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            android:id="@+id/OneYearPrice"
+                            style="@style/SubscribePrice"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/YearlyPrice"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="@dimen/SubscribeButtonWidth"
+                    android:layout_height="wrap_content">
+
+                    <com.caspervpn.vpn.helper.MyTextView
+                        style="@style/SubscribeSubTitle1"
+                        android:text="@string/YearlySave"
+                        android:textColor="@color/DarkBlue" />
+
+                    <com.caspervpn.vpn.helper.MyTextView
+                        style="@style/SubscribeSubTitle1"
+                        android:textColor="@color/DarkBlue" />
+
+
+                    <ImageView
+                        style="@style/shiled"
+                        android:layout_width="@dimen/SubscribeButtonWidth" />
+
+                    <com.caspervpn.vpn.helper.MyButton
+                        style="@style/SubscribeButtonTextWhite"
+                        android:id="@+id/OneYearSubscribeBtn"
+                        android:text="@string/Package"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="2dp"
+                android:background="@color/DarkBlue"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/White"
+            style="@style/MenuItem"
+            android:id="@+id/LiftimeLL"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/SubscribePadding"
+                        android:layout_marginTop="@dimen/SubscribePadding">
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            style="@style/SubscribeTitle1"
+                            android:id="@+id/Lifetimetxt"
+                            android:text="@string/Lifetime"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/SubscribePadding"
+                        android:layout_marginTop="@dimen/SubscribePadding">
+
+                        <ImageView style="@style/SubscribeCheck" />
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            android:id="@+id/lifetimeDevicestxt"
+                            style="@style/SubscribeMiddleWithMarginnormal"
+                            android:text="@string/Devices" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/SubscribePadding"
+                        android:layout_marginTop="@dimen/SubscribePadding">
+
+                        <ImageView style="@style/SubscribeCheck" />
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            android:id="@+id/ua4"
+                            style="@style/SubscribeMiddleWithMarginnormal"
+                            android:text="@string/UnlimitedAccessToAllServers" />
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/SubscribePadding"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="@dimen/SubscribeWidth"
+                            android:layout_height="match_parent"
+                            />
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            android:id="@+id/LifetimePrice"
+                            style="@style/SubscribePrice"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/LifetimePrice"/>
+
+                        <LinearLayout
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"
+                            />
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            style="@style/SubscribePrice"
+                            android:id="@+id/Lifetimetxtstrike1"
+                            android:textColor="@color/Red"
+                            android:text="@string/LimitedOffer"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="@dimen/SubscribeButtonWidth"
+                    android:layout_height="wrap_content">
+
+
+                    <com.caspervpn.vpn.helper.MyTextView
+                        style="@style/SubscribeTitle1"
+                        android:id="@+id/Lifetimetxtstrike"
+                        android:textColor="@color/Red"
+                        android:textSize="@dimen/SubscribeWidthhint"
+                        android:text="@string/Insteadof"/>
+
+                    <com.caspervpn.vpn.helper.MyTextView
+                        style="@style/SubscribeTitle1"
+                        android:textColor="@color/Red"
+                        android:textSize="17dp"
+                        android:text="550$"/>
+
+                    <LinearLayout
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        />
+
+                    <ImageView
+                        style="@style/shiled"
+                        android:layout_width="@dimen/SubscribeButtonWidth"
+                        android:layout_height="50dp" />
+
+                    <com.caspervpn.vpn.helper.MyButton
+                        style="@style/SubscribeButtonTextWhite"
+                        android:id="@+id/LifeimteSubscribeBtn"
+                        android:text="@string/Package"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/DarkBlue"
+            style="@style/footer"
+            android:id="@+id/footer"
+            android:layout_height="0dp"
+            android:layout_weight="0.2">
+
+            <com.caspervpn.vpn.helper.MyTextView
+                android:id="@+id/howsubscriptionworks"
+                style="@style/SubscribeTextWhite"
+                android:layout_width="wrap_content"
+                android:text="@string/HowSubscriptionWorks"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <com.caspervpn.vpn.helper.MyTextView
+                android:id="@+id/unsubscribe_updowngrade"
+                style="@style/SubscribeTextWhite"
+                android:layout_width="wrap_content"
+                android:text="@string/RestorePurchases"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/progress_bar"/>
+
+
+
+</RelativeLayout>
+

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_margin="@dimen/GettingStartedRadius"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:contentInsetStart="0dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Navy">
+
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/earth_bg"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="2"
+                        android:layout_height="0dp">
+
+
+                        <LinearLayout
+                            android:id="@+id/Connection_Info"
+                            android:visibility="visible"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="3">
+
+
+                                <View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:orientation="vertical">
+
+
+                                    <LinearLayout
+                                        android:layout_height="20dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_gravity="center">
+
+                                        <ImageView
+                                        android:id="@+id/Flag"
+                                        style="@style/ConnectedServerFlag"/>
+
+                                        <com.caspervpn.vpn.helper.MyTextView
+                                            android:id="@+id/CountryName"
+                                            style="@style/ConnectedServerName"/>
+                                    </LinearLayout>
+
+                                    <com.caspervpn.vpn.helper.MyTextView
+                                        style="@style/ConnectionTimer"
+                                        android:text="00.30.02"
+                                        android:id="@+id/Counter"/>
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"/>
+
+                            </LinearLayout>
+
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"/>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/EarthViewContainerHeight">
+
+                        <ImageView
+                            style="@style/Earth"
+                            android:id="@+id/earth_container" />
+
+                        <View
+                            style="@style/EarthCompleteCircle"
+                            android:id="@+id/complete_circle"
+                            android:visibility="visible"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_weight="3"
+                        android:layout_height="0dp"/>
+                </LinearLayout>
+
+
+                <ImageButton
+                    android:id="@+id/Connect_Disconnect"
+                    style="@style/ConnectButton"
+                    android:background="@drawable/round_button_always_selected"
+                    android:src="@drawable/casper_logo"
+                    android:padding="@dimen/ConnectButtonGhostPadding"/>
+
+                <com.caspervpn.vpn.helper.MyTextView
+                    style="@style/ConnectText"
+                    android:text="@string/Disconnect"/>
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/switch_view"
+                style="@style/Switch_View_btn"/>
+
+            <ImageButton
+                android:id="@+id/server_list"
+                style="@style/Server_List_btn"
+                android:layout_below="@+id/switch_view"
+                android:layout_alignRight="@+id/switch_view"/>
+
+            <include layout="@layout/online_chat"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/getting_started_actionbar"/>
+
+</RelativeLayout>

@@ -1,0 +1,437 @@
+<resources>
+    <!-- Language-->
+    <string name="SelectedLanguage">Pусский</string>
+
+    <!-- Rate Us -->
+    <string name="RateUsText">Если вам нравится с помощью CasperVPN, пожалуйста, найдите время, чтобы прошло. Спасибо за вашу поддержку!</string>
+    <string name="Later">Позже</string>
+    <string name="NoThanks">Нет, спасибо</string>
+    <string name="RateNow">Оценить сейчас</string>
+
+    <!-- Crash -->
+    <string name="crash_dialog_title">Вы сбою приложения CasperVPN</string>
+    <string name="crash_dialog_text">Произошла непредвиденная ошибка заставляет приложение остановиться. Пожалуйста, помогите нам исправить это, отправив нам данные об ошибках</string>
+    <string name="crash_dialog_comment_prompt">Вы можете добавить свои комментарии о следующей проблеме</string>
+
+    <string name="ShouldDownloadApp">Вы должны скачать приложение</string>
+    <string name="FreebeeCenter">Центр Freebee</string>
+    <string name="FillOutSurvey">Пройдите 15-секундное обследование и получите 3 дня бесплатной премии с CasperVPN</string>
+    <string name="WatchVideo">Посмотрите 30-секундное видео и получите один час Premium с CasperVPN</string>
+    <string name="ShareUs">Поделитесь нашими страницами социальных сетей и получите один час Premium с CasperVPN</string>
+    <string name="SocialMedia">Социальные медиа</string>
+
+    <string name="AffiliateText">Начните зарабатывать деньги, пригласив своих друзей на использование CasperVPN</string>
+    <string name="AffiliateGenerated">Ваша партнерская ссылка</string>
+    <string name="AffiliateError">Что-то пошло не так, попробуйте обновить и проверить подключение к Интернету.</string>
+    <string name="Affiliatebtn">Присоединиться к нашему партнеру</string>
+    <string name="AffiliateSharebtn">Поделитесь своей партнерской ссылкой</string>
+    <string name="AffiliateDescr">Пригласите своих друзей, чтобы подписаться на CasperVPN и получить до 70% от любых продаж, генерируемых по ссылке, которую вы передаете, ваша ссылка:</string>
+    <string name="LoadingAffiliate">Загрузка партнерской программы ...</string>
+    <string name="TweetAffiliate">Tweet Ваша ссылка</string>
+    <string name="ShareAffiliateFb">Поделитесь ссылкой на Facebook</string>
+    <string name="ShareAffiliateGP">Поделитесь ссылкой на Google+</string>
+    <string name="TweetAffiliatetxt">Войдите в / до CasperVPN и попробуйте бесплатно</string>
+    <string name="ShareAffiliateFbtxt">Войдите в / до CasperVPN и попробуйте бесплатно</string>
+    <string name="ShareAffiliateGPtxt">Войдите в / до CasperVPN и попробуйте бесплатно</string>
+    <string name="AffiliateShared">Ваша ссылка</string>
+    <string name="Affiliate">филиал</string>
+    <string name="AffiliateAccount1">Учетные данные учетной записи</string>
+    <string name="AffiliateAccount2">URL-адрес партнера</string>
+    <string name="AffiliateAccount3">Предупреждение. Эти учетные данные не сохраняются, вы должны их сохранить.</string>
+    <string name="AffiliateAccount4">Нажмите «ОК», чтобы поделиться своей ссылкой.</string>
+    <string name="Username">имя пользователя</string>
+    <string name="BlockError">Повторная отправка по электронной почте блокируется по причине спама.</string>
+
+    <!-- Social Media -->
+    <string name="TweetOnTwitter">Чтобы быть в курсе сегодняшних кибер-угроз, следуйте за нами в Twitter</string>
+    <string name="ShareOnFacebook">Чтобы быть в курсе сегодняшних кибер-угроз, следуйте за нами на Facebook</string>
+    <string name="ShareOurInstagram">Чтобы узнать о сегодняшних кибер-угрозах, следуйте нам на Instagram</string>
+    <string name="ShareOurGooglePlus">Чтобы быть в курсе сегодняшних кибер-угроз, следуйте за нами в Google+</string>
+
+    <string name="ErrorTitle">ошибка</string>
+    <string name="InvalidRecaptcha">Недействительный reCAPTCHA</string>
+    <string name="AvailableSurvey">Опрос доступен</string>
+    <string name="allset">у вас все настроено</string>
+    <string name="SubscriptionActivated">Аккаунт успешно активирован.</string>
+    <string name="FreeBeeCenterActivated">Ваш бесплатный сервис премиум-класса был успешным.</string>
+
+    <string name="MapView">Просмотр карты</string>
+
+    <string name="Refresh">обновление</string>
+    <string name="LoadingSurvey">Загрузка ...</string>
+    <string name="WaitfinishLoading">Загрузка, пожалуйста подождите...</string>
+    <string name="ServerList">Список серверов</string>
+    <string name="Guide">Руководство</string>
+
+    <string name="Welcome_Back">Добро пожаловать назад!</string>
+    <string name="UserIsBlocked">Пользователь заблокирован!</string>
+    <string name="Invalid_Login_Credentials">Неправильный адрес электронной почты и / или пароль.</string>
+    <string name="Email">Электронная почта*</string>
+    <string name="Password">Пароль*</string>
+    <string name="LOGIN">Вход</string>
+    <string name="Login">Вход</string>
+    <string name="ForgotPassword">Забыли пароль?</string>
+    <string name="DontHaveAnAccount">Не зарегистрированы?</string>
+    <string name="SignUp">Зарегистрироваться</string>
+    <string name="InvalidUserName">Неверное имя пользователя</string>
+    <string name="InvalidPassword">Неверный пароль</string>
+    <string name="InvalidOldPassword">Недопустимый старый пароль</string>
+    <string name="InvalidNewPassword">Недействительный новый пароль</string>
+    <string name="KindlySetYourEmail">Пожалуйста, установите вашу электронную почту</string>
+    <string name="ResetPassword">Восстановить пароль</string>
+    <string name="PasswordChanged">Пароль изменен</string>
+    <string name="GoBack">Возвращаться</string>
+    <string name="Error">Ошибка. Повторите попытку позже.</string>
+    <string name="UserAlreadyExists">Пользователь уже существует!</string>
+    <string name="InvalidResetLink">Неверная ссылка для сброса!</string>
+    <string name="LinkAlreadyUsed">Я использую ссылку выше!</string>
+    <string name="LinkHasExpired">Ссылка устарела!</string>
+    <string name="UserNotFound">Пользователь не найден</string>
+    <string name="CheckYourInternet">Пожалуйста, проверьте подключение к интернету</string>
+    <string name="CheckYourEmailReset">Проверьте свою электронную почту и нажмите ссылку сброса пароля</string>
+    <string name="EmailVerified">Вы успешно зарегистрировались в CasperVPN, любезно логин</string>
+    <string name="CheckYourEmailVerification">Проверьте свою электронную почту и нажмите ссылку для подтверждения. Если вы не получили письмо, проверьте папку SPAM \nНажмите «Отправить подтверждение»</string>
+    <string name="ReCheckYourEmailVerification">Повторно проверьте адрес электронной почты и нажмите ссылку подтверждения.</string>
+    <string name="ResendEmail">Повторно отправить подтверждение по электронной почте</string>
+
+    <string name="PleaseVerifyYourEmail">Сначала проверьте свой адрес электронной почты</string>
+    <string name="EmailAlreadyVerified">Адрес электронной почты уже подтвержден</string>
+    <string name="ResettingYourPassword">Сброс пароля...</string>
+    <string name="RegisteringYourAccount">Регистрация вашей учетной записи...</string>
+    <string name="Saving">Сохранение данных...</string>
+    <string name="Subscribing">Подписка...</string>
+    <string name="LoggingIn">Вход в систему...</string>
+    <string name="SigningIn">Вход в аккаунт ...</string>
+    <string name="Loading">Загружается...</string>
+    <string name="CannotConnectCheckYourInternet">К сожалению, сервер кажется недоступным, попробуйте еще раз или подключитесь к другому серверу!</string>
+    <string name="CannotConnectNоServerAvailable">не может подключиться Пожалуйста\nНет сервера</string>
+
+
+
+    <!-- **************************************************************************** -->
+
+
+    <string name="CantRemember">Не можете вспомнить?</string>
+    <string name="Reset">Восстановить пароль</string>
+    <string name="Connecting">Подключение</string>
+    <string name="Connect">Связаться</string>
+    <string name="Disconnect">Выйти</string>
+    <string name="pauseVPN">Пауза</string>
+    <string name="resumevpn">Продолжить</string>
+
+
+    <string name="Hello">Здравствуйте, Зарегистрируйтесь бесплатно и получите 15-дневную пробную версию !</string>
+    <string name="ConfirmPassword">Утвердить пароль*</string>
+    <string name="OldPassword">Старый пароль </string>
+    <string name="NewPassword">Новый пароль</string>
+    <string name="Register">РЕГИСТР</string>
+    <string name="VerifyEmail">ПРОВЕРЬТЕ ЭЛЕКТРОННУЮ ПОЧТУ</string>
+    <string name="save">СОХРАНИТЬ</string>
+    <string name="EditProfile">Редактировать профиль</string>
+    <string name="ChangePassword">Изменить пароль</string>
+    <string name="SetNewPassword">Установить новый пароль</string>
+    <string name="AlreadyaMember">Уже участник?</string>
+    <string name="SignIn">Войти</string>
+    <string name="YouAreIn">Вы находитесь в</string>
+    <string name="SafeHands">Надежные руки</string>
+    <string name="GoBackTo">Вернуться к</string>
+    <string name="IncorrectPasswordLength">Пароль должен содержать не менее 6 символов</string>
+    <string name="PasswordsDoNotMatch">Ваши пароли не совпадают</string>
+    <string name="NoInternetConnection">Нет соединения с интернетом</string>
+    <string name="PleaseCheckYourInternetConnectivity">Проверьте подключение к Интернету</string>
+    <string name="OK">ОК</string>
+    <string name="Cancel">Отмена</string>
+    <string name="CANCEL">ОТМЕНА</string>
+    <string name="ACCEPT">ПРИНЯТЬ</string>
+    <string name="SubscriptionType">Тип подписки</string>
+
+    <string name="RestartConfirmation">Подтверждение перезагрузки</string>
+    <string name="ApplicationRestart">Изменение языка требует перезапуска приложения.\nПродолжить?</string>
+
+    <string name="About">О нас</string>
+    <string name="AutoConnect">Подключиться загрузки</string>
+    <string name="ConnectOnWifi">Подключитесь по Wi-Fi</string>
+    <string name="AboutUs">О нас</string>
+    <string name="ABOUTUS">О НАС</string>
+    <string name="AboutCasperVPN">О CasperVPN</string>
+    <string name="OnlineChat">Онлайн чат</string>
+    <string name="ReportABug">Сообщить об ошибке</string>
+    <string  name="SendLogFile">Отправить файл журнала</string>
+    <string name="Subscribe">Подписывайся</string>
+    <string name="FrequentlyAskedQuestions">Часто задаваемые вопросы</string>
+    <string name="GetFreePremium">Получить бесплатный премиум </string>
+    <string name="TermsAndConditions">Права и условия </string>
+    <string name="WhatIsCasperVPN">Что такое CasperVPN</string>
+    <string name="PrivacyPolicy">Политика секретности </string>
+
+    <string name="HowSubscriptionWorks">Как работает подписка</string>
+    <string name="RestorePurchases">Восстановить покупки</string>
+    <string name="twocheckout">2Checkout</string>
+    <string name="GooglePay">Google Pay</string>
+    <string name="Devices">приборы</string>
+
+    <string name="SubscriptionStatus">Статус подписки</string>
+    <string name="Active">Активный</string>
+    <string name="Expired">Истекший</string>
+
+    <string name="UPGRADE">Обновить</string>
+    <string name="UNSUBSCRIBE">Отказаться от подписки</string>
+
+    <string name="CONNECT">Связаться </string>
+    <string name="DISCONNECT">Выйти</string>
+    <string name="PING">Пинг</string>
+
+    <string name="SupportedProtocols">Поддерживаемые протоколы</string>
+    <string name="Country">Страна</string>
+    <string name="Load">Загрузить</string>
+    <string name="CPU">ЦПУ</string>
+    <string name="RAM">ОЗУ</string>
+    <string name="Bandwidth">Cкорость</string>
+    <string name="Distance">Расстояние</string>
+
+    <string  name="Validtill">Годен до</string>
+    <string  name="ExpiredIn">Истекший</string>
+    <string  name="ExpiryDate">Срок годности</string>
+    <string name="Upgrade">Обновить</string>
+    <string  name="Downgrade">упадок</string>
+    <string name="Unsubscribe">Отказаться от подписки</string>
+    <string name="UnsubscribeConfirmation">Подтверждение отмены подписки</string>
+    <string name="UnsubscribeText">Вы действительно хотите отказаться от подписки?</string>
+
+    <string name="FeelSecure">Быть защищенным</string>
+    <string name="TrackingProtection">Защита от выслеживания</string>
+    <string name="CasperVPNSound">Звук CasperVPN</string>
+
+    <string name="ContactUs">Свяжитесь с нами</string>
+    <string name="RateUs">Оцените нас</string>
+    <string name="Logout">Выход</string>
+
+    <string name="SUBSCRIBE">Подписывайся</string>
+    <string name="Buy">КУПИТЬ</string>
+    <string  name="Month">месяц</string>
+    <string name="OneMonth">1 месяц</string>
+    <string name="MonthlyPrice">6.99$ / месяц</string>
+    <string name="SixMonth">6 месяц</string>
+    <string name="HalfYearPrice">5.99$ / месяц</string>
+    <string name="OneYear">1 год</string>
+    <string name="YearlyPrice">4.99$ / месяц</string>
+    <string  name="HalfYearSave">(Экономия 16.9%)</string>
+    <string  name="YearlySave">(Экономия 33.9%)</string>
+
+    <string name="LifetimePrice">350$</string>
+    <string name="Lifetime">Продолжительность жизни</string>
+    <string name="LifetimesSave">(Сэкономить 36,3%)</string>
+    <string name="LimitedOffer">(Ограниченное предложение)</string>
+    <string name="Insteadof">Вместо</string>
+
+    <string name="ThreeDevices">3 Устройства</string>
+    <string name="UnlimitedAccessToAllServers">Неограниченный доступ ко всем серверам</string>
+    <string name="UnlimitedBandwidth">Неограниченный трафик</string>
+    <string name="FiveEncryptionProtocols">5 Шифрование Протоколы</string>
+
+    <string name="SubscriptionPackages">Пакеты подписки</string>
+
+
+    <string name="TimeoutTitle">Время ожидания</string>
+    <string name="TimeoutMessage">Ваша сессия была отключена. Пожалуйста, войдите снова.</string>
+
+    <string name="You">Вы</string>
+    <string name="CasperVPNSecureYourData">Защитите свои данные</string>
+    <string name="TheInternet">Интернет</string>
+
+    <string name="WHATISCASPERVPN">ЧТО ТАКОЕ CASPERVPN</string>
+    <string name="ABOUTCASPERVPN">О CasperVPN</string>
+    <string name="WhyChooseCasperVPN">Почему именно CasperVPN</string>
+    <string name="TotalSecurity">Общая безопасность</string>
+    <string name="BreakFirewalls">Перерыв Брандмауэры</string>
+    <string name="FastAndPowerfulServers">Быстрые и мощные серверы</string>
+    <string name="Anonymity">Анонимность</string>
+    <string name="Flexibility">Гибкость</string>
+    <string name="Table">В следующей таблице перечислены и сравниваются разностные VPN-протоколы, поддерживаемые CasperVPN</string>
+    <string name="Feature">Особенность</string>
+
+
+    <string name="Speed">Скорость</string>
+    <string name="Fastest">Самый быстрый</string>
+    <string name="VeryFast">Очень быстро</string>
+    <string name="Slow">Медленный</string>
+    <string name="Intermediate">Промежуточные</string>
+    <string name="Fast">Быстро</string>
+    <string name="Security">Безопасность</string>
+    <string name="Unsecure">Незащищенный</string>
+    <string name="Secure">Безопасный</string>
+    <string name="HighlySecure">Высокая безопасность</string>
+    <string name="Usage">Применение</string>
+    <string name="EasyToUse">Легко использовать</string>
+    <string name="UsedPorts">Используемые порты</string>
+
+
+    <string name="FAQ">Вопросы-Ответы</string>
+    <string name="WhatisVPN">Что такое VPN?</string>
+    <string name="CanVpnBreakFirewall">Может ли VPN брандмауэров перерыв?</string>
+    <string name="IsVpnLegal">Является ли VPN Юридическая информация?</string>
+    <string name="AreVPNsecure">Являются ли VPN-безопасности?</string>
+    <string name="CanVpnProvidersSeeMyTraffic">Может провайдеры VPN видеть мой трафик?</string>
+    <string name="DoesMyIspSeeThatIAmConnectedToAVpn">Видит мой провайдер, что я подключен к VPN?</string>
+    <string name="HowCanIStartUsingCasperVPN">Как я могу начать использовать CasperVPN?</string>
+    <string name="PRIVACYPOLICY">ПОЛИТИКА СЕКРЕТНОСТИ</string>
+    <string name="CasperVPNPrivacyPolicy">CasperVPN Политика конфиденциальности</string>
+    <string name="WeCollect">мы собираем</string>
+    <string name="InfoUsed">Информация о б</string>
+    <string name="Disclosure">раскрытие</string>
+    <string name="TERMSANDCONDITIONS">Права и условия</string>
+    <string name="General">Генеральная</string>
+    <string name="ProhibitedActivities">Запрещенные виды деятельности</string>
+    <string name="SignInPolicies">Вход в политике</string>
+    <string name="PrivacyTermsAndPolicy">Конфиденциальность Условия использования и политика</string>
+    <string name="AcceptanceOfTermsAndPolicies">Принятие терминов и политики</string>
+
+
+    <string name="GETFREEPREMIUM">ПОЛУЧИТЬ БЕСПЛАТНЫЙ ПРЕМИУМ</string>
+
+
+    <string name="DiscountText">подписаться через наш сайт и получите 10% скидку</string>
+    <string name="GetFreeDiscount">Получите бесплатные скидки</string>
+    <string name="OFF">Скидка</string>
+
+    <string  name="SubscriptionExpired">Срок действия подписки истек</string>
+    <string  name="SubscriptionExpiredText">К сожалению! Похоже, что ваша подписка истекла\nПродлить подписку, чтобы остаться защищены</string>
+
+    <string name="TryCasperVPNForFree">Попробуйте CasperVPN БЕСПЛАТНО!</string>
+    <string name="ThankYou">Спасибо</string>
+
+
+    <string name="pull_to_refresh_pull_label">Потяните, чтобы обновить...</string>
+    <string name="pull_to_refresh_release_label">Отпустите, чтобы обновить...</string>
+    <string name="pull_to_refresh_refreshing_label">Загружается...</string>
+    <string name="pull_to_refresh_tap_label">Нажмите, чтобы обновить...</string>
+    <string name="pull_to_refresh_last_updated">Обновлено: %1$s</string>
+
+
+    <string name="NoDataAvailable">Данные недоступны</string>
+    <string name="ConnectionErrorClickToRefresh">Ошибка подключения \nнажмите, чтобы обновить</string>
+
+    <string name="day">день</string>
+    <string name="days">Дней</string>
+    <string name="One_Month">1 месяц</string>
+    <string name="Two_Months">2 месяца</string>
+    <string name="Three_Months">3 месяца</string>
+    <string name="Four_Months">4 месяца</string>
+    <string name="Five_Months">5 месяцев</string>
+    <string name="Six_Months">6 месяцев</string>
+    <string name="Seven_Months">7 месяцев</string>
+    <string name="Eight_Months">8 месяцев</string>
+    <string name="Nine_Months">9 месяцев</string>
+    <string name="Ten_Months">10 месяцев</string>
+    <string name="Eleven_Months">11 месяцев</string>
+    <string name="One_Months">1 год</string>
+    <string name="HardDisk">Жесткий диск</string>
+    <string name="RETRY">Повторить попытку</string>
+    <string name="CLOSE">ЗАКРЫТЬ</string>
+    <string name="PingResults">Ping pезультаты</string>
+    <string name="PingStarted">Ping запущен</string>
+
+
+    <string name="GettingStarted1">ДОБРО ПОЖАЛОВАТЬ В CASPERVPN</string>
+    <string name="GettingStarted2">НАЖМИТЕ КНОПКУ ПОДКЛЮЧЕНИЯ</string>
+    <string name="GettingStarted3">ПОДОЖДИТЕ МОМЕНТА, ПРИ ПОДКЛЮЧЕНИИ</string>
+    <string name="GettingStarted4">НАЖМИТЕ КНОПКУ ОТКЛЮЧЕНИЯ, ПОСЛЕ ТОГО, КАК ВЫ СДЕЛАЛИ</string>
+
+
+    <string name="TipsTitle1">Интернет-свобода</string>
+    <string name="TipsSubTitle1">Просмотр любимого контента из любого места</string>
+    <string name="TipsTitle2">Конфиденциальность информации</string>
+    <string name="TipsSubTitle2">Защитите свое право на конфиденциальность в Интернете</string>
+    <string name="TipsTitle3">Сетевая безопасность</string>
+    <string name="TipsSubTitle3">Шифрование сетевой активности</string>
+    <string name="TipsTitle4">Защита данных</string>
+    <string name="TipsSubTitle4">Защитите свои данные от кражи и взлома</string>
+
+
+    <string name="MapInstructionTop">Выберите сервер</string>
+    <string name="MapInstructionButton">Или нажмите кнопку автоматического подключения</string>
+    <string name="NO">НЕТ</string>
+    <string name="YES">ДА</string>
+    <string name="YourLocation">Ваше местоположение</string>
+    <string name="DisconnectFrom">Отключиться от</string>
+    <string name="Unknown">Неизвестный</string>
+    <string name="KM">KM</string>
+
+    <string name="GotIt">ПОНЯЛ</string>
+    <string name="TermsNotification">Регистрируясь, вы соглашаетесь с &lt;font color=\'#1dae6f\'&gt;&lt;u&gt;Условиями использования&lt;/u&gt;&lt;/font&gt;</string>
+
+
+
+
+    <string name="FreeEdition" >Бесплатная Берсия</string>
+    <string name="CommingSoon" >Скоро</string>
+    <string name="NeedHelp">Hужна Помощь?</string>
+
+
+    <string name="WhyChooseCasperVPN_data">CasperVPN представляет собой клиентское ПО VPN, который шифрует данные при просмотре Интернет. Благодаря этому шифрования CasperVPN обеспечивает высокое безопасность на уровне, общая анонимность и конфиденциальность конечной для своих пользователей.</string>
+    <string name="TotalSecurity_Data">CasperVPN создает зашифрованный туннель между вашим компьютером и нашими серверами. Этот зашифрованный туннель устраняет любые возможные попытки взлома или просмотра у Вас информацию какой-либо третьей стороной, например, в качестве поставщика услуг Интернета (ISP) или вашего местного оператора Wi-Fi. Шифрование является сложной задачей, как правило, опирается на хорошо проверенную внедрение и высшую математику. CasperVPN использует передовые алгоритмы шифрования для защиты ваших данных и обеспечить безопасность коммуникаций.</string>
+    <string name="BreakFirewalls_Data">При подключении к CasperVPN, ваш провайдер видит только зашифрованный трафик, проходящий через наши VPN-серверов, но они не могут расшифровать данные, чтобы анализировать его содержание. Поэтому в основном вы можете пройти любые ограничения или цензуры, поставленные вашим провайдером через CasperVPN. В CasperVPN мы считаем, что Интернет является свободной глобальной системы взаимосвязанных сетей, которые не должны быть ограничены или связаны каким-либо объектом. И в поддержку нашей веры мы создали CasperVPN, чтобы обеспечить интернет-свободу, так как это так оно и должно быть!</string>
+    <string name="FastAndPowerfulServers_Data">В CasperVPN мы имеем очень высокий уровень скорости и безопасности для широкополосных подключений к Интернету. Мы имеем наши серверы и управлять глобальной сетью для доставки самую высокую скорость VPN. Мы пишем оптимизированный код для доставки чрезвычайно быстрые соединения VPN с верхним уровнем безопасности. Так как мы имеем наши серверы не третья сторона, которая может вмешиваться в отношения между нами и нашим пользователем. Безопасность и конфиденциальность является нашей проблемой, именно поэтому мы считаем, что никакая третья сторона не должна каким-либо образом или обстоятельства имеют доступ к любой из наших серверов, чтобы обеспечить пользователю анонимность. И, чтобы добавить дополнительный уровень шифрования, мы создали наше программное обеспечение таким образом, что даже наша система рекламисты не может отслеживать активность пользователей, ни какие-либо журналы хранятся на наших серверах.</string>
+    <string name="Anonymity_Data">CasperVPN фактически размещает вас в другом месте или стране. Используя CasperVPN, вы можете не оставлять цифровой след, скрывая свой реальный IP-адрес и ваше географическое местоположение. CasperVPN считает, что каждый человек имеет право хранить свою личную информацию в тайне.</string>
+    <string name="Flexibility_Data">CasperVPN позволяет просматривать Интернет безопасно с помощью набора протоколов шифрования. Пользователь может соответствующим образом переключаться между этими протоколами и выбрать, какой протокол VPN лучше всего подходит в соответствии с вашей деятельностью.</string>
+    <string name="AboutCasperVPN_Data">CasperVPN выходит за рамки традиционных VPN-решений, обеспечивая высокий уровень качества обслуживания и пользовательского опыта. Наша цель не ограничивается удовлетворения удовлетворенность наших клиентов, но и превзойти ожидания наших клиентов, обеспечивая быстрый, безопасный и надежный VPN-сервис. Мы считаем, что каждый пользователь имеет право защищать свою частную жизнь и скрыть свою информацию от кражи и назойливой, в дополнение к обход виртуальных ограничений и брандмауэров при использовании Интернета. Чтобы настроить таргетинг на нашей цели, мы создали чрезвычайно безопасную инфраструктуру для обеспечения шифрования, анонимность и верхнего уровня VPN безопасности для наших клиентов. Наша искренняя миссия защиты конфиденциальности наших пользователей. Основываясь на этой концепции, мы создали программное обеспечение, которое не хранит журналы в нашей системе. Еще более наша инфраструктура построена таким образом, где сами системные операторы не способны отслеживать активность пользователя.</string>
+    <string name="WhatisVPN_Data">Интернет-трафик подвергается общественности. Сторонние трекеры, воры и хакеры будут в состоянии идентифицировать вашу личность, найти свое местоположение и отслеживать ваши действия через ваш IP-адрес. Виртуальная частная сеть (VPN) представляет собой безопасный частной сети между клиентами и сервером VPN, в котором весь клиентский трафик инкапсулированных и зашифрованным через защищенный туннель. С помощью VPN, интернет-провайдеры (ISP), правительство и хакеры не смогут увидеть или отслеживать ваши данные.</string>
+    <string name="CanVpnBreakFirewall_Data">С помощью VPN, межсетевые экраны не сможет блокировать ваши данные даже при использовании глубокого анализа пакетов. При использовании VPN, ваши данные будут зашифрованы с помощью VPN-туннель, это невозможно для брандмауэров для анализа зашифрованного пакета или просмотреть активность пользователя. Таким образом VPN клиенты могут получить доступ, что они хотят незримо от межсетевых экранов.</string>
+    <string name="IsVpnLegal_Data">Для большинства стран, VPN являются законными. Пользователь имеет право защищать свою частную жизнь и скрыть свои данные от общественности. VPN является инструментом, который также используется компаниями и организации и даже правительства, с тем, чтобы убедиться, что их данные защищены и безопасно.</string>
+    <string name="AreVPNsecure_Data">Через VPN, пользователи могут скрыть свою личность с помощью виртуального IP-адреса и виртуального местоположения, а это значит, что вся ваша деятельность, неизвестна и бессмысленно любого человека, желающего посмотреть. Тем не менее, прежде чем выбрать VPN вы должны доверять своему поставщику VPN, и это то, что мы обеспечиваем на CasperVPN, доверие и безопасность ответственности является то, что мы разделяем с нашими clients.CasperVPN не ведет журналы. Пользователь имеет право делать все, что он хочет сделать, в то время как его личные данные будут в полной безопасности и остаются полностью частной даже VPN операторов.</string>
+    <string name="CanVpnProvidersSeeMyTraffic_Data">Технически да, то очень важно, что пользователи доверяют своим поставщикам VPN. На самом деле пользователи VPN должны избегать доверительных провайдеров VPN, который предлагает бесплатные VPN услуги. Использование CasperVPN является отличным выбором для пользователей, которые не доверяют никаких провайдеров VPN. Это чрезвычайно важно для CasperVPN поддерживать конфиденциальность пользователей и обеспечивают полную безопасность и security.At CasperVPN, мы не храним никаких онлайн-журналы активности для наших пользователей при любых обстоятельствах. CasperVPN построили свою инфраструктуру VPN таким образом, что сами наши операторы VPN не способны отслеживать пользователей или хранить все журналы. И для того, чтобы наши пользователи чувствуют себя более защищенными и имеют доверие к нам, мы готовы и открыты, чтобы дать нашим пользователям ответы и данные, подтверждающие нашу чрезвычайно безопасную инфраструктуру, когда-либо необходимо. В конце дня безопасности, ответственности и конфиденциальность почему мы существуем.</string>
+    <string name="DoesMyIspSeeThatIAmConnectedToAVpn_Data">Так как CasperVPN предлагает протокол OpenVPN, какой провайдер может видеть, что пользователь просматривает защищенный веб-сайт с помощью Secure Socket Layer (HTTPS), который является нормальным и используется большинством веб-сайтов, таких как Google, лицо книги и PayPal.</string>
+    <string name="HowCanIStartUsingCasperVPN_Data">Просто вам необходимо скачать и установить приложение на устройстве, а затем нажмите кнопку подключения. В основном это так просто!</string>
+    <string name="CasperVPNPrivacyPolicy_Data">В CasperVPN мы считаем, что конфиденциальность и безопасность наших пользователей является конечной важности. Поэтому мы хотим сделать строгие административные политики, чтобы защитить вашу конфиденциальность и безопасность.</string>
+    <string name="WeCollect_Data">Адрес электронной почты и платежные данные. Клиенты, которые используют дополнительную панель управления получит временное печенье. Google может хранить куки в основном в области аналитики Google. Не стесняйтесь отказаться от плагина Google.</string>
+    <string name="InfoUsed_Data">Электронная почта используется для подписки информацию для оплаты сертификата и частным доступом в Интернет и промо предлагает только. Все данные об оплате используются для управления клиентскими платежей входа в систему и отказа. Файлы cookie и данные Google Analytics, используются для улучшения и тестирования нашего веб-сайта. Кроме того, наши журналы сервера регулярно подрезают. CasperVPN не собирает и не регистрировать трафик на своей виртуальной частной сети.</string>
+    <string name="PrivacyPolicyDisclosure_Data">CasperVPN стремится защитить права на частную жизнь своего потребителя и обеспечить им всех нужных запросов повесткой в ​​суд. Все податливости хорошо переработанное и тщательно нашим юридическим отделом. Если нас просят предоставить информацию о пользователях, мы будем бороться со всеми нашими ресурсами против любых попыток любой из сторон с просьбой к нам раскрыть эту информацию по той или иной причине или претензии. Кроме того, этот запрос должен быть подкреплены решением суда или иначе мы не будем принимать это во внимание. CasperVPN не участвует в каких-либо незаконных или неконституционного акта мы просто верим в защите конфиденциальности наших пользователей. CasperVPN не разделяет вашу личную информацию какой-либо третьей стороной в стороне от раскрытия информации, уже сделанные в настоящей политике конфиденциальности. Тем не менее, если вы желаете получить информацию о том, как CasperVPN не делиться личной информацией пользователя с третьими сторонами, не стесняйтесь обращаться к нам.</string>
+    <string name="General_Data">Таковы условия обслуживания, которые вы согласны на путем регистрации и пользуясь услугами CasperVPN. Только при этих условиях CasperVPN позволяет пользователям использовать его service.CasperVPN не является услугой, которые будут использоваться для преступной деятельности. Это служба безопасности Интернета и неприкосновенность частной жизни. Вы принимаете, чтобы не нарушать закон какой-либо юрисдикции, которые вы происходящей из. Это ответственность пользователей, чтобы знать и понимать любые и все соответствующие законы, связанные с какой-либо юрисдикции или место, что касается вас и ваших действий. CasperVPN не будет нести ответственность в любом случае или форму для действий, совершенных пользователями. Это включает в себя какой-либо уголовной или гражданской ответственности за вред, выполненную или не выполненную за какой-либо денежных средств, уплаченных за услуги CasperVPN любым человеком. Вы согласны с тем, чтобы сохранить своё имя пользователя / пароль и систему CasperVPN от несанкционированного использования. Вы несете ответственность за каждое действие, которое происходит на CasperVPN, где ваше имя пользователя / пароль был использован для установления соединения VPN. Вы соглашаетесь не использовать наши услуги для сканирования портов, рассылки спама, отправив отказ в электронной почте, сканирование для открытых реле или открытых прокси-серверов, отправки нежелательной электронной почты или любую версию или тип электронной почты, отправляемое в огромных количествах, даже если это электронная почта, наконец, отправили через другой сервер. Запрещено запускать любые всплывающие окна от нашей службы. Вы принимаете не нападение каким-либо образом или образовывать любой другой сети или компьютера при использовании наших услуг. CasperVPN нетерпим об эксплуатации детей фотографически, в цифровой форме или каким-либо другим способом.</string>
+    <string name="Usage_Data">Вы принимаете, чтобы не дать или передавать свой логин и пароль третьим лицам. CasperVPN, владельцы, работники, агенты и другие, которые участвуют с услугами CasperVPN не каким-либо образом или формы ответственности за любой ущерб любого рода выполняемой или не выполняются, в результате чего или возникающие через или с использованием любого счета, зарегистрированного с услугами CasperVPN. В любом случае CasperVPN никогда не будет нести ответственность за любой ущерб, причиненный использованием промаха службы его пользователями. И это включает в себя, но не ограничиваясь этим, гонорары адвокатов или судебных расходов независимо от каких-либо законов, которые могут решить ее иначе.</string>
+    <string name="ProhibitedActivities_Data">Преступная деятельность - любой клиент, который совершает любое из этих преступных действий: использование украденных кредитных карт, мошенничества с кредитными картами, мошенничества PayPal, банковского мошенничества, e-gold мошенничества, Paysera мошенничества, WebMoney мошенничества, Bitcoin мошенничество, мошенничество с использованием почты, вымогательство, шантаж, похищения людей, изнасилования, убийства, продажа украденных кредитных карт, продажа краденого, отправки электронной почты или эксплуатации веб-сайты для выполнения кражи личных данных, хакерство, причинения вреда, фишинг, спам в любой форме, или через наш сервис, используя наши ресурсы листья с концевыми Счет. Это целое соглашение. CasperVPN может переписать условия службы время от времени. Сроки службы становятся активными с момента его обновления на нашем сайте. Это ответственность клиента, чтобы проверить наличие новых Условий предоставления услуг каждый раз в while.CasperVPN может прекратить действие любой учетной записи пользователя за нарушение условий обслуживания мгновенно без возврата и уведомления. Или приостановить счет до дальнейшего разъяснения или расследования пользователя. Если ваша учетная запись была приостановлена ​​вы должны связаться с нами для того, чтобы увидеть, если дело может быть исправлено. Будем ждать мотивированное период времени, прежде чем мы закрыть учетную запись пользователя на постоянной основе и закрыть все биллинг.</string>
+    <string name="SignInPolicies_Data">CasperVPN не контролирует, хранить или записывать журналы для любого пользователя VPN. Мы не храним времени соединения марки, используемую полосу пропускания, журналы трафика или IP-адреса. Мы не связаны с какой-либо формой цензуры, и мы никогда не отдадим вашу личную информацию третьим лицам. Мы не выполнить любой запрос информации, если она не приходит с постановлением суда надлежащей юрисдикции. Никто не может иметь доступ к нашим серверам, так как они находятся в чрезвычайно безопасной среде. Кроме того никакой активности пользователя не будет храниться на наших серверах. Мы и всегда будет защищать вашу частную жизнь.</string>
+    <string name="PrivacyTermsAndPolicy_Data">CasperVPN не хранит и хранить все журналы. Тем не менее, мы должны сохранить некоторую информацию о пользователях, которые необходимы для нашего существования и поддержки пользователей. • Адрес электронной почты пользователя - отправить последние новости CasperVPN и восстановить потерянный пароль. • Имя пользователя - необходимо установить соединение VPN. • Информация об оплате - мы храним платежную информацию в случае запроса на возврат.</string>
+    <string name="TermsAndConditionDisclosure_Data">Вы имеете право отменить свой счет в любое время, связавшись с нами. Если учетная запись будет отменено деньги, которые вы потратили на счет VPN не будет возмещена. Ваш аккаунт должен быть активным, чтобы отменить его.</string>
+    <string name="AcceptanceOfTermsAndPolicies_Data">Входя в любой услуги CasperVPN, вы соглашаетесь с Правилами и условиями предоставления услуг, включая все другие политики, объединенных reference.These условиями CasperVPN может периодически обновляться, принимая эти условия и вы также принимаете какую-либо информацию о будущем изменения к настоящему договору, если применяется.</string>
+
+    <string name="paymentsuccessful">АККАУНТ АКТИВИРОВАН</string>
+    <string name="DOWNGRADE">упадок</string>
+    <string name="SelectPaymentMethod">Выберите способ оплаты</string>
+    <string name="UpgradeInfo">Чтобы обновить, пожалуйста, дождитесь окончания вашего текущего пакета, \nНе забудьте выключить повторяющийся заказ из своего профиля учетной записи Google</string>
+    <string name="DowngradeInfo">Чтобы понизить рейтинг, любезно дождитесь окончания вашего текущего пакета, \nНе забудьте отключить повторяющийся заказ в своем профиле учетной записи Google</string>
+    <string name="NoteInfo">Пожалуйста, подождите, пока ваш текущий пакет не закончится</string>
+    <string name="WrongAccount">Пожалуйста, используйте аккаунт, который вы подписали ранее, для наших услуг, чтобы активировать его.</string>
+    <string name="TURNOFFRECURRING">ВЫКЛЮЧИТЬ РЕКРЕРИРОВАНИЕ</string>
+    <string name="NOTE">ЗАМЕТКА</string>
+    <string name="ExpiryDateMessage">Ваша учетная запись будет снята после окончания пробного периода, если ваш пробный период уже закончился, вы будете активированы автоматически</string>
+    <string name="PACKAGES">ПАКЕТЫ</string>
+    <string name="Package">пакет</string>
+    <string name="REFRESH">ОБНОВЛЕНИЕ</string>
+    <string name="Ourservice">Вы можете ознакомиться с нашими Условиями обслуживания <font color='red'>here</font></string>
+    <string name="here">Вот</string>
+    <string name="HowsubscriptionworksInfo">Оплата будет засчитана на счет Google play store при подтверждении покупки. \n \nПодписка автоматически возобновляется, если автоматическое обновление не отключается по крайней мере за 24 часа до окончания текущего периода. \n \nСообщение будет начисляться за продление в течение 24 часов до конца текущего периода и определить стоимость продления. \n \nВыбор подписки может управляться пользователем, и автоматическое обновление может быть отключено путем перехода к настройкам учетной записи пользователя после покупки.</string>
+
+    <string name="ErrorContactUs">Ошибка, пожалуйста, свяжитесь с помощью онлайн-чата или отправив письмо по электронной почте support@caspervpn.com.</string>
+    <string name="Waitingrewardvideo">Награжденное видео недоступно, повторите попытку</string>
+
+    <string name="SIGNUP">ЗАРЕГИСТРИРОВАТЬСЯ</string>
+    <string name="SIGNIN">ВОЙТИ В СИСТЕМУ</string>
+    <string name="chooseurpackage">Добро пожаловать в CasperVPN, \nВыберите тур пакет, чтобы активировать бесплатную пробную версию. \nВы можете отменить подписку в любое время, за 27 часов до окончания пробной версии.</string>
+    <string name="Signinrequiredsubscription">Добро пожаловать в CasperVPN, \nПри регистрации учетной записи \nВыберите свой пакет, чтобы начать бесплатную пробную версию</string>
+    <string name="NewAppVersion">Найдена новая версия</string>
+    <string name="NewAppVersionDesc">Доступна новая версия, \nНастроенно обновить приложение</string>
+    <string name="UPDATE">ОБНОВИТЬ</string>
+    <string name="SubscriptionRequiredText">Добро пожаловать в CasperVPN, \nВыберите свой пакет, чтобы начать бесплатную пробную версию, \nKindly Войдите в систему / Up, чтобы активировать бесплатную пробную версию</string>
+
+    <string name="CofirmationEmail">Подтверждение электронной почты</string>
+
+
+    <string name="verify">ПРОВЕРКИ</string>
+    <string name="HowsubscriptionworksInfo1">Платеж будет снят с учетной записи Игрового магазина Coogle при подтверждении покупки.</string>
+    <string name="HowsubscriptionworksInfo2">Подписка автоматически возобновляется, если автоматическое продление не отключается по крайней мере за 24 часа до окончания текущего периода.</string>
+    <string name="HowsubscriptionworksInfo3">Счета будут взиматься за продление в течение 24 часов до конца текущего периода и определить стоимость продления.</string>
+    <string name="HowsubscriptionworksInfo4">Подпиской может управлять пользователь, и автоматическое обновление может быть отключено, перейдя в настройки учетной записи пользователя после покупки.</string>
+    <string name="HowsubscriptionworksInfo5">Любая неиспользованная часть бесплатного ознакомительного периода, если предлагается, будет конфискована, когда пользователь покупает подписку на эту публикацию, где это применимо.</string>
+    <string name="YourPrivacy">Ваша конфиденциальность</string>
+    <string name="YourPrivacyInfo">Мы стремимся собирать минимальный объем информации, необходимой для работы нашего сервиса. Вы можете ознакомиться с нашей политикой конфиденциальности <font color='blue'>Вот</font></string>
+</resources>

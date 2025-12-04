@@ -1,0 +1,120 @@
+[
+    {
+        "name": "id",
+        "dbType": "increments",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false
+    },
+    {
+        "name": "user_id",
+        "dbType": "integer",
+        "htmlType": "number",
+        "searchable": true
+    },
+    {
+        "name": "email",
+        "dbType": "string",
+        "htmlType": "email",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "status",
+        "dbType": "string",
+        "htmlType": "select,App Signup:1,App Singedin:2,First Time Connection:3"
+    },
+    {
+        "name": "signup_date",
+        "dbType": "dateTime",
+        "htmlType": "date",
+        "searchable": true
+    },
+    {
+        "name": "signedin_date",
+        "dbType": "dateTime",
+        "htmlType": "date",
+        "searchable": true
+    },
+
+    {
+        "name": "subscription",
+        "dbType": "string",
+        "htmlType": "select,Yes:1,No:0",
+        "validations": "required",
+        "searchable": true
+    },
+
+    {
+        "name": "emails_sent",
+        "dbType": "integer",
+        "htmlType": "number",
+        "searchable": true
+    },
+    {
+        "name": "emails_problems",
+        "dbType": "integer",
+        "htmlType": "number",
+        "searchable": true
+    },
+    {
+        "name": "device",
+        "dbType": "string",
+        "htmlType": "text",
+        "searchable": true
+    },
+
+    {
+        "name": "Country",
+        "dbType": "string",
+        "htmlType": "text",
+        "searchable": true
+    },
+
+    {
+        "name": "OS",
+        "dbType": "string",
+        "htmlType": "text",
+        "searchable": true
+    },
+    {
+        "name": "last_seen",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": true,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "created_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "updated_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    }
+
+
+]

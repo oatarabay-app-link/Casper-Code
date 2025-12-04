@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Navy">
+
+
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/earth_bg"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:layout_height="0dp">
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/Fragment_Display_Message"
+                android:id="@+id/Error_Message"/>
+
+            <LinearLayout
+                android:id="@+id/Connection_Info"
+                android:visibility="invisible"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="3">
+
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_height="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center">
+
+                            <!--<ImageView-->
+                            <!--android:id="@+id/Flag"-->
+                            <!--style="@style/ConnectedServerFlag"/>-->
+
+                            <com.caspervpn.vpn.helper.MyTextView
+                                android:id="@+id/CountryName"
+                                style="@style/ConnectedServerName"/>
+                        </LinearLayout>
+
+                        <com.caspervpn.vpn.helper.MyChronometer
+                            style="@style/ConnectionTimer"
+                            android:id="@+id/Counter"/>
+                        <com.caspervpn.vpn.helper.MyChronometer
+                            android:id="@+id/ByteCounter"
+                            style="@style/ConnectionTimer"
+                            android:text="500MB" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+
+                    </View>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+
+            <TextView
+                android:id="@+id/remainingmb"
+                style="@style/ConnectText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:text="500 MB"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#4CAF50"
+                android:visibility="invisible" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/EarthViewContainerHeight">
+
+            <ImageView
+                android:id="@+id/earth_container"
+                style="@style/Earth"/>
+
+            <com.caspervpn.vpn.helper.Circle
+                android:id="@+id/circle"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <View
+                android:id="@+id/complete_circle"
+                android:visibility="invisible"
+                style="@style/EarthCompleteCircle"/>
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/Connect_Rotate"
+                android:layout_toRightOf="@+id/earth_container"
+                style="@style/ScaledConnectButton"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_weight="3"
+            android:layout_height="0dp"/>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/Connect_Animation"
+        style="@style/ConnectButton"
+        android:visibility="invisible"
+        android:src="@drawable/casper_logo"
+        android:padding="@dimen/ConnectButtonGhostPadding"/>
+
+
+    <ImageButton
+        style="@style/ConnectButton"
+        android:id="@+id/Connect_Disconnect"
+        android:src="@drawable/casper_logo"
+        android:padding="@dimen/ConnectButtonGhostPadding"/>
+
+    <com.caspervpn.vpn.helper.MyTextView
+        style="@style/ConnectText"
+        android:id="@+id/ConnectStatus"
+        android:text="@string/Connect"/>
+
+    <include
+        layout="@layout/online_chat_earth"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp" />
+
+
+
+
+</RelativeLayout>

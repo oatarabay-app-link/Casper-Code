@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.caspervpn.vpn">
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- <uses-permission android:name="android.permission.WAKE_LOCK" />                 &lt;!&ndash; Firebase &ndash;&gt; -->
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="com.caspervpn.vpn.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" tools:node="remove"/>
+    <uses-permission android:name="android.permission.SEND_SMS" tools:node="remove"/>
+
+
+    <permission
+        android:name="com.caspervpn.vpn.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+
+
+
+    <application
+        android:name=".helper.MyApplication"
+        android:allowBackup="false"
+        android:configChanges="orientation"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="UnusedAttribute"
+        android:debuggable="false"
+        >
+
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider588867667976339"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_android_map_api_key" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="77cfc5fb0e4f1d591601ff0a4d91d2c78d5ad091" />
+
+        <activity
+            android:name=".screens.Loading"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.Login"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:host="caspervpn.com"
+                    android:pathPattern="/confirm-email.html"
+                    android:scheme="https" />
+
+                <data
+                    android:host="caspervpnofficial.com"
+                    android:pathPattern="/confirm-email.html"
+                    android:scheme="https" />
+
+                <data
+                    android:host="positivetalk.xyz"
+                    android:pathPattern="/confirm-email.html"
+                    android:scheme="https" />
+
+                <data
+                    android:host="peoplesay.us"
+                    android:pathPattern="/confirm-email.html"
+                    android:scheme="https" />
+
+                <data
+                    android:host="confirmemail.online"
+                    android:pathPattern="/confirm-email.html"
+                    android:scheme="https" />
+
+                <data
+                    android:host="opnmarket.live"
+                    android:pathPattern="/confirm-email.html"
+                    android:scheme="https" />
+                <data
+                    android:host="souksales.info"
+                    android:pathPattern="/confirm-email.html"
+                    android:scheme="https" />
+
+                <data
+                    android:host="opnmarket.club"
+                    android:pathPattern="/confirm-email.html"
+                    android:scheme="https" />
+                <data
+                    android:host="souksales.site"
+                    android:pathPattern="/confirm-email.html"
+                    android:scheme="https" />
+                <data
+                    android:host="openmarkt.live"
+                    android:pathPattern="/confirm-email.html"
+                    android:scheme="https" />
+                <!-- TODO check https://developer.android.com/training/app-indexing/deep-linking.html -->
+                <!-- TODO check https://developer.android.com/training/app-links/index.html -->
+                <!-- TODO check https://github.com/hampusohlsson/browser-deeplink   "toufic sleiman" -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.Forgot_Password"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.Signup"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.GettingStarted"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.Landing_Page"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:hardwareAccelerated="true"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.Edit_Profile"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.WithActionBar">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.Change_Password"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.WithActionBar">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.Server_List"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.Server_Detail"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.What_Is_CasperVPN"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.About_CasperVPN"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.FAQ"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.Privacy_Policy"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.Terms_And_Conditions"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.Social_Media"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screens.Subscribe"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+            <!--  Subscrioption code-->
+        <activity
+            android:name=".Subscriptions.Screens.Subscriptions"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".screens.PaymentMethods"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".screens.Reset_Password"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="caspervpn.com"
+                    android:pathPattern="/Reset-Password.html"
+                    android:scheme="https" />
+                <data
+                    android:host="caspervpnofficial.com"
+                    android:pathPattern="/Reset-Password.html"
+                    android:scheme="https" />
+
+                <data
+                    android:host="positivetalk.xyz"
+                    android:pathPattern="/Reset-Password.html"
+                    android:scheme="https" />
+
+                <data
+                    android:host="peoplesay.us"
+                    android:pathPattern="/Reset-Password.html"
+                    android:scheme="https" />
+
+                <data
+                    android:host="confirmemail.online"
+                    android:pathPattern="/Reset-Password.html"
+                    android:scheme="https" />
+
+                <data
+                    android:host="opnmarket.live"
+                    android:pathPattern="/confirm-email.html"
+                    android:scheme="https" />
+                <data
+                    android:host="souksales.info"
+                    android:pathPattern="/confirm-email.html"
+                    android:scheme="https" />
+
+                <data
+                    android:host="opnmarket.club"
+                    android:pathPattern="/confirm-email.html"
+                    android:scheme="https" />
+                <data
+                    android:host="souksales.site"
+                    android:pathPattern="/confirm-email.html"
+                    android:scheme="https" />
+                <data
+                    android:host="openmarkt.live"
+                    android:pathPattern="/confirm-email.html"
+                    android:scheme="https" />
+
+                <!-- TODO check https://developer.android.com/training/app-indexing/deep-linking.html -->
+                <!-- TODO check https://developer.android.com/training/app-links/index.html -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="de.blinkt.openvpn.activities.DisconnectVPN"
+            android:autoRemoveFromRecents="true"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:taskAffinity=".DisconnectVPN"
+            android:theme="@style/AppTheme.dialog" />
+
+        <receiver
+            android:name=".receivers.BillingBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receivers.OnBootReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receivers.WifiReceiver">
+            <intent-filter android:priority="100">
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".services.Check_Recurring_Subscription"
+            android:enabled="true" />
+        <service
+            android:name=".services.MyVpnService"
+            android:enabled="true" />
+
+        <!-- OPENVPN -->
+
+        <service
+            android:name="de.blinkt.openvpn.core.OpenVPNService"
+            android:permission="android.permission.BIND_VPN_SERVICE"
+            android:process=":openvpn">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="de.blinkt.openvpn.core.OpenVPNStatusService"
+            android:exported="false"
+            android:process=":openvpn" />
+
+        <activity
+            android:name="de.blinkt.openvpn.activities.LaunchVPN"
+            android:autoRemoveFromRecents="true"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:taskAffinity=".LaunchVPN"
+            tools:ignore="ExportedActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="de.blinkt.openvpn.activities.DisconnectVPNDialog"
+            android:autoRemoveFromRecents="true"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:taskAffinity=".DisconnectVPN"
+            android:theme="@style/AppTheme.dialog" />
+        <activity android:name=".screens.resend_confirm_email" />
+        <activity android:name=".screens.How_Subscription_Works" />
+        <activity android:name=".screens.Share_link"
+            android:largeHeap="true"
+            ></activity>
+
+
+
+    </application>
+
+</manifest>

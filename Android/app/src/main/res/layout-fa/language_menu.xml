@@ -1,0 +1,216 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/DashboardView_Root"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+
+
+    <RadioGroup
+        android:id="@+id/radioLanguageGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/English"
+            style="@style/MenuItem">
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/LanguageMenuText"
+                android:text="@string/English"/>
+
+            <RadioButton
+                android:id="@+id/radio_English"
+                style="@style/LanguageRadioButton"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/LightMediumGray"/>
+
+        <LinearLayout
+            android:id="@+id/French"
+            style="@style/MenuItem">
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/LanguageMenuText"
+                android:text="@string/French"/>
+
+            <RadioButton
+                android:id="@+id/radio_French"
+                style="@style/LanguageRadioButton"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/LightMediumGray"/>
+
+        <LinearLayout
+            android:id="@+id/German"
+            style="@style/MenuItem">
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/LanguageMenuText"
+                android:text="@string/German"/>
+
+            <RadioButton
+                android:id="@+id/radio_German"
+                style="@style/LanguageRadioButton"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/LightMediumGray"/>
+
+        <LinearLayout
+            android:id="@+id/Russian"
+            style="@style/MenuItem">
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/LanguageMenuText"
+                android:text="@string/Russian"/>
+
+            <RadioButton
+                android:id="@+id/radio_Russian"
+                style="@style/LanguageRadioButton"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/LightMediumGray"/>
+
+        <LinearLayout
+            android:id="@+id/Spanish"
+            style="@style/MenuItem">
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/LanguageMenuText"
+                android:text="@string/Spanish"/>
+
+            <RadioButton
+                android:id="@+id/radio_Spanish"
+                style="@style/LanguageRadioButton"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/LightMediumGray"/>
+
+
+        <LinearLayout
+            android:id="@+id/Turkish"
+            style="@style/MenuItem">
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/LanguageMenuText"
+                android:text="@string/Turkish"/>
+
+            <RadioButton
+                android:id="@+id/radio_Turkish"
+                style="@style/LanguageRadioButton"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/LightMediumGray"/>
+
+        <LinearLayout
+            android:id="@+id/Arabic"
+            style="@style/MenuItem">
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/LanguageMenuText"
+                android:textAlignment="textStart"
+                android:text="@string/Arabic"/>
+
+            <RadioButton
+                android:id="@+id/radio_Arabic"
+                style="@style/LanguageRadioButton"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/LightMediumGray"/>
+
+        <LinearLayout
+            android:id="@+id/Persian"
+            style="@style/MenuItem">
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/LanguageMenuText"
+                android:textAlignment="textStart"
+                android:text="@string/Persian"/>
+
+            <RadioButton
+                android:id="@+id/radio_Persian"
+                style="@style/LanguageRadioButton"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/LightMediumGray"/>
+
+        <LinearLayout
+            android:id="@+id/Chinese"
+            style="@style/MenuItem">
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/LanguageMenuText"
+                android:text="@string/Chinese"/>
+
+
+            <RadioButton
+                android:id="@+id/radio_Chinese"
+                style="@style/LanguageRadioButton"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/LightMediumGray"/>
+
+        <LinearLayout
+            android:id="@+id/Hindi"
+            style="@style/MenuItem">
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/LanguageMenuText"
+                android:text="@string/Hindi"/>
+
+            <RadioButton
+                android:id="@+id/radio_Hindi"
+                style="@style/LanguageRadioButton"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/LightMediumGray"/>
+
+    </RadioGroup>
+</LinearLayout>
+

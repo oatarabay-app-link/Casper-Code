@@ -1,0 +1,92 @@
+{
+  "configurations" : [
+    {
+      "id" : "A2DF8CAF-50FD-4713-9C95-5ECC362BFAF8",
+      "name" : "Tests running on simulator",
+      "options" : {
+        "environmentVariableEntries" : [
+          {
+            "key" : "DYNAMIC_DOMAIN",
+            "value" : "$(DYNAMIC_DOMAIN)"
+          }
+        ],
+        "testRepetitionMode" : "retryOnFailure"
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "environmentVariableEntries" : [
+      {
+        "key" : "DYNAMIC_DOMAIN",
+        "value" : "$(DYNAMIC_DOMAIN)"
+      }
+    ],
+    "language" : "en",
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:iOS.xcodeproj",
+      "identifier" : "791DE5D8208DDA3000A29EA5",
+      "name" : "ProtonVPN"
+    }
+  },
+  "testTargets" : [
+    {
+      "skippedTests" : [
+        "ConnectionTests",
+        "ExternalAccountsCapabilityATests\/testSignInWithUsernameAccountWorks()",
+        "ExternalAccountsCapabilityATests\/testSignUpWithExternalAccountIsNotAvailable()",
+        "ExternalAccountsCapabilityATests\/testSignUpWithInternalAccountIsNotAvailable()",
+        "ExternalAccountsCapabilityATests\/testSignUpWithUsernameAccountWorks()",
+        "ExternalAccountsCapabilityBTests\/testSignInWithExternalAccountWorks()",
+        "ExternalAccountsCapabilityBTests\/testSignInWithInternalAccountWorks()",
+        "ExternalAccountsCapabilityBTests\/testSignInWithUsernameAccountWorks()",
+        "ExternalAccountsCapabilityBTests\/testSignUpWithExternalAccountWorks()",
+        "ExternalAccountsCapabilityBTests\/testSignUpWithInternalAccountIsNotAvailable()",
+        "ExternalAccountsTests",
+        "ExternalAccountsTests\/testSignInWithInternalAccountWorks()",
+        "ExternalAccountsTests\/testSignUpWithInternalAccountWorks()",
+        "FreeRescopeTests",
+        "InternalAndExternalSignUpTests",
+        "InternalAndExternalSignUpTests\/testSignUpWithExternalAccountWorks()",
+        "InternalAndExternalSignUpTests\/testSignUpWithInternalAccountWorks()",
+        "LoginExtAccountTests",
+        "LoginExtAccountTests\/testLoginExtAcountNotSupportedOnOldAppVersion()",
+        "LoginExternalAccountTests",
+        "LoginExternalAccountTests\/testSignInWithExternalAccountWorks()",
+        "LoginExternalAccountTests\/testSignInWithInternalAccountWorks()",
+        "LoginExternalAccountTests\/testSignInWithUsernameAccountWorks()",
+        "LoginTests\/testLoginAsTwoFa()",
+        "LoginTests\/testLoginWithCorrectCredentials_C101()",
+        "LoginTests\/testLoginWithIncorrectCredentials_C100()",
+        "LoginTests\/testLoginWithSpecialChars()",
+        "LoginTests\/testLoginWithTwoPassUser()",
+        "LoginTests\/testNeedHelpClosed()",
+        "OldLoginTests",
+        "PlanTests",
+        "PlanTests\/testShowUpdatePlansForCurrentFreePlan()",
+        "ProfilesTests\/testCreateAndDeleteProfile()",
+        "ProfilesTests\/testCreateProfileWithTheSameName()",
+        "ProfilesTests\/testEditProfile()",
+        "ProfilesTests\/testMakeDefaultAndSecureCoreProfilePlusUser()",
+        "ProfilesTests\/testRecommendedProfiles()",
+        "SettingsTests",
+        "SignUpTests",
+        "SignupTests",
+        "SignupTests\/testSignupExistingInternalAccount()",
+        "SignupTests\/testSignupNewExternalAccountSuccess()",
+        "SignupTests\/testSignupNewExternalAccountUpgrade()",
+        "SignupTests\/testSignupNewInternalAccountUpgradePlans()",
+        "SubscriptionTests",
+        "TokenRefreshTests",
+        "TokenRefreshTests\/testLogInExpireSessionAndRefreshTokenGetUserRefreshTokenFailure()",
+        "TokenRefreshTests\/testLogInExpireSessionGetUserRefreshTokenSuccess()",
+        "UnloggedUserTests"
+      ],
+      "target" : {
+        "containerPath" : "container:iOS.xcodeproj",
+        "identifier" : "D5811D7C229BBD870087B63A",
+        "name" : "ProtonVPNUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

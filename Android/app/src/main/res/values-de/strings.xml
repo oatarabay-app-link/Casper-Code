@@ -1,0 +1,439 @@
+<resources>
+    <!-- Language-->
+    <string name="SelectedLanguage">Deutsche</string>
+
+    <!-- Rate Us -->
+    <string name="RateUsText">Wenn Sie die Anwendung genießen CasperVPN, nehmen Sie sich bitte einen Moment statt. Vielen Dank für Ihre Unterstützung!</string>
+    <string name="Later">Später</string>
+    <string name="NoThanks">Nein danke</string>
+    <string name="RateNow">Jetzt bewerten</string>
+
+
+    <string name="allset"></string>
+    <string name="SubscriptionActivated"></string>
+    <string name="FreeBeeCenterActivated"></string>
+
+    <!-- Crash -->
+    <string name="crash_dialog_title">Ich habe eine Anwendung abstürzen CasperVPN</string>
+    <string name="crash_dialog_text">Ein unerwarteter Fehler aufgetreten ist, die Anwendung zu zwingen zu stoppen. Bitte helfen Sie uns, dieses Problem zu beheben, indem Sie uns Fehlerdaten</string>
+    <string name="crash_dialog_comment_prompt">Sie können Ihre Kommentare über das Problem unten hinzufügen</string>
+
+    <string name="ErrorTitle">Error</string>
+    <string name="InvalidRecaptcha">Ungültiger reCAPTCHA</string>
+    <string name="AvailableSurvey">Umfrage ist verfügbar</string>
+    <string name="ShouldDownloadApp">Sie sollten die Anwendung herunterladen</string>
+    <string name="FreebeeCenter">Freebee-Zentrum</string>
+    <string name="FillOutSurvey">Nehmen Sie an einer 15-Sekunden-Umfrage teil und erhalten Sie 3 Tage gratis Premium mit CasperVPN</string>
+    <string name="WatchVideo">Schau dir ein 30-Sekunden-Video an und erhalte eine Stunde Premium mit CasperVPN</string>
+    <string name="ShareUs">Teilen Sie unsere Social-Media-Seiten und erhalten Sie eine Stunde Premium mit CasperVPN</string>
+    <string name="SocialMedia">Sozialen Medien</string>
+
+
+    <string name="AffiliateText"></string>
+    <string name="AffiliateGenerated"></string>
+    <string name="AffiliateError"></string>
+    <string name="Affiliatebtn"></string>
+    <string name="AffiliateSharebtn"></string>
+    <string name="AffiliateDescr"></string>
+    <string name="LoadingAffiliate"></string>
+    <string name="TweetAffiliate"></string>
+    <string name="ShareAffiliateFb"></string>
+    <string name="ShareAffiliateGP"></string>
+    <string name="TweetAffiliatetxt"></string>
+    <string name="ShareAffiliateFbtxt"></string>
+    <string name="ShareAffiliateGPtxt"></string>
+    <string name="AffiliateShared"></string>
+    <string name="Affiliate"></string>
+    <string name="AffiliateAccount1"></string>
+    <string name="AffiliateAccount2"></string>
+    <string name="AffiliateAccount3"></string>
+    <string name="AffiliateAccount4"></string>
+    <string name="Username"></string>
+    <string name="BlockError"></string>
+
+    <!-- Social Media -->
+    <string name="TweetOnTwitter">Twittern Sie über CasperVPN und erhalten Sie eine Stunde Premium-Service</string>
+    <string name="ShareOnFacebook">Teilen Sie unsere Facebook-Seite und erhalten Sie eine Stunde Premium-Service</string>
+    <string name="ShareOurInstagram">Teilen Sie unsere Instagram-Seite und erhalten Sie eine Stunde Premium-Service</string>
+    <string name="ShareOurGooglePlus">Teilen Sie unsere Google+ Seite und erhalten Sie eine Stunde Premium-Service</string>
+
+    <string name="Welcome_Back">Willkommen zurück!</string>
+    <string name="UserIsBlocked">Benutzer ist gesperrt!</string>
+    <string name="Invalid_Login_Credentials">Ungültige Email und / oder Passwort.</string>
+    <string name="Email">Email</string>
+    <string name="Password">Kennwort</string>
+    <string name="LOGIN">ANMELDEN</string>
+    <string name="Login">Anmelden</string>
+    <string name="ForgotPassword">Passwort vergessen?</string>
+    <string name="DontHaveAnAccount">Sie haben noch kein Konto?</string>
+    <string name="SignUp">Unterschreiben</string>
+    <string name="InvalidUserName">Ungültiger Benutzername</string>
+    <string name="InvalidPassword">Ungültiges Passwort</string>
+    <string name="InvalidOldPassword">Ungültiges altes Passwort</string>
+    <string name="InvalidNewPassword">Ungültiges neues Passwort</string>
+    <string name="KindlySetYourEmail">Bitte setzen Sie Ihre E-Mail</string>
+    <string name="ResetPassword">Kennwort zurücksetzen</string>
+    <string name="PasswordChanged">Passwort geändert</string>
+    <string name="GoBack">Geh zurück</string>
+    <string name="Error">Bitte versuchen Sie es später noch einmal</string>
+    <string name="UserAlreadyExists">Benutzer existiert bereits!</string>
+    <string name="InvalidResetLink">Ungültiger Reset Link!</string>
+    <string name="LinkAlreadyUsed">Wir haben früher Link verwendet worden!</string>
+    <string name="LinkHasExpired">Der Link ist abgelaufen!</string>
+    <string name="UserNotFound">Benutzer nicht gefunden</string>
+    <string name="CheckYourInternet">Bitte überprüfe deine Internetverbindung</string>
+    <string name="CheckYourEmailReset">Bitte überprüfen Sie Ihre E-Mail und klicken Sie auf den Link Passwort zurücksetzen</string>
+    <string name="EmailVerified">Sie haben sich erfolgreich bei CasperVPN, Kindly Login angemeldet</string>
+    <string name="CheckYourEmailVerification">Bitte überprüfen Sie Ihre E-Mail und klicken Sie auf den Bestätigungslink, Wenn Sie die E-Mail nicht erhalten haben, überprüfen Sie Ihren SPAM-Ordner \nOf klik op Bevestigingsmail opnieuw verzenden</string>
+    <string name="ReCheckYourEmailVerification">Controleer je e-mail opnieuw en klik op de bevestigingslink.</string>
+    <string name="ResendEmail">Verzend bevestigingsmail opnieuw</string>
+
+    <string name="MapView">Kartenansicht</string>
+    <string name="Refresh">Aktualisierung</string>
+
+    <string name="PleaseVerifyYourEmail">Bitte überprüfen Sie zuerst Ihre E-Mail</string>
+    <string name="EmailAlreadyVerified">E-Mail wurde bereits verifiziert</string>
+    <string name="ResettingYourPassword">Ihr Passwort zurücksetzen...</string>
+    <string name="RegisteringYourAccount">Registrieren Sie Ihr Konto...</string>
+    <string name="Saving">Merken...</string>
+    <string name="Subscribing">Abonnieren...</string>
+    <string name="LoggingIn">Einloggen...</string>
+    <string name="SigningIn">Anmelden...</string>
+    <string name="Loading">Laden...</string>
+    <string name="CannotConnectCheckYourInternet">Kann keine Verbindung\nHerstellen Bitte überprüfen Sie Ihre Internetverbindung</string>
+    <string name="CannotConnectNоServerAvailable">Kann keine Verbindung\nEs gibt keinen Server</string>
+
+    <!-- **************************************************************************** -->
+
+    <string name="LoadingSurvey">Umfrage wird geladen ...</string>
+    <string name="WaitfinishLoading">Laden, bitte warten...</string>
+    <string name="ServerList">Serverliste</string>
+    <string name="Guide">Führen</string>
+
+    <string name="CantRemember">Kann sich nicht erinnern?</string>
+    <string name="Reset">Kennwort zurücksetzen</string>
+    <string name="Connecting">Anschliessen</string>
+    <string name="Connect">Verbinden</string>
+    <string name="Disconnect">Trennen</string>
+    <string name="pauseVPN">Pause</string>
+    <string name="resumevpn">Fortsetzen</string>
+
+
+    <string name="Hello">Hallo, Meld je gratis aan en ontvang een gratis proefperiode van 15 dagen !</string>
+    <string name="ConfirmPassword">Bestätigen Sie das Kennwort</string>
+    <string name="OldPassword">Altes Kennwort</string>
+    <string name="NewPassword">Neues Kennwort</string>
+    <string name="Register">NEU REGISTRIEREN</string>
+    <string name="VerifyEmail">ÜBERPRÜFEN SIE IHRE E-MAIL \n (optional)</string>
+    <string name="save">SPEIHEN</string>
+    <string name="EditProfile">Profil bearbeiten</string>
+    <string name="ChangePassword">Passwort ändern</string>
+    <string name="SetNewPassword">Setzen Sie ein neues Passwort</string>
+    <string name="AlreadyaMember">Schon ein Mitglied?</string>
+    <string name="SignIn">Anmelden</string>
+    <string name="YouAreIn">Sie befinden sich in</string>
+    <string name="SafeHands">Sichere Hände</string>
+    <string name="GoBackTo">Geh zurück zu</string>
+    <string name="IncorrectPasswordLength">Das Passwort sollte mindestens 6 Zeichen lang sein</string>
+    <string name="PasswordsDoNotMatch">Ihre Passwörter stimmen nicht überein</string>
+    <string name="NoInternetConnection">Keine Internetverbindung</string>
+    <string name="PleaseCheckYourInternetConnectivity">Bitte überprüfen Sie Ihre Internetverbindung</string>
+    <string name="OK">OK</string>
+    <string name="Cancel">Stornieren</string>
+    <string name="CANCEL">STORNIEREN</string>
+    <string name="ACCEPT">AKZEPTIEREN</string>
+    <string name="SubscriptionType">Abonnement-Typ</string>
+
+    <string name="RestartConfirmation">Neustart bestätigen</string>
+    <string name="ApplicationRestart">Das Ändern der Sprache erfordert das Neustarten der Anwendung.\nWollen Sie fortfahren?</string>
+
+    <string name="About">Über</string>
+    <string name="AutoConnect">Aansluit op opstart</string>
+    <string name="ConnectOnWifi">Verbinden Sie auf wifi</string>
+    <string name="AboutUs">über uns</string>
+    <string name="ABOUTUS">ÜBER UNS</string>
+    <string name="AboutCasperVPN">Über CasperVPN</string>
+    <string name="OnlineChat">Online Chat</string>
+    <string name="ReportABug">Melde einen technischen Fehler</string>
+    <string  name="SendLogFile">Protokolldateien senden</string>
+    <string name="Subscribe">Abonnieren</string>
+    <string name="FrequentlyAskedQuestions">Häufig gestellte Fragen</string>
+    <string name="GetFreePremium">Freie Prämie erhalten</string>
+    <string name="TermsAndConditions">Geschäftsbeidingungen</string>
+    <string name="WhatIsCasperVPN">Was ist CasperVPN</string>
+    <string name="PrivacyPolicy">Datenschutz-Bestimmungen</string>
+
+    <string name="HowSubscriptionWorks">Wie funktioniert das Abonnement?</string>
+    <string name="RestorePurchases">Einkäufe wiederherstellen</string>
+    <string name="twocheckout">2Checkout</string>
+    <string name="GooglePay">Google Pay</string>
+    <string name="Devices">Geräte</string>
+
+
+    <string name="SubscriptionStatus">Abonnementstatus</string>
+    <string name="Active">Aktiv</string>
+    <string name="Expired">Abgelaufen</string>
+
+    <string name="UPGRADE">AKTUALISIERUNG</string>
+    <string name="UNSUBSCRIBE">ABBESTELLEN</string>
+
+    <string name="CONNECT">VERBINDEN</string>
+    <string name="DISCONNECT">TRENNEN</string>
+    <string name="PING">Peng</string>
+
+    <string name="SupportedProtocols">Unterstützte Protokolle</string>
+    <string name="Country">Land</string>
+    <string name="Load">Aufladung</string>
+    <string name="CPU">Zentralprozessor</string>
+    <string name="RAM">RAM</string>
+    <string name="Bandwidth">Bandbreite</string>
+    <string name="Distance">Entfernung</string>
+
+    <string  name="Validtill">Geldig tot</string>
+    <string  name="ExpiredIn">Abgelaufen</string>
+    <string  name="ExpiryDate">Verfallsdatum</string>
+    <string name="Upgrade">Aktualisierung</string>
+    <string name="Downgrade">Downgrade</string>
+    <string name="Unsubscribe">Abbestellen</string>
+    <string name="UnsubscribeConfirmation">Abbestellen Bestätigung</string>
+    <string name="UnsubscribeText">Bist du sicher, dass du dich abmelden möchtest?</string>
+
+    <string name="FeelSecure">Fühlen Sie sich sicher</string>
+    <string name="TrackingProtection">Tracking Schutz</string>
+    <string name="CasperVPNSound">CasperVPN Klang</string>
+
+    <string name="ContactUs">Kontaktiere uns</string>
+    <string name="RateUs">Bewerten Sie uns</string>
+    <string name="Logout">ausloggen</string>
+
+    <string name="SUBSCRIBE">ABONNIEREN</string>
+    <string name="Buy">KAUFEN</string>
+    <string  name="Month">Monat</string>
+    <string name="OneMonth">1 Monat</string>
+    <string name="MonthlyPrice">6.99$ / Monat</string>
+    <string name="SixMonth">6 Monate</string>
+    <string name="HalfYearPrice">5.99$ / Monat</string>
+    <string name="OneYear">1 Jahr</string>
+    <string name="YearlyPrice">4.99$ / Monat</string>
+    <string  name="HalfYearSave">(Sparen 16.9%)</string>
+    <string  name="YearlySave">(Sparen 33.9%)</string>
+
+    <string name="LifetimePrice">350$</string>
+    <string name="Lifetime">Lebenszeit</string>
+    <string name="LifetimesSave">(Sparen Sie 36,3%)</string>
+    <string name="LimitedOffer">(Begrenztes Angebot)</string>
+    <string name="Insteadof">Anstatt von</string>
+
+    <string name="ThreeDevices">3 Geräte</string>
+    <string name="UnlimitedAccessToAllServers">Unbegrenzter Zugriff</string>
+    <string name="UnlimitedBandwidth">Unbegrenzte Bandbreite</string>
+    <string name="FiveEncryptionProtocols">5 Verschlüsselungsprotokolle</string>
+
+    <string name="SubscriptionPackages">Abo-Pakete</string>
+
+    <string name="TimeoutTitle">Timeout-Warnung</string>
+    <string name="TimeoutMessage">Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.</string>
+
+
+    <string name="You">Sie</string>
+    <string name="CasperVPNSecureYourData">Sichern Sie Ihre Daten</string>
+    <string name="TheInternet">Das Internet</string>
+
+    <string name="WHATISCASPERVPN">WAS IST CASPERVPN</string>
+    <string name="ABOUTCASPERVPN">ÜBER CASPERVPN</string>
+    <string name="WhyChooseCasperVPN">Warum CasperVPN wählen</string>
+    <string name="TotalSecurity">Gesamtsicherheit</string>
+    <string name="BreakFirewalls">Brechen Sie Firewalls</string>
+    <string name="FastAndPowerfulServers">Schnelle und leistungsstarke Server</string>
+    <string name="Anonymity">Anonymität</string>
+    <string name="Flexibility">Flexibilität</string>
+    <string name="Table">Die folgende Tabelle listet und vergleicht die von CasperVPN unterstützten Differenz-VPN-Protokolle</string>
+    <string name="Feature">Geschwindigkeit</string>
+
+
+    <string name="Speed">Speed</string>
+    <string name="Fastest">Am schnellsten</string>
+    <string name="VeryFast">Sehr schnell</string>
+    <string name="Slow">Langsam</string>
+    <string name="Intermediate">Mittlere</string>
+    <string name="Fast">Schnell</string>
+    <string name="Security">Sicherheit</string>
+    <string name="Unsecure">Unsicher</string>
+    <string name="Secure">Sichern</string>
+    <string name="HighlySecure">Sehr sicher</string>
+    <string name="Usage">Verwendung</string>
+    <string name="EasyToUse">Einfach zu gebrauchen</string>
+    <string name="UsedPorts">GebrauchtPorts</string>
+
+
+    <string name="FAQ">FAQ</string>
+    <string name="WhatisVPN">Was ist VPN?</string>
+    <string name="CanVpnBreakFirewall">Kann VPN Firewalls brechen?</string>
+    <string name="IsVpnLegal">Ist VPN legal?</string>
+    <string name="AreVPNsecure">Sind VPNs sicher?</string>
+    <string name="CanVpnProvidersSeeMyTraffic">Können VPN-Provider meinen Traffic sehen?</string>
+    <string name="DoesMyIspSeeThatIAmConnectedToAVpn">Ist mein ISP sehen, dass ich mit einem VPN verbunden sind?</string>
+    <string name="HowCanIStartUsingCasperVPN">Wie kann ich CasperVPN verwenden?</string>
+    <string name="PRIVACYPOLICY">DATENSCHUTZ-BESTIMMUNGEN</string>
+    <string name="CasperVPNPrivacyPolicy">CasperVPN Datenschutzerklärung</string>
+    <string name="WeCollect">Wir sammeln</string>
+    <string name="InfoUsed">Info Gebraucht</string>
+    <string name="Disclosure">Offenlegung</string>
+    <string name="TERMSANDCONDITIONS">Geschäftsbeidingungen</string>
+    <string name="General">General</string>
+    <string name="ProhibitedActivities">Verbotene Aktivitäten</string>
+    <string name="SignInPolicies">Anmelden Richtlinien</string>
+    <string name="PrivacyTermsAndPolicy">Datenschutzbestimmungen</string>
+    <string name="AcceptanceOfTermsAndPolicies">Annahme von Begriffen und Richtlinien</string>
+
+
+    <string name="GETFREEPREMIUM">FREIE PRÄMIE ERHALTEN</string>
+
+
+    <string name="DiscountText">Über unsere Website abonnieren und erhalten 10% Rabatt</string>
+    <string name="GetFreeDiscount">Erhalten Sie freien Diskont</string>
+    <string name="OFF">Rabatt</string>
+
+    <string  name="SubscriptionExpired">Abonnement Abgelaufen</string>
+    <string  name="SubscriptionExpiredText">Leider! Es scheint, dass Ihr Abonnement abgelaufen ist\nVerlängern Sie Ihr Abonnement bleiben geschützt</string>
+
+    <string name="TryCasperVPNForFree">Versuche CasperVPN kostenlos!</string>
+    <string name="ThankYou">Danke</string>
+
+
+    <string name="pull_to_refresh_pull_label">Pull zum Auffrischen...</string>
+    <string name="pull_to_refresh_release_label">Freigabe zum Auffrischen...</string>
+    <string name="pull_to_refresh_refreshing_label">Laden...</string>
+    <string name="pull_to_refresh_tap_label">Tippen Sie auf...</string>
+    <string name="pull_to_refresh_last_updated">Aktualisiert: %1$s</string>
+
+
+    <string name="NoDataAvailable">Keine Daten verfügbar</string>
+    <string name="ConnectionErrorClickToRefresh">Verbindungsfehler\nKlick zum Aktualisieren</string>
+
+    <string name="day">Tag</string>
+    <string name="days">Tage</string>
+    <string name="One_Month">1 Monat</string>
+    <string name="Two_Months">2 Monate</string>
+    <string name="Three_Months">3 Monate</string>
+    <string name="Four_Months">4 Monate</string>
+    <string name="Five_Months">5 Monate</string>
+    <string name="Six_Months">6 Monate</string>
+    <string name="Seven_Months">7 Monate</string>
+    <string name="Eight_Months">8 Monate</string>
+    <string name="Nine_Months">9 Monate</string>
+    <string name="Ten_Months">10 Monate</string>
+    <string name="Eleven_Months">11 Monate</string>
+    <string name="One_Months">1 Jahr</string>
+    <string name="HardDisk">Festplatte</string>
+    <string name="RETRY">WIEDERHOLEN</string>
+    <string name="CLOSE">SCHLIESSEN</string>
+    <string name="PingResults">Ping Ergebnisse</string>
+    <string name="PingStarted">Ping Begann</string>
+
+
+    <string name="GettingStarted1">WILLKOMMEN BEI CASPERVPN</string>
+    <string name="GettingStarted2">DRÜCKEN SIE DIE ANSCHLUSSTASTE</string>
+    <string name="GettingStarted3">WÄHLEN SIE EINE MOMENTEN, WÄHREND VERBINDEN</string>
+    <string name="GettingStarted4">DRÜCKEN SIE DIE DISKONNECT-TASTE, WENN SIE SELBST SIND</string>
+
+
+    <string name="TipsTitle1">Online-Freiheit</string>
+    <string name="TipsSubTitle1">Durchsuchen Sie Ihre Lieblingsinhalte von jedem Ort aus</string>
+    <string name="TipsTitle2">Datenschutz</string>
+    <string name="TipsSubTitle2">Schützen Sie Ihr Recht auf Online-Datenschutz</string>
+    <string name="TipsTitle3">Netzwerksicherheit</string>
+    <string name="TipsSubTitle3">Verschlüsseln Sie Ihre Netzwerkaktivität</string>
+    <string name="TipsTitle4">Datenschutz</string>
+    <string name="TipsSubTitle4">Sichern Sie Ihre Daten vor Diebstahl und Hacking</string>
+
+
+    <string name="MapInstructionTop">Einen Server auswählen</string>
+    <string name="MapInstructionButton">Oder klicken Sie auf die\nSchaltfläche Automatische Verbindung</string>
+    <string name="NO">NEIN</string>
+    <string name="YES">JA</string>
+    <string name="YourLocation">Ihr Standort</string>
+    <string name="DisconnectFrom">Trennen von</string>
+    <string name="Unknown">Unbekannt</string>
+    <string name="KM">KM</string>
+
+    <string name="GotIt">ICH HABS</string>
+    <string name="TermsNotification">Mit der Anmeldung erklären Sie sich mit den Allgemeinen &lt;font color=\'#1dae6f\'&gt;&lt;u&gt;Geschäftsbedingungen&lt;/u&gt;&lt;/font&gt; einverstanden</string>
+
+
+
+    <string name="FreeEdition" >Gratis Version</string>
+    <string name="CommingSoon" >Demnächst</string>
+    <string name="NeedHelp">Brauche Hilfe?</string>
+
+
+    <string name="WhyChooseCasperVPN_data">CasperVPN ist eine VPN-Client-Software, die Ihre Daten beim Surfen im Internet verschlüsselt. Durch diese Verschlüsselung sorgt CasperVPN für höchste Sicherheit, totale Anonymität und ultimative Privatsphäre für seine Nutzer.</string>
+    <string name="TotalSecurity_Data">CasperVPN erstellt einen verschlüsselten Tunnel zwischen Ihrem Computer und unseren Servern. Dieser verschlüsselte Tunnel eliminiert mögliche Versuche, Informationen von Dritten, wie Ihrem Internet Service Provider (ISP) oder Ihrem lokalen Wi-Fi-Betreiber zu hacken oder zu betrachten. Verschlüsselung ist eine komplizierte Aufgabe, die generell auf bewährte Implementierung und fortgeschrittene Mathematik angewiesen ist. CasperVPN nutzt fortschrittliche Verschlüsselungsalgorithmen, um Ihre Daten zu schützen und Ihre Kommunikation zu sichern.</string>
+    <string name="BreakFirewalls_Data">Wenn er mit CasperVPN verbunden ist, sieht Ihr ISP nur den verschlüsselten Verkehr, der durch unsere VPN-Server geht, aber sie können die Daten nicht entschlüsseln, um ihren Inhalt zu analysieren. Also im Grunde können Sie durch Beschränkungen oder Zensuren von Ihrem ISP durch CasperVPN übergeben. In CasperVPN glauben wir, dass das Internet ein freies globales System von miteinander verbundenen Netzwerken ist, die nicht beschränkt oder von einer Einheit gebunden werden sollten. Und zur Unterstützung unseres Glaubens schufen wir CasperVPN, um Internetfreiheit zu schaffen, da es so sein sollte!</string>
+    <string name="FastAndPowerfulServers_Data">In CasperVPN haben wir ein sehr hohes Maß an Geschwindigkeit und Sicherheit für Breitband-Internetverbindungen. Wir besitzen unsere Server und verwalten ein globales Netzwerk, um die schnellste VPN-Geschwindigkeit zu liefern. Wir schreiben optimierten Code, um extrem schnelle VPN-Verbindungen mit höchster Sicherheit zu liefern. Da wir unsere Server besitzen gibt es keinen Dritten, der zwischen uns und unserem Benutzer stören kann. Sicherheit und Privatsphäre ist unser Hauptanliegen, deshalb glauben wir, dass kein Dritter auf irgendeine Weise Zugriff auf einen unserer Server haben sollte, um die Anonymität des Nutzers zu gewährleisten. Und um eine zusätzliche Schicht der Verschlüsselung hinzuzufügen, haben wir unsere Software so angelegt, dass auch unsere Systemadministratoren keine Benutzeraktivitäten verfolgen können und keine Protokolle auf unseren Servern gespeichert sind.</string>
+    <string name="Anonymity_Data">CasperVPN stellt Sie praktisch an einen anderen Ort oder Land. Mit CasperVPN können Sie vermeiden, den digitalen Footprint zu verlassen, indem Sie Ihre echte IP-Adresse und Ihre geografische Position ausblenden. CasperVPN glaubt, dass jeder das Recht hat, seine persönlichen Daten privat zu halten. Jedoch ist diese Privatsphäre durch die massiven Rücksichten und Fähigkeiten unserer ISP\'s in der Inspektion und Überwachung des Systems, das sie geschaffen haben, bedroht. So, wenn Anonymität die Privatsphäre garantiert, dann bitten wir jeden Internetbenutzer, Ammonium zu sein. In CasperVPN glauben wir aufrichtig, dass jeder Benutzer das Recht hat, anonym zu sein, wenn Privatsphäre bedroht ist, deshalb haben wir unser System so geschaffen, dass auch wir unsere Benutzer nicht verfolgen können.</string>
+    <string name="Flexibility_Data">Mit CasperVPN können Sie das Internet sicher mit einem Satz von Verschlüsselungsprotokollen durchsuchen. Benutzer können entsprechend zwischen diesen Protokollen wechseln und auswählen, welches VPN-Protokoll am besten geeignet ist, je nach Ihrer Aktivität.</string>
+    <string name="AboutCasperVPN_Data">CasperVPN geht über traditionelle VPN-Lösungen hinaus und bietet eine hohe Servicequalität und Benutzerfreundlichkeit. Unser Ziel ist nicht auf die Zufriedenheit unserer Kunden zu beschränken, sondern die Erwartungen unserer Kunden zu übertreffen, indem wir einen schnellen, sicheren und zuverlässigen VPN-Service liefern. Wir glauben, dass jeder Benutzer das Recht hat, seine Privatsphäre zu schützen und seine Informationen vor Diebstahl und Meddlesome zu verstecken, zusätzlich zu der Umgehung virtueller Einschränkungen und Firewalls bei der Nutzung des Internets. Um unser Ziel zu erreichen, haben wir eine äußerst sichere Infrastruktur aufgebaut, um unseren Kunden Verschlüsselung, Anonymität und Top-Level-VPN-Sicherheit zu gewährleisten. Unsere aufrichtige Aufgabe ist der Schutz der Privatsphäre unserer Benutzer. Aufbauend auf dieser Vision haben wir eine Software erstellt, die keine Protokolle in unserem System speichert. Noch mehr ist unsere Infrastruktur so gebaut, dass die Netzbetreiber selbst nicht in der Lage sind, die Nutzeraktivitäten zu verfolgen.</string>
+    <string name="WhatisVPN_Data">Internet-Verkehr ist der Öffentlichkeit ausgesetzt. Third-Party-Tracker, Diebe und Hacker können Ihre Identität identifizieren, Ihren Standort lokalisieren und Ihre Aktivitäten über Ihre IP-Adresse verfolgen. Virtuelles privates Netzwerk (VPN) ist ein sicheres privates Netzwerk zwischen Clients und VPN-Server, in dem der gesamte Client-Verkehr eingekapselt und über einen sicheren Tunnel verschlüsselt wird. Durch die Nutzung eines VPN, Internet Service Provider (ISP), Regierung und Hacker können nicht sehen oder verfolgen Sie Ihre Daten.</string>
+    <string name="CanVpnBreakFirewall_Data">Durch die Verwendung eines VPNs können Firewalls Ihre Daten auch dann nicht blockieren, wenn Sie eine Tiefpaketkontrolle durchführen. Bei der Verwendung von VPN werden Ihre Daten über VPN-Tunnel verschlüsselt, es ist unmöglich für Firewalls, ein verschlüsseltes Paket zu analysieren oder Benutzeraktivitäten zu sehen. So können VPN-Clients auf alles zugreifen, was sie unsichtbar von Firewalls wollen.</string>
+    <string name="IsVpnLegal_Data">Für die meisten Länder sind VPNs legal. Der Nutzer hat das Recht, seine Privatsphäre zu schützen und seine Daten vor der Öffentlichkeit zu verbergen. VPN ist ein Tool, das auch von Unternehmen und Organisationen und sogar Regierungen genutzt wird, um sicherzustellen, dass ihre Daten geschützt und sicher sind.</string>
+    <string name="AreVPNsecure_Data">Über ein VPN können Benutzer ihre Identität verbergen, indem sie eine virtuelle IP-Adresse und einen virtuellen Standort verwenden, was bedeutet, dass all Ihre Aktivitäten unbekannt und für jeden, der einen Blick nehmen möchte, bedeutungslos sind. Jedoch bevor Sie ein VPN wählen, müssen Sie Ihrem VPN Versorger vertrauen, und das ist, was wir an CasperVPN zur Verfügung stellen, Vertrauenshaftung und Sicherheit ist, was wir mit unseren Klienten teilen. CasperVPN hält keine Protokolle. Der Benutzer ist frei, alles zu tun, was er tun möchte, während seine persönlichen Daten werden völlig sicher und bleiben völlig privat auch für VPN-Betreiber.</string>
+    <string name="CanVpnProvidersSeeMyTraffic_Data">Technisch gesehen ist es sehr wichtig, dass die Anwender ihren VPN-Anbietern vertrauen. Tatsächlich müssen VPN-Benutzer Vertrauen in VPN-Anbieter vermeiden, die kostenlose VPN-Dienste anbieten. Die Verwendung von CasperVPN ist eine gute Wahl für Benutzer, die keinem VPN-Anbieter vertrauen. Es ist äußerst wichtig für CasperVPN, um die Privatsphäre der Nutzer zu gewährleisten und bieten komplette Sicherheit und security.At CasperVPN, halten wir keine Online-Aktivitätsprotokolle für unsere Benutzer unter keinen Umständen. CasperVPN hat seine VPN-Infrastruktur so aufgebaut, dass unsere VPN-Betreiber nicht in der Lage sind, Benutzer zu verfolgen oder Protokolle zu speichern. Und damit unsere Benutzer sich sicherer fühlen und Vertrauen in uns haben, sind wir bereit und offen, unseren Anwendern Antworten und Daten zu liefern, die unsere äußerst sichere Infrastruktur unter Beweis stellen. Am Ende des Tages Sicherheit, Haftung und Privatsphäre ist, warum wir existieren.</string>
+    <string name="DoesMyIspSeeThatIAmConnectedToAVpn_Data">Seit CasperVPN OpenVPN-Protokoll bietet, was ISP sehen kann, ist, dass Benutzer eine sichere Website mit einer sicheren Socket-Schicht (HTTPS), die normal ist und von den meisten Websites wie Google, Facebook und PayPal verwendet wird.</string>
+    <string name="HowCanIStartUsingCasperVPN_Data">Sie müssen nur die Anwendung auf Ihrem Gerät herunterladen und installieren und dann auf die Schaltfläche "Verbinden" klicken. Grundsätzlich ist es so einfach!</string>
+    <string name="CasperVPNPrivacyPolicy_Data">In CasperVPN glauben wir, dass die Privatsphäre und Sicherheit unserer Nutzer von höchster Bedeutung ist. Deshalb beschaffen wir strenge Verwaltungsrichtlinien, um Ihre Privatsphäre und Sicherheit zu schützen.</string>
+    <string name="WeCollect_Data">E-Mail-Adresse und Zahlung Daten. Clients, die das optionale Bedienfeld verwenden, erhalten ein temporäres Cookie. Google kann ein Cookie grundsätzlich in Google Analytics speichern. Fühlen Sie sich frei, mit Google-Plugin deaktivieren.</string>
+    <string name="InfoUsed_Data">E-Mail wird verwendet, um Ihre Informationen für Zahlungs-Zertifikat und private Internet-Zugang und für Promo-Angebote nur abonnieren. Alle Zahlungsdaten werden für die Verwaltung von Kunden-Login-Zahlungen und für die Stornierung verwendet. Cookies und Google Analytics-Daten werden verwendet, um unsere Website zu verbessern und zu testen. Darüber hinaus werden unsere Server-Logs regelmäßig beschnitten. CasperVPN sammelt und protokolliert keinen Verkehr auf seinem virtuellen privaten Netzwerk.</string>
+    <string name="PrivacyPolicyDisclosure_Data">CasperVPN ist bestrebt, die Privatsphäre des Nutzers zu schützen und ihnen die richtigen Vorladungsanfragen zukommen zu lassen. Alle Zulassungen werden von unserer Rechtsabteilung gut überarbeitet und geprüft. Wenn wir aufgefordert werden, Benutzerinformationen bereitzustellen, werden wir mit allen unseren Regressionen gegen jeden Versuch von einer Partei kämpfen, die uns auffordert, diese Informationen aus welchen Gründen oder Forderungen herauszugeben. Darüber hinaus sollte dieser Antrag durch eine gerichtliche Verfügung gestützt werden oder wir werden sie nicht berücksichtigen. CasperVPN ist nicht an einer illegalen oder verfassungswidrigen Handlung beteiligt, wir glauben einfach an den Schutz unserer Privatsphäre. CasperVPN teilt Ihre privaten Informationen nicht an Dritte weiter, abgesehen von den bereits in dieser Datenschutzerklärung enthaltenen Angaben. Wenn Sie jedoch fragen möchten, wie CasperVPN die persönlichen Daten des Nutzers nicht an Dritte weitergibt, können Sie sich gerne an uns wenden.</string>
+    <string name="General_Data">Dies sind die Nutzungsbedingungen, die Sie durch die Registrierung und Nutzung der Dienste von CasperVPN zustimmen. Es ist nur unter diesen Bedingungen, dass CasperVPN ermöglicht es Benutzern, seinen Service zu nutzen. CasperVPN ist kein Dienst für kriminelle Aktivitäten verwendet werden. Es ist ein Internet-Sicherheit und Datenschutz. Sie nehmen an, kein Gesetz irgendeiner Gerichtsbarkeit zu verletzen, von der Sie stammen. Es liegt in der Verantwortung des Nutzers, alle relevanten Gesetze zu kennen und zu verstehen, die sich auf eine Gerichtsbarkeit oder einen Gerichtsstand beziehen, der Sie und Ihre Handlungen betrifft. CasperVPN haftet in keiner Weise für die Handlungen seiner Nutzer. Dies schließt jegliche strafrechtliche oder zivilrechtliche Haftung für Schäden, Vollstreckungen oder nicht vollstreckbar über die Gelder ein, die für CasperVPN-Dienste von einer Person gezahlt werden. Sie stimmen zu, Ihren Benutzernamen / Passwort und CasperVPN-System vor unbefugter Nutzung zu bewahren. Sie sind für jede einzelne Aktion verantwortlich, die auf CasperVPN geschieht, in der Ihr Benutzername / Kennwort für die Einrichtung der VPN-Verbindung verwendet wurde. Sie stimmen zu, unsere Dienste nicht für Port-Scanning zu verwenden, Spam zu versenden, opt-in E-Mails zu versenden, nach offenen Relays oder offenen Proxies zu scannen, unerwünschte E-Mails zu versenden oder E-Mails in größeren Mengen zu versenden Wird die E-Mail schließlich über einen anderen Server gesendet. Es ist verboten, Pop-ups aus unserem Service zu starten. Sie akzeptieren, dass Sie in keiner Weise angreifen oder ein anderes Netzwerk oder Computer bilden, während Sie unsere Dienste nutzen. CasperVPN ist intolerant gegenüber der Ausbeutung von Kindern fotografisch, digital oder auf andere Weise.</string>
+    <string name="Usage_Data">Sie akzeptieren nicht, Ihren Benutzernamen und Ihr Passwort an Dritte weiterzugeben oder weiterzugeben. CasperVPN, Besitzer, Mitarbeiter, Vertreter und andere Personen, die mit CasperVPN-Diensten betraut sind, haften in keiner Weise für jegliche Art von Schäden, die durch die von CasperVPN registrierten Accounts verursacht oder entstehen. CasperVPN haftet in keinem Fall für Schäden, die durch die missbräuchliche Nutzung der Dienste durch den Nutzer verursacht werden. Und dies beinhaltet, aber nicht beschränkt auf, Anwaltskosten oder Gerichtskosten unabhängig von Gesetzen, die es anders ansprechen können.</string>
+    <string name="ProhibitedActivities_Data">Kriminalität - jeder Kunde, der eines dieser kriminellen Handlungen begeht: Verwendung von gestohlenen Kreditkarten, Kreditkartenbetrug, PayPal-Betrug, Bankbetrug, E-Goldbetrug, Paysera Betrug, Webmoneybetrug, Bitcoinbetrug, Korruption, Vergewaltigung, Mord, Verkauf von gestohlenen Kreditkarten, Verkauf von gestohlenen Waren, Versendung von E-Mails oder betrieblichen Websites, um Identitätsdiebstahl, Hacking, Schadensersatz, Phishing, Spamming jeglicher Form, in oder durch unseren Service zu erledigen Konto. Das ist die ganze Vereinbarung. CasperVPN kann die Nutzungsbedingungen von Zeit zu Zeit umschreiben. Die Nutzungsbedingungen werden ab dem Zeitpunkt der Aktualisierung auf unserer Website aktiv. Es liegt in der Verantwortung des Kunden, die neuen Nutzungsbedingungen jederzeit nach und nach zu überprüfen.CasperVPN kann jedes Benutzerkonto beenden, um die Nutzungsbedingungen zu verletzen sofort ohne Rückerstattung und Benachrichtigung. Oder das Konto bis zur weiteren Klärung oder Untersuchung des Benutzers aussetzen. Wenn Ihr Konto gesperrt wurde, müssen Sie sich mit uns in Verbindung setzen, um zu sehen, ob der Fall behoben werden kann. Wir warten eine begründete Zeit, bevor wir ein Benutzerkonto endgültig schließen und alle Abrechnungen beenden.</string>
+    <string name="SignInPolicies_Data">CasperVPN überwacht, speichert oder protokolliert keine Protokolle für jeden VPN-Benutzer. Wir speichern keine Verbindungszeitstempel, verbrauchte Bandbreite, Verkehrslogs oder IP-Adressen. Wir sind nicht mit irgendeiner Form der Zensur verwandt und wir geben niemals Ihre persönlichen Informationen an Dritte weiter. Wir erheben keine Auskunftsersuchen, es sei denn, es kommt zu einer gerichtlichen Anordnung der zuständigen Gerichtsbarkeit. Niemand kann Zugriff auf unsere Server haben, da sie sich in einer extrem sicheren Umgebung befinden. Außerdem wird keine User-Aktivität auf unseren Servern gespeichert. Wir sind und werden Ihre Privatsphäre immer schützen.</string>
+    <string name="PrivacyTermsAndPolicy_Data">CasperVPN speichert keine Protokolle. Allerdings müssen wir einige Informationen über die Benutzer, die für unsere Existenz und Benutzer-Support erforderlich sind zu halten. • Benutzer-E-Mail - um die neuesten CasperVPN-Nachrichten zu senden und ein verlorenes Passwort abzurufen. • Benutzername - Es ist notwendig, eine VPN-Verbindung herzustellen. • Zahlungsinformationen - wir speichern die Zahlungsinformationen im Falle einer Rückerstattungsanforderung.</string>
+    <string name="TermsAndConditionDisclosure_Data">Sie haben jederzeit das Recht, Ihr Konto zu kündigen, indem Sie sich mit uns in Verbindung setzen. Wenn das Konto gekündigt wird, wird das Geld, das Sie für das VPN-Konto ausgegeben haben, nicht zurückerstattet. Ihr Konto muss aktiv sein, um es abzubrechen.</string>
+    <string name="AcceptanceOfTermsAndPolicies_Data">Wenn Sie sich bei einem CasperVPN-Dienst anmelden, erklären Sie sich mit den CasperVPN-Nutzungsbedingungen und den dazugehörigen Richtlinien einverstanden. Diese Allgemeinen Geschäftsbedingungen können regelmäßig aktualisiert werden, indem Sie diese Bedingungen akzeptieren und alle Informationen über die Zukunft akzeptieren Änderungen dieser Vereinbarung.</string>
+
+
+    <string name="paymentsuccessful">KONTO AKTIVIERT</string>
+    <string name="DOWNGRADE">Herunterfahren</string>
+    <string name="SelectPaymentMethod">Wählen Sie die Zahlungsmethode</string>
+    <string name="UpgradeInfo">Um zu aktualisieren, warten Sie bitte, bis Ihr aktuelles Paket endet. \nVergessen Sie nicht, die wiederkehrende Bestellung in Ihrem Google-Kontoprofil zu deaktivieren</string>
+    <string name="DowngradeInfo">Um das Downgrade durchzuführen, warten Sie bitte, bis Ihr aktuelles Paket beendet ist. \nVergessen Sie nicht, die wiederkehrende Bestellung in Ihrem Google-Kontoprofil zu deaktivieren</string>
+    <string name="NoteInfo">Bitte warten Sie bis Ihr aktuelles Paket endet</string>
+    <string name="WrongAccount">Bitte verwenden Sie das Konto, das Sie zuvor bei unseren Diensten abonniert haben, um es zu aktivieren.</string>
+    <string name="TURNOFFRECURRING">REORDNUNG AUSSCHALTEN</string>
+    <string name="NOTE">HINWEIS</string>
+    <string name="ExpiryDateMessage">Ihr Konto wird nach Ablauf des Testzeitraums belastet. Wenn Ihr Testzeitraum bereits abgelaufen ist, werden Sie automatisch aktiviert.</string>
+    <string name="PACKAGES">PAKETE</string>
+    <string name="Package">Paket</string>
+    <string name="REFRESH">AKTUALISIERUNG</string>
+    <string name="Ourservice">Sie können unsere Nutzungsbedingungen einsehen <font color='blue'>Hier</font></string>
+    <string name="here">Hier</string>
+    <string name="HowsubscriptionworksInfo">Die Zahlung wird dem Apple Store-Konto bei der Kaufbestätigung belastet. \n \nDie Subskription wird automatisch verlängert, es sei denn, die automatische Verlängerung wird mindestens 24 Stunden vor dem Ende der aktuellen Periode deaktiviert. \n \nAccount wird innerhalb von 24 Stunden vor Ablauf des aktuellen Zeitraums für die Verlängerung in Rechnung gestellt und die Kosten für die Verlängerung angegeben. \n \nDie Anmeldung kann vom Benutzer verwaltet werden und die automatische Verlängerung kann deaktiviert werden, indem Sie nach dem Kauf zu den Kontoeinstellungen des Nutzers gehen.</string>
+
+    <string name="ErrorContactUs">Fehler, Bitte kontaktieren Sie s über den Online-Chat oder per E-Mail an support@caspervpn.com</string>
+    <string name="Waitingrewardvideo">Das belohnte Video ist nicht verfügbar. Bitte versuchen Sie es erneut</string>
+
+
+    <string name="SIGNUP">ANMELDEN</string>
+    <string name="SIGNIN">ANMELDEN</string>
+    <string name="chooseurpackage">Willkommen bei CasperVPN, \nKindly Reisepaket wählen, um Ihre kostenlose Testversion zu aktivieren. \nSie können Ihr Abonnement jederzeit kündigen, 27 Stunden vor Ablauf der Testphase.</string>
+    <string name="Signinrequiredsubscription">Willkommen bei CasperVPN, \nUm Ihr Konto zu registrieren, \nWählen Sie Ihr Paket, um Ihre kostenlose Testversion zu starten</string>
+    <string name="NewAppVersion">Neue Version gefunden</string>
+    <string name="NewAppVersionDesc">Eine neue Version ist verfügbar, aktualisieren Sie Ihre App</string>
+    <string name="UPDATE">AKTUALISIEREN</string>
+    <string name="SubscriptionRequiredText">Willkommen bei CasperVPN, \nWählen Sie Ihr Paket, um Ihre kostenlose Testversion zu starten. \NKindly Anmelden/Abmelden, um Ihre kostenlose Testversion zu aktivieren</string>
+
+    <string name="CofirmationEmail">Bestätigungsemail</string>
+
+
+    <string name="verify">ÜBERPRÜFEN</string>
+    <string name="HowsubscriptionworksInfo1">Die Zahlung wird dem Coogle Play Store-Konto bei der Kaufbestätigung in Rechnung gestellt.</string>
+    <string name="HowsubscriptionworksInfo2">Das Abonnement wird automatisch verlängert, es sei denn, die automatische Verlängerung wird mindestens 24 Stunden vor Ablauf des aktuellen Zeitraums deaktiviert.</string>
+    <string name="HowsubscriptionworksInfo3">Das Konto wird für die Verlängerung innerhalb von 24 Stunden vor Ablauf des aktuellen Zeitraums belastet und die Kosten für die Verlängerung angegeben.</string>
+    <string name="HowsubscriptionworksInfo4">Das Abonnement kann vom Benutzer verwaltet werden und die automatische Verlängerung kann deaktiviert werden, indem Sie nach dem Kauf zu den Kontoeinstellungen des Nutzers gehen.</string>
+    <string name="HowsubscriptionworksInfo5">Jeder nicht genutzte Teil eines kostenlosen Testzeitraums, falls angeboten, verfällt, wenn der Nutzer ein Abonnement für diese Publikation kauft, sofern zutreffend.</string>
+    <string name="YourPrivacy">Ihre Privatsphäre</string>
+    <string name="YourPrivacyInfo">Wir bemühen uns, die Mindestanzahl von Informationen zu sammeln, die für den Betrieb unseres Dienstes erforderlich sind. Sie können unsere Datenschutzrichtlinie einsehen <font color='blue'>Hier</font></string>
+
+</resources>

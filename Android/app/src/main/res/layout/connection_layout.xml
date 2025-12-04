@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="10"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1.8"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:src="@drawable/menu_user_icon"/>
+
+
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:paddingRight="10dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/right_arrow"/>
+
+
+            <ImageView
+                android:layout_weight="1.5"
+                android:layout_width="0dp"
+                android:padding="5dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/caspervpn_logo_blue"/>
+
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:paddingLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/left_arrow"/>
+
+            <ImageView
+                android:layout_weight="1.8"
+                android:layout_width="0dp"
+                android:padding="10dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/earth_logo"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/Connection_Layout_Text"
+                android:text="@string/You"
+                android:layout_weight="1.8"/>
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/Connection_Layout_Text"
+                android:text="@string/CasperVPNSecureYourData"
+                android:layout_weight="3.5"/>
+
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/Connection_Layout_Text"
+                android:layout_weight="1.8"
+                android:text="@string/TheInternet"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

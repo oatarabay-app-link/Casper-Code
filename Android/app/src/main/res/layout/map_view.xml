@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.caspervpn.vpn.helper.MapWrapperLayout
+        android:id="@+id/map_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+    </com.caspervpn.vpn.helper.MapWrapperLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:layout_height="0dp">
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/Fragment_Display_Message"
+                android:id="@+id/Error_Message" />
+
+            <LinearLayout
+                android:id="@+id/Connection_Info"
+                android:visibility="invisible"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        style="@style/MapConnectedTextFrame">
+
+                        <LinearLayout
+                            android:layout_height="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center">
+
+
+                            <!--<ImageView-->
+                                <!--android:id="@+id/Flag"-->
+                                <!--style="@style/ConnectedServerFlag"/>-->
+
+                            <com.caspervpn.vpn.helper.MyTextView
+                                android:id="@+id/CountryName"
+                                style="@style/ConnectedServerName"/>
+                        </LinearLayout>
+
+                        <com.caspervpn.vpn.helper.MyChronometer
+                            style="@style/ConnectionTimer"
+                            android:id="@+id/Counter"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/EarthViewContainerHeight"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_weight="3"
+            android:layout_height="0dp"/>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/Connect_Disconnect"
+        style="@style/ConnectButton"
+        android:src="@mipmap/map_connect"
+        android:padding="@dimen/ConnectButtonConnectorPadding"/>
+
+    <com.caspervpn.vpn.helper.MyTextView
+        style="@style/ConnectText"
+        android:id="@+id/ConnectStatus"
+        android:text="@string/Connect" />
+
+    <include layout="@layout/map_hint"/>
+</RelativeLayout>

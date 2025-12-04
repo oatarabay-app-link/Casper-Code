@@ -1,0 +1,76 @@
+{
+  "fields": [
+    {
+      "name": "uuid",
+      "type": "string"
+    },
+    {
+      "name": "subscription_uuid",
+      "type": "string"
+    },
+
+    {
+      "name": "subscription_id",
+      "type": "integer#unsigned"
+    },
+    {
+      "name": "user_id",
+      "type": "integer#unsigned"
+    },
+
+    {
+      "name": "period_in_months",
+      "type": "integer"
+    },
+    {
+      "name": "payment_id",
+      "type": "string"
+    },
+    {
+      "name": "status",
+      "type": "string"
+    },
+
+    {
+      "name": "payment_sum",
+      "type": "float"
+    },
+    {
+      "name": "details",
+      "type": "longtext"
+    },
+    {
+      "name": "check_code",
+      "type": "longtext"
+    }
+
+
+  ],
+  "relationships": [
+    {
+      "name": "subscriptions",
+      "type": "belongsTo",
+      "class": "App\\Subscription"
+    },
+    {
+      "name": "users",
+      "type": "belongsTo",
+      "class": "App\\Models\\Auth\\User"
+    }
+
+
+  ],
+  "foreign_keys": [
+    {
+      "column": "subscription_id",
+      "references": "id",
+      "on": "subscriptions"
+    },
+    {
+      "column": "user_id",
+      "references": "id",
+      "on": "users"
+    }
+
+  ]
+}

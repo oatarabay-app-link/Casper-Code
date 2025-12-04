@@ -1,0 +1,43 @@
+ProtonVPN.xcworkspace/xcuserdata
+Pods/Pods.xcodeproj/xcuserdata
+
+### OSX ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+fastlane/report.xml
+fastlane/test_output
+DerivedData
+fastlane/README.md
+.last_build_nr
+swiftlint.xml
+.swiftpm
+
+libraries/vpncore/Source/LocalizedString.swift
+
+sampleapps/**/xcuserdata
+
+# Dynamic bug report lib and examples
+libraries/BugReport/BugReport.xcodeproj/xcuserdata
+
+# Directory created by gitlab-runner
+builds
+libraries/Review/Tests/ReviewTests/ExtensionsTests.swift.plist
+libraries/Review/Tests/ReviewTests/UserDefaultsReviewDataStorageTests.swift.plist
+swiftlint.json
+codequality_report.json
+
+# Produced when running scripts/code_quality.sh locally
+codequality_report.json-e
+
+apps/ios/ProtonVPNUITests/credentials_bf22.plist
+
+# CI for linting and releases
+.gitlab/ci-env
+
+build/
+DerivedData_Temporary/
+output_directory/
+fastlane/coverage.json
+fastlane/ios/metadata
+fastlane/ios/screenshots

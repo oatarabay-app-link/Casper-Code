@@ -1,0 +1,479 @@
+<resources>
+    <!-- Language-->
+    <string name="SelectedLanguage">فارسي</string>
+
+    <!-- Rate Us -->
+    <string name="RateUsText">اگر شما لذت بردن با استفاده از CASPERVPN، لطفا یک لحظه به میزبانی. تشکر از شما برای حمایت از شما!</string>
+    <string name="Later">بعد</string>
+    <string name="NoThanks">بدون تشکر</string>
+    <string name="RateNow">نرخ در حال حاضر</string>
+
+    <!-- Crash -->
+    <string name="crash_dialog_title">من یک برنامه سقوط CasperVPN</string>
+    <string name="crash_dialog_text">برنامه به اجبار متوقف خطایی رخ داده. لطفا به ما کمک این تعمیر با ما ارسال اطلاعات خطا</string>
+    <string name="crash_dialog_comment_prompt">شما می توانید نظرات خود را در مورد این مشکل زیر اضافه کنید</string>
+    >
+    <string name="AvailableSurvey">نظرسنجی موجود است</string>
+    <string name="ShouldDownloadApp">شما باید نرم افزار را دانلود کنید</string>
+    <string name="FreebeeCenter">beeمرکز رایگان</string>
+    <string name="FillOutSurvey">یک نظرسنجی 15 ثانيه انجام دهید و 3 روز حق بیمه رایگان با CasperVPN دریافت کنید</string>
+    <string name="WatchVideo">یک ویدیو 30 ثانیه ای را تماشا کنید و یک ساعت از حق بیمه با CasperVPN دریافت کنید</string>
+    <string name="ShareUs">صفحات رسانه های اجتماعی ما را به اشتراک بگذارید و یک ساعت از حق بیمه با CasperVPN دریافت کنید</string>
+    <string name="SocialMedia">شبکه‌‌های اجتماعی</string>
+
+
+    <string name="AffiliateText">با دعوت از دوستان خود برای استفاده از CasperVPN، شروع به کسب درآمد کنید</string>
+    <string name="AffiliateGenerated">پیوند وابسته شما</string>
+    <string name="AffiliateError">چیزی اشتباه است، لطفا دوباره امتحان کنید و اتصال اینترنت خود را بررسی کنید.</string>
+    <string name="Affiliatebtn">عضویت در شرکت ما</string>
+    <string name="AffiliateSharebtn">پیوند وابسته خود را به اشتراک بگذارید</string>
+    <string name="AffiliateDescr">دعوت از دوستان خود برای عضویت در CasperVPN و به دست آوردن 70٪ از هر گونه فروش از لینک شما به اشتراک گذاری، لینک خود را:</string>
+    <string name="LoadingAffiliate">در حال بارگیری وابستگی ...</string>
+    <string name="TweetAffiliate">توییت لینک شما</string>
+    <string name="ShareAffiliateFb">لینک خود را در فیس بوک به اشتراک بگذارید</string>
+    <string name="ShareAffiliateGP">لینک خود را در Google+ به اشتراک بگذارید</string>
+    <string name="TweetAffiliatetxt">ورود به سیستم / تا CasperVPN و آزادی آن را امتحان کنید</string>
+    <string name="ShareAffiliateFbtxt">ورود به سیستم / تا CasperVPN و آزادی آن را امتحان کنید</string>
+    <string name="ShareAffiliateGPtxt">ورود به سیستم / تا CasperVPN و آزادی آن را امتحان کنید</string>
+    <string name="AffiliateShared">لینک شما به اشتراک گذاشته شده است</string>
+    <string name="Affiliate">وابسته</string>
+    <string name="AffiliateAccount1">اعتبار حساب</string>
+    <string name="AffiliateAccount2">آدرس وب سایت وابسته</string>
+    <string name="AffiliateAccount3">اخطار، این اعتبار ذخیره نشده است، شما باید آنها را ذخیره کنید.</string>
+    <string name="AffiliateAccount4">کلیک کنید Ok برای لینک خود را به اشتراک بگذارید.</string>
+    <string name="Username">نام کاربری</string>
+    <string name="BlockError">ایمیل مجدد برای دلیل هرزنامه مسدود شده است.</string>
+
+    <!-- Social Media -->
+    <string name="TweetOnTwitter">برای اطلاع از تهدیدات اینترنتی امروز، ما را در توییتر دنبال کنید</string>
+    <string name="ShareOnFacebook">برای اطلاع از تهدیدات اینترنتی امروز، ما در فیس بوک دنبال کنید</string>
+    <string name="ShareOurInstagram">برای اطلاع از تهدیدات سایبری امروز، ما در Instagram دنبال می کنیم</string>
+    <string name="ShareOurGooglePlus">برای اطلاع از تهدیدات اینترنتی امروز، ما را در + Google دنبال کنید</string>
+
+    <string name="ErrorTitle">خطا</string>
+    <string name="InvalidRecaptcha">reCAPTCHA نامعتبر است</string>
+
+    <string name="allset">همه شما تنظیم شده اند</string>
+    <string name="SubscriptionActivated">حساب کاربری شما با موفقیت فعال شده است.</string>
+    <string name="FreeBeeCenterActivated">خدمات حقوقی رایگان شما موفق بود.</string>
+
+    <string name="MapView">نمایش نقشه</string>
+    <string name="Refresh">تازه کردن</string>
+
+    <string name="LoadingSurvey">بارگیری نظرسنجی ...</string>
+    <string name="WaitfinishLoading">در حال بارگذاری لطفا صبر کنید...</string>
+    <string name="ServerList">لیست سرور</string>
+
+    <string name="Welcome_Back">خوش آمدید!</string>
+    <string name="UserIsBlocked">کاربر مسدود شده است!</string>
+    <string name="Invalid_Login_Credentials">نامعتبر ایمیل و / یا رمز عبور.</string>
+    <string name="Email">رایانامه*</string>
+    <string name="Password">گذرواژه*</string>
+    <string name="LOGIN">ورود</string>
+    <string name="Login">ورود</string>
+    <string name="ForgotPassword">رمز عبور را فراموش کرده اید؟</string>
+    <string name="DontHaveAnAccount">هنوز حساب کاربری ندارید؟</string>
+    <string name="SignUp">ثبت نام کردن</string>
+    <string name="InvalidUserName">نام کاربری نامعتبر</string>
+    <string name="InvalidPassword">رمز عبور نامعتبر</string>
+    <string name="InvalidOldPassword">رمز عبور قدیمی نامعتبر</string>
+    <string name="InvalidNewPassword">رمز عبور جدید نامعتبر</string>
+    <string name="KindlySetYourEmail">لطفا ایمیل خود را تعیین</string>
+    <string name="ResetPassword">تنظیم مجدد رمز عبور</string>
+    <string name="PasswordChanged">رمز عبور تغییر کرد</string>
+    <string name="GoBack">برگرد</string>
+    <string name="Error">خطا، لطفا بعدا دوباره امتحان کنید</string>
+    <string name="UserAlreadyExists">کاربر قبل وجود دارد!</string>
+    <string name="InvalidResetLink">لینک تنظیم مجدد نامعتبر است!</string>
+    <string name="LinkAlreadyUsed">من با استفاده از لینک قبلا!</string>
+    <string name="LinkHasExpired">لینک منقضی شده است!</string>
+    <string name="UserNotFound">کاربر پیدا نشد</string>
+    <string name="CheckYourInternet">لطفا اتصال به اینترنت خود را چک کنید</string>
+    <string name="CheckYourEmailReset">لطفا ایمیل خود را چک کنید و از لینک بازنشانی رمز ورود کلیک کنید</string>
+    <string name="EmailVerified">شما با موفقیت به CasperVPN امضا کردید، لطفا ورود به سیستم</string>
+    <string name="CheckYourEmailVerification">لطفا ایمیل خود را چک کنید و لینک تایید کلیک کنید. اگر شما این ایمیل دریافت کرد، پوشه اسپم خود را چک کنید یا روی ایمیل تأیید مجدد کلیک کنید</string>
+    <string name="ReCheckYourEmailVerification">لطفا ایمیل خود را دوباره بررسی کنید و روی لینک تأیید کلیک کنید.</string>
+    <string name="ResendEmail">ایمیل تایید را دوباره بفرستید</string>
+    <string name="PleaseVerifyYourEmail">لطفا ایمیل خود را تأیید اول</string>
+    <string name="EmailAlreadyVerified">ایمیل قبلا تأیید شده</string>
+    <string name="ResettingYourPassword">بازنشانی رمز عبور خود...</string>
+    <string name="RegisteringYourAccount">ثبت نام حساب شما...</string>
+    <string name="Saving">ذخیره داده...</string>
+    <string name="Subscribing">اشتراک...</string>
+    <string name="LoggingIn">ورود به سیستم در...</string>
+    <string name="SigningIn">وارد شدن...</string>
+    <string name="Loading">در حال بارگذاری...</string>
+    <string name="CannotConnectCheckYourInternet">متاسفانه، سرور دوباره به نظر نمی رسد قابل دسترسی باشد یا به سرور دیگری متصل شود!</string>
+    <string name="CannotConnectNоServerAvailable">نمی تواند اتصالهیچ سرور در دسترس وجود دارد</string>
+
+    <string name="Guide">راهنما</string>
+
+    <!-- ******************************************** -->
+
+    <string name="CantRemember">یاد نمی آورم؟</string>
+    <string name="Reset">تنظیم مجدد رمز عبور</string>
+    <string name="Connecting">برقراری ارتباط</string>
+    <string name="Connect">اتصال</string>
+    <string name="Disconnect">قطع شدن</string>
+    <string name="pauseVPN">توقف</string>
+    <string name="resumevpn">ادامه</string>
+
+
+    <string name="Hello">سلام, ثبت نام رایگان و یک محاکمه رایگان 15 روزه !</string>
+    <string name="ConfirmPassword">تایید گذرواژه*</string>
+    <string name="OldPassword">گذرواژه قدیمی</string>
+    <string name="NewPassword">گذرواژه جدید</string>
+    <string name="Register">ثبت نام</string>
+    <string name="VerifyEmail">تأیید EMAIL شما</string>
+    <string name="save">ذخیره کردن</string>
+    <string name="EditProfile">ویرایش مشخصات</string>
+    <string name="ChangePassword">تعویض رمز عبور</string>
+    <string name="SetNewPassword">یک رمز عبور جدید</string>
+    <string name="AlreadyaMember">در حال حاضر عضو؟</string>
+    <string name="SignIn">ورود</string>
+    <string name="YouAreIn">تو هم هستی</string>
+    <string name="SafeHands">دست های امن</string>
+    <string name="GoBackTo">بازگشت به</string>
+    <string name="IncorrectPasswordLength">رمز عبور باید 6 حرف باشد حداقل</string>
+    <string name="PasswordsDoNotMatch">کلمه عبور خود را مطابقت ندارد</string>
+    <string name="NoInternetConnection">بدون اتصال به اینترنت</string>
+    <string name="PleaseCheckYourInternetConnectivity">لطفا اتصال به اینترنت خود را چک کنید</string>
+    <string name="OK">خوب</string>
+    <string name="Cancel">لغو کردن</string>
+    <string name="CANCEL">لغو کردن</string>
+    <string name="ACCEPT">قبول کردن</string>
+    <string name="SubscriptionType">نوع اشتراک</string>
+
+    <string name="RestartConfirmation">تایید راه اندازی مجدد</string>
+    <string name="ApplicationRestart">تغییر دادن زبان نیاز به راه اندازی مجدد نرم افزار است.آیا می خواهید ادامه دهید؟</string>
+
+    <string name="About">درباره</string>
+    <string name="AutoConnect">اتصال در بوت</string>
+    <string name="ConnectOnWifi">اتصال بر روی فای</string>
+    <string name="AboutUs">درباره ما</string>
+    <string name="ABOUTUS">درباره ما</string>
+    <string name="AboutCasperVPN">درباره CasperVPN</string>
+    <string name="OnlineChat">چت آنلاین</string>
+    <string name="ReportABug">گزارش یک اشکال</string>
+    <string  name="SendLogFile">ارسال فایل سیاهههای مربوط</string>
+    <string name="Subscribe">اشتراک</string>
+    <string name="FrequentlyAskedQuestions">پرسش و پاسخهای متداول</string>
+    <string name="GetFreePremium">پرمیوم رایگان دریافت کنید</string>
+    <string name="TermsAndConditions">الف. قوانین و مقررات</string>
+    <string name="WhatIsCasperVPN">کسپر وی پی ان چیست</string>
+    <string name="PrivacyPolicy">سیاست حفظ حریم خصوصی</string>
+
+    <string name="HowSubscriptionWorks">شرایط عضویت چیست</string>
+    <string name="RestorePurchases">بازگرداندن خرید</string>
+    <string name="twocheckout">2Checkout</string>
+    <string name="GooglePay">Google Pay</string>
+    <string name="Devices">دستگاه ها</string>
+
+    <string name="SubscriptionStatus">وضعیت اشتراک</string>
+    <string name="Active">فعال</string>
+    <string name="Expired">منقضی شده</string>
+
+    <string name="UPGRADE">ارتقا</string>
+    <string name="UNSUBSCRIBE">لغو اشتراک</string>
+
+    <string name="CONNECT">اتصال</string>
+    <string name="DISCONNECT">قطع شدن</string>
+    <string name="PING">پینگ</string>
+
+    <string name="SupportedProtocols">پروتکل های پشتیبانی شده</string>
+    <string name="Country">کشور</string>
+    <string name="Load">بار</string>
+    <string name="CPU">CPU</string>
+    <string name="RAM">RAM</string>
+    <string name="Bandwidth">پهنای باند</string>
+    <string name="Distance">فاصله</string>
+
+    <string  name="Validtill">معتبر تا</string>
+    <string  name="ExpiredIn">منقضی شده</string>
+    <string  name="ExpiryDate">تاریخ انقضا</string>
+    <string name="Upgrade">ارتقا</string>
+    <string name="Downgrade">پایین آمدن</string>
+    <string name="Unsubscribe">لغو اشتراک</string>
+    <string name="UnsubscribeConfirmation">تایید لغو اشتراک</string>
+    <string name="UnsubscribeText">آیا شما مطمئن شما می خواهید به لغو کنم؟</string>
+
+    <string name="FeelSecure">احساس امنیت</string>
+    <string name="TrackingProtection">حفاظت ردیابی</string>
+    <string name="CasperVPNSound">صدای CasperVPN</string>
+
+    <string name="ContactUs">تماس با ما</string>
+    <string name="RateUs">به ما رای دهید</string>
+    <string name="Logout">خروج</string>
+
+    <string name="SUBSCRIBE">اشتراک</string>
+    <string name="Buy">خرید</string>
+    <string  name="Month">ماه</string>
+    <string name="OneMonth">1 ماه</string>
+    <string name="MonthlyPrice">6.99$ / ماه</string>
+    <string name="SixMonth">6 ماه</string>
+    <string name="HalfYearPrice">5.99$ / ماه</string>
+    <string name="OneYear">1 سال</string>
+    <string name="YearlyPrice">4.99$ / ماه</string>
+    <string name="HalfYearSave">(صرفه جویی 16.9%)</string>
+    <string name="YearlySave">(صرفه جویی 33.9%)</string>
+
+    <string name="LifetimePrice">350$</string>
+    <string name="Lifetime">طول عمر</string>
+    <string name="LifetimesSave">(صرفه جویی 36.3٪)</string>
+    <string name="LimitedOffer">(پیشنهاد محدود)</string>
+    <string name="Insteadof">بجای</string>
+
+    <string name="ThreeDevices">3 دستگاه</string>
+    <string name="UnlimitedAccessToAllServers">دسترسی نامحدود</string>
+    <string name="UnlimitedBandwidth">پهنای باند نامحدود</string>
+    <string name="FiveEncryptionProtocols">5 پروتکل های رمزگذاری</string>
+
+    <string name="SubscriptionPackages">بسته های اشتراک</string>
+
+    <string name="TimeoutTitle">اخطار زمانبندی</string>
+    <string name="TimeoutMessage">جلسه شما به پایان رسیده است لطفا دوباره وارد شوید.</string>
+
+
+    <string name="You">شما</string>
+    <string name="CasperVPNSecureYourData">تامین امنیت داده های خود را</string>
+    <string name="TheInternet">اینترنت</string>
+
+    <string name="WHATISCASPERVPN">کسپر وی پی ان چیست</string>
+    <string name="ABOUTCASPERVPN">درباره CasperVPN</string>
+    <string name="WhyChooseCasperVPN">چرا فیلترشکن کسپر را انتخاب کنیم</string>
+    <string name="TotalSecurity">امنیت کامل</string>
+    <string name="BreakFirewalls">فرار از فایروال ها</string>
+    <string name="FastAndPowerfulServers">سرورهای سریع و قوی</string>
+    <string name="Anonymity">ناشناس بودن</string>
+    <string name="Flexibility"> توانمند بودن</string>
+    <string name="Table">در زیر لیست جدول و مقایسه تفاوت پروتکل های VPN پشتیبانی شده توسط CasperVPN</string>
+    <string name="Feature">ویژگی</string>
+
+
+    <string name="Speed">سرعت</string>
+    <string name="Fastest">سریعترین</string>
+    <string name="VeryFast">خیلی سریع</string>
+    <string name="Slow">آرام</string>
+    <string name="Intermediate">حد واسط</string>
+    <string name="Fast">سریع</string>
+    <string name="Security">امنیت</string>
+    <string name="Unsecure">ناامن</string>
+    <string name="Secure">امن</string>
+    <string name="HighlySecure">بسیار امن</string>
+    <string name="Usage">طرز استفاده</string>
+    <string name="EasyToUse">آسان برای استفاده</string>
+    <string name="UsedPorts">پورت کاربران</string>
+
+
+    <string name="FAQ">سوال‌های متداول</string>
+    <string name="WhatisVPN">الف. فیلترشکن چیست؟</string>
+    <string name="CanVpnBreakFirewall">می توانید فایروال استراحت VPN؟</string>
+    <string name="IsVpnLegal">آیا استفاده از فیلتر شکن قانونی است؟</string>
+    <string name="AreVPNsecure">آیا فیلترشکن‌ها مطمئن هستند؟</string>
+    <string name="CanVpnProvidersSeeMyTraffic">آیا ارائه دهندگان سرویس فیلترشکن توانایی دیدن فعالیت‌های من را در اینترنت دارند؟</string>
+    <string name="DoesMyIspSeeThatIAmConnectedToAVpn">. آیا ارائه دهندگان سرویس  اینترنت من می‌توانند متوجه بشوند که من از فیلترشکن
+استفاده می‌کنم؟
+</string>
+    <string name="HowCanIStartUsingCasperVPN">چطور می‌توانم فیلترشکن کسپر را استفاده کنم؟</string>
+    <string name="PRIVACYPOLICY">سیاست حفظ حریم خصوصی</string>
+    <string name="CasperVPNPrivacyPolicy">حریم خصوصی و فیلترشکن کسپر</string>
+    <string name="WeCollect">ما جمع آوری</string>
+    <string name="InfoUsed">اطلاعات مورد استفاده</string>
+    <string name="Disclosure">اطلاعیه</string>
+    <string name="TERMSANDCONDITIONS">الف. قوانین و مقررات</string>
+    <string name="General">قوانین کلی</string>
+    <string name="ProhibitedActivities">فعالیت های ممنوع</string>
+    <string name="SignInPolicies">شرایط عضویت</string>
+    <string name="PrivacyTermsAndPolicy">شرایط حفظ حریم خصوصی و قوانین</string>
+    <string name="AcceptanceOfTermsAndPolicies">پذیرش شرایط و ضوابط</string>
+
+
+    <string name="GETFREEPREMIUM">پرمیوم رایگان دریافت کنید</string>
+
+
+    <string name="DiscountText">اشتراک از طریق وب سایت ما و دریافت 10٪ تخفیف</string>
+    <string name="GetFreeDiscount">دریافت رایگان تخفیف</string>
+    <string name="OFF">تخفیف</string>
+
+    <string  name="SubscriptionExpired">اشتراک منقضی</string>
+    <string  name="SubscriptionExpiredText">متاسفانه! به نظر می رسد که اشتراک خود را تمام شده استتمدید اشتراک خود را به ماندن محافظت</string>
+
+    <string name="TryCasperVPNForFree">سعی کنید CasperVPN به صورت رایگان!</string>
+    <string name="ThankYou">متشکرم</string>
+
+
+    <string name="pull_to_refresh_pull_label">نگه دار، به روز کردن...</string>
+    <string name="pull_to_refresh_release_label">انتشار به روز کردن ...</string>
+    <string name="pull_to_refresh_refreshing_label">در حال بارگذاری ...</string>
+    <string name="pull_to_refresh_tap_label">ضربه بزنید به روز کردن...</string>
+    <string name="pull_to_refresh_last_updated">به روز رسانی: %1$s</string>
+
+
+    <string name="NoDataAvailable">اطلاعاتی موجود نیست</string>
+    <string name="ConnectionErrorClickToRefresh">خطای اتصالکلیک کنید به روز کردن</string>
+
+    <string name="day">روز</string>
+    <string name="days">روزها</string>
+    <string name="One_Month">1 ماه</string>
+    <string name="Two_Months">2 ماه</string>
+    <string name="Three_Months">3 ماه</string>
+    <string name="Four_Months">4 ماه</string>
+    <string name="Five_Months">5 ماه</string>
+    <string name="Six_Months">6 ماه</string>
+    <string name="Seven_Months">7 ماه</string>
+    <string name="Eight_Months">8 ماه</string>
+    <string name="Nine_Months">9 ماه</string>
+    <string name="Ten_Months">10 ماه</string>
+    <string name="Eleven_Months">11 ماه</string>
+    <string name="One_Months">1 سال</string>
+    <string name="HardDisk">هارد دیسک</string>
+    <string name="RETRY">تلاش مجدد</string>
+    <string name="CLOSE">بستن</string>
+    <string name="PingResults">پینگ نتایج</string>
+    <string name="PingStarted">پینگ آغاز شده</string>
+
+
+    <string name="GettingStarted1">خوش آمدید به CASPERVPN</string>
+    <string name="GettingStarted2">را فشار دهید اتصال را فشار دهید</string>
+    <string name="GettingStarted3">یک لحظه صبر کنید در حالی که اتصال</string>
+    <string name="GettingStarted4">فشار دکمه قطع ارتباط یک بار شما انجام می شود</string>
+
+
+    <string name="TipsTitle1">آزادی آنلاین</string>
+    <string name="TipsSubTitle1">محتوای مورد علاقه خود را از هر مکان مرور کنید</string>
+    <string name="TipsTitle2">حریم خصوصی اطلاعات</string>
+    <string name="TipsSubTitle2">حق خود را به حریم خصوصی آنلاین حفظ کنید</string>
+    <string name="TipsTitle3">امنیت شبکه</string>
+    <string name="TipsSubTitle3">فعالیت شبکه خود را رمزگذاری کنید</string>
+    <string name="TipsTitle4">حفاظت از داده ها</string>
+    <string name="TipsSubTitle4">اطلاعات خود را از سرقت و هک شدن محافظت کنید</string>
+
+
+    <string name="MapInstructionTop">سرور را انتخاب کنید</string>
+    <string name="MapInstructionButton">یا با کلیک بر روی دکمه خودکار اتصال</string>
+    <string name="NO">خیر</string>
+    <string name="YES">بله</string>
+    <string name="YourLocation">موقعیت تو</string>
+    <string name="DisconnectFrom">قطع اتصال از</string>
+    <string name="Unknown">ناشناخته</string>
+    <string name="KM">کلم</string>
+
+    <string name="GotIt">فهمیدم</string>
+    <string name="TermsNotification">با ثبت نام، شما را به &lt;font color=\'#1dae6f\'&gt;&lt;u&gt;شرایط و ضوابط&lt;/u&gt;&lt;/font&gt; موافقت</string>
+
+
+    <string name="FreeEdition" >نسخه رایگان</string>
+    <string name="CommingSoon" >به زودی</string>
+    <string name="NeedHelp">کمک خواستن؟</string>
+
+
+    <string name="WhyChooseCasperVPN_data">فیلترشکن کسپر نرم افزاری است که برای استفاده مشتری تهیه شده که در هنگام استفاده از اینترنت فعالیت شما را رمزنگاری می‌کند. از طریق این رمزنگاری فیلترشکن کسپر سطح امنیت را بالا برده، فعالیت نامحسوس و امنیت کامل را برای کاربران خود تضمین می‌کند</string>
+    <string name="TotalSecurity_Data">فیلترشکن کسپر یک تونل رمزگذاری شده بین کامپیوتر شما و سرورهای ما ایجاد می‌کند. این تونل رمزگذاری شده هرگونه فعالیت ممکن از جمله هک کردن یا مشاهده اطلاعات شما توسط هر شخص ثالثی مثل ارائه دهندگان خدمات اینترنتی (ای اس پی) یا اپراتور وای فای محلی شما را غیر ممکن می‌کند. رمزگذاری کار پیچیده‌ایی است که به طور کلی بر پایه آزمایشات تخصصی و با استفاده از ریاضیات پیشرفته انجام می‌پذیرد.
+فیلترشکن کسپر از الگوریتم‌های رمزنگاری پیشرفته برای محافظت از اطلاعات شما استفاده می‌کند و ارتباطات شما را محفوظ نگه می‌دارد
+</string>
+    <string name="BreakFirewalls_Data">هنگامی که به CasperVPN متصل، ISP خود را تنها می بیند ترافیک رمز عبور از طریق سرور VPN ما، اما آنها می توانند داده رمزگشایی کند به تجزیه و تحلیل محتوای آن است. بنابراین در واقع شما می توانید عبور توسط هیچ گونه محدودیت یا سانسور قرار داده شده توسط ISP خود را از طریق CasperVPN. در CasperVPN ما معتقدیم که اینترنت یک سیستم جهانی عاری از شبکه های به هم پیوسته است که باید محدود شود و یا محدود توسط هر نهاد است. و در حمایت از اعتقاد ما ما ایجاد CasperVPN به ارائه آزادی اینترنت، از این راه آن باید باشد!</string>
+    <string name="FastAndPowerfulServers_Data">ذر فیلترشکن کسپر سرعت و امنیت بسیار بالایی برای اتصال به اینترنت پرسرعت وجود دارد. ما مالک سرورهای خود هستیم و با مدیریت آنها،‌ یک شبکه جهانی برای ارائه سریع‌ترین خدمات سرعت فیلترشکن در اختیار داریم. ما کدهای بهینه سازی شده‌ایی را می‌نویسیم که از طریق آنها می توانیم ارتباطات فوق سریع فیلترشکن با امنیت بالا در اختیار داشته باشیم. و بدلیل آنکه ما مالکیت سرورهایمان را در اختیار داریم شخص سومی نمی‌تواند بین ما و کاربر ما دخالتی داشته باشد.
+امنیت و حفظ حریم خصوصی یکی از اصلی‌ترین نگرانی‌های ماست، به همین دلیل ما معتقدیم که هیچ شخص ثالثی به هیچ وجه و تحت هیچ شرایطی نباید به سرورهای ما دسترسی داشته باشد تا ناشناس بودن کاربر قطعی باشد. و برای افزودن یک لایه اضافی از رمزنگاری ما نرم افزار خود را طوری طراحی کرده‌ایم که حتی مدیران برنامه نمی‌توانند فعالیت کاربر را ردیابی کنند و همچنین هیچ اطلاعات ذخیره‌ شده‌ایی در سرور‌های ما موجود نیست
+</string>
+    <string name="Anonymity_Data">فیلترشکن کسپر عملاً شما را در یک مکان یا یک کشور دیگر قرار می‌دهد. شما با استفاده از فیلترشکن کسپر می‌توانید از پنهان بودن آدرس آی پی واقعی و موقعیت جغرافیایی خودمطمئن شوید. فیلترشکن کسپر معتقد است که هر کس حق دارد اطلاعات شخصی خود را محفوظ نگه دارد</string>
+    <string name="Flexibility_Data">فیلترشکن کسپر از چندین پروتکل پشتیبانی می کند و به شما این امکان را می‌دهد که با استفاده از یک مجموعه از این پروتکل‌های رمزگذاری شده از اینترنت ایمن استفاده کنید. بنابراین کاربر میتواند این پروتکل‌ها را تغییر دهد و انتخاب پروتکل فیلتر شکن با توجه به فعالیت شما انتخاب می‌شود</string>
+    <string name="AboutCasperVPN_Data">   فیلترشکن کسپر فراتر از یک فیلتر شکن سنتی کار می‌کند و از طریق ارائه دادن سطح بالایی از کیفیت و
+خدمات تجربه لذت بخشی برای کاربر رقم می‌زند
+
+هدف ما تنها رضایت مشتری نیست، بلکه سعی بر آن داریم تا با ارائه فیلترشکن سریع، امن و مطمئن انتظارات مشتری را بر‌آورده کنیم.
+
+ما معتقدیم که هر کاربر حق دارد از حریم خصوصی خود محافظت کند و مانع از به سرقت رفتن اطلاعات خود توسط افراد مزاحم شود. برای رسیدن به این هدف، ما زیرساخت بسیار امنی به وجود آورده‌ایم که توسط آن می‌توانیم به کاربران امکانات رمزنگاری مطمئن، پنهان کردن اطلاعات و امنیت بالای فیلترشکن
+را به مشتریان ارائه دهیم
+
+هدف اصلی ما محافظت از حریم خصوصی کاربر است. بر اساس این دیدگاه، ما نرم افزاری ایجاد کرده‌ایم که هیچ اطلاعاتی را  در سیستم ما ذخیره نمی‌کند. به اضافه اینکه زیرساخت‌های ما به گونه ایی ساخته شده‌اند که حتی اپراتور‌های خود سیستم قادر به ردیابی فعالیت کاربران نیست
+
+
+</string>
+    <string name="WhatisVPN_Data">استفاده از اینترنت قابل دسترس عموم است. شخص سوم، دزدها و هکرها همیشه قادر هستند مشخصات شما را شناسایی کرده،‌ موقعیت جغرافیایی شما را پیدا کنند و فعالیت‌های شما را از طریف آدرس آی پی شما پیگیری کنند. شبکه‌های خصوصی مجازی یا همان (فیلترشکن) یک شبکه خصوصی امن بین کاربران و سرور ارائه دهنده فیلترشکن ایجاد می کند که در آن تمام فعالیت‌های کاربر مسدود و رمزگذاری شده است. با استفاده از فیلترشکن، ارائه دهندگان اینترنتی (ای اس پی) و هکرها قادر نخواهند بود که شما را ردیابی کرده یا به اطلاعات شما دست پیدا کنند</string>
+    <string name="CanVpnBreakFirewall_Data">با استفاده از یک VPN، فایروال قادر نخواهد بود برای جلوگیری از داده های خود را حتی زمانی که با استفاده از بازرسی بسته عمیق. هنگام استفاده از VPN، اطلاعات خود را از طریق تونل VPN رمزگذاری شده، غیر ممکن است برای فایروال به تجزیه و تحلیل بسته رمزگذاری شده و یا فعالیت های کاربر را مشاهده کنید. بنابراین مشتریان VPN می توانید دسترسی به هر چه می خواهند نامرئی از فایروال.</string>
+    <string name="IsVpnLegal_Data">در اکثر کشورها استفاده از فیلترشکن قانونی است. کاربر حق دارد از حریم خصوصی خود محافظت کند و اطلاعات خود را از انظار عمومی پنهان کند. فیلترشکن یک ابزار است که توسط شرکت‌ها و سازمان‌ها و حتی دولت‌ها مورد استفاده قرار می گیرد تا اطمینان حاصل شود که اطلاعات آنها محفوظ و امن هستند</string>
+    <string name="AreVPNsecure_Data">از طریق استفاده از یک فیلتز شکن،‌ کاربران می‌توانند مشخصات خود را با استفاده از یک آدرس آی پی مجازی و یک آدرس جغرافیایی مجازی  پنهان کنند،‌و این بدان معنی است که تمام فعالیت‌های شما برای هر کسی که مایل باشد به آنها دسترسی داشته باشد غیر ممکن می‌شود. با این حال قبل از اینکه فیلترشکن خود را انتخاب کنید باید از شرکت ارائه دهنده فیلترشکن مطمئن باشید،‌ و این هدف ما در ساخت فیلترشکن کسپر است. ما اعتماد، مسئولیت پذیری و امنیت را به مشتریان خود ارائه می‌دهیم. فیلترشکن کسپر هیچگونه اطلاعاتی در خود ضبط نمی کند. کاربر می تواند هر کاری که مایل است  انجام دهد در حالی که اطلاعات شخصی وی کاملا امن است و حتی اپراتور‌های فیلترشکن توانایی دسترسی به اطلاعات را ندارند</string>
+    <string name="CanVpnProvidersSeeMyTraffic_Data">از لحاظ فنی بله، اما اطمینان بین کاربران و ارائه دهندگان سرویس فیلترشکن بسیار مهم است.. در حقیقت کاربران فیلترشکن باید از استفاده از فیلترشکن‌های رایگان خودداری کنند. استفاده از فیلترشکن کسپر گزینه عاقلانه‌ایی برای کاربرانی است که به هر سرویس دهنده فیلترشکنی اطمینان نمی‌کنند. حفاظت از حریم شخصی کابران و ارائه ایمنی و امنیت کامل آنها برای فیلترشکن کسپر حائز اهمیت بسیار است. در فیلترشکن کسپر هیچگونه فعالیت  یا اطلاعات کاربران را تحت هیچ شرایطی ضبط نمی‌کنیم. زیرساخت‌های فیلترشکن کسپر به طوری ساخته شده‌اند که اپراتورهای وی پی ان ما قادر به ردیابی کاربران یا ذخیره اطلاعات آنها نیست. و برای خاطرنشان کردن کاربرانمان از امنیت بیشتر و اعتماد بیشتر به ما، همیشه آماده ایم تا به سوالات کاربران جواب داده و اطلاعاتی که ثابت کند زیرساخت‌های ما امن هستند،‌در موارد مورد نیاز ارائه می‌دهیم. در نهایت هدف ما امنیت و حفظ حریم خصوصی کاربران است</string>
+    <string name="DoesMyIspSeeThatIAmConnectedToAVpn_Data">از آنجا که فیلترشکن کسپر از پروتکل فیلترشکن باز استفاده می‌کند، ارائه دهندگان اینترنت شما تنها می‌توانند ببینید که کاربر در حال بازدید از یک سایت امن با استفاده از یک لایه امن  (اچ تی تی پی اس) است که امری عادی است و توسط وب سایت‌هایی مانند فیس بوک،‌ گوگل و پی پال نیز مورد استفاده قرار می‌گیرد</string>
+    <string name="HowCanIStartUsingCasperVPN_Data">شما فقط لازم است که برنامه را دانلود کرده و آن را  بر روی دستگاه خود نصب کنید  دکمه اتصال را بزنید. به همین سادگی</string>
+    <string name="CasperVPNPrivacyPolicy_Data">در فیلترشکن کسپر ما برای حفظ حریم خصوصی و امنیت کاربران اهمیت زیادی قائل هستیم. بنابراین ما سیاست‌های سختگیرانه‌ اداری را برای حفاظت از حریم خصوصی و امنیت شما به کار می‌گیریم</string>
+    <string name="WeCollect_Data">آدرس ایمیل و پرداخت داده. مشتریان که با استفاده از کنترل پنل اختیاری یک کوکی موقت دریافت خواهید کرد. گوگل ممکن است یک کوکی اساسا در تجزیه و تحلیل گوگل ذخیره کنید. احساس رایگان به انتخاب کردن با پلاگین گوگل است.</string>
+    <string name="InfoUsed_Data">آدرس ایمیل شما برای عضویت در سایت و اطلاعات پرداخت هزینه و دسترسی به اینترنت خصوصی که فقط برای اطلاع رساندن از تبلیغات مورد استفاده قرار می‌گیرد.
+تمام اطلاعات پرداخت‌های شما برای مدیریت پرداخت ورود به سیستم مشتری و لغو عضویت مورد استفاده است.
+اطلاعات جانبی و تجزیه و تحلیل‌های گوگل برای بهبود و آزمایش وب‌ سایت‌های ما مورد استفاده است. علاوه بر این اطلاعات سرورهای ما به طور مرتب تنظیم می‌شوند. فیترشکن کسپر هیچ نوع اطلاعات یا ترافیک در شبکه خصوصی و مجازی خود ذخیره نمی‌کند
+</string>
+    <string name="PrivacyPolicyDisclosure_Data">فیلترشکن کسپر تلاش می‌کند تا از حریم خصوصی و شخصی کاربران خود محافظت کند و تمام درخواست‌های احضاریه مناسب را به آنها ارائه می‌دهد. تمام موارد مطابق با استانداردهای حقوقی ماست که تجدید نظر و بررسی شده‌اند. اگر از ما خواسته شود اطلاعات کاربر را ارائه دهیم ما تمام سعی خود را خواهیم کرد و مانع ارائه دادن یا آشکار کردن اطلاعات به آن شخص به هر دلیل و بهانه‌ایی می‌شویم. علاوه بر این، این درخواست  باید با دستور دادگاه تایید شود در غیر این صورت درخواستشان مورد قبول واقع نخواهد شد. فیلترشکن کسپر در هیچ فعالیت غیرقانونی  و نقض قانون شرکت نمی‌کند و تنها به حفظ حریم خصوصی کاربر احترام می‌گذارد. فیلترشکن کسپر اطلاعات خصوصی شما را با هیچ شخص سومی در میان نمی‌گذارد و تنها اطلاعاتی که قبلاً به اشتراک گذاشته شده را شامل نمی‌شود. با این حال، اگر می‌خواهید در مورد نحوه چگونگی استفاده از فیلترشکن کسپر  و به استراک گذاشتن اطلاعات شخصی کابران با شخص ثالث اطلاع پیدا کنید با ما تماس بگیرید</string>
+    <string name="General_Data">این شرایط خدماتی است که شما با ثبت نام و استفاده از فیلترشکن کسپر متقبل می شوید. فقط با متقبل شدن این شرایط است که فیلترشکن کسپر به کاربران اجازه استفاده از خدمات خود را می‌دهد
+فیلترشکن کسپر را نمی‌توانید برای فعالیت‌های جنایی استفاده کنید. این فیلترشکن یک سرویس امنیتی و حفاظت از حریم خصوصی در اینترنت است. شما متقبل می‌شود که هیچ فعالیتی که باعث نقض قوانین یا هر قانون مربوطه یا هر کار مرتبط دیگر انجام نمی‌دهید.
+فیلترشکن کسپر هیچگونه مسئولیتی در برابر فعالیت‌های انجام شده توسط کاربران را ندارد. این قانون شامل هر گونه مسئولیت کیفری یا مدنی مثلًا صدمه وارد کردن یا نکردن یا انجام دادن یا ندادن اعمال کیفری حتی پیش از پرداخت هزینه برای استفاده از خدمات فیلترشکن کسپر توسط فرد می‌شود. شما قبول می‌کنید که نام کاربری/رمز عبور خود را حفظ کرده و استفاده غیر مجاز از سیستم فیلترشکن کسپر را ندهید. شما مسئول هر گونه اقدامی که در زمان استفاده از فیلترشکن کسپر از جمله استفاده از نام کاربری و رمز عبور و وصل شدن به سرویس فیلترشکن هستید.
+ شما تقبل می‌کنید که از خدمات ما برای اسکن پورتال، ارسال هرزنامه، ارسال ایمیل انتخابی،‌ اسکن کردن برای بازکردن رلیه یا باز کردن پروکسی، ارسال ایمیل بدون نام  یا هر نوع ایمیل ارسال شده در مقادیر وسیع،‌ حتی اگر ایملیی از طریق سرور دیگری ارسال بشود هستید. شما نباید هیچ گونه ایمیل پاپ آپ در سرویس ما تهیه کنید. شما تقبل می‌کنید که هرگز به هیچ سرویس یا کامپیوتر دیگری آسیب نرسانید.
+فیلترشکن کسپر کاملاٌ با استثمار کودکان از طریق عکس،‌ یا به صورت دیجیتالی یا به هر دلیل دیگری مخالف است
+</string>
+    <string name="Usage_Data">شما تقبل می‌کنید که نام کاربری و رمز عبور خود را به دیگران نداده و با آنها به اشتراک نگذارید.
+فیلترشکن کسپر، صاحبان،‌ کارکنان،‌ نمایندگان و دیگر افرادی که با خدمات فیلترشکن کسپر مشارکت می‌کنند هیچ گونه مسئولیتی در قبال هر گونه آسیب وارد شده یا نشده،‌ که در نتیجه یا منجر به استفاده از هر حساب کاربری ثبت شده از خدمات فیلترشکن کسپر را تقبل نمیکنند. در صورت بروز هر گونه مشکل فیلترشکن کسپر مسئولیت آسیب‌های ناشی از عدم استفاده از سرویس فیلترشکن توسط کاربران را بر عهده نخواهد گرفت. و این شامل اما منحصر به هزینه وکیل،‌ هزینه دادرسی بی توجه به قوانین وضع شده در این زمینه نخواهد بود
+ </string>
+    <string name="ProhibitedActivities_Data">فعالیت جنایی – هر مشتری که یکی از فعالیت‌های جنایی زیر را مرتکب شود باعث مسدود شدن حساب فیلترشکن کسپر خود خواهد شد، فعالیت هایی نظیر: استفاده از کارت‌های اعتباری دزدیده شده، تقلب در کارت اعتباری، تقلب در استفاده از پی پال، تقلب در امور بانکی،‌ تقلب در طلای الکترونیکی،‌تقلب در پی سرا،‌ تقلب در مانی وب، تقلب در بیت کوین، تقلب در پست، اخاذی، آدم ربایی، تجاوز، قتل، فروش کارت‌های اعتباری دزدیده شده،‌فروش کالای به سرقت رفته، ارسال ایمیل یا وب سایت‌های عامل برای انجام سرقت هویت، هک کردن، آسیب رساندن، جاسوسی،‌ هرزنامه در خدمات ما و یا استفاده از منابع با حساب مسدود شده. این توافق کلی است. فیلترشکن کسپر می‌تواند شرایط سرویس رسانی را هر چند وقت یکبار تغییر داده بازنویسی کند. شرایط خدمات از زمانی که در وب سایت ما به روز می‌شود فعال است. این مسئولیت مشتری است که هر چند وقت یکبار این قوانین را دوباره مطالعه کند.
+ فیلترشکن کسپر می تواند هر حساب کاربری را که شرایط خدمات را نقض کرده‌اند بلافاصله و بدون بازپرداخت هر مبلغی یا اطلاع رسانی مسدود کند.
+یا حساب را تا زمان مشخص شدن و بررسی بیشتر متوقف کند. اگر حساب شما معلق شده است شما باید با ما تماس بگیرید و مطمئن شوید که این تعلیق صحیح بوده است یا خیر. ما قبل از اینکه حساب کاربری را به طور دائم بسته و تمام صورتحساب آن را مسدود کنیم مدت زمان مشخصی را صبر خواهیم کرد
+</string>
+    <string name="SignInPolicies_Data">فیلترشکن کسپر هیچ گونه نظارتی بر نگهداری یا ذخیره اطلاعات کاربران فیلترشکن ندارد. ما مدت زمان استفاده از فیلترشکن،‌ ثبت پهنای باند استفاده شده، ثبت ترافیک آدرس‌های آی پی را انجام نمی‌دهیم.
+ما هیچ گونه سانسور را قبول نداریم و هرگز اطلاعات شخصی شما را به شخص ثالثی ارائه نخواهیم کرد. ما صلاحیت دادگاهی را رد کرده و هیچ کس اجازه دسترسی به سرورهای ما را ندارد زیرا این سرورها در یک محیط بسیار امن قرار دارند. علاوه بر این هیچ فعالیت کاربری در سرورهای ما ذخیره نخواهد شد. ما همیشه مراقب حریم خصوصی شما هستیم
+</string>
+    <string name="PrivacyTermsAndPolicy_Data">فیلترشکن کسپر هیچگونه اطلاعاتی را ذخیره و نگهداری نمی‌کند. با این همه ما مقداری از اطلاعات کاربران را که  برای کارایی خودمان و پشتیبانی از کاربر لازم داریم.
+ادرس ایمیل کاربر، برای فرستادن خبرهای جدید و رمز عبور فراموش شده
+  نام کاربری،‌ که برای ایجاد اتصال فیلترشکن واجب است
+اطلاعات پرداخت،‌ در صورت درخواست بازپرداخت، اطلاعات صورتحساب ذخیره شده لازم است
+</string>
+    <string name="TermsAndConditionDisclosure_Data">شما می‌توانید در هر زمان با تماس گرفتن با ما حساب خود را لغو کنید. اگر حساب لغو شود هزینه ایی که صرف خرید فیلترشکن کرده‌اید بازپرداخت نخواهد شد. حساب کاربری شما باید فعال باشد تا بتوانید آن را لغو کنید</string>
+    <string name="AcceptanceOfTermsAndPolicies_Data">با ورود به هر سرویس فیلترشکن کسپر شما با شرایط و ضوابط سرویس فیلترشکن از جمله تمام شرایط گنجانده شده موافق هستید. این شرایط و ضوابط ممکن است به صورت دوره ایی به روز شود ، با پذیرفتن این شرایط شما نیز در پذیرش هر گونه اطلاعات در مورد تغییرات آینده در این موافقت نامه،‌ موافق هستید</string>
+
+    <string name="paymentsuccessful">حساب فعال</string>
+    <string name="DOWNGRADE">جمع و جور کردن</string>
+    <string name="SelectPaymentMethod">روش پرداخت را انتخاب کنید</string>
+    <string name="UpgradeInfo">برای ارتقاء، صبر کنید تا بسته فعلی شما به پایان برسد،  فراموش نکنید که نظم تکراری را از نمایه حساب Google خود خاموش کنید</string>
+    <string name="DowngradeInfo">برای به دست آوردن پیش فرض، صبر کنید تا بسته فعلی شما خاتمه یابد،  نمی توانید فرمان تکراری را از نمایه حساب Google خود خاموش کنید</string>
+    <string name="NoteInfo">لطفا صبر کنید تا بسته فعلی شما به پایان برسد</string>
+    <string name="WrongAccount">لطفا از حساب کاربری که قبلا با سرویس های ما مشترک شده اید، استفاده کنید تا آن را فعال کنید.</string>
+    <string name="TURNOFFRECURRING">روشن کردن مجدد</string>
+    <string name="NOTE">توجه داشته باشید</string>
+    <string name="ExpiryDateMessage">پس از پایان دوره آزمایشی حساب شما بعد از اتمام دوره آزمایشی شما محاسبه خواهد شد، اگر مدت آزمایشی شما به پایان رسیده باشد، به طور خودکار فعال خواهد شد.</string>
+    <string name="PACKAGES">بسته ها</string>
+    <string name="Package">بسته بندی</string>
+    <string name="REFRESH">تازه کردن</string>
+    <string name="Ourservice">شما می توانید شرایط خدمات ما را مشاهده کنید</string>
+    <string name="here">اینجا</string>
+    <string name="HowsubscriptionworksInfo">هنگام خرید هزینه‌ها از حساب آی تونز  شما کم
+می‌شود
+ اشتراک شما به طورخودکار تجدید می‌شود مگر اینکه تمدید خودکار  حساب خود را حداقل ۲۴ ساعت قبل از پایان دوره فعلی خاموش کرده باشید.
+از حساب  شما برای تجدید اشتراکتان در طی ۲۴ ساعت قبل از اتمام دوره فعلی شما هزینه تمدید مشخص شده و کسر خواهد شد.
+کاربر می‌تواند اشتراک را مدیریت کرده  و اشتراک خودکار خود را با رفتن به تنظیمات حساب کاربری پس از خرید تغییر دهد.
+هر مقدار استفاده نشده از یک بخش آمایشی رایگان، در صورت ارائه شدن خدمات رایگان، و هنگام خرید اشتراک ملغی می‌شود
+</string>
+
+    <string name="ErrorContactUs">خطا، لطفا با استفاده از چت آنلاین یا با ارسال ایمیل به support@caspervpn.com تماس بگیرید</string>
+    <string name="Waitingrewardvideo">پاداش در دسترس نیست، لطفا دوباره امتحان کنید</string>
+
+    <string name="SIGNUP">ثبت نام</string>
+    <string name="SIGNIN">ورود</string>
+    <string name="chooseurpackage">خوش آمدید به CasperVPN،  به طور خاص بسته های تور را انتخاب کنید تا آزمایشی رایگان خود را فعال کنید.  شما می توانید اشتراک خود را هر زمان، 27 ساعت قبل از محاکمه خود را لغو کنید.</string>
+    <string name="Signinrequiredsubscription">به CasperVPN خوش آمدید،  برای ثبت نام حساب خود،  بسته خود را برای شروع محاکمه آزاد خود انتخاب کنید</string>
+    <string name="NewAppVersion">نسخه جدید یافت شد</string>
+    <string name="NewAppVersionDesc">نسخه جدید در دسترس است،  به طور خاص برنامه خود را به روز رسانی کنید</string>
+    <string name="UPDATE">به روز رسانی</string>
+    <string name="SubscriptionRequiredText">خوش آمدید به CasperVPN،  برای انتخاب امتحان رایگان خود، بسته خود را انتخاب کنید،  به طور خودکار وارد شوید/برای آزادی آزمایشی رایگان خود را فعال کنید</string>
+
+    <string name="CofirmationEmail">تأییدیه ایمیل</string>
+
+
+    <string name="verify">تأیید کنید</string>
+    <string name="HowsubscriptionworksInfo1">هزینه تأیید خرید برای حساب Coogle Store ذخیره خواهد شد.</string>
+    <string name="HowsubscriptionworksInfo2">اشتراک به صورت خودکار تجدید می شود مگر اینکه تمدید خودکار حداقل 24 ساعت قبل از پایان دوره فعلی خاموش شود.</string>
+    <string name="HowsubscriptionworksInfo3">حساب برای تجدید ظرف 24 ساعت قبل از پایان دوره جاری تادیه خواهد شد و هزینه تمدید را تعیین می کند.</string>
+    <string name="HowsubscriptionworksInfo4">اشتراک ممکن است توسط کاربر مدیریت شود و تمدید خودکار ممکن است با رفتن به تنظیمات حساب کاربر پس از خرید خاموش شود.</string>
+    <string name="HowsubscriptionworksInfo5">هر بخش استفاده نشده از یک دوره آزمایشی رایگان، در صورت ارائه، زمانی که کاربر خرید یک اشتراک به آن انتشار، در صورت لزوم، محروم خواهد شد.</string>
+    <string name="YourPrivacy">حریم خصوصی شما</string>
+    <string name="YourPrivacyInfo">ما سعی می کنیم که کمترین مقدار از اطلاعات مورد نیاز برای اجرای سرویس‌هایمان را جمع آوری کنیم
+شما می‌توانید شرایط خدمات را در اینجا ببینید
+شما می‌توانید شرایط حفظ حریم خصوصی خود را در اینجا ببینید
+</string>
+</resources>

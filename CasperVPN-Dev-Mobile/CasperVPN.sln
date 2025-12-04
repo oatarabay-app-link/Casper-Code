@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36121.58 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Casper.API", "Casper.API\Casper.API.csproj", "{B429CCB7-29D0-4E02-9C61-D0F4FAA1ED24}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "casper.admin", "casper.admin\casper.admin.esproj", "{9E185D25-90A2-094B-3363-1668B2319429}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B429CCB7-29D0-4E02-9C61-D0F4FAA1ED24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B429CCB7-29D0-4E02-9C61-D0F4FAA1ED24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B429CCB7-29D0-4E02-9C61-D0F4FAA1ED24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B429CCB7-29D0-4E02-9C61-D0F4FAA1ED24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E185D25-90A2-094B-3363-1668B2319429}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E185D25-90A2-094B-3363-1668B2319429}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E185D25-90A2-094B-3363-1668B2319429}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9E185D25-90A2-094B-3363-1668B2319429}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E185D25-90A2-094B-3363-1668B2319429}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E185D25-90A2-094B-3363-1668B2319429}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {663DCCB5-886B-4A31-96DB-C360FDEE6A2A}
+	EndGlobalSection
+EndGlobal

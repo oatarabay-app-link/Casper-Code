@@ -1,0 +1,438 @@
+<resources>
+    <!-- Language-->
+    <string name="SelectedLanguage">हिंदी</string>
+
+    <!-- Rate Us -->
+    <string name="RateUsText">आप उपयोग कर CasperVPN आनंद, की मेजबानी करने के लिए एक क्षण ले कृपया। अपने समर्थन के लिए धन्यवाद!</string>
+    <string name="Later">बाद में</string>
+    <string name="NoThanks">जी नहीं, धन्यवाद</string>
+    <string name="RateNow">दर अब</string>
+
+    <!-- Crash -->
+    <string name="crash_dialog_title">आप आवेदन दुर्घटना CasperVPN</string>
+    <string name="crash_dialog_text">बंद करने के लिए आवेदन के लिए मजबूर कर एक अप्रत्याशित त्रुटि हुई। कृपया हमें त्रुटि डेटा भेजकर हमें इसे ठीक करने में मदद</string>
+    <string name="crash_dialog_comment_prompt">आप नीचे दिए गए समस्या के बारे में अपनी टिप्पणी में जोड़ सकते हैं</string>
+
+    <string name="AvailableSurvey">सर्वेक्षण उपलब्ध है</string>
+    <string name="ShouldDownloadApp">आपको एप्लिकेशन डाउनलोड करना चाहिए</string>
+    <string name="FreebeeCenter">फ्रीबी सेंटर</string>
+    <string name="FillOutSurvey">15-सेकंड का सर्वेक्षण लें और कैस्पर वीपीएन के साथ 3 दिन का निःशुल्क प्रीमियम प्राप्त करें</string>
+    <string name="WatchVideo">30-सेकंड वाला वीडियो देखें और कैसपर वीपीएन के साथ एक घंटे का प्रीमियम प्राप्त करेंं</string>
+    <string name="ShareUs">हमारे सोशल मीडिया पेजों को साझा करें और कैस्पर वीपीएन के साथ एक घंटा प्रीमियम प्राप्त करें</string>
+    <string name="SocialMedia">सामाजिक मीडिया</string>
+
+
+    <string name="AffiliateText">CasperVPN का उपयोग करने के लिए अपने दोस्तों को आमंत्रित करके पैसे कमाने शुरू करें</string>
+    <string name="AffiliateGenerated">आपका सहबद्ध लिंक</string>
+    <string name="AffiliateError">कुछ गड़बड़ हुई, कृपया रीफ्रेश करने का प्रयास करें और अपना इंटरनेट कनेक्शन जांचें।</string>
+    <string name="Affiliatebtn">हमारे सहयोगी से जुड़ें</string>
+    <string name="AffiliateSharebtn">अपने सहबद्ध लिंक साझा करें</string>
+    <string name="AffiliateDescr">अपने दोस्तों को CasperVPN की सदस्यता लेने के लिए आमंत्रित करें और आपके द्वारा साझा किए गए लिंक से उत्पन्न किसी भी बिक्री से 70% तक का लाभ प्राप्त करें, आपका लिंक:</string>
+    <string name="LoadingAffiliate">संबद्ध लोड हो रहा है ...</string>
+    <string name="TweetAffiliate">अपने लिंक को ट्वीट करें</string>
+    <string name="ShareAffiliateFb">फेसबुक पर अपना लिंक साझा करें</string>
+    <string name="ShareAffiliateGP">Google+ पर अपना लिंक साझा करें</string>
+    <string name="TweetAffiliatetxt">CasperVPN में साइन इन / अप करें और इसे मुफ्त में आज़माएं</string>
+    <string name="ShareAffiliateFbtxt">CasperVPN में साइन इन / अप करें और इसे मुफ्त में आज़माएं</string>
+    <string name="ShareAffiliateGPtxt">CasperVPN में साइन इन / अप करें और इसे मुफ्त में आज़माएं</string>
+    <string name="AffiliateShared">आपका लिंक साझा किया गया है</string>
+    <string name="Affiliate">संबद्ध</string>
+    <string name="AffiliateAccount1">खाता क्रेडेंशियल</string>
+    <string name="AffiliateAccount2">संबद्ध वेबसाइट यूआरएल</string>
+    <string name="AffiliateAccount3">चेतावनी, ये प्रमाण-पत्र सहेजे नहीं गए हैं, आपको उन्हें सहेजना चाहिए।</string>
+    <string name="AffiliateAccount4">अपना लिंक साझा करने के लिए ठीक क्लिक करें।</string>
+    <string name="Username">उपयोगकर्ता नाम</string>
+    <string name="BlockError">स्पैम कारण के लिए ईमेल पुनः भेजें अवरुद्ध है।</string>
+
+    <!-- Social Media -->
+    <string name="TweetOnTwitter">आज के साइबर खतरों के बारे में सूचित रहने के लिए ट्विटर पर हमें का पालन करें</string>
+    <string name="ShareOnFacebook">आज के साइबर खतरों के बारे में सूचित रहने के लिए हमें फेसबुक पर अनुसरण करें</string>
+    <string name="ShareOurInstagram">आज की साइबर खतरों के बारे में जानकारी रखने के लिए हमें Instagram पर का पालन करें</string>
+    <string name="ShareOurGooglePlus">आज के साइबर खतरों के बारे में सूचित रहने के लिए हमें Google+ पर अनुसरण करें</string>
+
+    <string name="ErrorTitle">त्रुटि</string>
+    <string name="InvalidRecaptcha">अमान्य रीकाप्चा</string>
+
+    <string name="allset">तुम पूरी तरह तैयार हो</string>
+    <string name="SubscriptionActivated">आपका अकाउंट ठीक से चालू हो चूका है।</string>
+    <string name="FreeBeeCenterActivated">आपकी मुफ्त प्रीमियम सेवा सफल रही थी</string>
+
+    <string name="MapView">नक्शा देखें</string>
+    <string name="Refresh">ताज़ा करना</string>
+
+    <string name="LoadingSurvey">सर्वेक्षण लोड हो रहा है ...</string>
+    <string name="WaitfinishLoading">लोड हो रहा है कृपया प्रतीक्षा करें...</string>
+    <string name="ServerList">सर्वर सूची</string>
+    <string name="Guide">मार्गदर्शक</string>
+
+    <string name="Welcome_Back">वापसी पर स्वागत है!</string>
+    <string name="UserIsBlocked">अवरुद्ध उपयोगकर्ता!</string>
+    <string name="Invalid_Login_Credentials">गलत ईमेल / या पासवर्ड।</string>
+    <string name="Email">ईमेल*</string>
+    <string name="Password">पासवर्ड*</string>
+    <string name="LOGIN">प्रविष्टि</string>
+    <string name="Login">प्रविष्टि</string>
+    <string name="ForgotPassword">पासवर्ड भूल गए?</string>
+    <string name="DontHaveAnAccount">एक खाता नहीं है?</string>
+    <string name="SignUp">साइन अप करें</string>
+    <string name="InvalidUserName">अमान्य उपयोगकर्ता नाम</string>
+    <string name="InvalidPassword">अवैध पासवर्ड</string>
+    <string name="InvalidOldPassword">अमान्य पुराने पासवर्ड</string>
+    <string name="InvalidNewPassword">अमान्य नया पासवर्ड</string>
+    <string name="KindlySetYourEmail">कृपया अपना ईमेल सेट</string>
+    <string name="ResetPassword">पासवर्ड फिर से परिभाषित</string>
+    <string name="PasswordChanged">संकेतशब्द परवर्तित।</string>
+    <string name="GoBack">वापस जाओ</string>
+    <string name="Error">त्रुटि, कृपया बाद में फिर से प्रयास करें</string>
+    <string name="UserAlreadyExists">उपयोगकर्ता पहले से मौजूद है!</string>
+    <string name="InvalidResetLink">अवैध रीसेट लिंक!</string>
+    <string name="LinkAlreadyUsed">मैं लिंक पहले से उपयोग किया गया है!</string>
+    <string name="LinkHasExpired">लिंक की समय सीमा खत्म हो गयी है!</string>
+    <string name="UserNotFound">उपयोगकर्ता नहीं मिला</string>
+    <string name="CheckYourInternet">कृपया अपने इंटरनेट कनेक्शन की जाँच करें</string>
+    <string name="CheckYourEmailReset">कृपया अपना ईमेल जांचें और रीसेट पासवर्ड लिंक पर क्लिक करें</string>
+    <string name="EmailVerified">आपने कैस्पर वीपीएन को सफलतापूर्वक साइन अप किया है, कृपया लॉगिन करें</string>
+    <string name="CheckYourEmailVerification">कृपया अपना ईमेल जांचें और पुष्टिकरण लिंक पर क्लिक करें. यदि आपको ईमेल नहीं मिला, तो अपना स्पैम फ़ोल्डर देखें \nया फिर पुष्टि ईमेल पुनः भेजें पर क्लिक करें</string>
+    <string name="ReCheckYourEmailVerification">कृपया अपना ईमेल पुनः जांचें और पुष्टिकरण लिंक पर क्लिक करें</string>
+    <string name="ResendEmail">पुष्टिकरण ईमेल पुन: भेजें</string>
+
+    <string name="PleaseVerifyYourEmail">कृपया अपना ईमेल पहले सत्यापित करें</string>
+    <string name="EmailAlreadyVerified">ईमेल पहले ही सत्यापित है</string>
+    <string name="ResettingYourPassword">आपका पासवर्ड रीसेट करना...</string>
+    <string name="RegisteringYourAccount">अपना खाता पंजीकृत कर रहा है...</string>
+    <string name="Saving">डेटा सहेज रहा है...</string>
+    <string name="Subscribing">सदस्यता लें...</string>
+    <string name="LoggingIn">प्रवेश किया...</string>
+    <string name="SigningIn">अंदर आना...</string>
+    <string name="Loading">लोड हो रहा है...</string>
+    <string name="CannotConnectCheckYourInternet">ओह, सर्वर अप्राप्य लगता है कि पुन: प्रयास करें या किसी अन्य सर्वर से कनेक्ट करें!</string>
+    <string name="CannotConnectNоServerAvailable">कनेक्ट नहीं कर सकता।\nकोई सर्वर उपलब्ध नहीं है</string>
+
+    <!-- **************************************************************************** -->
+
+
+
+    <string name="CantRemember">याद नहीं कर सकते?</string>
+    <string name="Reset">पासवर्ड फिर से परिभाषित</string>
+    <string name="Connecting">कनेक्ट करना</string>
+    <string name="Connect">संपर्क</string>
+    <string name="Disconnect">डिस्कनेक्ट</string>
+    <string name="pauseVPN">रोकें</string>
+    <string name="resumevpn">बायोडाटा</string>
+
+
+    <string name="Hello">नमस्कार, नि: शुल्क साइन अप करें और 15 दिन का निःशुल्क परीक्षण प्राप्त करें !</string>
+    <string name="ConfirmPassword">अपना पासवर्ड की पुष्टि करें*</string>
+    <string name="OldPassword">पुराने पासवर्ड</string>
+    <string name="NewPassword">आधुनिक शब्द पासवर्ड</string>
+    <string name="Register">रजिस्टर</string>
+    <string name="VerifyEmail">अपने ईमेल की पुष्टि करें</string>
+    <string name="save">सहेजें</string>
+    <string name="EditProfile">प्रोफाइल एडिट करें</string>
+    <string name="ChangePassword">पासवर्ड बदलें</string>
+    <string name="SetNewPassword">नया पासवर्ड सेट करें</string>
+    <string name="AlreadyaMember">पहले से सदस्य हैं?</string>
+    <string name="SignIn">प्रविष्टि</string>
+    <string name="YouAreIn">तुम हो</string>
+    <string name="SafeHands">सुरक्षित हाथ</string>
+    <string name="GoBackTo">वापस जाओ</string>
+    <string name="IncorrectPasswordLength">पासवर्ड कम से कम 6 अक्षर होना चाहिए</string>
+    <string name="PasswordsDoNotMatch">आपके पासवर्ड मेल नहीं खाते हैं</string>
+    <string name="NoInternetConnection">कोई इंटरनेट कनेक्शन नहीं</string>
+    <string name="PleaseCheckYourInternetConnectivity">कृपया अपने इंटरनेट कनेक्टिविटी की जांच करें</string>
+    <string name="OK">ठीक</string>
+    <string name="Cancel">रद्द करना</string>
+    <string name="CANCEL">रद्द करना</string>
+    <string name="ACCEPT">स्वीकार करना</string>
+    <string name="SubscriptionType">सदस्यता प्रकार</string>
+
+    <string name="RestartConfirmation">पुष्टिकरण पुनः आरंभ करें</string>
+    <string name="ApplicationRestart">भाषा बदलने के लिए एप्लिकेशन को पुनरारंभ करना आवश्यक है। \n क्या आप आगे बढ़ना चाहते हैं?</string>
+
+    <string name="About">के बारे में</string>
+    <string name="AutoConnect">स्टार्टअप से कनेक्ट करें</string>
+    <string name="ConnectOnWifi">वाईफ़ाई पर कनेक्ट करें</string>
+    <string name="AboutUs">हमारे बारे में</string>
+    <string name="ABOUTUS">हमारे बारे में</string>
+    <string name="AboutCasperVPN">CasperVPN बारे में</string>
+    <string name="OnlineChat">ऑनलाइन बातचीत</string>
+    <string name="ReportABug">गलती सूचित करें</string>
+    <string  name="SendLogFile">लॉग फाइल भेजें</string>
+    <string name="Subscribe">सदस्यता लें</string>
+    <string name="FrequentlyAskedQuestions">अक्सर पूछे जाने वाले प्रश्न</string>
+    <string name="GetFreePremium">पहले अभिजात वर्ग मुक्त हो जाओ</string>
+    <string name="TermsAndConditions">शर्तें</string>
+    <string name="WhatIsCasperVPN">CasperVPN क्या है</string>
+    <string name="PrivacyPolicy">गोपनीयता अधिनियम</string>
+
+    <string name="HowSubscriptionWorks">सदस्यता कैसे काम करती है</string>
+    <string name="RestorePurchases">खरीदारी वापस लौटाएं</string>
+    <string name="twocheckout">2Checkout</string>
+    <string name="GooglePay">Google Pay</string>
+    <string name="Devices">उपकरण</string>
+
+    <string name="SubscriptionStatus">सदस्यता स्थिति</string>
+    <string name="Active">सक्रिय</string>
+    <string name="Expired">समय सीमा समाप्त</string>
+
+    <string name="UPGRADE">अपग्रेड करें</string>
+    <string name="UNSUBSCRIBE">सदस्यता रद्द करें</string>
+
+    <string name="CONNECT">संपर्क</string>
+    <string name="DISCONNECT">डिस्कनेक्ट</string>
+    <string name="PING">कंप्यूटर नेटवर्क प्रबंधन</string>
+
+    <string name="SupportedProtocols">समर्थित प्रोटोकॉल</string>
+    <string name="Country">देश</string>
+    <string name="Load">लदान</string>
+    <string name="CPU">सीपीयू</string>
+    <string name="RAM">राम</string>
+    <string name="Bandwidth">बैंडविड्थ</string>
+    <string name="Distance">दूरी</string>
+
+    <string  name="Validtill">तक मान्य है</string>
+    <string  name="ExpiredIn">समय सीमा समाप्त</string>
+    <string  name="ExpiryDate">समाप्ति तिथि</string>
+    <string name="Upgrade">अपग्रेड करें</string>
+    <string  name="Downgrade">ढाल</string>
+    <string name="Unsubscribe">सदस्यता रद्द करें</string>
+    <string name="UnsubscribeConfirmation">पुष्टि रद्द करें</string>
+    <string name="UnsubscribeText">क्या आप वाकई सदस्यता समाप्त करना चाहते हैं?</string>
+
+    <string name="FeelSecure">सुरक्षित महसूस</string>
+    <string name="TrackingProtection">संरक्षण पर मुकदमा चलाने के</string>
+    <string name="CasperVPNSound">CasperVPN की आवाज</string>
+
+    <string name="ContactUs">हमसे संपर्क करें</string>
+    <string name="RateUs">हमें रेटिंग दें</string>
+    <string name="Logout">निकास</string>
+
+    <string name="SUBSCRIBE">सदस्यता लें</string>
+    <string name="Buy">खरीदें</string>
+    <string  name="Month">महीना</string>
+    <string name="OneMonth">1 महीना</string>
+    <string name="MonthlyPrice">6.99$ / माह</string>
+    <string name="SixMonth">6 माह</string>
+    <string name="HalfYearPrice">5.99$ / माह</string>
+    <string name="OneYear">1 साल</string>
+    <string name="YearlyPrice">4.99$ / माह</string>
+    <string  name="HalfYearSave">(सेव करें 16.9%)</string>
+    <string  name="YearlySave">(सेव करें 33.9%)</string>
+
+    <string name="LifetimePrice">350$</string>
+    <string name="Lifetime">जीवन काल</string>
+    <string name="LifetimesSave">(36.3% बचाएं)</string>
+    <string name="LimitedOffer">(सीमित ऑफ़र)</string>
+    <string name="Insteadof">के बजाय</string>
+
+    <string name="ThreeDevices">3 उपकरणों</string>
+    <string name="UnlimitedAccessToAllServers">सभी सर्वरों के लिए असीमित उपयोग</string>
+    <string name="UnlimitedBandwidth">असीमित बैंडविड्थ</string>
+    <string name="FiveEncryptionProtocols">5 एन्क्रिप्शन प्रोटोकॉल</string>
+
+    <string name="SubscriptionPackages">सदस्यता संकुल</string>
+
+    <string name="TimeoutTitle">टाइमआउट चेतावनी</string>
+    <string name="TimeoutMessage">आपका सत्र समाप्त हो गया है। कृपया फिर भाग लें।</string>
+
+
+    <string name="You">आप</string>
+    <string name="CasperVPNSecureYourData">अपने डेटा को सुरक्षित</string>
+    <string name="TheInternet">इंटरनेट</string>
+
+    <string name="WHATISCASPERVPN">CasperVPN क्या है</string>
+    <string name="ABOUTCASPERVPN">CasperVPN बारे में</string>
+    <string name="WhyChooseCasperVPN">कैस्पर वीपीएन क्यों चुनें</string>
+    <string name="TotalSecurity">कुल सुरक्षा</string>
+    <string name="BreakFirewalls">तोड़ फायरवॉल</string>
+    <string name="FastAndPowerfulServers">तेज और शक्तिशाली सर्वर</string>
+    <string name="Anonymity">गुमनामी</string>
+    <string name="Flexibility">लचीलापन</string>
+    <string name="Table">निम्न सारणी सूची और कैस्पर वीपीएन द्वारा समर्थित अंतर वीपीएन प्रोटोकॉल की तुलना करती है</string>
+    <string name="Feature">फ़ीचर</string>
+
+
+    <string name="Speed">स्पीड</string>
+    <string name="Fastest">सबसे तेज़</string>
+    <string name="VeryFast">बहुत तेज़</string>
+    <string name="Slow">धीमा</string>
+    <string name="Intermediate">इंटरमीडिएट</string>
+    <string name="Fast">फास्ट</string>
+    <string name="Security">सुरक्षा</string>
+    <string name="Unsecure">असुरक्षित</string>
+    <string name="Secure">सुरक्षित</string>
+    <string name="HighlySecure">अत्यधिक सुरक्षित</string>
+    <string name="Usage">प्रयोग</string>
+    <string name="EasyToUse">प्रयोग करने में आसान</string>
+    <string name="UsedPorts">प्रयुक्त पोर्ट्स</string>
+
+
+    <string name="FAQ">सामान्य प्रश्न</string>
+    <string name="WhatisVPN">वीपीएन क्या है?</string>
+    <string name="CanVpnBreakFirewall">ब्रेक फायरवॉल वीपीएन कर सकते हैं?</string>
+    <string name="IsVpnLegal">वीपीएन कानूनी है?</string>
+    <string name="AreVPNsecure">वीपीएन के सुरक्षित हैं?</string>
+    <string name="CanVpnProvidersSeeMyTraffic">वीपीएन प्रदाताओं मेरे यातायात देख सकते हैं?</string>
+    <string name="DoesMyIspSeeThatIAmConnectedToAVpn">मेरे आईएसपी देख नहीं है कि मैं एक वीपीएन से जुड़ा हूँ?</string>
+    <string name="HowCanIStartUsingCasperVPN">मैं CasperVPN का उपयोग कर कैसे शुरू कर सकते हैं?</string>
+    <string name="PRIVACYPOLICY">गोपनीयता अधिनियम</string>
+    <string name="CasperVPNPrivacyPolicy">CasperVPN गोपनीयता नीति</string>
+    <string name="WeCollect">हम एकत्र करते हैं</string>
+    <string name="InfoUsed">जानकारी प्रयुक्त</string>
+    <string name="Disclosure">प्रकटीकरण</string>
+    <string name="TERMSANDCONDITIONS">शर्तें</string>
+    <string name="General">सामान्य</string>
+    <string name="ProhibitedActivities">निषिद्ध क्रियाएँ</string>
+    <string name="SignInPolicies">नीतियाँ साइन इन</string>
+    <string name="PrivacyTermsAndPolicy">गोपनीयता नियम और नीति</string>
+    <string name="AcceptanceOfTermsAndPolicies">नियमों और नीतियों की स्वीकृतिs</string>
+
+
+    <string name="GETFREEPREMIUM">पहले अभिजात वर्ग मुक्त हो जाओ</string>
+
+
+    <string name="DiscountText">हमारी वेबसाइट के माध्यम सदस्यता लें और 10% डिस्काउंट मिलता है</string>
+    <string name="GetFreeDiscount">निःशुल्क डिस्काउंट प्राप्त करें</string>
+    <string name="OFF">छूट</string>
+
+    <string  name="SubscriptionExpired">सदस्यता समाप्त हो</string>
+    <string  name="SubscriptionExpiredText">दुर्भाग्य! ऐसा लगता है कि अपनी सदस्यता समाप्त हो गया है\nअपनी सदस्यता का नवीनीकरण संरक्षित रहने के लिए</string>
+
+    <string name="TryCasperVPNForFree">कैसपर वीपीएन मुफ़्त में आज़माएं!</string>
+    <string name="ThankYou">धन्यवाद</string>
+
+
+    <string name="pull_to_refresh_pull_label">रीफ़्रेश करने के लिए खींचें...</string>
+    <string name="pull_to_refresh_release_label">ताज़ा होने के लिए छोड़ दें...</string>
+    <string name="pull_to_refresh_refreshing_label">लोड हो रहा है...</string>
+    <string name="pull_to_refresh_tap_label">ताज़ा करने के लिए टैप करें...</string>
+    <string name="pull_to_refresh_last_updated">अपडेट किया गया: %1$s</string>
+
+
+    <string name="NoDataAvailable">कोई डेटा उपलब्ध नहीं है</string>
+    <string name="ConnectionErrorClickToRefresh">कनेक्शन त्रुटि\nताज़ा करने के लिए क्लिक करें</string>
+
+    <string name="day">दिन</string>
+    <string name="days">दिन</string>
+    <string name="One_Month">1 महीना</string>
+    <string name="Two_Months">2 महीना</string>
+    <string name="Three_Months">3 महीना</string>
+    <string name="Four_Months">4 महीना</string>
+    <string name="Five_Months">5 महीना</string>
+    <string name="Six_Months">6 महीना</string>
+    <string name="Seven_Months">7 महीना</string>
+    <string name="Eight_Months">8 महीना</string>
+    <string name="Nine_Months">9 महीना</string>
+    <string name="Ten_Months">10 महीना</string>
+    <string name="Eleven_Months">11 महीना</string>
+    <string name="One_Months">1 साल</string>
+    <string name="HardDisk">हार्ड डिस्क</string>
+    <string name="RETRY">पुन: प्रयास करें</string>
+    <string name="CLOSE">बंद करे</string>
+    <string name="PingResults">पिंग परिणाम</string>
+    <string name="PingStarted">पिंग शुरू हुआ</string>
+
+
+    <string name="GettingStarted1">CASPERVPN को आपका स्वागत है</string>
+    <string name="GettingStarted2">कनेक्ट बटन दबाएं</string>
+    <string name="GettingStarted3">कनेक्ट होने के समय एक क्षण की प्रतीक्षा करें</string>
+    <string name="GettingStarted4">डिस्नेनेक्ट बटन को एक बार दबाएं जब आप कर रहे हैं</string>
+
+
+    <string name="TipsTitle1">ऑनलाइन स्वतंत्रतां</string>
+    <string name="TipsSubTitle1">किसी भी स्थान से अपनी पसंदीदा सामग्री ब्राउज़ करें</string>
+    <string name="TipsTitle2">सूचना गोपनीयता</string>
+    <string name="TipsSubTitle2">अपने ऑनलाइन गोपनीयता के अधिकार को सुरक्षित रखें</string>
+    <string name="TipsTitle3">नेटवर्क सुरक्षा</string>
+    <string name="TipsSubTitle3">अपनी नेटवर्क गतिविधि को एन्क्रिप्ट करें</string>
+    <string name="TipsTitle4">डेटा सुरक्षा</string>
+    <string name="TipsSubTitle4">अपने डेटा को चोरी और हैकिंग से सुरक्षित रखें</string>
+
+
+    <string name="MapInstructionTop">एक सर्वर चुनें</string>
+    <string name="MapInstructionButton">या ऑटो कनेक्ट बटन पर क्लिक करें</string>
+    <string name="NO">नहीं</string>
+    <string name="YES">हाँ</string>
+    <string name="YourLocation">आपकी स्थिति</string>
+    <string name="DisconnectFrom">से डिस्कनेक्ट करें</string>
+    <string name="Unknown">अनजान</string>
+    <string name="KM">किमी</string>
+
+    <string name="GotIt">समझ गया</string>
+    <string name="TermsNotification">साइन अप करके, आप &lt;font color=\'#1dae6f\'&gt;&lt;u&gt;नियमों और शर्तों&lt;/u&gt;&lt;/font&gt; से सहमत होते हैं</string>
+
+
+
+    <string name="FreeEdition" >निशुल्क संस्करण</string>
+    <string name="CommingSoon" >जल्द आ रहा है</string>
+    <string name="NeedHelp">मदद चाहिए?</string>
+
+
+
+    <string name="WhyChooseCasperVPN_data">CasperVPN एक वीपीएन क्लाइंट सॉफ्टवेयर है कि अपने आंकड़ों को कूट जबकि इंटरनेट ब्राउज़िंग है। इस एन्क्रिप्शन के माध्यम से CasperVPN शीर्ष स्तर की सुरक्षा, कुल गुमनामी और अपने उपयोगकर्ताओं के लिए परम गोपनीयता सुनिश्चित करता है।</string>
+    <string name="TotalSecurity_Data">CasperVPN अपने कंप्यूटर और हमारे सर्वर के बीच एक एन्क्रिप्टेड सुरंग बनाता है। इस एन्क्रिप्टेड सुरंग जैसे आपका इंटरनेट सेवा प्रदाता (आईएसपी) या अपने स्थानीय वाई-फाई ऑपरेटर के रूप में हैक या आप किसी भी तीसरे पक्ष द्वारा जानकारी देखने के लिए किसी भी संभव प्रयास समाप्त। एन्क्रिप्शन एक जटिल काम है कि आम तौर पर अच्छी तरह से परीक्षण कार्यान्वयन और उन्नत गणित पर निर्भर करता है। CasperVPN अपने डेटा की रक्षा और अपने संचार को सुरक्षित करने के लिए उन्नत एन्क्रिप्शन एल्गोरिदम का उपयोग करता है।</string>
+    <string name="BreakFirewalls_Data">CasperVPN से जुड़ा है, अपने आईएसपी केवल एन्क्रिप्टेड यातायात हमारे वीपीएन सर्वर के माध्यम से गुजर देखता है, लेकिन वे डेटा डिक्रिप्ट नहीं कर सकते हैं अपनी सामग्री का विश्लेषण करने के लिए। तो बुनियादी तौर पर आप द्वारा CasperVPN के माध्यम से अपने आईएसपी द्वारा डाल किसी भी प्रतिबंध या censorships पारित कर सकते हैं। CasperVPN में हम मानते हैं कि इंटरनेट परस्पर नेटवर्क है कि नहीं प्रतिबंधित या किसी संस्था द्वारा बाध्य किया जाना चाहिए की एक स्वतंत्र वैश्विक प्रणाली है। और हमारी धारणा के समर्थन में हम, इंटरनेट स्वतंत्रता प्रदान करने के बाद से यह इस तरह से होना चाहिए CasperVPN बनाया!</string>
+    <string name="FastAndPowerfulServers_Data">CasperVPN में हम ब्रॉडबैंड इंटरनेट कनेक्शन के लिए गति और सुरक्षा का एक बहुत ही उच्च स्तर है। हम हमारे सर्वर के मालिक हैं और सबसे तेजी से वीपीएन गति देने के लिए एक वैश्विक नेटवर्क का प्रबंधन। हम शीर्ष स्तर की सुरक्षा के साथ बहुत तेजी से वीपीएन कनेक्शन देने के लिए अनुकूलित कोड लिखें। चूंकि हम अपने सर्वर ही वहाँ कोई तीसरा पक्ष है कि हमें और हमारे उपयोगकर्ता के बीच हस्तक्षेप कर सकते है। सुरक्षा और गोपनीयता हमारे संख्या एक चिंता का विषय है, इसलिए हमें विश्वास है कि कोई तीसरा पक्ष चाहिए किसी भी तरह से या परिस्थिति से उपयोगकर्ता नाम न छापने सुनिश्चित करने के लिए हमारे सर्वर से किसी के लिए उपयोग किया है। और एन्क्रिप्शन के एक अतिरिक्त परत जोड़ने के लिए हम एक तरीका है कि यहां तक ​​कि हमारे सिस्टम admen के उपयोगकर्ता गतिविधि ट्रैक नहीं कर सकते, न ही किसी भी लॉग हमारे सर्वर पर संग्रहीत कर रहे हैं में हमारे सॉफ्टवेयर बनाया।</string>
+    <string name="Anonymity_Data">कैस्पर वीपीएन ने आपको एक अलग स्थान या देश में जगह दी है। कैस्पर वीपीएन का उपयोग करके आप अपने वास्तविक आईपी पते और आपके भौगोलिक स्थान को छिपाकर डिजिटल पदचिह्न छोड़ने से बच सकते हैं। कैस्पर वीपीएन का मानना है कि हर किसी को अपनी व्यक्तिगत जानकारी निजी रखने का अधिकार है</string>
+    <string name="Flexibility_Data">CasperVPN आप सुरक्षित एन्क्रिप्शन प्रोटोकॉल का एक सेट का उपयोग कर इंटरनेट ब्राउज़ करने के लिए अनुमति देता है। उपयोगकर्ता के हिसाब से इन प्रोटोकॉल के बीच स्विच और चुनें जो वीपीएन प्रोटोकॉल अपनी गतिविधि के अनुसार सबसे उपयुक्त है सकते हैं।</string>
+    <string name="AboutCasperVPN_Data">CasperVPN सेवा की गुणवत्ता और उपयोगकर्ता के अनुभव के एक उच्च स्तर प्रदान करके पारंपरिक वीपीएन समाधान परे चला जाता है। हमारा लक्ष्य है, लेकिन एक तेज, सुरक्षित और विश्वसनीय वीपीएन सेवा देने से हमारे ग्राहक की उम्मीद से अधिक करने के लिए हमारे ग्राहकों की संतुष्टि को पूरा करने के लिए ही सीमित नहीं है। हम मानते हैं कि हर उपयोगकर्ता, उसकी गोपनीयता की रक्षा और आभासी प्रतिबंध और फायरवॉल को दरकिनार जब इंटरनेट का उपयोग करने के अलावा चोरी और उकतानेवाला से अपनी जानकारी को छिपाने के लिए अधिकार नहीं है। हमारा उद्देश्य के लिए लक्षित करने के लिए, हम एन्क्रिप्शन, हमारे ग्राहकों के लिए गुमनामी और शीर्ष स्तर वीपीएन सुरक्षा सुनिश्चित करने के लिए एक अत्यंत सुरक्षित बुनियादी ढांचे का निर्माण किया है। हमारी ईमानदारी मिशन के लिए हमारे उपयोगकर्ता की गोपनीयता की रक्षा है। इस दृष्टि पर बिल्डिंग, हम एक सॉफ्टवेयर है कि हमारे सिस्टम में किसी भी लॉग दुकान नहीं है बनाया। इससे भी अधिक हमारी बुनियादी सुविधाओं के लिए एक तरह जहां सिस्टम ऑपरेटरों खुद को उपयोगकर्ता गतिविधि पर नज़र रखने में सक्षम नहीं हैं में बनाया गया है।</string>
+    <string name="WhatisVPN_Data">इंटरनेट यातायात जनता के संपर्क में है। थर्ड पार्टी ट्रैकर्स, चोरों और हैकर्स आपके आईपी पते के माध्यम से अपनी पहचान अपनी गतिविधियों की पहचान, अपने स्थान का पता लगाने और ट्रैक करने में सक्षम हो जाएगा। वर्चुअल प्राइवेट नेटवर्क (वीपीएन) ग्राहकों और वीपीएन सर्वर जिसमें सभी ग्राहक यातायात समझाया और एक सुरक्षित सुरंग के माध्यम से एन्क्रिप्टेड है के बीच एक सुरक्षित निजी नेटवर्क है। एक वीपीएन, इंटरनेट सेवा प्रदाता (आईएसपी) का उपयोग करके, सरकार और हैकर्स देखने के लिए या अपने डेटा को ट्रैक करने में सक्षम नहीं होगा।</string>
+    <string name="CanVpnBreakFirewall_Data">एक वीपीएन का उपयोग करके, फायरवॉल जब गहरी पैकेट निरीक्षण का उपयोग करते हुए भी अपने डेटा को ब्लॉक करने में सक्षम नहीं होगा। वीपीएन उपयोग करते हुए, अपने डेटा वीपीएन सुरंग के माध्यम से एन्क्रिप्टेड किया जाएगा, यह फायरवॉल एन्क्रिप्टेड पैकेट का विश्लेषण या उपयोगकर्ता गतिविधि को देखने के लिए असंभव है। इस प्रकार वीपीएन ग्राहकों तक पहुँच सकते हैं जो कुछ भी वे फायरवॉल से अदृश्य चाहते हैं।</string>
+    <string name="IsVpnLegal_Data">देशों से ज्यादातर के लिए, वीपीएन के कानूनी रहे हैं। उपयोगकर्ता जनता से उनकी गोपनीयता की रक्षा और अपने डेटा को छिपाने के लिए अधिकार नहीं है। वीपीएन है कि एक उपकरण है यह भी सुनिश्चित करें कि उनके डाटा संरक्षित और सुरक्षित है सुनिश्चित करने के क्रम में कंपनियों और संगठन और यहां तक ​​कि सरकारों द्वारा प्रयोग किया जाता है।</string>
+    <string name="AreVPNsecure_Data">एक वीपीएन के माध्यम से, उपयोगकर्ताओं को एक आभासी आईपी पते और आभासी स्थान है, जिसका अर्थ है कि आपके सभी गतिविधि, अज्ञात और एक नज़र लेने के लिए किसी को बधाई देने के लिए अर्थहीन है का उपयोग करके अपनी पहचान छिपा कर सकते हैं। हालांकि एक वीपीएन चुनने से पहले आप अपने वीपीएन प्रदाता पर भरोसा करने के लिए है, और यह है कि क्या हम CasperVPN, विश्वास दायित्व पर प्रदान करते है और सुरक्षा के लिए हम क्या हिस्सा हमारे clients.CasperVPN कोई लॉग रहता है के साथ है। उपयोगकर्ता कुछ भी वह क्या करना चाहता है करने के लिए स्वतंत्र है, जबकि उसकी व्यक्तिगत डेटा पूरी तरह से सुरक्षित हो सकता है और यहां तक ​​कि वीपीएन ऑपरेटरों को पूरी तरह से निजी रहेगा।</string>
+    <string name="CanVpnProvidersSeeMyTraffic_Data">तकनीकी तौर पर हाँ, यह बहुत महत्वपूर्ण है कि उपयोगकर्ताओं को अपने वीपीएन प्रदाताओं पर भरोसा है। वास्तव में वीपीएन उन पर भरोसा वीपीएन प्रदाताओं कि मुक्त वीपीएन सेवाएं प्रदान करता है से बचना चाहिए। CasperVPN का उपयोग कर उपयोगकर्ताओं को जो किसी भी वीपीएन प्रदाताओं पर भरोसा नहीं है के लिए एक शानदार विकल्प है। CasperVPN उपयोगकर्ता की गोपनीयता बनाए रखने के लिए और पूर्ण सुरक्षा प्रदान करते हैं और security.At CasperVPN, हम किसी भी परिस्थिति में हमारे उपयोगकर्ताओं के लिए किसी भी ऑनलाइन गतिविधि लॉग रखना नहीं है यह अत्यंत महत्वपूर्ण है। CasperVPN एक तरीका है कि हमारे वीपीएन ऑपरेटरों खुद को उन पर नज़र रखने या किसी लॉग भंडारण के लिए सक्षम नहीं हैं में अपने वीपीएन बुनियादी ढांचे का निर्माण किया है। और हमारे लिए आदेश में हमारे उपयोगकर्ताओं को और अधिक सुरक्षित महसूस करते हैं और विश्वास है करने के लिए हम तैयार हैं और खुले हमारे उपयोगकर्ताओं के जवाब और डेटा हमारे अत्यंत सुरक्षित बुनियादी ढांचे साबित जब कभी जरूरत दे रहे हैं। दिन सुरक्षा, दायित्व और गोपनीयता के अंत में है कि हम क्यों मौजूद हैं।</string>
+    <string name="DoesMyIspSeeThatIAmConnectedToAVpn_Data">चूंकि CasperVPN OpenVPN प्रोटोकॉल प्रदान करता है, क्या आईएसपी देख सकते हैं कि उपयोगकर्ता एक सुरक्षित सॉकेट लेयर (HTTPS) जो जैसे गूगल, फेस बुक और पेपैल के रूप में वेबसाइटों के अधिकांश द्वारा सामान्य और प्रयोग किया जाता है का उपयोग कर एक सुरक्षित वेबसाइट ब्राउज़ कर रही है।</string>
+    <string name="HowCanIStartUsingCasperVPN_Data">बस आप डाउनलोड करने के लिए और अपने डिवाइस पर आवेदन स्थापित करें, और तब कनेक्ट बटन दबाएँ है। असल में यह इतना आसान है!</string>
+    <string name="CasperVPNPrivacyPolicy_Data">CasperVPN में हम विश्वास करते हैं कि गोपनीयता और हमारे उपयोगकर्ताओं की सुरक्षा को परम महत्व का है। इसलिए हम आपकी गोपनीयता और सुरक्षा की रक्षा के लिए सख्त प्रशासनिक नीतियों की खरीद।</string>
+    <string name="WeCollect_Data">ई-मेल पता और भुगतान डेटा। ग्राहकों को जो वैकल्पिक नियंत्रण कक्ष का उपयोग एक अस्थायी कुकी प्राप्त होगा। गूगल गूगल एनालिटिक्स में मूल रूप से एक कुकी स्टोर कर सकते हैं। गूगल के प्लगइन के साथ बाहर निकलना करने के लिए स्वतंत्र महसूस हो रहा है।</string>
+    <string name="InfoUsed_Data">ईमेल भुगतान प्रमाणपत्र और निजी इंटरनेट एक्सेस के लिए अपनी जानकारी को सब्सक्राइब करने के लिए प्रयोग किया जाता है और प्रोमो के लिए ही प्रदान करता है। सभी भुगतान डेटा ग्राहक लॉगिन भुगतान और निरस्तीकरण का प्रबंधन करने के लिए उपयोग किया जाता है। कुकीज़ और गूगल एनालिटिक्स डेटा में सुधार लाने और हमारी वेबसाइट का परीक्षण करने के लिए इस्तेमाल कर रहे हैं। इसके अलावा हमारे सर्वर लॉग नियमित रूप से काट दिया जाता है। CasperVPN इकट्ठा या अपने वर्चुअल प्राइवेट नेटवर्क पर किसी भी यातायात लॉग इन नहीं करता।</string>
+    <string name="PrivacyPolicyDisclosure_Data">CasperVPN अपने उपयोगकर्ता की गोपनीयता के अधिकारों की रक्षा के लिए और सब ठीक सम्मन अनुरोध के साथ उन्हें प्रदान करने का प्रयास। सभी अनुपालन में अच्छी तरह से संशोधित और हमारे कानूनी विभाग से छानबीन कर रहे हैं। हम उपयोगकर्ता जानकारी प्रदान करने के लिए कहा जाता है, तो हम जो भी कारण या दावे के लिए इस जानकारी का खुलासा करने के लिए हमें का अनुरोध किसी भी पार्टी द्वारा किसी भी प्रयास के खिलाफ हमारे सभी संसाधन के साथ लड़ना होगा। इसके अलावा इस अनुरोध को एक अदालत के आदेश से संरक्षित किया जाना चाहिए वरना हम इसे ध्यान में नहीं ले जाएगा। CasperVPN किसी भी अवैध या असंवैधानिक कृत्य हम सिर्फ हमारे उपयोगकर्ता की गोपनीयता की रक्षा करने में विश्वास में भाग नहीं ले रहा है। CasperVPN खुलासे को पहले से ही इस गोपनीयता नीति में किए गए एक तरफ से किसी भी तीसरे पक्ष के साथ अपने निजी जानकारी का हिस्सा नहीं है। हालांकि, तीसरे पक्ष के लिए हमसे संपर्क करने के लिए स्वतंत्र महसूस हो रहा है के साथ करता है, तो आप कैसे CasperVPN उपयोगकर्ता की व्यक्तिगत जानकारी साझा नहीं करता में पूछताछ करना चाहते हैं।</string>
+    <string name="General_Data">ये सेवा की शर्तें कि आप दर्ज की और CasperVPN की सेवाओं का उपयोग करके पर सहमत हैं। यह केवल इन शर्तों है कि CasperVPN उन का उपयोग करने के service.CasperVPN एक सेवा आपराधिक गतिविधियों के लिए इस्तेमाल नहीं किया जा रहा है की अनुमति देता है के अधीन है। यह एक इंटरनेट सुरक्षा और गोपनीयता सेवा है। आप किसी भी अधिकार क्षेत्र है कि तुम से होने वाले कर रहे हैं के किसी भी कानून का उल्लंघन नहीं करने के लिए स्वीकार करते हैं। यह उपयोगकर्ताओं को जिम्मेदारी को जानते हैं और किसी भी और सभी प्रासंगिक किसी भी अधिकार क्षेत्र या स्थान है कि आप और आपके कार्यों की चिंताओं से संबंधित कानूनों को समझने के लिए है। CasperVPN किसी भी तरह से जिम्मेदार नहीं हो सकता है या अपने उपयोगकर्ताओं के द्वारा किया कार्यों के लिए बनेगी। इस नुकसान के लिए किसी भी आपराधिक या सिविल दायित्व, मार डाला या किसी भी व्यक्ति द्वारा CasperVPN सेवाओं के लिए भुगतान किसी भी पैसे से परे नहीं मार डाला शामिल हैं। आप अनाधिकृत उपयोग से अपने उपयोगकर्ता नाम / पासवर्ड और CasperVPN प्रणाली को बनाए रखने के लिए सहमत हैं। आप जहां अपने उपयोगकर्ता नाम / पासवर्ड वीपीएन संबंध स्थापित करने के लिए इस्तेमाल किया गया था कि CasperVPN पर होता है हर एक कार्रवाई के लिए जिम्मेदार हैं। आप स्पैम भेजने, भेजने ऑप्ट में ई-मेल, खुले रिले या खुले परदे के पीछे के लिए स्कैनिंग बंदरगाह स्कैनिंग के लिए हमारी सेवाओं का उपयोग करने के लिए सहमत नहीं है, अवांछित ई-मेल या विशाल मात्रा भले ही में भेजे गए किसी भी संस्करण या ई-मेल के प्रकार भेजने के ई-मेल अन्त में एक और सर्वर के माध्यम से भेजा है। यह हमारी सेवा से किसी भी पॉप-अप शुरू करने के लिए मना किया है। आप किसी भी तरह से हमला करने के लिए नहीं स्वीकार या हमारी सेवाओं का उपयोग करते हुए किसी भी अन्य नेटवर्क या कंप्यूटर के रूप में। CasperVPN या बच्चों के शोषण फ़ोटोग्राफ़ी, डिजिटल के बारे में किसी भी अन्य तरीके से असहिष्णु है।</string>
+    <string name="Usage_Data">आप दे सकते हैं या साझा करने के लिए नहीं दूसरों के लिए अपने यूज़रनेम और पासवर्ड स्वीकार करते हैं। CasperVPN, मालिकों, कर्मचारियों, एजेंटों और दूसरों है कि CasperVPN सेवाओं के साथ शामिल कर रहे हैं किसी भी तरह से नहीं कर रहे हैं या किसी भी तरह से मार डाला मार डाला है या नहीं के किसी भी नुकसान के लिए उत्तरदायी फार्म, जिसके परिणामस्वरूप या के माध्यम से या CasperVPN सेवाओं के साथ पंजीकृत किसी भी खाते के उपयोग से उत्पन्न होने वाली। किसी भी घटना में CasperVPN अपने उपयोगकर्ताओं द्वारा सेवा की मिस उपयोग की वजह से किसी भी नुकसान के लिए उत्तरदायी नहीं होगा। और यह भी शामिल है, लेकिन करने के लिए, वकील की फीस या अदालत सीमित नहीं है किसी भी कानून है कि यह अन्यथा संबोधित कर सकते हैं की परवाह किए बगैर खर्च होती है।</string>
+    <string name="ProhibitedActivities_Data">आपराधिक गतिविधि - किसी भी ग्राहक जो इन आपराधिक कार्यों के किसी भी करता है: चोरी क्रेडिट कार्ड, क्रेडिट कार्ड धोखाधड़ी, पेपैल धोखाधड़ी, बैंक धोखाधड़ी, ई-गोल्ड धोखाधड़ी, Paysera धोखाधड़ी, WebMoney धोखाधड़ी, Bitcoin धोखाधड़ी, मेल धोखाधड़ी, जबरन वसूली, ब्लैकमेल का उपयोग करते हैं, अपहरण, बलात्कार, हत्या, चोरी क्रेडिट कार्ड, चोरी के सामान की बिक्री, ईमेल या ऑपरेटिंग वेबसाइटों के लिए, किसी भी रूप में स्पैमिंग, या हमारी सेवा के माध्यम से हमारे संसाधनों का उपयोग कर भेजने के पहचान की चोरी प्रदर्शन करने के लिए हैकिंग को नुकसान पहुँचाने फ़िशिंग, की बिक्री समाप्त साथ छोड़ देता है लेखा। इस पूरे समझौता है। CasperVPN समय-समय पर सेवा की शर्तों को फिर से लिखना कर सकते हैं। सेवा की शर्तें समय यह हमारी वेबसाइट पर अद्यतन किया जाता है से सक्रिय हो जाते हैं। यह ग्राहक की जिम्मेदारी एक while.CasperVPN में नई सेवा की शर्तों हर एक बार जांच करने के लिए तुरन्त किसी भी वापसी और सूचना के बिना सेवा की शर्तों का उल्लंघन करने के लिए किसी भी उपयोगकर्ता के खाते को समाप्त कर सकता है। या आगे स्पष्टीकरण या उपयोगकर्ता की जांच जब तक खाते को निलंबित। अपने खाते को निलंबित कर दिया गया है, तो आप देखने के लिए अगर मामला सुधारा जा सकता है क्रम में हमसे संपर्क करना चाहिए। हम स्थायी रूप से एक उपयोगकर्ता खाते को बंद करने से पहले हम समय की एक प्रमाणित अवधि इंतजार और सभी बिलिंग को बंद कर दिया जाएगा।</string>
+    <string name="SignInPolicies_Data">CasperVPN की निगरानी नहीं करता, किसी भी वीपीएन उपयोगकर्ता के लिए दुकान या रिकार्ड लॉग। हम कनेक्शन समय टिकटों, बैंडविड्थ उपयोग किया जाता है, यातायात लॉग या आईपी पतों की दुकान नहीं है। हम सेंसरशिप के किसी भी रूप से संबंधित नहीं हैं और हम किसी भी तीसरे पक्ष को अपनी व्यक्तिगत जानकारी दूर कभी नहीं देंगे। हम किसी भी जानकारी के अनुरोध को पूरा नहीं जब तक कि यह सक्षम न्यायालय की एक अदालत के आदेश के साथ आता है। क्योंकि वे एक अत्यंत सुरक्षित वातावरण में हैं कोई भी हमारे सर्वरों के लिए उपयोग हो सकता है। इसके अलावा कोई भी उपयोगकर्ता गतिविधि हमारे सर्वर पर संग्रहीत किया जाएगा। हम कर रहे हैं और हमेशा आपकी गोपनीयता की रक्षा करेगा।</string>
+    <string name="PrivacyTermsAndPolicy_Data">CasperVPN रखने के लिए या किसी भी लॉग दुकान नहीं है। हालांकि, हम उन है कि हमारे अस्तित्व और उपयोगकर्ता के समर्थन के लिए आवश्यक हैं के बारे में कुछ जानकारी रखने की जरूरत है। • उपयोगकर्ता ई-मेल - नवीनतम CasperVPN खबर भेजने के लिए और एक खो पासवर्ड निकालते हैं। • यूजर का नाम है - यह एक वीपीएन कनेक्शन बनाने के लिए आवश्यक है। • भुगतान जानकारी - हम एक वापसी के अनुरोध के मामले में बिलिंग जानकारी स्टोर।</string>
+    <string name="TermsAndConditionDisclosure_Data">आप हमसे संपर्क करके किसी भी समय अपने खाते को रद्द करने का अधिकार है। खाते में पैसा आप वीपीएन अकाउंट में बिताया है रद्द कर दिया जाता है, तो प्रतिपूर्ति नहीं की जाएगी। आपका खाता आदेश रद्द करने के लिए सक्रिय होना चाहिए।</string>
+    <string name="AcceptanceOfTermsAndPolicies_Data">किसी भी CasperVPN सेवा में प्रवेश करके, आप CasperVPN नियम और reference.These नियमों और शर्तों के द्वारा शामिल अन्य सभी नीतियों सहित सेवा की शर्तों से सहमत समय समय पर अद्यतन किया जा सकता है, इन नियमों और शर्तों आप भी भविष्य के बारे में कोई जानकारी स्वीकार कर रहे हैं स्वीकार कर इस समझौते में परिवर्तन करता है, तो लागू होता है।</string>
+
+    <string name="paymentsuccessful">खाता सक्रिय किया गया</string>
+    <string name="DOWNGRADE">अधोगति</string>
+    <string name="SelectPaymentMethod">भुगतान विधि का चयन करें</string>
+    <string name="UpgradeInfo">अपग्रेड करने के लिए, कृपया अपने वर्तमान पैकेज समाप्त होने तक प्रतीक्षा करें, \n अपने Google खाता प्रोफ़ाइल से पुनरावर्ती ऑर्डर बंद करने के लिए मत भूलना</string>
+    <string name="DowngradeInfo">डाउनग्रेड के लिए, कृपया अपने वर्तमान पैकेज समाप्त होने तक इंतजार करें, \n अपने Google खाता प्रोफ़ाइल से पुनरावर्ती ऑर्डर बंद करने के लिए मत भूलें</string>
+    <string name="NoteInfo">कृपया अपने मौजूदा पैकेज समाप्त होने तक प्रतीक्षा करें</string>
+    <string name="WrongAccount">कृपया उस खाते का उपयोग करें जिसे आपने पहले सक्रिय करने के लिए हमारी सेवाओं के साथ सदस्यता ली थी।</string>
+    <string name="TURNOFFRECURRING">फिर से चलना बंद करें</string>
+    <string name="NOTE">ध्यान दें</string>
+    <string name="ExpiryDateMessage">आपकी परीक्षण अवधि समाप्त होने के बाद आपके खाते का शुल्क लिया जाएगा, यदि आपकी परीक्षण अवधि पहले ही समाप्त हो गई है, तो आप स्वचालित रूप से सक्रिय हो जाएंगे</string>
+    <string name="PACKAGES">संकुल</string>
+    <string name="Package">पैकेज</string>
+    <string name="REFRESH">रीफ़्रेश करें</string>
+    <string name="Ourservice">आप हमारी सेवा की शर्तों को देख सकते हैं <font color='red'>here</font></string>
+    <string name="here">यहाँ</string>
+    <string name="HowsubscriptionworksInfo">खरीद के पुष्टिकरण पर भुगतान को Coogle Play store खाते से लिया जाएगा। \n \n सब्सक्रिप्शन स्वत: नवीनीकृत नहीं हो जाता है, जब तक कि वर्तमान अवधि के अंत से कम से कम 24 घंटे पहले स्वत: नवीनीकरण बंद नहीं हो जाता है। \n \n चालू अवधि के पहले 24 घंटे के भीतर नवीनीकरण के लिए राशि का भुगतान किया जाएगा और नवीनीकरण की लागत की पहचान की जाएगी। \n \n उपयोगकर्ता द्वारा सदस्यता को प्रबंधित किया जा सकता है और खरीदारी के बाद उपयोगकर्ता की खाता सेटिंग पर जाकर स्वत: नवीनीकरण बंद किया जा सकता है।</string>
+
+    <string name="ErrorContactUs">त्रुटि, कृपया ऑनलाइन चैट का उपयोग करके या support@caspervpn.com पर ईमेल भेजकर संपर्क करें</string>
+    <string name="Waitingrewardvideo">पुरस्कारित वीडियो उपलब्ध नहीं है, कृपया फिर से प्रयास करें</string>
+
+    <string name="SIGNUP">साइन अप करें</string>
+    <string name="SIGNIN">साइन इन करें</string>
+    <string name="chooseurpackage">कैस्पर वीपीएन में आपका स्वागत है, \n अपने निःशुल्क परीक्षण को सक्रिय करने के लिए टूर्नामेंट का चयन करें। \n आप अपनी सदस्यता समाप्त होने से 27 घंटे पहले अपनी सदस्यता को रद्द कर सकते हैं।</string>
+    <string name="Signinrequiredsubscription">कैस्पर वीपीएन में आपका स्वागत है, \n अपने खाते को पंजीकृत करने के लिए, \n अपने निशुल्क परीक्षण शुरू करने के लिए अपना पैकेज चुनें</string>
+    <string name="NewAppVersion">नया संस्करण मिला</string>
+    <string name="NewAppVersionDesc">एक नया संस्करण उपलब्ध है, \n अपने ऐप को स्पष्ट रूप से अपडेट करें</string>
+    <string name="UPDATE">अद्यतन करें</string>
+    <string name="SubscriptionRequiredText">कैस्पर वीपीएन में आपका स्वागत है, \n अपना निःशुल्क परीक्षण शुरू करने के लिए अपना पैकेज चुनें, \n अपने निशुल्क परीक्षण को सक्रिय करने के लिए साइन-इन / अप करें</string>
+
+    <string name="CofirmationEmail">पुष्टिकरण ईमेल</string>
+
+
+    <string name="verify">सत्यापित करें</string>
+    <string name="HowsubscriptionworksInfo1">खरीद के पुष्टिकरण पर भुगतान को Coogle Play store खाते से लिया जाएगा।</string>
+    <string name="HowsubscriptionworksInfo2">सब्सक्रिप्शन स्वचालित रूप से नवीनीकृत हो जाता है, जब तक कि चालू अवधि के अंत से कम से कम 24 घंटे पहले ऑटो-नवीनीकरण बंद नहीं हो जाता है।</string>
+    <string name="HowsubscriptionworksInfo3">चालू अवधि के पहले 24 घंटों के भीतर नवीनीकरण के लिए खाते पर शुल्क लिया जाएगा, और नवीकरण की लागत की पहचान करेगा।</string>
+    <string name="HowsubscriptionworksInfo4">उपयोगकर्ता द्वारा सदस्यता का प्रबंधन किया जा सकता है और खरीद के बाद उपयोगकर्ता के खाता सेटिंग्स पर जाकर ऑटो-नवीनीकरण बंद किया जा सकता है।</string>
+    <string name="HowsubscriptionworksInfo5">निशुल्क परीक्षण अवधि के किसी भी अप्रयुक्त भाग को, यदि पेशकश की जाती है, तो उस समय जब्त कर दिया जाएगा जब उपयोगकर्ता उस प्रकाशन की सदस्यता, जहां लागू हो।</string>
+    <string name="YourPrivacy">आपकी गोपनीयता</string>
+    <string name="YourPrivacyInfo">हम हमारी सेवा संचालित करने के लिए आवश्यक न्यूनतम राशि एकत्र करने का प्रयास करते हैं आप हमारी गोपनीयता नीति देख सकते हैं <font color='blue'>यहाँ</font></string>
+</resources>

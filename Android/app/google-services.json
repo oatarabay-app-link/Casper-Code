@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "683891339366",
+    "firebase_url": "https://caspervpn-56ed4.firebaseio.com",
+    "project_id": "caspervpn-56ed4",
+    "storage_bucket": "caspervpn-56ed4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:683891339366:android:a144f6e59bfe0f01",
+        "android_client_info": {
+          "package_name": "com.caspervpn.vpn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "683891339366-6u7iv63b83t66icugq5rfhrb9r63o38k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.caspervpn.vpn",
+            "certificate_hash": "4b28d35c07c4bcfff60097f3fe72354831d6fb03"
+          }
+        },
+        {
+          "client_id": "683891339366-vau78shk2co51m279vo92sobdomr4q3i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDEFCKtWvQoKp-iESr6kJ81lcrZt2euRk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "683891339366-vau78shk2co51m279vo92sobdomr4q3i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

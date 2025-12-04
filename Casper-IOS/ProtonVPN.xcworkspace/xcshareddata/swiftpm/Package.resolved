@@ -1,0 +1,376 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire",
+        "state": {
+          "branch": null,
+          "revision": "d120af1e8638c7da36c8481fd61a66c0c08dc4fc",
+          "version": "5.4.4"
+        }
+      },
+      {
+        "package": "AlamofireImage",
+        "repositoryURL": "https://github.com/Alamofire/AlamofireImage",
+        "state": {
+          "branch": null,
+          "revision": "98cbb00ce0ec5fc8e52a5b50a6bfc08d3e5aee10",
+          "version": "4.2.0"
+        }
+      },
+      {
+        "package": "Ccrypt_blowfish",
+        "repositoryURL": "https://github.com/tannerdsilva/Ccrypt_blowfish.git",
+        "state": {
+          "branch": null,
+          "revision": "abd2bf4ca4730e05d04e9a096f3f6300653ee40c",
+          "version": "1.3.0"
+        }
+      },
+      {
+        "package": "combine-schedulers",
+        "repositoryURL": "https://github.com/pointfreeco/combine-schedulers",
+        "state": {
+          "branch": null,
+          "revision": "9dc9cbe4bc45c65164fa653a563d8d8db61b09bb",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "CryptoSwift",
+        "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift",
+        "state": {
+          "branch": null,
+          "revision": "32f641cf24fc7abc1c591a2025e9f2f572648b0f",
+          "version": "1.7.2"
+        }
+      },
+      {
+        "package": "DictionaryCoder",
+        "repositoryURL": "https://github.com/almazrafi/DictionaryCoder.git",
+        "state": {
+          "branch": null,
+          "revision": "c340c90eeb4ff318ccea992e57e9ace8aaf3357d",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "EllipticCurveKeyPair",
+        "repositoryURL": "https://github.com/agens-no/EllipticCurveKeyPair",
+        "state": {
+          "branch": null,
+          "revision": "944ae5c89ca045e9f1a113b736706c73fc51d1c2",
+          "version": "2.0.0"
+        }
+      },
+      {
+        "package": "GSMessages",
+        "repositoryURL": "https://github.com/wxxsw/GSMessages",
+        "state": {
+          "branch": null,
+          "revision": "88d895a9c889b310dd498ccb897a5aac4f3f2b1e",
+          "version": "1.7.5"
+        }
+      },
+      {
+        "package": "JSONSchema",
+        "repositoryURL": "https://github.com/kylef/JSONSchema.swift",
+        "state": {
+          "branch": null,
+          "revision": "d14de4b2d9205068c9db89c00d097ca43c897000",
+          "version": "0.6.0"
+        }
+      },
+      {
+        "package": "KeychainAccess",
+        "repositoryURL": "https://github.com/kishikawakatsumi/KeychainAccess",
+        "state": {
+          "branch": null,
+          "revision": "84e546727d66f1adc5439debad16270d0fdd04e7",
+          "version": "4.2.2"
+        }
+      },
+      {
+        "package": "Lottie",
+        "repositoryURL": "https://github.com/airbnb/lottie-ios",
+        "state": {
+          "branch": null,
+          "revision": "45517c3cfec9469bbdd4f86e32393c28ae9df0bc",
+          "version": "4.3.3"
+        }
+      },
+      {
+        "package": "OHHTTPStubs",
+        "repositoryURL": "https://github.com/AliSoftware/OHHTTPStubs",
+        "state": {
+          "branch": null,
+          "revision": "12f19662426d0434d6c330c6974d53e2eb10ecd9",
+          "version": "9.1.0"
+        }
+      },
+      {
+        "package": "openssl-apple",
+        "repositoryURL": "https://github.com/passepartoutvpn/openssl-apple",
+        "state": {
+          "branch": null,
+          "revision": "757c074af45e4f2514fe63f649ccdde966183e90",
+          "version": "1.1.11700"
+        }
+      },
+      {
+        "package": "PathKit",
+        "repositoryURL": "https://github.com/kylef/PathKit.git",
+        "state": {
+          "branch": null,
+          "revision": "3bfd2737b700b9a36565a8c94f4ad2b050a5e574",
+          "version": "1.0.1"
+        }
+      },
+      {
+        "package": "PlistUtil",
+        "repositoryURL": "https://github.com/protonjohn/plistutil",
+        "state": {
+          "branch": null,
+          "revision": "9b085081f65a8b03c08d1a59f8afd500265de3a6",
+          "version": "0.0.2"
+        }
+      },
+      {
+        "package": "Reachability",
+        "repositoryURL": "https://github.com/ashleymills/Reachability.swift",
+        "state": {
+          "branch": null,
+          "revision": "c01bbdf2d633cf049ae1ed1a68a2020a8bda32e2",
+          "version": "5.1.0"
+        }
+      },
+      {
+        "package": "SDWebImage",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImage",
+        "state": {
+          "branch": null,
+          "revision": "7f9fb5d43ecd4aa714c00746f54873f354403438",
+          "version": "5.15.8"
+        }
+      },
+      {
+        "package": "Sentry",
+        "repositoryURL": "https://github.com/getsentry/sentry-cocoa",
+        "state": {
+          "branch": null,
+          "revision": "3b9a8e69ca296bd8cd0e317ad7a448e5daf4a342",
+          "version": "8.18.0"
+        }
+      },
+      {
+        "package": "Sparkle",
+        "repositoryURL": "https://github.com/sparkle-project/Sparkle",
+        "state": {
+          "branch": null,
+          "revision": "631846cc829f0f0cae327df9bafe5a32b7ddadce",
+          "version": "2.4.0"
+        }
+      },
+      {
+        "package": "Spectre",
+        "repositoryURL": "https://github.com/kylef/Spectre.git",
+        "state": {
+          "branch": null,
+          "revision": "26cc5e9ae0947092c7139ef7ba612e34646086c7",
+          "version": "0.10.1"
+        }
+      },
+      {
+        "package": "swift-argument-parser",
+        "repositoryURL": "https://github.com/apple/swift-argument-parser",
+        "state": {
+          "branch": null,
+          "revision": "c8ed701b513cf5177118a175d85fbbbcd707ab41",
+          "version": "1.3.0"
+        }
+      },
+      {
+        "package": "swift-atomics",
+        "repositoryURL": "https://github.com/apple/swift-atomics.git",
+        "state": {
+          "branch": null,
+          "revision": "6c89474e62719ddcc1e9614989fff2f68208fe10",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "swift-case-paths",
+        "repositoryURL": "https://github.com/pointfreeco/swift-case-paths",
+        "state": {
+          "branch": null,
+          "revision": "5da6989aae464f324eef5c5b52bdb7974725ab81",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "swift-clocks",
+        "repositoryURL": "https://github.com/pointfreeco/swift-clocks",
+        "state": {
+          "branch": null,
+          "revision": "d1fd837326aa719bee979bdde1f53cd5797443eb",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "swift-collections",
+        "repositoryURL": "https://github.com/apple/swift-collections",
+        "state": {
+          "branch": null,
+          "revision": "937e904258d22af6e447a0b72c0bc67583ef64a2",
+          "version": "1.0.4"
+        }
+      },
+      {
+        "package": "swift-composable-architecture",
+        "repositoryURL": "https://github.com/pointfreeco/swift-composable-architecture",
+        "state": {
+          "branch": null,
+          "revision": "f62ba37cc0c51acb89f6dd1f552f6a1f9c58027c",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "swift-concurrency-extras",
+        "repositoryURL": "https://github.com/pointfreeco/swift-concurrency-extras",
+        "state": {
+          "branch": null,
+          "revision": "ea631ce892687f5432a833312292b80db238186a",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "swift-custom-dump",
+        "repositoryURL": "https://github.com/pointfreeco/swift-custom-dump",
+        "state": {
+          "branch": null,
+          "revision": "edd66cace818e1b1c6f1b3349bb1d8e00d6f8b01",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "swift-dependencies",
+        "repositoryURL": "https://github.com/pointfreeco/swift-dependencies.git",
+        "state": {
+          "branch": null,
+          "revision": "4e1eb6e28afe723286d8cc60611237ffbddba7c5",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "swift-identified-collections",
+        "repositoryURL": "https://github.com/pointfreeco/swift-identified-collections",
+        "state": {
+          "branch": null,
+          "revision": "d1e45f3e1eee2c9193f5369fa9d70a6ddad635e8",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "swift-log",
+        "repositoryURL": "https://github.com/apple/swift-log.git",
+        "state": {
+          "branch": null,
+          "revision": "6fe203dc33195667ce1759bf0182975e4653ba1c",
+          "version": "1.4.4"
+        }
+      },
+      {
+        "package": "Overture",
+        "repositoryURL": "https://github.com/pointfreeco/swift-overture",
+        "state": {
+          "branch": null,
+          "revision": "7977acd7597f413717058acc1e080731249a1d7e",
+          "version": "0.5.0"
+        }
+      },
+      {
+        "package": "swift-snapshot-testing",
+        "repositoryURL": "https://github.com/pointfreeco/swift-snapshot-testing",
+        "state": {
+          "branch": null,
+          "revision": "4862d48562483d274a2ac7522d905c9237a31a48",
+          "version": "1.15.0"
+        }
+      },
+      {
+        "package": "swift-syntax",
+        "repositoryURL": "https://github.com/apple/swift-syntax.git",
+        "state": {
+          "branch": null,
+          "revision": "6ad4ea24b01559dde0773e3d091f1b9e36175036",
+          "version": "509.0.2"
+        }
+      },
+      {
+        "package": "SwiftBCrypt",
+        "repositoryURL": "https://github.com/tannerdsilva/SwiftBCrypt.git",
+        "state": {
+          "branch": null,
+          "revision": "12521ab8c1416828b00cb4d94e450dd111df6193",
+          "version": "0.2.0"
+        }
+      },
+      {
+        "package": "SwiftOTP",
+        "repositoryURL": "https://github.com/lachlanbell/SwiftOTP.git",
+        "state": {
+          "branch": null,
+          "revision": "93d4942c90dd498580988ffb9971e2ddf91d5a28",
+          "version": "2.0.3"
+        }
+      },
+      {
+        "package": "swiftui-navigation",
+        "repositoryURL": "https://github.com/pointfreeco/swiftui-navigation",
+        "state": {
+          "branch": null,
+          "revision": "f5bcdac5b6bb3f826916b14705f37a3937c2fd34",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "SwiftyBeaver",
+        "repositoryURL": "https://github.com/SwiftyBeaver/SwiftyBeaver",
+        "state": {
+          "branch": null,
+          "revision": "12b5acf96d98f91d50de447369bd18df74600f1a",
+          "version": "1.9.6"
+        }
+      },
+      {
+        "package": "TrustKit",
+        "repositoryURL": "https://github.com/ProtonMail/TrustKit",
+        "state": {
+          "branch": null,
+          "revision": "d107d7cc825f38ae2d6dc7c54af71d58145c3506",
+          "version": null
+        }
+      },
+      {
+        "package": "ViewInspector",
+        "repositoryURL": "https://github.com/nalexn/ViewInspector.git",
+        "state": {
+          "branch": null,
+          "revision": "a1422d4749ccf7f32b1d14a9ec19ec9a0b0fd337",
+          "version": "0.9.9"
+        }
+      },
+      {
+        "package": "xctest-dynamic-overlay",
+        "repositoryURL": "https://github.com/pointfreeco/xctest-dynamic-overlay",
+        "state": {
+          "branch": null,
+          "revision": "302891700c7fa3b92ebde9fe7b42933f8349f3c7",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

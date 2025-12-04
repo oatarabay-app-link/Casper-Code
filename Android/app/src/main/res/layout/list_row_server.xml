@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layoutDirection="ltr"
+    android:background="@color/LightMediumGray">
+
+    <LinearLayout
+        style="@style/ServerItem"
+        android:id="@+id/Server_Item">
+
+        <ImageView
+            android:id="@+id/Server_Flag"
+            android:layout_width="50dp"
+            android:layout_marginRight="@dimen/ServerItemTextMargin"
+            android:layout_marginLeft="@dimen/ServerItemTextMargin"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:src="@mipmap/fr"/>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/ServerItemPadding"
+            android:paddingBottom="@dimen/ServerItemPadding"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.caspervpn.vpn.helper.MyTextView
+                android:id="@+id/Server_Name"
+                style="@style/ServerItemText"/>
+
+            <com.caspervpn.vpn.helper.MyTextView
+                android:id="@+id/Server_IP"
+                style="@style/ServerItemIP"/>
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:id="@+id/Server_Health"
+            style="@style/ServerItemHelthIndicator"/>
+
+        <ImageView
+            style="@style/ServerItemBtn"/>
+
+    </LinearLayout>
+</LinearLayout>

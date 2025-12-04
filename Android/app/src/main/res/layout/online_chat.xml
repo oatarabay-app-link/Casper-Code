@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageButton
+        android:id="@+id/OnlineChat"
+        style="@style/NeedHelpImage"
+        android:layout_above="@+id/NeedHelp"
+        android:layout_alignEnd="@+id/NeedHelp" />
+
+    <com.caspervpn.vpn.helper.MyTextView
+        android:id="@+id/NeedHelp"
+        style="@style/NeedHelpText"/>
+
+</RelativeLayout>

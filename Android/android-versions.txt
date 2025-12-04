@@ -1,0 +1,353 @@
+version 55.4
+
+- fix recurring process, change check
+- fix deeplinks add all dns links
+- fix upgrade downgrade, unsubscribe buttons
+- test the app well,
+test deeplinks, recurring, emails, connection, expiry date, freebeecenter, send error logs, subscription, subscription buttons
+downgrade, upgrade, unsubscribe
+
+
+
+this is zaher version - updated from me (the old scenario - user login then he can use the app 15 days free trial before he subscribe)
+
+to be added:
+___________
+
+- warning :
+Your app currently targets API level 25 and must target at least API level 26 to ensure it is built on the latest APIs optimized for security and performance.
+
+From August 2018, new apps must target at least Android 8.0 (API level 26).
+From November 2018, app updates must target Android 8.0 (API level 26).
+for more info
+https://developer.android.com/distribute/best-practices/develop/target-sdk
+
+- change message when error appear for servers lian ktir tawil
+- save token in the payment api
+- check the crash in v43
+- check the first code for zaher
+- check sign up problem
+- SMTP2Go - also for ios
+  recaptcha in registration page
+- add https://testfairy.com/ for testing the app
+
+- when we have work on server side show a message for users using the API
+- change free bee center to https://adgatemedia.com/, support@caspervpn.com / Indacom$
+- Integrate tappx https://www.tappx.com/en/manual/?os=and#1_integration+1_dependency
+	remove <!--tools:ignore="UnusedAttribute"--> AndroidManifest: tools:replace="allowBackup,supportsRtl">
+- survey message: "Take a survey and gain 3 free premium days"    (3 free premium days - linked to server's api response)
+- before 5 min if the user is connected push notification for the user that show him that he has 5 min before he finishes
+- Free bee center server side integration (example when server API returns pollfish: 1 day - app should change the subscription expiry date to 1 day and all message strings like fill survey and take 1 day free service)
+Pollfish: 1-5 days
+Appdeal: 15 min video rewards - 1-2 hours
+- User's not elligeable for a survey, show message that he can use reward videos intead 
+message: "Unfortunately, you were not eligible for that survey and you will not get any reward for that... Please stay tuned for future surveys or get one hour of free premium by watching a 15 sec reward video!"
+- Integrate our survey about the app and what is the good and bad and rating it, and feedbacks from user Pollfish feature
+- Guide in landing page button like online chat
+- Change the Guide page to Menu and some hint about the menu in it (subscribe, get free premium, ...)
+- optimize the code when it's possible - subscription flow in all pages
+- Tested well before publish it (contact testers team)
+- Fix All English Language and send it to the IOS team 
+
+- v next version
+- add the same popup in subscribe page for connection problem in free bee center 
+- recurring without entering the app 
+- zabit l title tb3 social media men fo2 ma7touta get free premium 7ota social media wchil l get free premium wl social media men ta7t
+- bdna tester 3ndo mchkle bel connection, se3eta eza sar fi crash bel system bede chouf eza bkebo 3al login page yerj3 y3mil sign
+in eza rej3it zabatit l app so he 1 of the solution, aham chi ma totbouch 3nd l user
+
+- correct translations
+- check font style why it's not the same in all devices, solution we should set font style from code behind										
+- fix Problem:
+during connecting when user turn off wi-fi and then turn it on again, app told him that server unavailable, try again
+- change bandwidth to unlimited in subscribe page
+
+
+
+
+
+
+
+
+
+
+
+													--v55.1--
+- Add UAE check 
+- commented in loading page
+											
+													--v55--
+- fix edit profile
+- fix translations
+													
+													--v54.8--
+- add lifetime subscription
+- add discount design
+- showReloginMessage() 
+- published on beta v54.8
+													
+													--v54.6--
+- v54.6	
+- Fix recurring system check add check in loading 
+- affiliate integration 
+	DataConnection, DataAccess add contains .php check
+	Add share link  activity for affiliate 
+- Fix google analytics free premium socail media
+- Free bee center title fixed
+- Remove getserverdate and replace by calculating datezone ireland IST
+- when user sign up, and click resend email, after he clicks we should disapear the link
+- when user enter resend email page, we should block user after 1 time trial
+- change affiliate to another page
+- fix twitter
+- affiliate design 
+- app animation is not working when we connect then close then open it
+- check connect on wifi why it's not working 
+- check battery power prbs and how to solve them
+- check subscription crashes and check recurring also
+- Translation affiliate + correct translations
+- remove share google + affiliate
+- change affiliate images + add one
+
+- Test all features well + testers 
+
+													--v54.5--
+- v54.5	
+- Fix some crashes
+- remove recaptcha
+- fix survey + 3 days
+
+
+
+
+
+
+													
+													--v23--	
+- v54.4
+- Add recaptcha, sign up and resend confirmation email, reset password, forget password
+- fix survey + 3 days
+- this version is revoked, we don't need recaptcha
+
+													--v22--	
+- v54.3
+- fix arabic and persian translations
+													--v21--	
+- v54.2
+- Subsribe onDestroy crash try catch					!!
+- update subscription page method Update_Expiry_Date()	!!
+- update check_recurring_subscription page method Update_Expiry_Date()	!!
+- add try catch for setConnectedVpnProfile() in ProfileManager toufic 31-5-18	!! // toufic 31-5
+- add try catch for Landing_Page in CheckSubscription()	!!
+- add try catch for Map_View in Load_Servers()	!!
+- change LOADING_WAITING_TIME to 1 min	!!
+- add try catch to check_recurring_subscription ondestroy()	!!
+- add try catch to Map_View Set_Connected_Flashing()	!!
+- add try catch for server-details onClick()	!!
+- Loading page new version function change to the landing page OnCreate function	!!
+- delete newrelic from the app to optimize the size		!!
+- do not forget to change pollfish from debug mode to release mode after testing well !!
+- Change take a survey from popup to button because of some errors	!!
+- Fix Free bee center	!!
+- Fix pollfish problem with menu	!!
+- update menu expiry date code but it's not working	!!
+- Add service for service that show popup message when survey is ready on landing page, to let users make a survey when it's ready 
+	SubscriptionClass Added for organize the subscription part in the code (need to use it in another Activities: Check_Recurring, Subscription, Free_Bee_Center)
+	survey_popup.xml added for the popup in Landing page
+	Change Landing page: add Pollfish 
+	Add strings: AvailableSurvey, FillOutSurvey (need to be changed after creating new API)
+	Change in DataConnection.java and in Configuration.java	
+- Update Free_Bee_Center use SubscriptionClass 			!!
+- Translations
+- Tested well before publish it (contact testers team)
+
+
+													--v20--					
+- v54.1
+- add translation for subsciption message
+	<string name="allset">You are all set</string>
+    <string name="SubscriptionActivated">Your purchase was successful.</string> 
+- Integrate https://reports.exodus-privacy.eu.org/reports/4690/
+- check analytics value
+													--v19--					
+- v54
+- fix ServerListSelectedServer = null pointer !!
+- add intercom chat to the popup message when error case appears when user subscribe !!
+- check payment sum  !!
+- change place for connected attribute (when user really can connect) !!
+- Add logs for exception !!
+- Change intercom attribute function !!
+- fix sign up free premium intercom attribute problem (remove the code from android app) !!
+Solution: user is not created in intercom when system sign up, it will be created when user is confirmed
+so changes will be when we call confirm api from server side:
+commun.updateIntercomAttribureSubscribe(false); // subscribe = false
+commun.updateIntercomAttributeConnected(false);  // user signed up, still not connected
+commun.updateIntercomAttributeFreePermium(false);
+- is added in gettingstarted page commun.java !!
+commun.updateIntercomAttributeSignedUpAppVersion(MyActivity.getPackageManager().getPackageInfo(getPackageName(), 0).versionName);
+- show message for user that he won a 1 h for free after free bee !!
+- social media (in the menu),  "To stay informed about todays cyber threats follow us on:" 
+- add new relic https://rpm.newrelic.com/accounts/1925799/mobile/setup
+
+- Translations
+
+													
+													--v18-- 						
+- v53
+- add try catch for the crash in function ondestroy landing page 
+- update value in analytics when recurring
+- update payment_sum when recurring
+- remove some indicators in the code logs
+- add try catch in loading page line 53 because of crash
+- remove sign up google event from sign up page
+- change connect scenario when user clicks connect the app go and search for server date
+- change CannotConnectCheckYourInternet to oops...
+
+- change some sentences in android app (in about us + Oops, Server seems unreachable try again or connect to another server!)
+- plus translations + give them to IOS team	
+- reset password deeplink check		
+- sign up form remove *			
+													--v17-- 
+- v52
+- add value in analytics
+- fix paymentsym = getperiodPrice()
+													--v16-- 
+- v51
+- add ShowRefreshDialog() in subscription page in some error cases
+- remove consume function in subscription page
+- connecting state button
+- fix analytics email to user id (analytics warning) 
+													--v15--
+- Resend email on signup page
+- Add new page for resend email linked to signin
+- deep link - confirmation email
+- analytics
+- app logo launcher not free
+- compileSdkVersion 26  				-	OLD: 25
+  buildToolsVersion "26.0.2"			-	OLD: 25.0.2
+  AND other sdks to 26.
+- auto-connect = connect on boot = false per default
+- gettting started image 
+- private users
+- check update api - you can add it on earth view when user connect click
+- how subscription works page + text
+- subscription design
+- remove get subscription from login page
+- subscribe	page with google play				
+- fix subscription design on note 4
+- translate all additinal words 
+- Intercom attributes: Subscribe
+- check recurring subscription class			-	CheckRecurringSubscription	
+- continue update images and texts illegal from the code and google play store	  
+- edit profile subscription button		
+- Intercom attributes: 
+- fix server details prb can't connect		
+- when a new update found and user click android back button the popup disapear - app should close
+- update UI in subsribe page after subscription finished 
+- map / earth icon
+- testing well  - beta family before submit
+- edit_profile subscribe button
+- fix subscribe page update UI buttons
+- add logs for the app tracking code ###
+- update check in subscribe page - in UpdateUI()
+// Logic
+// - if user is active and his subscription still auto renewable - buttons will change
+// - else if (user not active / his subscription canceled) - buttons still package (he can subscribe)
+// one case is: if user subscription canceled and he subscribe before his subscription get inactive - his recurring will begin after 1 month that he payed, he will gain his expiry date after he cancel his subscription
+// Logic
+- i can't update the expiry date from google play payment, because i don't have it returned from google play
+- intercom attributes 
+- errors exceptions in openvpn crashletics library
+- get date time from server (to prevent bypassing the system activation) add it on the recurring page check for security reason 
+- error MyVpnServiceInstance null pointer exception
+- connect from server-details page when connected mode is on (error fixed)
+- check connection breaks on page check_recurring_subscription
+- change check_recurring_subscription page from activity to service - to prevent activity start 2 times
+- update expiry date after service stop running
+- pollfish integration - survey 
+- fix some small issues in design and expiry date popup
+- appodeal integration - video
+- fb integrated - but their is a problem
+- Social media link
+- Banner integrations
+- check crashletics 
+- Configurations
+- remove instagram from social media
+- Write_storage_ error fixed
+- remove native ads from social media page
+- translation 
+- configuration - debug mode enable 
+- crash on crashletics - add try catch to onresume in Map_View and Server_Detail and Earth_View
+- fix tablet problem xml
+- testing well on all our devices
+- test pollfish survey
+- fix crashes in note 4 
+- fix banner ads show in landing page
+- version 43
+- add popup in subscription when layout didn't complete
+- video close - update expiry date
+- fix sign up layout page
+- fix Hello, Sign up and get a 15 day free trial ! in sign up (english only)
+- fix survey visibility
+- pollfish sdk 
+- change menu
+- add intercom chat in earth view
+- appodeal sdk fixed
+- Adding Guide in Menu - Getting started
+- change days free premium + translate to 2 days
+- fix online chat xml click in earth view
+- need continue translate
+- fix a crash in showing connection error
+- fix / change pollfish api key  
+- fix pollfish red tick show 
+- subscribe = false intercom fix sign up
+- cancel = false in Subscribe page, and cancel = true in check recurring subscription (need to verify)
+- Intercom attributes
+// if user subscribed = false + canceled = undefined => he didn't subscribed
+// if user subscribed = true + canceled = false => he didn't cancel the subscription OR he canceled and he re-subscribed
+// if user subscribed = true + canceled = true => he was subscribed and he canceled
+// if user subscribed = false + canceled = true => he was didn't subscribed, but his account is not active
+- add popup message in edit profile
+- add google analytics goals events
+- fix crash loading
+- change cancel logic because if user cancel and he add free b center in the old logic, we can't track if he canceled or not
+- fix online chat earth view
+- Subscription problem, catch all exception with show message + add payment_sum = 1 month or payment USD
+- Get free premium problem, sometimes load video rewards null, and if user account expired update 2 + his expiry date fixed
+- https://docs.google.com/document/d/1MzaJCp7ud6CUpKLvStPnoy7EFtkXOGJpnvYZd8KXFMg/edit?usp=sharing  Google analytics
+- translateDateTime in edit_profile + server time 
+- publish v50
+- change free premiun from 2 days to 2 hours
+- landing page SubscriptionDialog.show() removed oncreate
+- connect !isActive removed because we are now working with hours (and with hours each country have different hour)
+- social media page fix freeze loading + catch all exception with show message
+- social media problem the same as free premium
+- refresh api after 40 sec
+- getting started guide 
+- connect !isActive removed because we are now working with hours on landing page connect()
+- Strings update 
+- testing well
+- fix free bee center
+
+not added: 
+__________ 
+
+- we should add new design for Getting started  
+- refresh the app button
+- subscription design bold to normal
+- native ads in social media and free bee center 
+- auto connect is not working when user first install the app - because no vpnprofile created yet, so if user was connected before the code will work becuse a vpn profile will not be empty = null (you can create a vpn profile if it's = null, but it's not mandatory)  
+- check how to minimise the code size 
+- check if library take a lot of battery and MBs 
+
+Errors / Security: 
+__________________
+
+- counter not the same as in the notification bar, sometimes
+- battery problem 
+- intercom chat block guest users - we should add more security - preferencense or sqllite ! maybe delete it !
+- a small bugs (when user enter the app first time) 
+- server side problem with subscription (if user account expired and he takes 4 days to open the app after expiry date ended he will he will get 4 days for free) system should update his expiry date = last one + 30 days (so we should send a field from android app recurring = true)
+- subscription scenario should be like this:
+  when user enter the app, app should send a request to the server 
+  this request is just to call the server for checking user's account
+  server will check if he's subscribed, if yes it will return the username and subscribed = true and if he's still active

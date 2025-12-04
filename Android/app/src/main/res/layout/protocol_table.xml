@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:layout_marginBottom="20dp"
+    android:layout_marginTop="20dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="15"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/Table_Cell_Header"
+                android:text="@string/Feature"/>
+
+            <TextView
+                style="@style/Table_Cell_Header"
+                android:text="@string/Speed"/>
+
+
+            <TextView
+                style="@style/Table_Cell_Header"
+                android:text="@string/Security"/>
+
+            <TextView
+                style="@style/Table_Cell_Header"
+                android:text="@string/Usage"/>
+
+            <TextView
+                style="@style/Table_Cell_Header"
+                android:text="@string/UsedPorts"/>
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/Table_Cell_Header"
+                android:text="@string/PPTP"/>
+
+            <TextView
+            style="@style/Table_Cell"
+            android:text="@string/Fastest"/>
+
+
+        <TextView
+            style="@style/Table_Cell"
+            android:text="@string/Unsecure"/>
+
+            <TextView
+                style="@style/Table_Cell"
+                android:text="@string/EasyToUse"
+                android:id="@+id/textView4" />
+
+            <TextView
+                style="@style/Table_Cell"
+                android:text="@string/PPTPPorts"
+                android:id="@+id/textView5" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/Table_Cell_Header"
+                android:text="@string/SSTP"/>
+
+            <TextView
+                style="@style/Table_Cell"
+                android:text="@string/VeryFast"/>
+
+
+            <TextView
+                style="@style/Table_Cell"
+                android:text="@string/Security"/>
+
+            <TextView
+                style="@style/Table_Cell"
+                android:text="@string/EasyToUse"/>
+
+            <TextView
+                style="@style/Table_Cell"
+                android:text="@string/SSTPPorts"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/Table_Cell_Header"
+                android:text="@string/L2TPOverIPSec"/>
+
+            <TextView
+                style="@style/Table_Cell"
+                android:text="@string/Slow"/>
+
+
+            <TextView
+                style="@style/Table_Cell"
+                android:text="@string/HighlySecure"/>
+
+            <TextView
+                style="@style/Table_Cell"
+                android:text="@string/EasyToUse"/>
+
+            <TextView
+                style="@style/Table_Cell"
+                android:text="@string/L2TPPorts"
+                android:id="@+id/textView2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/Table_Cell_Header"
+                android:text="@string/OpenVPN"/>
+
+            <TextView
+                style="@style/Table_Cell"
+                android:text="@string/Intermediate"/>
+
+
+            <TextView
+                style="@style/Table_Cell"
+                android:text="@string/HighlySecure"/>
+
+
+            <TextView
+                style="@style/Table_Cell"
+                android:text="@string/EasyToUse"/>
+
+            <TextView
+                style="@style/Table_Cell"
+                android:text="@string/OpenVPNPorts"
+                android:id="@+id/textView6" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/Table_Cell_Header"
+                android:text="@string/IKEv2"/>
+
+            <TextView
+                style="@style/Table_Cell"
+                android:text="@string/Fast"/>
+
+
+            <TextView
+                style="@style/Table_Cell"
+                android:text="@string/Secure"/>
+
+
+            <TextView
+                style="@style/Table_Cell"
+                android:text="@string/EasyToUse"/>
+
+            <TextView
+                style="@style/Table_Cell"
+                android:text="@string/IKEv2Ports"/>
+        </TableRow>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

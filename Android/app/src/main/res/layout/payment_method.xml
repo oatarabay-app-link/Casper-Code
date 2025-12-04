@@ -1,0 +1,122 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/White"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_title_and_menu" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_weight="0.3"
+            android:height="2dp"
+            android:gravity="center_horizontal"
+            android:text="Select payment mode"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textIsSelectable="false"
+            android:visibility="visible"
+            tools:text="Select payment mode" />
+        <LinearLayout
+
+            style="@style/MenuItem"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:baselineAligned="false">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="@color/White"
+                android:clickable="true"
+                android:contentDescription="TODO"
+                android:cropToPadding="false"
+                android:visibility="visible"
+                app:srcCompat="@drawable/googleplaylogo2"
+                tools:srcCompat="@drawable/googleplaylogo2"
+                android:src="@drawable/googleplaylogo2"
+                android:id="@+id/GooglePlay"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            style="@style/MenuItem"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/White"
+            android:baselineAligned="false">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:contentDescription="TODO"
+                android:cropToPadding="false"
+                android:visibility="visible"
+                app:srcCompat="@drawable/fortumologo"
+                tools:srcCompat="@drawable/fortumologo"
+                android:src="@drawable/fortumologo"
+                android:id="@+id/Fortumo"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_weight="1"
+            style="@style/MenuItem"
+            android:layout_height="0dp"
+            android:background="@color/White"
+            android:baselineAligned="false">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:contentDescription="TODO"
+                android:cropToPadding="false"
+                android:visibility="visible"
+                app:srcCompat="@drawable/btc2"
+                tools:srcCompat="@drawable/btc2"
+                android:src="@drawable/btc2"
+                android:id="@+id/BTC"
+                />
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/progress_bar"/>
+
+
+
+</RelativeLayout>

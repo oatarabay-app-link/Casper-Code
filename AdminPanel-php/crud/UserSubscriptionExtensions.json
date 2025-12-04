@@ -1,0 +1,59 @@
+{
+  "fields": [
+    {
+      "name": "user_id",
+      "type": "integer#unsigned"
+    },
+
+    {
+      "name": "subscription_id",
+      "type": "integer#unsigned"
+    },
+    {
+      "name": "days",
+      "type": "integer"
+    },
+    {
+      "name": "exipry_date",
+      "type": "timestamp"
+    },
+    {
+      "name": "note",
+      "type": "longtext"
+    },
+
+    {
+      "name": "added_by",
+      "type": "integer#unsigned"
+    }
+
+  ],
+
+
+  "relationships": [
+    {
+      "name": "subscriptions",
+      "type": "belongsTo",
+      "class": "App\\Subscription"
+    },
+    {
+      "name": "user",
+      "type": "belongsTo",
+      "class": "App\\Models\\Auth\\User"
+    }
+
+  ],
+  "foreign_keys": [
+    {
+      "column": "subscription_id",
+      "references": "id",
+      "on": "subscriptions"
+    },
+
+    {
+      "column": "user_id",
+      "references": "id",
+      "on": "users"
+    }
+  ]
+}

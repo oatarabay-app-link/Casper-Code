@@ -1,0 +1,44 @@
+{
+  "fields": [
+    {
+      "name": "user_id",
+      "type": "integer#unsigned"
+    },
+    {
+      "name": "vpnserver_id",
+      "type": "integer#unsigned"
+    }
+
+
+
+
+
+  ],
+
+
+  "relationships": [
+    {
+      "name": "v_p_n_servers",
+      "type": "belongsTo",
+      "class": "App\\VPNServer"
+    },
+    {
+      "name": "user",
+      "type": "belongsTo",
+      "class": "App\\Models\\Auth\\User"
+    }
+
+  ],
+  "foreign_keys": [
+    {
+      "column": "vpnserver_id",
+      "references": "id",
+      "on": "v_p_n_servers"
+    },
+    {
+      "column": "user_id",
+      "references": "id",
+      "on": "users"
+    }
+  ]
+}

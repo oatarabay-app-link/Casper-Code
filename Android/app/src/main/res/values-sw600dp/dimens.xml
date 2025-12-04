@@ -1,0 +1,12 @@
+<!-- 7" Display -->
+<resources>
+    <dimen name="EarthViewContainerHeight">405dp</dimen>
+    <dimen name="EarthDimensions">300dp</dimen>
+    <dimen name="CompleteCircleDimensions">354dp</dimen>
+    <dimen name="ScaledConnectButtonDimensions">36dp</dimen>
+    <dimen name="ScaledConnectButtonMarginBottom">60dp</dimen>
+    <dimen name="ScaledConnectButtonMarginLeft">-43.5dp</dimen>
+    <dimen name="ScaledConnectButtonPadding">7.5dp</dimen>
+    <dimen name="RotateScaleValue">-106.5dp</dimen>
+    <dimen name="CircleRotateScaleValue">352dp</dimen>
+</resources>

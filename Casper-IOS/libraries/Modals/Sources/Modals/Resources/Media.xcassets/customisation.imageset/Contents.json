@@ -1,0 +1,20 @@
+{
+  "images" : [
+    {
+      "filename" : "customisation-mobile.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "customisation-desktop.pdf",
+      "idiom" : "mac"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true,
+    "template-rendering-intent" : "original"
+  }
+}

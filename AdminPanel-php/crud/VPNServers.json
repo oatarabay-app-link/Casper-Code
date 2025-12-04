@@ -1,0 +1,51 @@
+{
+  "fields": [
+    {
+      "name": "uuid",
+      "type": "string"
+    },
+    {
+      "name": "create_date",
+      "type": "timestamp"
+    },
+    {
+      "name": "is_deleted",
+      "type": "boolean"
+    },
+    {
+      "name": "is_disabled",
+      "type": "boolean"
+    },
+    {
+      "name": "ip",
+      "type": "string"
+    },
+    {
+      "name": "latitude",
+      "type": "string"
+    },{
+      "name": "longitude",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "country",
+      "type": "string"
+    },
+    {
+      "name": "parameters",
+      "type": "longtext"
+    },
+    {
+      "name": "server_provider",
+      "type": "string"
+    },
+    {
+      "name": "notes",
+      "type": "longtext"
+    }
+  ]
+}

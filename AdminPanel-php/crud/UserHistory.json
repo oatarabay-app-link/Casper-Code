@@ -1,0 +1,44 @@
+{
+  "fields": [
+    {
+      "name": "user_id",
+      "type": "integer#unsigned"
+    },
+    {
+      "name": "event",
+      "type": "string"
+    },
+    {
+      "name": "operation",
+      "type": "string"
+    },
+
+    {
+      "name": "result",
+      "type": "string"
+    },
+
+    {
+      "name": "description",
+      "type": "longtext"
+    }
+
+
+  ],
+  "relationships": [
+    {
+      "name": "user",
+      "type": "belongsTo",
+      "class": "App\\Models\\Auth\\User"
+    }
+
+
+  ],
+  "foreign_keys": [
+    {
+      "column": "user_id",
+      "references": "id",
+      "on": "users"
+    }
+  ]
+}

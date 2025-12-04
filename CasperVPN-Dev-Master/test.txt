@@ -1,0 +1,6 @@
+{
+  "userId": "33ab74da-fdbe-4506-be9e-e6d288bdcaf2",
+  "serverId": "08de2b70-cdc5-445a-8382-b2648e4c3f52",
+  "location": "pakistan",
+  "protocolId": "c29a4a48-eef3-4ee6-b5df-c61bb45701aa"
+}

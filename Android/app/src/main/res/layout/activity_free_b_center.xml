@@ -1,0 +1,172 @@
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    custom:context=".screens.Social_Media">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White">
+
+
+        <include
+            layout="@layout/toolbar_title_and_menu"/>
+
+
+        <LinearLayout
+            android:id="@+id/Fill_Servey"
+            android:background="@color/UltraLightGray"
+            style="@style/MenuItem"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="@dimen/SubscribeButtonWidth"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/fillout"
+                        android:src="@drawable/filloutsurvey"
+                        android:layout_width="@dimen/SubscribeButtonWidth" />
+
+                    <com.caspervpn.vpn.helper.MyButton
+                        style="@style/SubscribeButtonTextWhite"
+                        android:layout_height="35dp"
+                        android:text="@string/GetFreePremium"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.caspervpn.vpn.helper.MyTextView
+                        android:id="@+id/txtSurveryLoading"
+                        style="@style/SocialMediaText"
+                        android:text="@string/FillOutSurvey"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Watch_Video"
+            android:background="@color/White"
+            style="@style/MenuItem"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="@dimen/SubscribeButtonWidth"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/fillout"
+                        android:src="@drawable/fillvideos"
+                        android:layout_width="@dimen/SubscribeButtonWidth" />
+
+                    <com.caspervpn.vpn.helper.MyButton
+                        style="@style/SubscribeButtonTextWhite"
+                        android:layout_height="35dp"
+                        android:text="@string/GetFreePremium"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.caspervpn.vpn.helper.MyTextView
+                        style="@style/SocialMediaText"
+                        android:text="@string/WatchVideo"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/smbannerid"
+            style="@style/SocialMediaMenuItem3"
+            android:background="@color/White">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.appodeal.ads.BannerView
+                    android:id="@+id/appodealBannerViewBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/progress_bar"/>
+
+    <com.appodeal.ads.BannerView
+        android:id="@+id/appodealBannerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</RelativeLayout>
+
+
+
+

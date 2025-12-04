@@ -1,0 +1,105 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/UltraLightBlue">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+        <com.caspervpn.vpn.helper.MyTextView
+            style="@style/GettingStartedTitle"
+            android:text="@string/GettingStarted1"
+            android:id="@+id/GettingStartedTitle">
+        </com.caspervpn.vpn.helper.MyTextView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="18">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:layout_height="match_parent">
+
+            <androidx.viewpager.widget.ViewPager
+                android:background="@color/White"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/InnerPager"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corners"/>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dip">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/GettingStarted1"
+            android:enabled="true"
+            style="@style/GettingStartedMenuButton"/>
+
+        <Button
+            android:id="@+id/GettingStarted2"
+            android:enabled="false"
+            style="@style/GettingStartedMenuButton"/>
+
+        <Button
+            android:id="@+id/GettingStarted3"
+            android:enabled="false"
+            style="@style/GettingStartedMenuButton"/>
+
+        <Button
+            android:id="@+id/GettingStarted4"
+            android:enabled="false"
+            style="@style/GettingStartedMenuButton"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+</LinearLayout>
+

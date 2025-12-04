@@ -1,0 +1,122 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/DashboardView_Root"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+
+    <LinearLayout
+        android:id="@+id/WhatIsCasperVPN"
+        style="@style/MenuItem">
+
+        <ImageView
+            style="@style/MenuImage"
+            android:src="@mipmap/menu_caspervpn_icon"
+            android:id="@+id/imageView3" />
+
+        <com.caspervpn.vpn.helper.MyTextView
+            style="@style/MenuText"
+            android:text="@string/WhatIsCasperVPN"/>
+
+        <ImageView
+            style="@style/MenuArrow"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/LightMediumGray"/>
+
+    <LinearLayout
+        android:id="@+id/AboutCasperVPN"
+        style="@style/MenuItem">
+
+        <ImageView
+            style="@style/MenuImage"
+            android:src="@mipmap/menu_info_icon"/>
+
+        <com.caspervpn.vpn.helper.MyTextView
+            style="@style/MenuText"
+            android:text="@string/AboutUs"/>
+
+        <ImageView
+            style="@style/MenuArrow"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/LightMediumGray"/>
+
+    <LinearLayout
+        android:id="@+id/FAQ"
+        style="@style/MenuItem">
+
+        <ImageView
+            style="@style/MenuImage"
+            android:src="@mipmap/menu_faq_icon"
+            android:id="@+id/imageView2" />
+
+        <com.caspervpn.vpn.helper.MyTextView
+            style="@style/MenuText"
+            android:text="@string/FAQ"/>
+
+        <ImageView
+            style="@style/MenuArrow"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/LightMediumGray"/>
+
+    <LinearLayout
+        android:id="@+id/PrivacyPolicy"
+        style="@style/MenuItem">
+
+        <ImageView
+            style="@style/MenuImage"
+            android:src="@mipmap/menu_lock_icon"/>
+
+        <com.caspervpn.vpn.helper.MyTextView
+            style="@style/MenuText"
+            android:text="@string/PrivacyPolicy"/>
+
+        <ImageView
+            style="@style/MenuArrow"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/LightMediumGray"/>
+
+    <LinearLayout
+        android:id="@+id/TermsAndConditions"
+        style="@style/MenuItem">
+
+        <ImageView
+            style="@style/MenuImage"
+            android:src="@mipmap/menu_terms_and_conditions"/>
+
+        <com.caspervpn.vpn.helper.MyTextView
+            style="@style/MenuText"
+            android:text="@string/TermsAndConditions"/>
+
+        <ImageView
+            style="@style/MenuArrow"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/LightMediumGray"/>
+</LinearLayout>
+

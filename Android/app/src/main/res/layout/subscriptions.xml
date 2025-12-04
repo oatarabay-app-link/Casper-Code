@@ -1,0 +1,65 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <include
+            layout="@layout/toolbar_title_and_menu"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="584dp"
+            android:layout_marginBottom="50dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+            android:background="@color/DarkBlue"
+            style="@style/footer"
+            android:id="@+id/footer"
+            android:layout_height="0dp"
+            android:layout_weight="0.2">
+
+            <com.caspervpn.vpn.helper.MyTextView
+                android:id="@+id/howsubscriptionworks"
+                style="@style/SubscribeTextWhite"
+                android:layout_width="wrap_content"
+                android:text="@string/HowSubscriptionWorks"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <com.caspervpn.vpn.helper.MyTextView
+                android:id="@+id/unsubscribe_updowngrade"
+                style="@style/SubscribeTextWhite"
+                android:layout_width="wrap_content"
+                android:text="@string/RestorePurchases"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/progress_bar"/>
+
+
+
+</RelativeLayout>
+

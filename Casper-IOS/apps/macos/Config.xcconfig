@@ -1,0 +1,21 @@
+//
+//  Config.xcconfig
+//  macOS
+//
+//  Created by Igor Kulman on 24.05.2021.
+//  Copyright © 2021 Proton Technologies AG. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+REDESIGN = 0
+DEPLOYMENT_TARGET0 = 11.0
+DEPLOYMENT_TARGET1 = 12.0
+DEPLOYMENT_TARGET = $(DEPLOYMENT_TARGET$(REDESIGN))
+
+REDESIGN_SWIFTFLAGS0 =
+REDESIGN_SWIFTFLAGS1 = -DREDESIGN
+REDESIGN_SWIFTFLAGS = $(REDESIGN_SWIFTFLAGS$(REDESIGN))
+
+MAC_APP_VERSION = 4.1.5

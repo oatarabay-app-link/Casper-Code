@@ -1,0 +1,193 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    custom:context=".screens.Social_Media">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White">
+
+        <include
+            layout="@layout/toolbar_title_and_menu"/>
+        <!--<TextView style="@style/CommingSoonSocialMedia"-->
+            <!--android:id="@+id/FreeEdition"/>-->
+
+        <LinearLayout
+            style="@style/SocialMediaMenuItem1"
+            android:id="@+id/Share_Twitter">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="0dp"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SocialMediaIconHeight"
+                        android:src="@mipmap/twitter"/>
+
+
+                    <com.caspervpn.vpn.helper.MyTextView
+                        style="@style/SocialMediaText"
+                        android:text="@string/TweetOnTwitter"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="0dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            style="@style/SocialMediaMenuItem2">
+
+            <LinearLayout
+                style="@style/SocialMediaMenuItem2"
+                android:layout_height="fill_parent"
+                android:id="@+id/Share_GooglePlus">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="10"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="0dp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/SocialMediaIconHeight"
+                            android:src="@mipmap/google_plus"/>
+
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            style="@style/SocialMediaText"
+                            android:text="@string/ShareOurGooglePlus"/>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="0dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.gms.plus.PlusOneButton
+                xmlns:plus="http://schemas.android.com/apk/lib/com.google.android.gms.plus"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="-1000000dp"
+                plus:size="small"
+                plus:annotation="none"
+                android:id="@+id/plus_one_button"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            style="@style/SocialMediaMenuItem1"
+            android:id="@+id/Share_FaceBook">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="0dp"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/SocialMediaIconHeight"
+                        android:src="@mipmap/facebook"/>
+
+
+                    <com.caspervpn.vpn.helper.MyTextView
+                        style="@style/SocialMediaText"
+                        android:text="@string/ShareOnFacebook"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="0dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/progress_bar"/>
+
+
+</RelativeLayout>
+

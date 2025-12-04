@@ -1,0 +1,67 @@
+{
+  "fields": [
+    {
+      "name":"subject",
+      "type":"string"
+    },
+    {
+      "name":"delivered_at",
+      "type":"string"
+    },
+    {
+      "name":"process_status",
+      "type":"string"
+    },
+    {
+      "name":"email_id",
+      "type":"string"
+    },
+    {
+      "name":"status",
+      "type":"string"
+    },
+    {
+      "name":"response",
+      "type":"string"
+    },
+    {
+      "name":"email_tx",
+      "type":"string"
+    },
+    {
+      "name":"host",
+      "type":"string"
+    },
+    {
+      "name":"smtpcode",
+      "type":"string"
+    },
+    {
+      "name":"sender",
+      "type":"string"
+    },
+    {
+      "name":"recipient",
+      "type":"string"
+    },
+    {
+      "name":"stmp2gousername",
+      "type":"string"
+    },
+    {
+      "name":"headers",
+      "type":"longtext"
+    },
+    {
+      "name":"total_opens",
+      "type":"string"
+    },
+    {
+      "name":"opens",
+      "type":"longtext"
+    }
+
+  ]
+}
+
+

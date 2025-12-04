@@ -1,0 +1,22 @@
+{
+  "fields": [
+    {
+      "name": "username",
+      "type": "string"
+    },
+    {
+      "name": "pass",
+      "type": "string"
+    },
+    {
+      "name": "reply",
+      "type": "string"
+    },
+
+    {
+      "name": "priority",
+      "type": "integer"
+    }
+
+  ]
+}

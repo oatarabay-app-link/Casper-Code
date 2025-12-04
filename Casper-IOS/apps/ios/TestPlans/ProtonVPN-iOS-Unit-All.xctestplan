@@ -1,0 +1,239 @@
+{
+  "configurations" : [
+    {
+      "id" : "AC2710D2-2ECD-4706-9ADF-3D70C8B8E37B",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:iOS.xcodeproj",
+          "identifier" : "791DE5D8208DDA3000A29EA5",
+          "name" : "ProtonVPN"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/Ergonomics",
+          "identifier" : "Ergonomics",
+          "name" : "Ergonomics"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/ConnectionDetails",
+          "identifier" : "ConnectionDetails",
+          "name" : "ConnectionDetails"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/Home",
+          "identifier" : "Home",
+          "name" : "Home"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/Home",
+          "identifier" : "Home-iOS",
+          "name" : "Home-iOS"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/LegacyCommon",
+          "identifier" : "LegacyCommon",
+          "name" : "LegacyCommon"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/LocalFeatureFlags",
+          "identifier" : "LocalFeatureFlags",
+          "name" : "LocalFeatureFlags"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/Modals",
+          "identifier" : "Modals",
+          "name" : "Modals"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/Modals",
+          "identifier" : "Modals-iOS",
+          "name" : "Modals-iOS"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/NEHelper",
+          "identifier" : "NEHelper",
+          "name" : "NEHelper"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/NEHelper",
+          "identifier" : "VPNAppCore",
+          "name" : "VPNAppCore"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/NEHelper",
+          "identifier" : "VPNCrypto",
+          "name" : "VPNCrypto"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/NEHelper",
+          "identifier" : "VPNShared",
+          "name" : "VPNShared"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/Onboarding",
+          "identifier" : "Onboarding",
+          "name" : "Onboarding"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/PMLogger",
+          "identifier" : "PMLogger",
+          "name" : "PMLogger"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/Review",
+          "identifier" : "Review",
+          "name" : "Review"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/Search",
+          "identifier" : "Search",
+          "name" : "Search"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/SharedViews",
+          "identifier" : "SharedViews",
+          "name" : "SharedViews"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/Theme",
+          "identifier" : "Theme",
+          "name" : "Theme"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/Timer",
+          "identifier" : "Timer",
+          "name" : "Timer"
+        },
+        {
+          "containerPath" : "container:..\/..\/libraries\/BugReport",
+          "identifier" : "BugReport",
+          "name" : "BugReport"
+        }
+      ]
+    },
+    "language" : "en",
+    "region" : "US",
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:iOS.xcodeproj",
+      "identifier" : "791DE5D8208DDA3000A29EA5",
+      "name" : "ProtonVPN"
+    }
+  },
+  "testTargets" : [
+    {
+      "skippedTests" : [
+        "ProtonVPNUITests"
+      ],
+      "target" : {
+        "containerPath" : "container:iOS.xcodeproj",
+        "identifier" : "791DE5EE208DDA3200A29EA5",
+        "name" : "ProtonVPNTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/..\/libraries\/BugReport",
+        "identifier" : "BugReportTests",
+        "name" : "BugReportTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/..\/libraries\/ConnectionDetails",
+        "identifier" : "ConnectionDetailsTests",
+        "name" : "ConnectionDetailsTests"
+      }
+    },
+    {
+      "skippedTests" : [
+        "LocalizationUtilityTests"
+      ],
+      "target" : {
+        "containerPath" : "container:..\/..\/libraries\/LegacyCommon",
+        "identifier" : "LegacyCommonTests",
+        "name" : "LegacyCommonTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/..\/libraries\/Modals",
+        "identifier" : "ModalsTests",
+        "name" : "ModalsTests"
+      }
+    },
+    {
+      "skippedTests" : [
+        "CertificateRefreshTests\/testManagerStopAfterSchedulingRetryDueToNetworkTimeoutResultsInOperationBeingCancelled()"
+      ],
+      "target" : {
+        "containerPath" : "container:..\/..\/libraries\/NEHelper",
+        "identifier" : "NEHelperTests",
+        "name" : "NEHelperTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/..\/libraries\/NEHelper",
+        "identifier" : "VPNSharedTests",
+        "name" : "VPNSharedTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/..\/libraries\/Review",
+        "identifier" : "ReviewTests",
+        "name" : "ReviewTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/..\/libraries\/Search",
+        "identifier" : "SearchTests",
+        "name" : "SearchTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/..\/libraries\/Foundations\/Ergonomics",
+        "identifier" : "ErgonomicsTests",
+        "name" : "ErgonomicsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/..\/libraries\/Foundations\/LocalFeatureFlags",
+        "identifier" : "LocalFeatureFlagsTests",
+        "name" : "LocalFeatureFlagsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/..\/libraries\/Foundations\/Timer",
+        "identifier" : "TimerMockTests",
+        "name" : "TimerMockTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/..\/libraries\/Foundations\/Timer",
+        "identifier" : "TimerTests",
+        "name" : "TimerTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..\/..\/libraries\/Foundations\/PMLogger",
+        "identifier" : "PMLoggerTests",
+        "name" : "PMLoggerTests"
+      }
+    }
+  ],
+  "version" : 1
+}

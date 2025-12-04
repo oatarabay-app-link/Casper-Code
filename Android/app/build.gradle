@@ -1,0 +1,147 @@
+buildscript {
+    repositories {
+//        maven { url 'https://maven.fabric.io/public' }
+        mavenCentral()
+    }
+
+    dependencies {
+        //classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+//apply plugin: 'com.google.gms.google-services'                 //used for firebase
+apply plugin: 'com.android.application'
+//apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    mavenCentral()
+    google()
+    jcenter()
+    //maven { url 'https://adcolony.bintray.com/AdColony' }
+}
+
+
+android {
+    signingConfigs
+            {
+                config
+                        {
+                            keyAlias 'applink'
+                            keyPassword 'applink_password'
+                            storeFile file('applink')
+                            storePassword 'applink_password'
+                        }
+            }
+    compileSdkVersion 28
+    //buildToolsVersion '28.0.3'
+
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    defaultConfig {
+        applicationId "caspervpn.com"   // change when you make a new application
+        minSdkVersion 21        //KitKat
+        targetSdkVersion 28     //Nougat
+        versionCode 91         //change
+        versionName "55.91"     //change
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+            jniDebuggable false
+        }
+    }
+
+    sourceSets {
+        main {
+            assets.srcDirs = ['ovpnlibs/assets']
+            jniLibs.srcDirs = ['ovpnlibs/jniLibs']
+            jni.srcDirs = [] //disable automatic ndk-build
+        }
+
+//
+
+        debug {
+
+        }
+
+        release {
+
+        }
+    }
+
+    productFlavors {
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+//    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+//        exclude group: 'com.android.support', module: 'support-annotations'
+//    })
+    implementation('com.twitter.sdk.android:twitter:2.3.2@aar') { transitive = true; }
+    //Twitter Integration
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.3@aar') { transitive = true; }
+    //Crashlytics
+    //compile 'com.jaredrummler:android-device-names:1.1.2'                     //Device Friendly Name
+    //compile 'me.biubiubiu.justifytext:library:1.1'                            //Justify Text fast but Not working for arabic
+    //compile 'com.github.bluejamesbond:textjustify-android:2.1.6'              //Justify Text
+    // support multidex (intercom prb)
+    //Store Object in Preference
+    //Google Plus
+    //Google Map User Location
+    //Google Map
+    //Intercom
+    //Billing Broadcast receiver
+    //Facebook Integration
+    //StringUtils
+    //ACRA Crash Reporting
+    //Justify Text
+    //Google Analytics
+    //implementation 'com.android.support:multidex:1.0.1'
+    //noinspection GradleCompatible
+    //implementation 'com.android.support:appcompat-v13:28.0.0'
+    //implementation 'com.android.support:support-v13:28.0.0'
+//    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    //noinspection GradleCompatible
+    //implementation 'com.google.android.gms:play-services-plus:11.6.2'
+    //implementation 'com.google.android.gms:play-services-location:11.6.2'
+    //implementation 'com.google.android.gms:play-services-maps:11.6.2'
+
+    implementation 'com.google.android.gms:play-services-analytics:17.0.0'
+    implementation 'com.google.android.gms:play-services-plus:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'io.intercom.android:intercom-sdk-base:6.+'
+    implementation 'com.parse:parse-android:1.13.1'
+    implementation 'com.facebook.android:facebook-share:[4,5)'
+    implementation 'org.apache.commons:commons-lang3:3.5'
+    //compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+
+    //implementation 'ch.acra:acra:4.9.0'
+    //implementation 'com.uncopt:android.justified:1.0'
+
+    //implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    //implementation 'com.squareup.picasso:picasso:2.5.2'
+    //for Inmobi
+    //implementation 'com.google.android.gms:play-services-ads:11.6.2'
+   // implementation 'com.google.android.gms:play-services:11.6.2'
+    //implementation 'io.fabric.sdk.android:fabric:1.4.8'
+      // Ok Http Libraries
+    implementation("com.squareup.okhttp3:okhttp:4.2.2")
+    implementation group: 'cz.msebera.android', name: 'httpclient', version: '4.4.1.2'
+
+    def multidex_version = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex_version"
+
+
+}
+

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/PopupMargin"
+    android:layout_marginLeft="@dimen/PopupMargin"
+    android:orientation="vertical"
+    android:background="@drawable/popup_bg">
+
+    <com.caspervpn.vpn.helper.MyTextView
+        style="@style/Popup_Title"
+        android:text="@string/GetFreeDiscount"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="2dp"
+            android:background="@color/White"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp">
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="@dimen/GetFreeDiscountDimension"
+                android:layout_height="@dimen/GetFreeDiscountDimension"
+                android:background="@drawable/discount">
+
+                <com.caspervpn.vpn.helper.MyTextView
+                    style="@style/Discount_Title"
+                    android:gravity="center|right"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/DiscountAmount"/>
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.caspervpn.vpn.helper.MyTextView
+                        style="@style/Discount_Unit"
+                        android:gravity="bottom|left"
+                        android:text="@string/Percent"/>
+
+
+                    <com.caspervpn.vpn.helper.MyTextView
+                        style="@style/Discount_OFF"
+                        android:gravity="top|left"
+                        android:text="@string/OFF"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/Popup_Message"
+                android:text="@string/DiscountText"/>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/PopupButtonHeight"
+        android:layout_margin="@dimen/PopupButtonContainerMargin">
+
+        <com.caspervpn.vpn.helper.MyButton
+            style="@style/Popup_Button"
+            android:id="@+id/dialogButtonCancel"
+            android:layout_marginRight="@dimen/PopupButtonMargin"
+            android:layout_marginLeft="@dimen/PopupButtonMargin"
+            android:text="@string/CANCEL"/>
+
+        <com.caspervpn.vpn.helper.MyButton
+            style="@style/Popup_Button"
+            android:id="@+id/dialogButtonOK"
+            android:layout_marginRight="@dimen/PopupButtonMargin"
+            android:layout_marginLeft="@dimen/PopupButtonMargin"
+            android:text="@string/ACCEPT"/>
+
+    </LinearLayout>
+</LinearLayout>

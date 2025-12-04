@@ -1,0 +1,63 @@
+{
+  "fields": [
+    {
+      "name": "uuid",
+      "type": "string"
+    },
+    {
+      "name": "subscription_uuid",
+      "type": "string"
+    },
+    {
+      "name": "subscription_start_date",
+      "type": "timestamp"
+    },
+    {
+      "name": "subscription_end_date",
+      "type": "timestamp"
+    },
+    {
+      "name": "vpn_pass",
+      "type": "string"
+    },
+    {
+      "name": "is_active",
+      "type": "boolean"
+    },
+    {
+      "name": "subscription_id",
+      "type": "integer#unsigned"
+    },
+    {
+      "name": "user_id",
+      "type": "integer#unsigned"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "subscriptions",
+      "type": "belongsTo",
+      "class": "App\\Subscription"
+    },
+    {
+      "name": "users",
+      "type": "belongsTo",
+      "class": "App\\Models\\Auth\\User"
+    }
+
+
+  ],
+  "foreign_keys": [
+    {
+      "column": "subscription_id",
+      "references": "id",
+      "on": "subscriptions"
+    },
+    {
+      "column": "user_id",
+      "references": "id",
+      "on": "users"
+    }
+
+  ]
+}

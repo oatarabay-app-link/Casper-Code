@@ -1,0 +1,103 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/DashboardView_Root"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+
+    <LinearLayout
+        android:id="@+id/ContactUs"
+        style="@style/MenuItem">
+
+        <ImageView
+            style="@style/MenuImage"
+            android:src="@mipmap/menu_message_icon"/>
+
+        <com.caspervpn.vpn.helper.MyTextView
+            style="@style/MenuText"
+            android:text="@string/ContactUs"/>
+
+        <ImageView
+            style="@style/MenuArrow"
+            android:scaleX="-1"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/LightMediumGray"/>
+
+    <LinearLayout
+        android:id="@+id/OnlineChat"
+        style="@style/MenuItem">
+
+        <ImageView
+            style="@style/MenuImage"
+            android:src="@mipmap/menu_chat_icon"/>
+
+        <com.caspervpn.vpn.helper.MyTextView
+            style="@style/MenuText"
+            android:text="@string/OnlineChat"/>
+
+        <ImageView
+            style="@style/MenuArrow"
+            android:scaleX="-1"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/LightMediumGray"/>
+
+    <LinearLayout
+        android:id="@+id/ReportBug"
+        style="@style/MenuItem">
+
+        <ImageView
+            style="@style/MenuImage"
+            android:src="@mipmap/menu_bug_icon"/>
+
+        <com.caspervpn.vpn.helper.MyTextView
+            style="@style/MenuText"
+            android:text="@string/ReportABug"/>
+
+        <ImageView
+            style="@style/MenuArrow"
+            android:scaleX="-1"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/LightMediumGray"/>
+
+    <LinearLayout
+        android:id="@+id/SendLogFile"
+        style="@style/MenuItem">
+
+        <ImageView
+            style="@style/MenuImage"
+            android:src="@mipmap/logs"/>
+
+        <com.caspervpn.vpn.helper.MyTextView
+            style="@style/MenuText"
+            android:text="@string/SendLogFile"/>
+
+        <ImageView
+            style="@style/MenuArrow"
+            android:scaleX="-1"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/LightMediumGray"/>
+
+
+</LinearLayout>
+

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    custom:context=".screens.What_Is_CasperVPN">
+
+    <include
+        layout="@layout/toolbar_title_and_menu"
+        android:id="@+id/AppBarLayout"/>
+
+   <ScrollView
+       android:id="@+id/ScrollView"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            style="@style/ParagraphTitleNoIcon"
+                            android:text="@string/WhyChooseCasperVPN"
+                            android:id="@+id/com.caspervpn.vpn.helper.MyTextView" />
+
+                    </LinearLayout>
+
+                    <com.caspervpn.vpn.helper.MyJustifiedTextView
+                        style="@style/ParagraphText"
+                        android:text="@string/WhyChooseCasperVPN_data"/>
+
+                </LinearLayout>
+
+                <include
+                    layout="@layout/devices_layout" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            style="@style/ParagraphIcon"
+                            android:src="@drawable/menu_lock_icon"/>
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            style="@style/ParagraphTitle"
+                            android:text="@string/TotalSecurity"/>
+
+                    </LinearLayout>
+
+                    <com.caspervpn.vpn.helper.MyJustifiedTextView
+                        style="@style/ParagraphText"
+                        android:text="@string/TotalSecurity_Data"/>
+
+                </LinearLayout>
+
+
+                <!--<LinearLayout-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content">-->
+
+                        <!--<ImageView-->
+                            <!--style="@style/ParagraphIcon"-->
+                            <!--android:src="@drawable/firewall"/>-->
+
+                        <!--<com.caspervpn.vpn.helper.MyTextView-->
+                            <!--style="@style/ParagraphTitle"-->
+                            <!--android:text="@string/BreakFirewalls"/>-->
+
+                    <!--</LinearLayout>-->
+
+                    <!--<com.caspervpn.vpn.helper.MyJustifiedTextView-->
+                        <!--style="@style/ParagraphText"-->
+                        <!--android:text="@string/BreakFirewalls_Data" />-->
+
+                <!--</LinearLayout>-->
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            style="@style/ParagraphIcon"
+                            android:src="@drawable/missile"/>
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            style="@style/ParagraphTitle"
+                            android:text="@string/FastAndPowerfulServers"/>
+
+                    </LinearLayout>
+
+                    <com.caspervpn.vpn.helper.MyJustifiedTextView
+                        style="@style/ParagraphText"
+                        android:text="@string/FastAndPowerfulServers_Data"/>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            style="@style/ParagraphIcon"
+                            android:src="@drawable/anonimity"/>
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            style="@style/ParagraphTitle"
+                            android:text="@string/Anonymity"/>
+
+                    </LinearLayout>
+
+                    <com.caspervpn.vpn.helper.MyJustifiedTextView
+                        style="@style/ParagraphText"
+                        android:text="@string/Anonymity_Data"/>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            style="@style/ParagraphIcon"
+                            android:src="@drawable/flexibility"/>
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            style="@style/ParagraphTitle"
+                            android:text="@string/Flexibility"/>
+
+                    </LinearLayout>
+
+                    <com.caspervpn.vpn.helper.MyJustifiedTextView
+                        style="@style/ParagraphText"
+                        android:text="@string/Flexibility_Data" />
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <com.caspervpn.vpn.helper.MyTextView
+                            style="@style/ParagraphTitleNoIcon"
+                            android:textSize="12sp"
+                            android:text="@string/Table"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <include
+                    layout="@layout/protocol_table"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+</LinearLayout>
+

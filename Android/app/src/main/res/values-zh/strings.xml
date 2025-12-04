@@ -1,0 +1,437 @@
+<resources>
+    <!-- Language-->
+    <string name="SelectedLanguage">中文</string>
+
+    <!-- Rate Us -->
+    <string name="RateUsText">如果你喜歡使用CasperVPN，請花一點時間來託管。謝謝您的支持！</string>
+    <string name="Later">後來</string>
+    <string name="NoThanks">不，謝謝</string>
+    <string name="RateNow">現在房價</string>
+
+    <!-- Crash -->
+    <string name="crash_dialog_title">您應用程序崩潰CasperVPN</string>
+    <string name="crash_dialog_text">發生意外的錯誤迫使應用程序停止。請幫助我們解決這個問題給我們發送錯誤數據</string>
+    <string name="crash_dialog_comment_prompt">您可以添加下面關於這個問題您的意見</string>
+
+    <string name="ShouldDownloadApp">你应该下载应用程序</string>
+
+    <string name="FreebeeCenter">Freebee中心</string>
+    <string name="FillOutSurvey">进行15秒的调查并使用CasperVPN获得3天的免费保费</string>
+    <string name="WatchVideo">观看30秒的视频并使用CasperVPN获得一小时的Premium</string>
+    <string name="ShareUs">分享我们的社交媒体页面，并使用CasperVPN获得一小时Premium</string>
+    <string name="SocialMedia">社交媒体</string>
+
+
+    <string name="AffiliateText">通過邀請您的朋友使用CasperVPN開始賺錢</string>
+    <string name="AffiliateGenerated">您的會員鏈接</string>
+    <string name="AffiliateError">出了點問題，請嘗試刷新並檢查您的互聯網連接。</string>
+    <string name="Affiliatebtn">加入我們的會員</string>
+    <string name="AffiliateSharebtn">分享您的會員鏈接</string>
+    <string name="AffiliateDescr">邀請您的朋友訂閱CasperVPN，並從您分享的鏈接產生的任何銷售中獲得高達70％的折扣，您的鏈接：</string>
+    <string name="LoadingAffiliate">正在加載會員...</string>
+    <string name="TweetAffiliate">發送你的鏈接</string>
+    <string name="ShareAffiliateFb">在Facebook上分享您的鏈接</string>
+    <string name="ShareAffiliateGP">在Google+上分享您的鏈接</string>
+    <string name="TweetAffiliatetxt">登錄/註冊CasperVPN並免費試用</string>
+    <string name="ShareAffiliateFbtxt">登錄/註冊CasperVPN並免費試用</string>
+    <string name="ShareAffiliateGPtxt">登錄/註冊CasperVPN並免費試用</string>
+    <string name="AffiliateShared">您的鏈接是共享的</string>
+    <string name="Affiliate">加盟</string>
+    <string name="AffiliateAccount1">賬戶憑證</string>
+    <string name="AffiliateAccount2">會員網站網址</string>
+    <string name="AffiliateAccount3">警告，這些憑據不會保存，您應該保存它們。</string>
+    <string name="AffiliateAccount4">單擊確定以分享您的鏈接。</string>
+    <string name="Username">用戶名</string>
+    <string name="BlockError">由於垃圾郵件原因，重新發送電</string>
+
+    <!-- Social Media -->
+    <string name="TweetOnTwitter">要了解当今的网络威胁，请在Twitter上关注我们</string>
+    <string name="ShareOnFacebook">要了解当今的网络威胁，请在Facebook上关注我们</string>
+    <string name="ShareOurInstagram">要了解当今的网络威胁，请在Instagram上关注我们</string>
+    <string name="ShareOurGooglePlus">为了随时了解当前的网络威胁，请在Google+上关注我们</string>
+
+    <string name="ErrorTitle">错误</string>
+    <string name="InvalidRecaptcha">无效的reCAPTCHA</string>
+    <string name="AvailableSurvey">调查是可用的</string>
+    <string name="allset">你全都定了</string>
+    <string name="SubscriptionActivated">您的帐户已成功激活。</string>
+    <string name="FreeBeeCenterActivated">你的免费高级服务是成功的。</string>
+
+    <string name="MapView">地图视图</string>
+
+    <string name="LoadingSurvey">加载调查...</string>
+    <string name="WaitfinishLoading">加载请稍候...</string>
+    <string name="ServerList">服务器列表</string>
+    <string name="Guide">指南</string>
+    <string name="Refresh">刷新</string>
+
+    <string name="Welcome_Back">歡迎回來！</string>
+    <string name="UserIsBlocked">用户被屏蔽!</string>
+    <string name="Invalid_Login_Credentials">電子郵件和/或密碼無效</string>
+    <string name="Email">电邮*</string>
+    <string name="Password">密码*</string>
+    <string name="LOGIN">登录</string>
+    <string name="Login">登录</string>
+    <string name="ForgotPassword">忘記密碼？</string>
+    <string name="DontHaveAnAccount">沒有帳戶？</string>
+    <string name="SignUp">注册</string>
+    <string name="InvalidUserName">無效的用戶名</string>
+    <string name="InvalidPassword">無效的密碼</string>
+    <string name="InvalidOldPassword">舊密碼無效</string>
+    <string name="InvalidNewPassword">新密碼無效</string>
+    <string name="KindlySetYourEmail">請設置您的電子郵件</string>
+    <string name="ResetPassword">重置密码</string>
+    <string name="PasswordChanged">密碼已更改</string>
+    <string name="GoBack">回去</string>
+    <string name="Error">錯誤，請稍後再試</string>
+    <string name="UserAlreadyExists">用戶已存在！</string>
+    <string name="InvalidResetLink">重置鏈接無效！</string>
+    <string name="LinkAlreadyUsed">我一直在使用的鏈接前面！</string>
+    <string name="LinkHasExpired">鏈接已失效！</string>
+    <string name="UserNotFound">找不到用戶</string>
+    <string name="CheckYourInternet">請檢查您的互聯網連接</string>
+    <string name="CheckYourEmailReset">請檢查您的電子郵件，然後單擊重置密碼鏈接</string>
+    <string name="EmailVerified">您已成功注册CasperVPN，请登录</string>
+    <string name="CheckYourEmailVerification">請檢查您的電子郵件，然後點擊確認鏈接. 如果您沒有收到電子郵件，請檢查您的垃圾郵件文件夾 \n或者点击重新发送确认电子邮件</string>
+    <string name="ReCheckYourEmailVerification">请重新检查您的电子邮件，然后点击确认链接。</string>
+    <string name="ResendEmail">重发确认邮件</string>
+
+    <string name="PleaseVerifyYourEmail">請驗證您的電子郵件</string>
+    <string name="EmailAlreadyVerified">電子郵件已經驗證</string>
+    <string name="ResettingYourPassword">重設密碼...</string>
+    <string name="RegisteringYourAccount">註冊您的帳戶...</string>
+    <string name="Saving">保存數據...</string>
+    <string name="Subscribing">訂閱...</string>
+    <string name="LoggingIn">在登錄...</string>
+    <string name="SigningIn">登錄中...</string>
+    <string name="Loading">正在加載...</string>
+    <string name="CannotConnectCheckYourInternet">哎呀，服务器似乎无法访问再试一次或连接到另一台服务器！</string>
+    <string name="CannotConnectNоServerAvailable">無法連接\n没有服务器可用</string>
+
+    <!-- **************************************************************************** -->
+
+
+
+    <string name="CantRemember">不記得了</string>
+    <string name="Reset">重置密码</string>
+    <string name="Connecting">連接</string>
+    <string name="Connect">连接</string>
+    <string name="Disconnect">断开</string>
+    <string name="pauseVPN">暫停</string>
+    <string name="resumevpn">恢復</string>
+
+
+    <string name="Hello">你好, 免费注册并获得15天的免费试用 ！</string>
+    <string name="ConfirmPassword">确认密码*</string>
+    <string name="OldPassword">旧密码</string>
+    <string name="NewPassword">新密码</string>
+    <string name="Register">寄存器</string>
+    <string name="VerifyEmail">验证您的电子邮件</string>
+    <string name="save">保存</string>
+    <string name="EditProfile">編輯個人資料</string>
+    <string name="ChangePassword">更改密碼</string>
+    <string name="SetNewPassword">設置新密碼</string>
+    <string name="AlreadyaMember">已經是會員？</string>
+    <string name="SignIn">登录</string>
+    <string name="YouAreIn">你在</string>
+    <string name="SafeHands">安全的手</string>
+    <string name="GoBackTo">回去</string>
+    <string name="IncorrectPasswordLength">密碼至少應為6個字符</string>
+    <string name="PasswordsDoNotMatch">您的密碼不符合</string>
+    <string name="NoInternetConnection">沒有網絡連接</string>
+    <string name="PleaseCheckYourInternetConnectivity">請檢查您的互聯網連接</string>
+    <string name="OK">好</string>
+    <string name="Cancel">取消</string>
+    <string name="CANCEL">取消</string>
+    <string name="ACCEPT">接受</string>
+    <string name="SubscriptionType">訂閱類型</string>
+
+    <string name="RestartConfirmation">重新啟動確認</string>
+    <string name="ApplicationRestart">更改語言需要重新啟動應用程序。\n是否要繼續？</string>
+
+    <string name="About">关于</string>
+    <string name="AutoConnect">設備重新啟動時連接</string>
+    <string name="ConnectOnWifi">連接在wifi上</string>
+    <string name="AboutUs">关于我们</string>
+    <string name="ABOUTUS">关于我们</string>
+    <string name="AboutCasperVPN">關於CasperVPN</string>
+    <string name="OnlineChat">在線聊天</string>
+    <string name="ReportABug">報告錯誤</string>
+    <string  name="SendLogFile">發送日誌文件</string>
+    <string name="Subscribe">訂閱</string>
+    <string name="FrequentlyAskedQuestions">經常問的問題</string>
+    <string name="GetFreePremium">获取免费付费版</string>
+    <string name="TermsAndConditions">条款和条件</string>
+    <string name="WhatIsCasperVPN">什麼是CasperVPN</string>
+    <string name="PrivacyPolicy">隐私政策</string>
+
+    <string name="HowSubscriptionWorks">订阅如何工作</string>
+    <string name="RestorePurchases">恢复购买</string>
+    <string name="twocheckout">2Checkout</string>
+    <string name="GooglePay">Google Pay</string>
+    <string name="Devices">设备</string>
+
+    <string name="SubscriptionStatus">訂閱狀態</string>
+    <string name="Active">活性</string>
+    <string name="Expired">已過期</string>
+
+    <string name="UPGRADE">升級</string>
+    <string name="UNSUBSCRIBE">取消訂閱</string>
+
+    <string name="CONNECT">连接</string>
+    <string name="DISCONNECT">断开</string>
+    <string name="PING">平</string>
+
+    <string name="SupportedProtocols">支持的協議</string>
+    <string name="Country">國家</string>
+    <string name="Load">加载</string>
+    <string name="CPU">中央處理器</string>
+    <string name="RAM">隨機存取存儲器</string>
+    <string name="Bandwidth">帶寬</string>
+    <string name="Distance">距離</string>
+
+    <string  name="Validtill">有效期至</string>
+    <string  name="ExpiredIn">过期</string>
+    <string  name="ExpiryDate">到期日</string>
+    <string name="Upgrade">升級</string>
+    <string  name="Downgrade">ダウングレード</string>
+    <string name="Unsubscribe">取消訂閱</string>
+    <string name="UnsubscribeConfirmation">取消訂閱確認</string>
+    <string name="UnsubscribeText">你確定要取消訂閱嗎？</string>
+
+    <string name="FeelSecure">感受安全</string>
+    <string name="TrackingProtection">追踪保护</string>
+    <string name="CasperVPNSound">CasperVPN心声</string>
+
+    <string name="ContactUs">聯繫我們</string>
+    <string name="RateUs">給我們評分</string>
+    <string name="Logout">登出</string>
+
+    <string name="SUBSCRIBE">訂閱</string>
+    <string name="Buy">購買</string>
+    <string  name="Month">個月</string>
+    <string name="OneMonth">1 個月</string>
+    <string name="MonthlyPrice">6.99$ / 月</string>
+    <string name="SixMonth">6 個月</string>
+    <string name="HalfYearPrice">5.99$ / 月</string>
+    <string name="OneYear">1 年</string>
+    <string name="YearlyPrice">4.99$ / 月</string>
+    <string  name="HalfYearSave">(節省 16.9%)</string>
+    <string  name="YearlySave">(節省 33.9%)</string>
+    <string name="LimitedOffer">(限量优惠)</string>
+    <string name="Insteadof">代替</string>
+
+    <string name="LifetimePrice">350$</string>
+    <string name="Lifetime">一生</string>
+    <string name="LifetimesSave">（节省36.3％）</string>
+
+    <string name="ThreeDevices">3設備</string>
+    <string name="UnlimitedAccessToAllServers">無限制訪問所有服務器</string>
+    <string name="UnlimitedBandwidth">無限帶寬</string>
+    <string name="FiveEncryptionProtocols">5加密協議</string>
+
+    <string name="SubscriptionPackages">訂閱包</string>
+
+    <string name="TimeoutTitle">超时警告</string>
+    <string name="TimeoutMessage">您的会话已超时。 请再次登录。</string>
+
+
+
+    <string name="You">您</string>
+    <string name="CasperVPNSecureYourData">保護您的數據</string>
+    <string name="TheInternet">互聯網</string>
+
+    <string name="WHATISCASPERVPN">什麼是CasperVPN</string>
+    <string name="ABOUTCASPERVPN">關於CasperVPN</string>
+    <string name="WhyChooseCasperVPN">為什麼選擇CasperVPN</string>
+    <string name="TotalSecurity">總安全性</string>
+    <string name="BreakFirewalls">打破防火牆</string>
+    <string name="FastAndPowerfulServers">快速和強大的服務器</string>
+    <string name="Anonymity">匿名</string>
+    <string name="Flexibility">靈活性</string>
+    <string name="Table">下表列出並比較了CasperVPN支持的不同VPN協議</string>
+    <string name="Feature">特徵</string>
+
+
+    <string name="Speed">速度</string>
+    <string name="Fastest">最快的</string>
+    <string name="VeryFast">非常快</string>
+    <string name="Slow">慢</string>
+    <string name="Intermediate">中間</string>
+    <string name="Fast">快速</string>
+    <string name="Security">安全</string>
+    <string name="Unsecure">不安全</string>
+    <string name="Secure">安全</string>
+    <string name="HighlySecure">高度安全</string>
+    <string name="Usage">用法</string>
+    <string name="EasyToUse">使用方便e</string>
+    <string name="UsedPorts">二手港</string>
+
+
+    <string name="FAQ">常問問題</string>
+    <string name="WhatisVPN">什麼是VPN？</string>
+    <string name="CanVpnBreakFirewall">VPN可以打破防火牆嗎？</string>
+    <string name="IsVpnLegal">是VPN法律?</string>
+    <string name="AreVPNsecure">VPN是否安全？</string>
+    <string name="CanVpnProvidersSeeMyTraffic">VPN提供商可以看到我的流量嗎？</string>
+    <string name="DoesMyIspSeeThatIAmConnectedToAVpn">我的ISP看到我已連接到VPN？</string>
+    <string name="HowCanIStartUsingCasperVPN">如何開始使用CasperVPN？</string>
+    <string name="PRIVACYPOLICY">隐私政策</string>
+    <string name="CasperVPNPrivacyPolicy">CasperVPN隱私政策</string>
+    <string name="WeCollect">我們收集</string>
+    <string name="InfoUsed">使用信息</string>
+    <string name="Disclosure">披露</string>
+    <string name="TERMSANDCONDITIONS">条款和条件</string>
+    <string name="General">一般</string>
+    <string name="ProhibitedActivities">禁止活動</string>
+    <string name="SignInPolicies">登錄策略</string>
+    <string name="PrivacyTermsAndPolicy">隱私權條款和政策</string>
+    <string name="AcceptanceOfTermsAndPolicies">接受條款和政策</string>
+
+
+    <string name="GETFREEPREMIUM">获取免费付费版</string>
+
+
+    <string name="DiscountText">通過我們的網站訂閱，並獲得10％的優惠</string>
+    <string name="GetFreeDiscount">獲得免費折扣</string>
+    <string name="OFF">折扣</string>
+
+    <string  name="SubscriptionExpired">订阅过期</string>
+    <string  name="SubscriptionExpiredText">不幸的是！看来你的订阅已过期\n续订以保持保护</string>
+
+    <string name="TryCasperVPNForFree">免費試用CasperVPN！</string>
+    <string name="ThankYou">謝謝</string>
+
+
+    <string name="pull_to_refresh_pull_label">拉扯刷新...</string>
+    <string name="pull_to_refresh_release_label">釋放刷新...</string>
+    <string name="pull_to_refresh_refreshing_label">正在加載...</string>
+    <string name="pull_to_refresh_tap_label">点按即可刷新...</string>
+    <string name="pull_to_refresh_last_updated">更新: %1$s</string>
+
+
+    <string name="NoDataAvailable">无可用数据</string>
+    <string name="ConnectionErrorClickToRefresh">连接错误\n点击刷新</string>
+
+    <string name="day">天</string>
+    <string name="days">天</string>
+    <string name="One_Month">1 個月</string>
+    <string name="Two_Months">2 個月</string>
+    <string name="Three_Months">3 個月</string>
+    <string name="Four_Months">4 個月</string>
+    <string name="Five_Months">5 個月</string>
+    <string name="Six_Months">6 個月</string>
+    <string name="Seven_Months">7 個月</string>
+    <string name="Eight_Months">8 個月</string>
+    <string name="Nine_Months">9 個月</string>
+    <string name="Ten_Months">10 個月</string>
+    <string name="Eleven_Months">11 個月</string>
+    <string name="One_Months">1 天</string>
+    <string name="HardDisk">硬盤</string>
+    <string name="RETRY">重試</string>
+    <string name="CLOSE">關</string>
+    <string name="PingResults">平結果</string>
+    <string name="PingStarted">平開</string>
+
+
+    <string name="GettingStarted1">歡迎來到CASPERVPN</string>
+    <string name="GettingStarted2">按連接按鈕</string>
+    <string name="GettingStarted3">等待連接的時候</string>
+    <string name="GettingStarted4">按下斷開連接按鈕</string>
+
+
+    <string name="TipsTitle1">在线自由</string>
+    <string name="TipsSubTitle1">从任何位置浏览您最喜爱的内容</string>
+    <string name="TipsTitle2">信息隐私</string>
+    <string name="TipsSubTitle2">保护您的在线隐私权</string>
+    <string name="TipsTitle3">网络安全</string>
+    <string name="TipsSubTitle3">加密您的网络活动</string>
+    <string name="TipsTitle4">数据保护</string>
+    <string name="TipsSubTitle4">保护您的数据免遭盗窃和黑客入侵</string>
+
+
+    <string name="MapInstructionTop">選擇一個服務器</string>
+    <string name="MapInstructionButton">或單擊自動連接按鈕</string>
+    <string name="NO">沒有</string>
+    <string name="YES">是</string>
+    <string name="YourLocation">你的地點</string>
+    <string name="DisconnectFrom">斷開連接</string>
+    <string name="Unknown">未知</string>
+    <string name="KM">公里</string>
+
+    <string name="GotIt">得到它了</string>
+    <string name="TermsNotification">通过注册，即表示您同意&lt;font color=\'#1dae6f\'&gt;&lt;u&gt;条款和条件&lt;/u&gt;&lt;/font&gt;</string>
+    <!-- *-************************** -->
+
+
+    <string name="FreeEdition" >免費版</string>
+    <string name="CommingSoon" >近日公開</string>
+    <string name="NeedHelp">需要幫助嗎？</string>
+
+
+    <string name="WhyChooseCasperVPN_data">CasperVPN是一個VPN客戶端軟件，在瀏覽互聯網時加密您的數據。 通過這種加密CasperVPN確保頂級安全性，完全匿名和最終的隱私為其用戶。</string>
+    <string name="TotalSecurity_Data">CasperVPN在您的計算機和我們的服務器之間創建一個加密隧道。 此加密隧道可消除任何第三方（例如您的Internet服務提供商（ISP）或您當地的Wi-Fi運營商）嘗試破解或查看您的信息。 加密是一個複雜的任務，通常依賴於經過良好測試的實現和高級數學。 CasperVPN使用高級加密算法來保護您的數據並確保您的通信安全。</string>
+    <string name="BreakFirewalls_Data">當連接到CasperVPN時，您的ISP只看到通過我們的VPN服務器的加密流量，但他們不能解密數據以分析其內容。所以基本上你可以通過任何限製或審查由你的ISP通過CasperVPN。在CasperVPN中，我們認為互聯網是一個互聯網絡的免費全球系統，不應受任何實體限製或約束。為了支持我們的信念，我們創建了CasperVPN以提供互聯網自由，因為這是應該的方式！</string>
+    <string name="FastAndPowerfulServers_Data">在CasperVPN中，我們擁有非常高的速度和寬帶互聯網連接的安全性。我們擁有我們的服務器並管理全球網絡，以提供最快的VPN速度。我們編寫優化的代碼，提供極其快速的VPN連接和頂級安全性。由於我們擁有我們的服務器，沒有第三方可以乾擾我們和我們的用戶。安全和隱私是我們的首要關注點，這就是為什麼我們認為任何第三方都不應以任何方式或情況訪問我們的任何服務器，以確保用戶匿名。為了增加一個額外的加密層，我們創建了我們的軟件，甚至我們的系統admen不能跟踪用戶活動，也沒有任何日誌存儲在我們的服務器上。</string>
+    <string name="Anonymity_Data">CasperVPN几乎将您置于不同的地点或国家。 使用CasperVPN，您可以通过隐藏您的真实IP地址和您的地理位置来避免留下数字足迹。 CasperVPN相信每个人都有权保护他们的私人信息。</string>
+    <string name="Flexibility_Data">CasperVPN允許您使用一組加密協議安全地瀏覽互聯網。用戶可以相應地在這些協議之間切換，並根據您的活動選擇最適合的VPN協議。</string>
+    <string name="AboutCasperVPN_Data">CasperVPN通過提供高水平的服務質量和用戶體驗超越了傳統的VPN解決方案。我們的目標不僅僅是滿足我們客戶的滿意，而是通過提供快速，安全和可靠的VPN服務超越我們的客戶的期望。我們相信，除了在使用互聯網時繞過虛擬限制和防火牆之外，每個用戶都有權利保護他的隱私和隱藏他的信息，使其免於盜竊和醫療。為了實現我們的目標，我們建立了一個非常安全的基礎設施，以確保加密，匿名和頂級VPN安全給我們的客戶。我們真誠的使命是保護我們的用戶的隱私。在這個願景的基礎上，我們創建了一個不在我們的系統中存儲任何日誌的軟件。甚至我們的基礎設施是以系統運營商本身不能跟踪用戶活動的方式構建的。</string>
+    <string name="WhatisVPN_Data">互聯網流量暴露給公眾。第三方跟踪工具，竊賊和黑客將能夠通過您的IP地址識別您的身份，查找您的位置並跟踪您的活動。虛擬專用網絡（VPN）是客戶端和VPN服務器之間的安全專用網絡，其中所有客戶端流量都通過安全隧道進行封裝和加密。通過使用VPN，互聯網服務提供商（ISP），政府和黑客將無法查看或跟踪您的數據。</string>
+    <string name="CanVpnBreakFirewall_Data">通過使用VPN，即使使用深度包檢測，防火牆也將無法阻止您的數據。當使用VPN時，您的數據將通過VPN隧道加密，防火牆不可能分析加密數據包或查看用戶活動。因此，VPN客戶端可以從防火牆訪問任何他們想要的不可見的。</string>
+    <string name="IsVpnLegal_Data">對於大多數國家，VPN是合法的。用戶有權保護其隱私權，並將其數據隱藏。 VPN是一種工具，也被公司和組織甚至政府使用，以確保他們的數據是受保護和安全的。</string>
+    <string name="AreVPNsecure_Data">通過VPN，用戶可以通過使用虛擬IP地址和虛擬位置隱藏他們的身份，這意味著您的所有活動，是未知的，對任何人想看看無意義。然而，在選擇VPN之前，您必須信任您的VPN提供商，這是我們在CasperVPN提供的，信任責任和安全是我們與我們的客戶共享.CasperVPN保持沒有日誌。用戶可以自由地做任何他想做的，而他的個人數據將是完全安全的，甚至對VPN運營商保持完全私人。</string>
+    <string name="CanVpnProvidersSeeMyTraffic_Data">技術上是，用戶信任他們的VPN提供商是非常重要的。事實上，VPN用戶必須避免信任提供免費VPN服務的VPN提供商。使用CasperVPN是不信任任何VPN提供商的用戶的明智選擇。對CasperVPN來說，保持用戶隱私並提供完整的安全性和安全性是非常重要的。在任何情況下，我們不會為我們的用戶保留任何在線活動日誌。 CasperVPN已經建立了其VPN基礎設施，我們的VPN運營商本身不能跟踪用戶或存儲任何日誌。為了使我們的用戶感到更安全，並對我們的信任，我們準備和開放給我們的用戶的答案和數據，證明我們極為安全的基礎設施，當有需要時。在一天結束時，安全，責任和隱私是我們存在的原因。</string>
+    <string name="DoesMyIspSeeThatIAmConnectedToAVpn_Data">由於CasperVPN提供OpenVPN協議，ISP可以看到的是，用戶正在使用安全套接字層（HTTPS）瀏覽安全網站，這是正常的，並被大多數網站，如穀歌，臉書和PayPal使用。</string>
+    <string name="HowCanIStartUsingCasperVPN_Data">只需要下載並在您的設備上安裝應用程序，然後按連接按鈕。基本上就是這麼簡單！</string>
+    <string name="CasperVPNPrivacyPolicy_Data">在CasperVPN我們相信，我們的用戶的隱私和安全是最重要的。因此，我們採購嚴格的管理政策，以保護您的隱私和安全。</string>
+    <string name="WeCollect_Data">電子郵件地址和付款數據。使用可選控制面板的客戶端將收到臨時Cookie。 Google可能會將Cookie儲存在Google Analytics（分析）中。隨意選擇停用Google的插件。</string>
+    <string name="InfoUsed_Data">電子郵件用於訂閱您的信息的付款證書和私人互聯網訪問和促銷優惠只。所有付款數據都用於管理客戶登錄付款和取消。 Cookie和Google分析數據用於改進和測試我們的網站。此外，我們的服務器日誌會定期修剪。 CasperVPN不會收集或記錄其虛擬專用網絡上的任何流量。</string>
+    <string name="PrivacyPolicyDisclosure_Data">CasperVPN努力保護其用戶的隱私權，並向他們提供所有正確的傳票請求。所有合規都經過我們法律部門的良好修訂和審查。如果我們被要求提供用戶信息，我們將與任何一方要求我們以任何理由或主張揭露此信息的任何嘗試與所有資源進行鬥爭。此外，此請求應由法院命令支持，否則我們不會考慮。 CasperVPN不參與任何非法或違憲行為，我們只是相信保護我們的用戶的隱私。 CasperVPN不會與任何第三方共享您的私人信息，除了本隱私政策中已做的披露。但是，如果您想詢問CasperVPN如何不與第三方共享用戶的個人信息，請隨時與我們聯繫。</string>
+    <string name="General_Data">這些是您通過註冊和使用CasperVPN的服務而同意的服務條款。只有在這些條件下，CasperVPN才允許用戶使用其服務.CasperVPN不是用於犯罪活動的服務。它是一個互聯網安全和隱私服務。您接受不違反任何您源自任何司法管轄區的法律。用戶有責任了解和理解與涉及您和您的行為的任何管轄區或地點相關的任何和所有相關法律。 CasperVPN不會以任何方式或形式對其用戶所執行的操作負責。這包括任何刑事或民事責任的傷害，執行或不執行任何個人為CasperVPN服務支付的錢。您同意保留您的用戶名/密碼和CasperVPN系統未經授權使用。您對在CasperVPN上發生的每個操作負責，其中用戶名/密碼用於建立VPN連接。您同意不使用我們的服務進行端口掃描，發送垃圾郵件，發送選擇接收電子郵件，掃描打開的中繼或打開代理，發送未經請求的電子郵件或任何版本或類型的大量發送的電子郵件，即使最後通過另一個服務器發送電子郵件。禁止從我們的服務發布任何彈出窗口。您在使用我們的服務時不接受任何方式的攻擊或形成任何其他網絡或計算機。 CasperVPN對照相，數字或任何其他方式對兒童的剝削感到不能容忍。</string>
+    <string name="Usage_Data">您接受不向他人提供或分享您的用戶名和密碼。 CasperVPN，所有者，員工，代理和其他參與CasperVPN服務的人不以任何方式或形式對使用任何在CasperVPN服務中註冊的任何帳戶執行或不執行，導致或產生的任何損害負責。在任何情況下，CasperVPN永遠不會對由於用戶錯過使用服務而造成的任何損害負責。這包括但不限於律師費或法院費用，不論任何法律可以解決它。</string>
+    <string name="ProhibitedActivities_Data">犯罪活動 - 任何客戶犯下任何這些犯罪行為：使用被盜的信用卡，信用卡欺詐，PayPal欺詐，銀行欺詐，電子黃金欺詐，Paysera欺詐，WebMoney欺詐，比特幣欺詐，郵件欺詐，敲詐勒索，綁架，強姦，謀殺，銷售被盜信用卡，銷售被盜物品，發送電子郵件或操作網站以通過我們的資源執行身份盜用，黑客攻擊，危害，網絡釣魚，網絡釣魚，帳戶。這是整個協議。 CasperVPN可能會不時重寫服務條款。服務條款從我們網站更新時起生效。客戶有責任每隔一段時間檢查一次新的服務條款.CasperVPN可以立即終止任何違反服務條款的用戶帳戶，無需退款和通知。或暫停帳戶，直到對用戶進行進一步澄清或調查。如果您的帳戶已被暫停，您必須與我們聯繫，以查看該情況是否可以更正。在我們永久關閉用戶帳戶並關閉所有帳單之前，我們將等待一段具體的時間。</string>
+    <string name="SignInPolicies_Data">CasperVPN不監視，存儲或記錄任何VPN用戶的日誌。我們不存儲連接時間戳，使用的帶寬，流量日誌或IP地址。我們不涉及任何形式的審查，我們絕不會將您的個人信息提供給任何第三方。我們不履行任何信息請求，除非它有一個有管轄權的法院命令。沒有人可以訪問我們的服務器，因為他們在一個非常安全的環境。此外，我們的服務器上不會存儲任何用戶活動。我們將永遠保護您的隱私。</string>
+    <string name="PrivacyTermsAndPolicy_Data">CasperVPN不保留或存儲任何日誌。但是，我們需要保留一些有關我們存在和用戶支持所需的用戶的信息。 •用戶電子郵件 - 發送最新的CasperVPN新聞並檢索丟失的密碼。 •用戶名 - 需要建立VPN連接。 •付款信息 - 我們會在退款申請時存儲結算信息。</string>
+    <string name="TermsAndConditionDisclosure_Data">您有權隨時通過與我們聯繫取消您的帳戶。如果帳戶被取消，您在VPN帳戶上花費的金額將不會退還。您的帳戶必須處於活動狀態才能取消。</string>
+    <string name="AcceptanceOfTermsAndPolicies_Data">登錄任何CasperVPN服務即表示您同意CasperVPN服務條款和條件，包括通過引用合併的所有其他政策。這些條款和條件可能會定期更新，接受這些條款和條件，您也接受任何有關未來的信息如果適用，對本協議的更改。</string>
+
+    <string name="paymentsuccessful">帐户激活</string>
+    <string name="DOWNGRADE">下坡</string>
+    <string name="SelectPaymentMethod">选择付款方式</string>
+    <string name="UpgradeInfo">为了升级，请等待您的当前套餐结束，\n不要忘记关闭您的Google帐户个人资料中的重复订单</string>
+    <string name="DowngradeInfo">为了降级，请等待您的当前套餐结束，\n不要忘记关闭您的Google帐户个人资料中的经常性订单</string>
+    <string name="NoteInfo">请等待，直到您的当前包裹结束</string>
+    <string name="WrongAccount">请使用您之前订阅的帐户加入我们的服务以激活它。</string>
+    <string name="TURNOFFRECURRING">关闭重播</string>
+    <string name="NOTE">注意</string>
+    <string name="ExpiryDateMessage">您的帐户将在您的试用期结束后收取，如果您的试用期已经结束，您将自动激活。</string>
+    <string name="PACKAGES">套餐</string>
+    <string name="Package">包</string>
+    <string name="REFRESH">提神</string>
+    <string name="Ourservice">您可以查看我们的服务条款 <font color='blue'>这里</font></string>
+    <string name="here">这里</string>
+    <string name="HowsubscriptionworksInfo">Google play store帐户。 \n \n订阅自动更新，除非自动更新在当前期间结束前至少24小时关闭。 \n \n帐户将在本期结束前的24小时内收取续费，并确定续约费用。 \n \n订阅可由用户管理，购买后可通过转到用户的帐户设置关闭自动续订功能。</string>
+
+    <string name="SIGNUP">注册</string>
+    <string name="SIGNIN">签到</string>
+    <string name="chooseurpackage">欢迎来到CasperVPN，\nKindly选择旅游套餐激活您的免费试用。 \n您可以在试用结束前27小时随时取消订阅。</string>
+    <string name="Signinrequiredsubscription">欢迎来到CasperVPN，\ n为了注册您的帐户，\n选择您的包来开始免费试用</string>
+    <string name="NewAppVersion">找到新版本</string>
+    <string name="NewAppVersionDesc">新版本可用，\nKindly更新您的应用程序</string>
+    <string name="UPDATE">UPDATE</string>
+    <string name="SubscriptionRequiredText">欢迎来到CasperVPN，\n选择您的套餐开始免费试用，\nKindly登录/注册以激活您的免费试用</string>
+    <string name="CofirmationEmail">确认邮件</string>
+
+    <string name="ErrorContactUs">错误，请通过在线聊天或发送电子邮件至support@caspervpn.com与我们联系</string>
+    <string name="Waitingrewardvideo">奖励视频不可用，请重试</string>
+
+    <string name="verify">校验</string>
+    <string name="HowsubscriptionworksInfo1">在确认购买时，将向Coogle Play商店帐户收取款项。</string>
+    <string name="HowsubscriptionworksInfo2">订阅自动更新，除非自动更新在当前期间结束前至少24小时关闭。</string>
+    <string name="HowsubscriptionworksInfo3">账户将在本期结束前的24小时内收取续费，并确定续约费用。</string>
+    <string name="HowsubscriptionworksInfo4">订阅可以由用户管理，并且可以在购买之后通过转到用户的账户设置来关闭自动续订。</string>
+    <string name="HowsubscriptionworksInfo5">如果提供免费试用期的任何未使用部分，则在用户购买该出版物的订阅（如适用）时将被没收。</string>
+    <string name="YourPrivacy">您的隐私</string>
+    <string name="YourPrivacyInfo">我们努力收集运营我们服务所需的最少量信息。你可以看到我们的隐私政策 <font color='blue'>这里</font></string>
+
+</resources>

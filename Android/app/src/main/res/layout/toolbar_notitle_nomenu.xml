@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize">
+    <androidx.appcompat.widget.Toolbar
+        android:fitsSystemWindows="true"
+        android:id="@+id/toolbar"
+        app:contentInsetStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:gravity="top|start"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+</RelativeLayout>

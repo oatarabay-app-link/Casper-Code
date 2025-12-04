@@ -1,0 +1,48 @@
+{
+  "fields": [
+    {
+      "name": "vpnserver_uuid",
+      "type": "string"
+    },
+    {
+      "name": "protocol_uuid",
+      "type": "string"
+    },
+    {
+      "name": "vpnserver_id",
+      "type": "integer#unsigned"
+    },
+    {
+      "name": "protocol_id",
+      "type": "integer#unsigned"
+    }
+
+  ],
+
+
+  "relationships": [
+    {
+      "name": "v_p_n_servers",
+      "type": "belongsTo",
+      "class": "App\\VPNServer"
+    },
+    {
+      "name": "protocols",
+      "type": "belongsTo",
+      "class": "App\\Protocol"
+    }
+
+  ],
+  "foreign_keys": [
+    {
+      "column": "vpnserver_id",
+      "references": "id",
+      "on": "v_p_n_servers"
+    },
+    {
+      "column": "protocol_id",
+      "references": "id",
+      "on": "protocols"
+    }
+  ]
+}

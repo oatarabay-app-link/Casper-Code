@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/UltraLightGray"
+    custom:context=".screens.Signup">
+
+
+    <include layout="@layout/online_chat"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"></TableRow>
+
+
+        <com.caspervpn.vpn.helper.MyTextView
+            style="@style/ActivityTitle"
+            android:text="@string/Hello"/>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"></TableRow>
+
+        <include layout="@layout/activity_display_message"/>
+
+        <TableRow
+            android:id="@+id/Resend_table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+
+            <com.caspervpn.vpn.helper.MyTextView
+                android:id="@+id/ResendEmail"
+                style="@style/SendConfirmEmail"
+                android:text="@string/ResendEmail"/>
+
+        </TableRow>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/EditTextTitle"
+                android:text="@string/Email"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+
+            <LinearLayout
+                style="@style/EditTextContainer">
+
+                <ImageView
+                    style="@style/EditTextImageStyle"
+                    android:id="@+id/Login_Image"
+                    android:src="@drawable/user_disabled"/>
+
+                <View
+                    style="@style/EditTextDividor"/>
+
+                <com.caspervpn.vpn.helper.MyEditText
+                    style="@style/EditText"
+                    android:id="@+id/User_Name"
+                    android:layout_marginLeft="10dp"
+                    android:hint="@string/EmailHint"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionNext"
+                    android:nextFocusForward="@+id/Password"
+                    android:text=""/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/EditTextTitle"
+                android:text="@string/Password"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+
+            <LinearLayout
+                style="@style/EditTextContainer">
+
+                <ImageView
+                    style="@style/EditTextImageStyle"
+                    android:id="@+id/Password_Image"
+                    android:src="@drawable/password_disabled"/>
+
+                <View
+                    style="@style/EditTextDividor"/>
+
+                <com.caspervpn.vpn.helper.MyPasswordText
+                    style="@style/PasswordEditText"
+                    android:id="@+id/Password"
+                    android:imeOptions="actionNext"
+                    android:nextFocusForward="@+id/ConfirmPassword"/>
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/ShowPassword"
+                android:src="@mipmap/show_password_disabled"
+                style="@style/EditText_Tool"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/EditTextTitle"
+                android:text="@string/ConfirmPassword"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+
+            <LinearLayout
+                style="@style/EditTextContainer">
+
+                <ImageView
+                    style="@style/EditTextImageStyle"
+                    android:id="@+id/ConfirmPassword_Image"
+                    android:src="@drawable/password_disabled"/>
+
+                <View
+                    style="@style/EditTextDividor"/>
+
+                <com.caspervpn.vpn.helper.MyPasswordText
+                    style="@style/PasswordEditText"
+                    android:id="@+id/ConfirmPassword"
+                    android:imeOptions="actionDone"/>
+
+
+                <EditText
+                    android:id="@+id/FocusHelper"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/ShowPasswordConfirmation"
+                android:src="@mipmap/show_password_disabled"
+                style="@style/EditText_Tool"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/EditTextTitle"
+                android:text="@string/VerifyEmail"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+
+            <com.caspervpn.vpn.helper.MyButton
+                android:id="@+id/VerifyEmail"
+                android:text="@string/Register"
+                style="@style/ActivityButton2"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+
+            <com.caspervpn.vpn.helper.MyButton
+                android:id="@+id/Register"
+                android:text="@string/Register"
+                style="@style/ActivityButton3"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+            <View
+                style="@style/ActivityViewWeight"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/LightMediumGray"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <com.caspervpn.vpn.helper.MyTextView
+                    style="@style/ActivityFooter"
+                    android:id="@+id/AlreadyAMember"
+                    android:text="@string/AlreadyaMember"/>
+
+                <TextView
+                    style="@style/ActivityFooter_Helper"/>
+
+                <com.caspervpn.vpn.helper.MyTextView
+                    style="@style/ActivityFooter_Bold"
+                    android:id="@+id/Sign_In"
+                    android:text="@string/SignIn"/>
+
+            </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"/>
+        </LinearLayout>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></TableRow>
+
+    </TableLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/progress_bar"/>
+
+</RelativeLayout>

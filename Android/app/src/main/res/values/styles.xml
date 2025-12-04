@@ -1,0 +1,1358 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/DarkBlue</item>
+        <item name="colorPrimaryDark">@color/DarkBlueFocus</item>
+        <item name="colorAccent">@color/Green</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowSoftInputMode">stateHidden</item>
+        <item name="android:textColorHint">@color/LightMediumGray</item>
+    </style>
+
+    <style name="AppTheme.WithActionBar" parent="AppTheme">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+    </style>
+
+    <style name="AppTheme.dialog" parent="android:Theme.DeviceDefault.Light.Dialog" />
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+
+    <!-- ************************************************************ -->
+
+    <style name="ActivityTitle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingRight">@dimen/ActivityTitleHorizontalPadding</item>
+        <item name="android:paddingLeft">@dimen/ActivityTitleHorizontalPadding</item>
+        <item name="android:textColor">@color/DarkBlue</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/ActivityTitleTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+
+    <style name="ActivityViewWeight">
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="ActivityViewHeight" parent="ActivityViewWeight">
+        <item name="android:layout_height">@dimen/ActivityViewHeight</item>
+    </style>
+
+    <style name="EditTextTitle"  parent="ActivityViewWeight">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/EditTextTitleMarginTop</item>
+        <item name="android:layout_marginBottom">@dimen/EditTextTitleMarginBottom</item>
+        <item name="android:layout_marginLeft">@dimen/ButtonRadius</item>
+        <item name="android:layout_marginRight">@dimen/ButtonRadius</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">@dimen/EditTextTitleTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+    </style>
+
+
+
+
+    <style name="SendConfirmEmail"  parent="ActivityViewWeight">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/EditTextTitleMarginBottom</item>
+        <item name="android:layout_marginLeft">@dimen/ButtonRadius</item>
+        <item name="android:layout_marginRight">@dimen/ButtonRadius</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:textColor">@color/DarkGray</item>
+        <item name="android:textSize">@dimen/ApplicationTitleTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+    </style>
+
+
+    <style name="EditTextImageStyle">
+        <item name="android:layout_width">@dimen/EditTextImageWidth</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">@dimen/EditTextImagePadding</item>
+    </style>
+
+    <style name="EditTextDividor">
+        <item name="android:layout_width">@dimen/EditTextDividorWidth</item>
+        <item name="android:layout_marginTop">@dimen/EditTextDividorMargin</item>
+        <item name="android:layout_marginBottom">@dimen/EditTextDividorMargin</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/LightGray</item>
+    </style>
+
+    <style name="ActivityButton" parent="ActivityViewHeight">
+        <item name="android:enabled">false</item>
+        <item name="android:background">@drawable/button</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginTop">@dimen/ActivityButtonMarginTop</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/ActivityButtonTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+
+    <style name="ActivityButton2" parent="ActivityViewHeight">
+        <item name="android:enabled">false</item>
+        <item name="android:background">@drawable/button</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/ActivityButtonTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+
+    <style name="ActivityButton3" parent="ActivityViewHeight">
+        <item name="android:enabled">false</item>
+        <item name="android:background">@drawable/button</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginTop">@dimen/EditTextPadding</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/ActivityButtonTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+
+
+    <style name="EditTextContainer" parent="ActivityViewHeight">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/edit_text</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="EditText" parent="ActivityViewHeight">
+        <item name="android:paddingRight">@dimen/EditTextPadding</item>
+        <item name="android:paddingLeft">@dimen/EditTextPadding</item>
+        <item name="android:background">@null</item>
+        <item name="android:hint">@string/EmailHint</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">@dimen/EditTextTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Book.otf</item>
+    </style>
+
+    <style name="PasswordEditText" parent="EditText">
+        <item name="android:hint">@string/PasswordHint</item>
+        <item name="android:inputType">textPassword</item>
+    </style>
+
+    <style name="EditText_Tool">
+        <item name="android:src">@mipmap/show_password_disabled</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:background">@color/FullTransparent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:padding">@dimen/ShowPasswordPadding</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">0.2</item>
+    </style>
+
+    <style name="ActivityFooter">
+        <item name="android:textColor">@color/DarkGray</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Book.otf</item>
+
+        <item name="android:paddingBottom">@dimen/ActivityFooterPadding</item>
+        <item name="android:paddingTop">@dimen/ActivityFooterPadding</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">end|bottom</item>
+        <item name="android:textAlignment">viewEnd</item>
+    </style>
+
+    <style name="ActivityFooter_Bold">
+        <item name="android:textColor">@color/DarkGray</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+
+        <item name="android:paddingBottom">@dimen/ActivityFooterPadding</item>
+        <item name="android:paddingTop">@dimen/ActivityFooterPadding</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">start|bottom</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
+    <style name="ActivityFooter_Bold_Weighted" parent="ActivityViewWeight">
+        <item name="android:textColor">@color/DarkGray</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">end|bottom</item>
+        <item name="android:textAlignment">viewEnd</item>
+    </style>
+
+
+    <style name="ActivityFooter_Helper">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:text">\n\s</item>
+    </style>
+
+
+    <style name="Activity_Display_Message" parent="ActivityViewWeight">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minLines">3</item>
+        <item name="android:background">@drawable/msg_selector</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+        <item name="android:paddingRight">@dimen/EditTextPadding</item>
+        <item name="android:paddingLeft">@dimen/EditTextPadding</item>
+        <item name="android:textColor">@drawable/msg_text_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/DisplayMessageMarginTop</item>
+        <item name="android:textSize">@dimen/DisplayMessageTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+    </style>
+
+    <!-- ************************************************************ -->
+
+
+    <!-- ************************************************************ -->
+    <style name="ApplicationActionBar">
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:textSize">@dimen/ApplicationTitleTextSize</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+    <style name="ApplicationActionBar1">
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:textSize">@dimen/ApplicationTitleTextSize</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+
+    <style name="ApplicationTitle" parent="ApplicationActionBar">
+        <item name="android:text">@string/app_name_upper</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ToolBarBackBtn">
+        <item name="android:paddingRight">@dimen/ToolBarBackBtnPadding</item>
+        <item name="android:paddingLeft">@dimen/ToolBarBackBtnPadding</item>
+        <item name="android:layout_width">@dimen/ToolBarBackBtnDimens</item>
+        <item name="android:layout_height">@dimen/ToolBarBackBtnDimens</item>
+        <item name="android:layout_marginLeft">@dimen/ToolBarBackBtnMargin</item>
+        <item name="android:layout_marginRight">@dimen/ToolBarBackBtnMargin</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@drawable/back_btn</item>
+        <item name="android:src">@mipmap/menu_back_icon</item>
+    </style>
+
+    <style name="ToolBarFontBtn">
+        <item name="android:padding">@dimen/ToolBarFontBtnPadding</item>
+        <item name="android:layout_width">@dimen/ToolBarFontBtnDimens</item>
+        <item name="android:layout_height">@dimen/ToolBarFontBtnDimens</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:background">@drawable/back_btn</item>
+    </style>
+
+    <style name="ApplicationVersion" parent="ApplicationActionBar">
+        <item name="android:layout_marginRight">@dimen/ActionBarMargin</item>
+        <item name="android:layout_marginLeft">@dimen/ActionBarMargin</item>
+        <item name="android:gravity">right|center</item>
+        <item name="android:text">10.0.1</item>
+    </style>
+
+    <style name="ApplicationDrawer" parent="ApplicationActionBar">
+        <item name="android:layout_marginLeft">@dimen/ActionBarMargin</item>
+        <item name="android:layout_marginRight">@dimen/ActionBarMargin</item>
+        <item name="android:paddingTop">@dimen/DrawerPadding</item>
+        <item name="android:paddingBottom">@dimen/DrawerPadding</item>
+        <item name="android:src">@mipmap/nav_drawer_icon</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:scaleType">fitStart</item>
+    </style>
+
+    <style name="TipsTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginRight">@dimen/TipsMargin</item>
+        <item name="android:layout_marginLeft">@dimen/TipsMargin</item>
+        <item name="android:textColor">@color/White</item>
+
+        <item name="android:paddingBottom">@dimen/TipsTitlePadding</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:textSize">@dimen/TipsTitleTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+
+
+    <style name="TipsSubTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginRight">@dimen/TipsMargin</item>
+        <item name="android:layout_marginLeft">@dimen/TipsMargin</item>
+        <item name="android:textColor">@color/White</item>
+
+        <item name="android:gravity">top</item>
+        <item name="android:textSize">@dimen/TipsSubtutleTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+    </style>
+
+    <style name="TipsImage">
+        <item name="android:layout_marginLeft">@dimen/TipsMargin</item>
+        <item name="android:layout_marginRight">@dimen/TipsMargin</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">@dimen/TipsImageHeight</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="GettingStartedMenuButton">
+        <item name="android:layout_width">@dimen/GettingStartedButtonDimension</item>
+        <item name="android:layout_height">@dimen/GettingStartedButtonDimension</item>
+        <item name="android:layout_marginRight">@dimen/GettingStartedButtonMargin</item>
+        <item name="android:layout_marginLeft">@dimen/GettingStartedButtonMargin</item>
+        <item name="android:background">@drawable/getting_started</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+
+    <style name="GettingStartedTitle">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">10</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/GettingStartedTitleTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+    <!-- ************************************************************ -->
+
+
+    <!-- ************************************************************ -->
+    <style name="ptr_headerContainer">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/PTR_Header_Container_Height</item>
+        <item name="android:gravity">bottom</item>
+    </style>
+
+    <style name="ptr_header">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/PTR_Header_Padding</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="ptr_arrow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:src">@mipmap/pulltorefresh</item>
+        <item name="android:layout_marginLeft">@dimen/PTR_Arrow_Margin</item>
+    </style>
+
+
+    <style name="ptr_textwrapper">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="ptr_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/PTR_Text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/Green</item>
+    </style>
+
+    <style name="ptr_last_updated" parent="ptr_text">
+        <item name="android:textStyle">normal</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/PTR_Last_Updated</item>
+        <item name="android:layout_below">@+id/ptr_id_text</item>
+    </style>
+    <!-- ************************************************************ -->
+
+
+    <!-- ************************************************************ -->
+    <style name="ProgressBar">
+        <item name="android:clickable">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:background">@color/HalfTransparent</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="ProgressBarTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/ProgressBarTextSize</item>
+        <item name="android:layout_marginBottom">@dimen/ProgressBarMarginButton</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+    </style>
+    <!-- ************************************************************ -->
+
+
+    <!-- ************************************************************ -->
+    <style name="SocialMediaText">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:gravity">center|top</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+        <item name="android:lineSpacingExtra">8dp</item>
+    </style>
+
+    <style name="SocialMediaTextN">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:gravity">center|top</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+    </style>
+
+    <style name="SocialMediaMenuItem1">
+        <item name="android:clickable">true</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/social_media_list_bg_1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="SocialMediaMenuItem2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:clickable">true</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/social_media_list_bg_2</item>
+    </style>
+
+    <style name="SocialMediaMenuItem3">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">0.2</item>
+        <item name="android:clickable">true</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/social_media_list_bg_1</item>
+    </style>
+
+    <style name="AdsWall">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/White</item>
+    </style>
+    <!-- ************************************************************ -->
+
+
+    <!-- ************************************************************ -->
+
+    <style name="MenuRemainingDays">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textSize">@dimen/MenuRemainingDaysTextSize</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Book.otf</item>
+        <item name="android:text">"2 months"</item>
+    </style>
+
+    <style name="MenuUserName">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">@dimen/MenuUserNameTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+        <item name="android:text">"Example@gmail.com"</item>
+    </style>
+
+    <style name="MenuImage">
+        <item name="android:layout_marginLeft">@dimen/MenuImageMargin</item>
+        <item name="android:layout_marginRight">@dimen/MenuImageMargin</item>
+        <item name="android:layout_width">@dimen/MenuImageWidth</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:scaleType">fitStart</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    <style name="MenuTextStyle">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/MenuTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Book.otf</item>
+
+    </style>
+
+    <style name="MenuText" parent="MenuTextStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:textColor">@color/Black</item>
+    </style>
+
+    <style name="LanguageMenuText" parent="MenuText">
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:paddingLeft">@dimen/LanguageMenuPadding</item>
+        <item name="android:paddingRight">@dimen/LanguageMenuPadding</item>
+    </style>
+
+    <style name="MenuLogout" parent="MenuTextStyle">
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/Red</item>
+    </style>
+
+    <style name="MenuArrow">
+        <item name="android:layout_height">@dimen/MenuArrowHeight</item>
+        <item name="android:layout_width">@dimen/MenuBtnWidth</item>
+        <item name="android:layout_marginRight">@dimen/MenuBtnMargin</item>
+        <item name="android:layout_marginLeft">@dimen/MenuBtnMargin</item>
+        <item name="android:src">@mipmap/menu_next_icon</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    <style name="MenuItem">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/list_bg</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/MenuItemHeight</item>
+    </style>
+
+    <style name="footer">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/list_bg</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/FooterItemHeight</item>
+    </style>
+
+    <style name="SwitchBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_width">@dimen/MenuBtnWidth</item>
+        <item name="android:layout_marginRight">@dimen/MenuBtnMargin</item>
+        <item name="android:layout_marginLeft">@dimen/MenuBtnMargin</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="LanguageRadioButton">
+        <item name="android:background">@color/FullTransparent</item>
+        <item name="android:clickable">false</item>
+        <item name="android:padding">@dimen/RadioButtonPadding</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <!-- ************************************************************ -->
+
+
+    <!-- ************************************************************ -->
+
+    <style name="ServerItem">
+        <item name="android:layout_marginBottom">0.5dp</item>
+        <item name="android:background">@drawable/list_bg</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ServerItemBtn">
+        <item name="android:layout_width">@dimen/ServerItemBtnWidth</item>
+        <item name="android:paddingRight">@dimen/ServerItemBtnPadding</item>
+        <item name="android:paddingLeft">@dimen/ServerItemBtnPadding</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@color/LightGray</item>
+        <item name="android:src">@mipmap/menu_next_icon</item>
+    </style>
+
+    <style name="ServerItemText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginRight">@dimen/ServerItemTextMargin</item>
+        <item name="android:layout_marginLeft">@dimen/ServerItemTextMargin</item>
+        <item name="android:textColor">@color/Black</item>
+
+        <item name="android:gravity">start|bottom</item>
+        <item name="android:textSize">@dimen/ServerItemTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+        <item name="android:text">France</item>
+    </style>
+
+    <style name="ServerItemIP">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginRight">@dimen/ServerItemTextMargin</item>
+        <item name="android:layout_marginLeft">@dimen/ServerItemTextMargin</item>
+        <item name="android:textColor">@color/DarkGray</item>
+
+        <item name="android:gravity">start|top</item>
+        <item name="android:textSize">@dimen/ServerItemIPTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Book.otf</item>
+        <item name="android:text">192.168.136.2</item>
+    </style>
+
+
+    <style name="ServerItemHelthIndicator">
+        <item name="android:layout_width">55dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:src">@drawable/level_5</item>
+        <item name="android:paddingTop">@dimen/ServerItemVerticalPadding</item>
+        <item name="android:paddingBottom">@dimen/ServerItemVerticalPadding</item>
+        <item name="android:paddingLeft">@dimen/ServerItemHorizontalPadding</item>
+        <item name="android:paddingRight">@dimen/ServerItemHorizontalPadding</item>
+    </style>
+
+    <!-- ************************************************************ -->
+
+
+    <!-- ************************************************************ -->
+
+    <style name="ParagraphIcon">
+        <item name="android:layout_marginTop">@dimen/ParagraphIconMargin</item>
+        <item name="android:layout_marginLeft">@dimen/ParagraphIconMargin</item>
+        <item name="android:layout_marginRight">@dimen/ParagraphIconMargin</item>
+        <item name="android:layout_width">@dimen/ParagraphIconWidth</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="ParagraphTitle">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginTop">@dimen/ParagraphTitleMargin</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">@dimen/ParagraphTitleTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+    </style>
+
+    <style name="ParagraphTitleNoIcon" parent="ParagraphTitle">
+        <item name="android:layout_marginLeft">@dimen/ParagraphTitleMargin</item>
+        <item name="android:layout_marginRight">@dimen/ParagraphTitleMargin</item>
+    </style>
+
+    <style name="ParagraphText">
+        <item name="android:lineSpacingExtra">@dimen/LineSpacing</item>
+        <item name="android:selectable">false</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">@dimen/ParagraphTextSize</item>
+        <item name="android:layout_margin">@dimen/ParagraphTitleMargin</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Book.otf</item>
+    </style>
+
+    <style name="Table_CellStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/CellTextSize</item>
+        <item name="android:padding">@dimen/CellPadding</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/cell_shape</item>
+    </style>
+
+    <style name="Table_Cell_Header" parent="Table_CellStyle">
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+    </style>
+
+    <style name="Table_Cell" parent="Table_CellStyle">
+        <item name="android:textColor">@color/LightBlack</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Book.otf</item>
+    </style>
+
+    <!-- ************************************************************ -->
+
+
+    <!-- ************************************************************ -->
+
+    <style name="ServerDetailTextStyle">
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">@dimen/ServerDetailTextSize</item>
+        <item name="android:paddingLeft">@dimen/ServerDetailTextPaddingHorizontal</item>
+        <item name="android:paddingRight">@dimen/ServerDetailTextPaddingHorizontal</item>
+    </style>
+
+    <style name="ServerDetailTextTitle" parent="ServerDetailTextStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+    </style>
+
+    <style name="ServerDetailTextValue" parent="ServerDetailTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Book.otf</item>
+    </style>
+
+    <style name="ServerDetailTextTitleWide" parent="ServerDetailTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+        <item name="android:paddingBottom">@dimen/ServerDetailTextPaddingVertical</item>
+        <item name="android:paddingTop">@dimen/ServerDetailTextPaddingVertical</item>
+    </style>
+
+    <style name="ProtocolRadioButton">
+        <item name="android:background">@color/FullTransparent</item>
+        <item name="android:clickable">true</item>
+        <item name="android:padding">@dimen/ServerDetailTextPaddingVertical</item>
+        <item name="android:layout_marginLeft">@dimen/ServerDetailRadioButtonMargin</item>
+        <item name="android:layout_marginRight">@dimen/ServerDetailRadioButtonMargin</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+
+    <style name="ServerDetailButtonTextWhite">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/rectangular_button</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+
+    <!-- ************************************************************ -->
+
+
+    <!-- ************************************************************ -->
+
+    <style name="SubscribeButtonTextWhite">
+        <item name="android:layout_width">@dimen/SubscribeButtonWidth</item>
+        <item name="android:layout_height">@dimen/SubscribeButtonHeight</item>
+        <item name="android:background">@drawable/rectangular_button</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">@dimen/SubscribeButtonTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+
+    <style name="SubscribeTextWhite">
+        <item name="android:layout_height">@dimen/SubscribeButtonHeight</item>
+        <item name="android:background">@drawable/rectangular_button</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">@dimen/SubscriptionTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+    </style>
+
+    <style name="SubscribeText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">@dimen/SubscribeTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+    </style>
+
+    <style name="SubscribeTitle" parent="SubscribeText">
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">bottom</item>
+    </style>
+
+    <style name="SubscribeSubTitle" parent="SubscribeText">
+        <item name="android:gravity">top</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/DarkBlue</item>
+    </style>
+
+    <style name="SubscribeTitle1" parent="SubscribeText">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">bottom</item>
+    </style>
+
+    <style name="SubscribeSubTitle1" parent="SubscribeText">
+        <item name="android:gravity">top</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <style name="SubscribePrice" parent="SubscribeText">
+        <item name="android:textColor">@color/DarkBlue</item>
+        <item name="android:layout_marginRight">@dimen/SubscribeTitleMargin</item>
+        <item name="android:layout_marginLeft">@dimen/SubscribeTitleMargin</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="SubscribePriceLogin" parent="SubscribeText">
+        <item name="android:textColor">@color/White</item>
+        <item name="android:layout_marginRight">@dimen/SubscribeTitleMargin</item>
+        <item name="android:layout_marginLeft">@dimen/SubscribeTitleMargin</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="SubscribeMiddleTitle" parent="SubscribeText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/SubscribeTitlePadding</item>
+        <item name="android:paddingBottom">@dimen/SubscribeTitlePadding</item>
+    </style>
+
+
+    <style name="SubscriptionPackage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">@dimen/SubscriptionPackageTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+    </style>
+
+    <style name="SubscribeMiddleWithMargin" parent="SubscribeMiddleTitle">
+        <item name="android:layout_marginRight">@dimen/SubscribeTitleMargin</item>
+        <item name="android:layout_marginLeft">@dimen/SubscribeTitleMargin</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SubscribeMiddleWithMarginnormal" parent="SubscribeMiddleTitle">
+        <item name="android:layout_marginRight">@dimen/SubscribeTitleMargin</item>
+        <item name="android:layout_marginLeft">@dimen/SubscribeTitleMargin</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <style name="SubscribeCheck">
+        <item name="android:layout_width">@dimen/SubscribeCheckWidth</item>
+        <item name="android:layout_margin">@dimen/SubscribeCheckMargin</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:src">@drawable/check</item>
+    </style>
+
+    <style name="shiled">
+        <item name="android:layout_width">@dimen/SubscribeCheckWidth</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:src">@drawable/shiled</item>
+    </style>
+
+    <style name="fillout">
+        <item name="android:layout_width">@dimen/SubscribeCheckWidth</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+
+    <!-- ************************************************************ -->
+
+
+
+    <!-- ************************************************************ -->
+
+    <style name="Connection_Layout_Text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Book.otf</item>
+    </style>
+
+    <!-- ************************************************************ -->
+
+
+    <!-- ************************************************************ -->
+
+    <style name="Popup_Title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/PopupTitleMarginTop</item>
+        <item name="android:layout_marginBottom">@dimen/PopupTitleMarginBottom</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">@dimen/PopupTitleTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+
+    <style name="Popup_Title_Login">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/PopupTitleMarginTopLogin</item>
+        <item name="android:layout_marginBottom">@dimen/PopupTitleMarginBottomLogin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">@dimen/PopupTitleTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+
+    <style name="Popup_Message">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">4</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">@dimen/PopupMessageTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+
+    <style name="Popup_Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/popup_button</item>
+        <item name="android:textColor">@drawable/popup_button_text</item>
+        <item name="android:textSize">@dimen/PopupButtonTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+
+    <style name="Discount_Title">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1.2</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+
+    <style name="Discount_Unit" parent="@style/Discount_Title">
+        <item name="android:layout_marginTop">@dimen/PopupDiscountUnitMarginTop</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">@dimen/PopupDiscountUnitTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+
+    <style name="Discount_OFF" parent="@style/Discount_Title">
+        <item name="android:layout_marginTop">@dimen/PopupDiscountOFFMarginTop</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">@dimen/PopupDiscountOFFTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+
+    <!-- ************************************************************ -->
+
+
+    <!-- ************************************************************ -->
+
+    <style name="MAP_Popup_Message">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/PopupColor</item>
+        <item name="android:textSize">@dimen/MapPopupMessageTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+        <item name="android:minWidth">@dimen/Map_Popup_Message_Min_Width</item>
+    </style>
+
+    <style name="Map_Popup_Button">
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">@dimen/MapPopupButtonHeight</item>
+        <item name="android:layout_marginTop">@dimen/MapPopupButtonMarginTop</item>
+        <item name="android:layout_marginRight">@dimen/MapPopupButtonHorizontalMargin</item>
+        <item name="android:layout_marginLeft">@dimen/MapPopupButtonHorizontalMargin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/map_popup_button</item>
+        <item name="android:textColor">@drawable/map_popup_button_text</item>
+        <item name="android:textSize">@dimen/MapPopupMessageTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+
+    <style name="Map_Hint">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/MapHintTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+    </style>
+
+    <style name="Map_Hint_Button">
+        <item name="android:paddingRight">@dimen/MapHintButtonHorizontalPadding</item>
+        <item name="android:paddingLeft">@dimen/MapHintButtonHorizontalPadding</item>
+        <item name="android:paddingBottom">@dimen/MapHintButtonVerticalPadding</item>
+        <item name="android:paddingTop">@dimen/MapHintButtonVerticalPadding</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:text">@string/GotIt</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/rectangular_button</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+    </style>
+
+    <!-- ************************************************************ -->
+
+
+    <!-- ************************************************************ -->
+
+    <style name="ConnectButton">
+        <item name="android:layout_width">@dimen/ConnectButtonDimensions</item>
+        <item name="android:layout_height">@dimen/ConnectButtonDimensions</item>
+        <item name="android:layout_marginBottom">@dimen/ConnectButtonMargin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/round_button</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="ConnectText">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_marginBottom">@dimen/ConnectTitleMarginButton</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">@dimen/ConnectButtonTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+    </style>
+
+    <style name="ConnectedServerName">
+        <item name="android:text">France</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingBottom">@dimen/ConnectedServerPaddingButton</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:gravity">left|bottom</item>
+        <item name="android:textSize">@dimen/ConnectedServerNameTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+    </style>
+
+    <style name="ConnectionTimer">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:gravity">center_horizontal|center</item>
+        <item name="android:textSize">@dimen/ConnectionTimerTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Book.otf</item>
+    </style>
+
+    <style name="ConnectedServerFlag">
+        <item name="android:layout_width">@dimen/ConnectedServerFlagWidth</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:src">@mipmap/fr</item>
+        <item name="android:scaleType">fitStart</item>
+        <item name="android:layout_marginRight">@dimen/ConnectedServerFlagMargin</item>
+        <item name="android:layout_marginLeft">@dimen/ConnectedServerFlagMargin</item>
+    </style>
+
+    <style name="Pointer">
+        <item name="android:layout_width">@dimen/ConnectedServerFlagWidth</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/pointer</item>
+        <item name="android:layout_marginRight">@dimen/ConnectedServerFlagMargin</item>
+        <item name="android:layout_marginLeft">@dimen/ConnectedServerFlagMargin</item>
+    </style>
+
+    <style name="Fragment_Display_Message">
+        <item name="android:text">@string/CannotConnectCheckYourInternet</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">@drawable/display_msg_white</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+        <item name="android:textColor">@drawable/msg_text_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/DisplayMessageTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Demi.otf</item>
+        <item name="android:padding">@dimen/EditTextPadding</item>
+    </style>
+
+    <style name="Earth">
+        <item name="android:layout_width">@dimen/EarthDimensions</item>
+        <item name="android:layout_height">@dimen/EarthDimensions</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:src">@drawable/earth</item>
+    </style>
+
+    <style name="EarthCompleteCircle">
+        <item name="android:layout_width">@dimen/CompleteCircleDimensions</item>
+        <item name="android:layout_height">@dimen/CompleteCircleDimensions</item>
+        <item name="android:background">@drawable/earth_circle</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="ScaledConnectButton">
+        <item name="android:layout_width">@dimen/ScaledConnectButtonDimensions</item>
+        <item name="android:layout_height">@dimen/ScaledConnectButtonDimensions</item>
+        <item name="android:layout_marginBottom">@dimen/ScaledConnectButtonMarginBottom</item>
+        <item name="android:layout_marginLeft">@dimen/ScaledConnectButtonMarginLeft</item>
+        <item name="android:padding">@dimen/ScaledConnectButtonPadding</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@drawable/round_button</item>
+        <item name="android:src">@drawable/casper_logo</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="MapConnectedTextFrame">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/MapConnectedTextFrameHeight</item>
+        <item name="android:paddingLeft">@dimen/MapConnectedTextFrameHorizontalMargin</item>
+        <item name="android:paddingRight">@dimen/MapConnectedTextFrameHorizontalMargin</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/HalfTransparent</item>
+    </style>
+
+    <!-- ************************************************************ -->
+
+
+    <!-- ************************************************************ -->
+
+    <style name="TermsofServicesNotification">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">@dimen/ApplicationTitleTextSize</item>
+        <item name="android:layout_marginTop">@dimen/DialogTextMargin</item>
+        <item name="android:layout_marginLeft">@dimen/DialogTextMargin</item>
+        <item name="android:layout_marginRight">@dimen/DialogTextMargin</item>
+    </style>
+
+    <!-- ************************************************************ -->
+
+    <style name="FreeEdition">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/FreeEditionPanHeight</item>
+        <item name="android:textSize">@dimen/FreeEditionTextSize</item>
+        <item name="android:background">@color/Red</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">@string/FreeEdition</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="CommingSoon">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/FreeEditionPanHeight</item>
+        <item name="android:textSize">@dimen/FreeEditionTextSize</item>
+        <item name="android:background">@color/White</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">@string/FreebeeCenter</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="CommingSoonSocialMedia">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/FreeEditionPanHeight</item>
+        <item name="android:textSize">@dimen/FreeEditionTextSize</item>
+        <item name="android:background">@color/White</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">@string/SocialMedia</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+
+
+    <!-- ************************************************************ -->
+    <style name="Switch_View_btn">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:src">@drawable/map_button</item>
+        <item name="android:background">@color/FullTransparent</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="Server_List_btn">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:src">@drawable/server_button</item>
+        <item name="android:background">@drawable/server_list_button</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <!-- ************************************************************ -->
+
+
+    <!-- ************************************************************ -->
+
+    <style name="NeedHelpImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/OnlineChatIconSize</item>
+        <item name="android:layout_marginEnd">@dimen/OnlineChatMargin</item>
+        <item name="android:layout_marginStart">@dimen/OnlineChatMargin</item>
+        <item name="android:scaleType">fitEnd</item>
+        <item name="android:src">@drawable/online_chat</item>
+        <item name="android:background">@color/FullTransparent</item>
+    </style>
+
+    <style name="NeedHelpText">
+        <item name="android:textColor">@color/DarkGray</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+        <item name="android:text">@string/NeedHelp</item>
+
+        <item name="android:paddingBottom">@dimen/ActivityFooterPadding</item>
+        <item name="android:layout_marginEnd">@dimen/OnlineChatMargin</item>
+        <item name="android:layout_marginStart">@dimen/OnlineChatMargin</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">end|bottom</item>
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+
+    <style name="TakeASurvey">
+        <item name="android:textStyle">bold</item>
+        <item name="android:tag">fonts/NeutraText-Bold.otf</item>
+        <item name="android:text">@string/AvailableSurvey</item>
+
+        <item name="android:padding">2dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginEnd">@dimen/OnlineChatMargin</item>
+        <item name="android:layout_marginStart">@dimen/OnlineChatMargin</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">start|top</item>
+        <!--<item name="android:textAlignment">textEnd</item>-->
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentStart">true</item>
+
+        <item name="android:background">@drawable/rectangular_button</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

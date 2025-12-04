@@ -1,0 +1,18 @@
+{
+  "fields": [
+    {
+      "name": "username",
+      "type": "string"
+    },
+    {
+      "name": "groupname",
+      "type": "string"
+    },
+
+    {
+      "name": "priority",
+      "type": "integer"
+    }
+
+  ]
+}

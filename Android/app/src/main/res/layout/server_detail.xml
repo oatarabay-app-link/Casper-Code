@@ -1,0 +1,324 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    custom:context=".screens.Server_Detail">
+
+    <include
+        layout="@layout/toolbar_title_and_menu"
+        android:id="@+id/AppBarLayout"/>
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/AppBarLayout"
+        android:layout_above="@+id/footer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/ServerDetailTextTitle"
+                android:text="@string/Country"/>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <com.caspervpn.vpn.helper.MyTextView
+                    android:id="@+id/Country"
+                    android:text="France"
+                    style="@style/ServerDetailTextValue"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/LightMediumGray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/ServerDetailTextTitle"
+                android:text="@string/Load"/>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <com.caspervpn.vpn.helper.MyTextView
+                    android:id="@+id/Load"
+                    android:text="50%"
+                    style="@style/ServerDetailTextValue"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/LightMediumGray"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/ServerDetailTextTitle"
+                android:text="@string/RAM"/>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <com.caspervpn.vpn.helper.MyTextView
+                    android:id="@+id/RAM"
+                    android:text="250 GHZ"
+                    style="@style/ServerDetailTextValue"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/LightMediumGray"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/ServerDetailTextTitle"
+                android:text="@string/HardDisk"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <com.caspervpn.vpn.helper.MyTextView
+                    android:id="@+id/HardDisk"
+                    android:text="500 GB"
+                    style="@style/ServerDetailTextValue"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/LightMediumGray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/ServerDetailTextTitle"
+                android:text="@string/Bandwidth"/>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <com.caspervpn.vpn.helper.MyTextView
+                    android:id="@+id/Bandwidth"
+                    android:text="50 MBps"
+                    style="@style/ServerDetailTextValue"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/LightMediumGray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+
+            <com.caspervpn.vpn.helper.MyTextView
+                style="@style/ServerDetailTextTitle"
+                android:text="@string/Distance"/>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <com.caspervpn.vpn.helper.MyTextView
+                    android:id="@+id/Distance"
+                    android:text="@string/Unknown"
+                    style="@style/ServerDetailTextValue"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/LightMediumGray"/>
+
+        <LinearLayout
+            android:id="@+id/protocols"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:layout_above="@+id/footer"
+            android:orientation="vertical">
+
+
+            <com.caspervpn.vpn.helper.MyTextView
+                android:text="@string/SupportedProtocols"
+                style="@style/ServerDetailTextTitleWide"/>
+
+
+            <RadioGroup
+                android:id="@+id/radioProtocolGroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radio_PPTP"
+                    android:text="@string/PPTP"
+                    style="@style/ProtocolRadioButton"/>
+
+                <RadioButton
+                    android:id="@+id/radio_SSTP"
+                    android:text="@string/SSTP"
+                    style="@style/ProtocolRadioButton"/>
+
+                <RadioButton
+                    android:id="@+id/radio_IKEv2"
+                    android:text="@string/IKEv2"
+                    style="@style/ProtocolRadioButton"/>
+
+                <RadioButton
+                    android:id="@+id/radio_L2TP"
+                    android:text="@string/L2TPOverIPSec"
+                    style="@style/ProtocolRadioButton"/>
+
+                <RadioButton
+                    android:id="@+id/radio_OpenVPN"
+                    android:text="@string/OpenVPN"
+                    style="@style/ProtocolRadioButton"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"/>
+
+
+        <com.caspervpn.vpn.helper.MyButton
+            android:id="@+id/Ping"
+            style="@style/ServerDetailButtonTextWhite"
+            android:text="@string/PING" />
+
+        <com.caspervpn.vpn.helper.MyButton
+            style="@style/ServerDetailButtonTextWhite"
+            android:id="@+id/Connect"
+            android:text="@string/CONNECT" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"/>
+    </LinearLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/progress_bar"/>
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+{
+  "fields": [
+    {
+      "name": "nasname",
+      "type": "string"
+    },
+    {
+      "name": "shortname",
+      "type": "string"
+    },
+
+    {
+      "name": "type",
+      "type": "string"
+    },
+    {
+      "name": "ports",
+      "type": "integer"
+    },
+
+    {
+      "name": "secret",
+      "type": "string"
+    },
+    {
+      "name": "server",
+      "type": "string"
+    },
+    {
+      "name": "community",
+      "type": "string"
+    },
+
+    {
+      "name": "description",
+      "type": "string"
+    },
+
+
+
+    {
+      "name": "details",
+      "type": "longtext"
+    },
+    {
+      "name": "check_code",
+      "type": "longtext"
+    }
+
+
+
+  ]
+}

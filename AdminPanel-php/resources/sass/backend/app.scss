@@ -1,0 +1,30 @@
+@import "../global";
+
+// If you want to override variables do it here
+@import "variables";
+
+// Import styles
+@import "~@coreui/coreui/scss/coreui";
+
+@import "~@coreui/icons/css/all.css";
+@import "~datatables.net-bs4/css/dataTables.bootstrap4.min.css";
+//@import "~@coreui/icons/scss/flag/flag-icons";
+//@import "~@coreui/icons/scss/brand/brand-icons";
+
+// Fix inaccessible dropdown in .table-responsive dropdown buttons
+.table-responsive {
+    overflow-x: inherit;
+    td:not(.btn-td) {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 200px;
+    }
+}
+
+// Fix mobile footer
+.app-footer {
+    flex: 0 0;
+    padding-top: map-get($spacers, 3);
+    padding-bottom: map-get($spacers, 3);
+}

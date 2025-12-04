@@ -1,0 +1,59 @@
+stages:
+  - distribute
+  - i18n
+  - github
+  - lint
+  - deploy
+  - build
+  - test
+  - test_ui
+  - cleanup
+
+variables:
+  GIT_SUBMODULE_STRATEGY: normal
+  GIT_SUBMODULE_FORCE_HTTPS: "true"
+  LC_ALL: "en_US.UTF-8"
+  LANG: "en_US.UTF-8"
+  CI_KEYCHAIN_NAME: $CI_JOB_ID
+  # We use this variable when we run publish-github jobs
+  RELEASE_GITHUB_REPOSITORY: git@github.com:ProtonVPN/ios-mac-app.git
+  # Folder where jobs put their output like build binaries, test results, etc.
+  JOBS_OUTPUT_PATH: "artifacts/"
+  # Default tart settings
+  TART_EXECUTOR_ALWAYS_PULL: "false"
+  TART_EXECUTOR_HEADLESS: "false"
+
+
+default:
+  image: "team-vpn"
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" || 
+          $CI_PIPELINE_SOURCE == "schedule" ||
+          $CI_COMMIT_BRANCH == "develop"
+      variables:
+        # also deploy on MRs and schedules
+        ATLAS_DEPLOY_ENV: "true"
+    # run tests without env deployment
+    - if: $CI_COMMIT_TAG
+
+include:
+  - project: 'proton/devops/atlas-deploy'
+    ref: main
+    file: '/scenarios/pipeline-env.yml'
+
+  - project: 'translations/generator'
+    ref: master
+    file: '/jobs/sync-crowdin.gitlab-ci.yml'
+
+  - project: 'translations/generator'
+    ref: master
+    file: '/jobs/commit-locales.gitlab-ci.yml'
+
+  - project: 'agarroux/publish-github'
+    ref: feat/github-app
+    file: '/jobs/release.gitlab-ci.yml'
+  
+  # Include all jobs from all the files on `.gitlab/jobs/` folder
+  - local: '.gitlab/jobs/*.yml'

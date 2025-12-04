@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="@dimen/GettingStartedRadius"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        style="@style/ApplicationDrawer"
+        android:scaleType="fitEnd"
+        android:gravity="right|center"/>
+
+    <com.caspervpn.vpn.helper.MyTextView
+        style="@style/ApplicationTitle"
+        android:id="@+id/ApplicationTitle"/>
+
+    <com.caspervpn.vpn.helper.MyTextView
+        style="@style/ApplicationVersion"
+        android:gravity="left|center"
+        android:id="@+id/ApplicationVersion"/>
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+{
+  "fields": [
+    {
+      "name": "user_id",
+      "type": "integer#unsigned"
+    },
+    {
+      "name": "attribute",
+      "type": "string"
+    },
+    {
+      "name": "op",
+      "type": "string"
+    },
+
+    {
+      "name": "value",
+      "type": "string"
+    },
+
+    {
+      "name": "description",
+      "type": "longtext"
+    },
+
+    {
+      "name": "status",
+      "type": "boolean"
+    }
+
+  ],
+  "relationships": [
+    {
+      "name": "user",
+      "type": "belongsTo",
+      "class": "App\\Models\\Auth\\User"
+    }
+
+
+  ],
+  "foreign_keys": [
+    {
+      "column": "user_id",
+      "references": "id",
+      "on": "users"
+    }
+  ]
+}

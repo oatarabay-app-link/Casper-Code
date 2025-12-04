@@ -1,0 +1,44 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class MoreFeilds extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('payment_infos', function (Blueprint $table) {
+            //
+
+            $table->string('developer_payload')->nullable();
+            $table->string('kind')->nullable();
+            $table->timestamp("start_time")->nullable();
+            $table->timestamp("expiry_time")->nullable();
+            $table->timestamp("processed_price")->nullable();
+            $table->integer('payment_state')->nullable();
+            $table->longText('response_json')->nullable();
+            $table->longText('response_json')->nullable();
+
+
+
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('payment_infos', function (Blueprint $table) {
+            //
+        });
+    }
+}

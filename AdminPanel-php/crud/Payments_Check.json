@@ -1,0 +1,74 @@
+{
+  "fields": [
+    {
+      "name": "uuid",
+      "type": "string"
+    },
+    {
+      "name": "create_date",
+      "type": "timestamp"
+    },
+    {
+      "name": "subscription_uuid",
+      "type": "string"
+    },
+
+    {
+      "name": "user_uuid",
+      "type": "string"
+    },
+    {
+      "name": "user_id",
+      "type": "integer#unsigned"
+    },
+
+    {
+      "name": "user_email",
+      "type": "string"
+    },
+
+    {
+      "name": "subscription_id",
+      "type": "integer#unsigned"
+    },
+
+    {
+      "name": "token",
+      "type": "text"
+    },
+    {
+      "name": "status",
+      "type": "text"
+    }
+
+
+
+  ],
+  "relationships": [
+    {
+      "name": "subscriptions",
+      "type": "belongsTo",
+      "class": "App\\Subscription"
+    },
+    {
+      "name": "users",
+      "type": "belongsTo",
+      "class": "App\\Models\\Auth\\User"
+    }
+
+
+  ],
+  "foreign_keys": [
+    {
+      "column": "subscription_id",
+      "references": "id",
+      "on": "subscriptions"
+    },
+    {
+      "column": "user_id",
+      "references": "id",
+      "on": "users"
+    }
+
+  ]
+}

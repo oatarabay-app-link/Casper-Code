@@ -1,0 +1,2 @@
+Landing Page
+Earth Viw and map View are Fragments

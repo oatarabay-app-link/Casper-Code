@@ -1,0 +1,2154 @@
+/* Common word */
+"_cancel" = "Cancelar";
+
+/* Common word */
+"_connect" = "Conectar";
+
+/* Common word */
+"_connected" = "Conectado";
+
+/* Common word */
+"_delete" = "Excluir";
+
+/* Common word */
+"_disconnect" = "Desconectar";
+
+/* Common word */
+"_disconnected" = "Desconectado";
+
+/* Status of VPN connection reported by Siri */
+"_disconnecting" = "Desconectando";
+
+/* Common word */
+"_done" = "Concluído";
+
+/* Common word */
+"_edit" = "Editar";
+
+/* Common word */
+"_ok" = "OK";
+
+/* Common word */
+"_save" = "Salvar";
+
+/* Common word */
+"_unavailable" = "Indisponível";
+
+/* Description of the expand/collapse button used by accessibility Voice Over */
+"_expand_list_of_servers" = "Expandir lista de servidores";
+
+"_collapse_list_of_servers" = "Fechar lista de servidores";
+
+/* Used as a title in alerts/modals */
+"_warning" = "Aviso";
+
+/* Button in many places in both iOS and MacOS apps */
+"_upgrade" = "Fazer upgrade";
+
+/* iOS: Plan selection during plan upgarde, button insettings screen */
+"_upgrade_subscription" = "Upgrade de assinatura";
+
+/* MacOS: Settings -> Account. Button leading to web interface. */
+"_manage_subscription" = "Gerenciar assinatura";
+
+/* iOS & MacOS: text near country or server; MacOS: title of several alerts */
+"_upgrade_required" = "Upgrade necessário";
+
+/* MacOS: voice over indication for a country or server on maintenance */
+"_on_maintenance" = "Em manutenção";
+
+/* iOS & MacOS: text that requires restart connection */
+"_reconnection_required" = "Reconexão necessária";
+
+/* Server status in many places in iOS and MacOS apps */
+"_maintenance" = "Manutenção";
+
+/* MacOS: quit application button in custom status menu */
+"_quit" = "Sair";
+
+/* MacOS: alert show before quitting app if VPN is connected */
+"_quit_warning" = "Ao sair do aplicativo, a conexão VPN ativa será desconectada. Deseja continuar?";
+
+/* Common word */
+"_enabled" = "Ativado";
+
+/* Common word */
+"_disabled" = "Desativado";
+
+/* Button in some alerts */
+"_disable" = "Desativar";
+
+/* Button in Kill switch error alert */
+"_report" = "Reportar";
+
+/* Button in Kill switch error alert */
+"_ignore" = "Ignorar";
+
+"_continue" = "Continuar";
+
+/* Button in some alerts */
+"_show_instructions" = "Mostrar instruções";
+
+/* iOS: quick connect widget */
+"_network_unreachable" = "Rede indisponível";
+
+/* Title in no internet alert */
+"_not_connected_to_the_internet" = "Não foi possível estabelecer uma conexão VPN. Você não está conectado à internet.";
+
+/* MacOS: alert before disconnection on protocol and/or SecureCore state change */
+"_vpn_connection_active" = "Conexão VPN ativa";
+
+/* User is trying to switch to a VPN protocol that isn't supported on the current server (title) */
+"_vpn_protocol_not_supported_title" = "Protocolo VPN não suportado";
+
+/* User is trying to switch to a VPN protocol that isn't supported on the current server (text) */
+"_vpn_protocol_not_supported_text" = "O protocolo VPN não está disponível para a conexão selecionado. Para conectar, tente alterar o protocolo ou servidor.";
+
+/* iOS: button in settings screen */
+"_log_out" = "Encerrar sessão";
+
+/* iOS: Logout alert */
+"_log_out_warning" = "O encerramento da sessão irá finalizar sua sessão VPN.";
+
+/* MacOS: Logout alert */
+"_log_out_warning_long" = "Encerrar a sessão do aplicativo irá desconectar a conexão VPN ativa. Você tem certeza que deseja continuar?";
+
+/* Warning text that changing the VPN protocol will require the current VPN session to be disconnected */
+"_change_protocol_disconnect_warning" = "Alterar os protocolos irá encerrar sua sessão de VPN atual.";
+
+/* Slogan text under the logo in may places in iOS and MacOS apps */
+"_loading_screen_slogan" = "Internet segura em qualquer lugar";
+
+/* Main mac app menu item */
+"_report_an_issue" = "Reportar um problema...";
+
+/* Main app menu; User with \Proton VPN\ inside the same main menu as a name for item that opens help page. */
+"_help" = "Ajuda";
+
+/* MacOS: link in login screen */
+"_learn_more" = "Saiba mais";
+
+/* iOS: Status view */
+"_ip" = "IP";
+
+/* Common word */
+"_close" = "Fechar";
+
+/* Changing settings title */
+"_change_settings" = "Mudar configurações";
+
+/* Suggest the user to upgrade account for new features */
+"_get_plus_for_feature" = "Obtenha o Proton VPN Plus para desbloquear este e outros recursos.";
+
+/* Display more information */
+"_more_info" = "Saiba mais";
+
+/* Display less information */
+"_less_info" = "Menos informações";
+
+/* Text addressing to contact costumer support on several sites of the app */
+"_contact_our_support" = "Contate nosso Suporte";
+
+"_turn_on" = "Ligar";
+
+"_not_now" = "Agora não";
+
+"_allow" = "Permitir";
+
+/* %@ is an IP address e.g. IP: 123.45.67.890 */
+"_ip_value" = "IP: %@";
+
+/* %@ is an IP address e.g. Public IP: 123.45.67.890 */
+"_public_ip" = "IP público: %@";
+
+/* Several places in both iOS and Mac apps */
+"_quick_connect" = "Conexão rápida";
+
+/* Title of the change server button */
+"_change_server" = "Alterar servidor";
+
+/* Used in many places in MacOS app */
+"_secure_core" = "Secure Core";
+
+/* %@ is a country e.g. Secure Core Switzerland */
+"_secure_core_country" = "Secure Core %@";
+
+/* Profile create/edit menu */
+"_country" = "País";
+
+"_show_protonvpn" = "Mostrar Proton VPN";
+
+/* Main mac app menu item */
+"_clear_application_data" = "Limpar cache do aplicativo";
+
+/* Main mac app menu item */
+"_system_extension_tutorial_menu_item" = "Tutorial da extensão do sistema";
+
+/* MacOS: connecting overlay */
+"_preparing_connection" = "Verificando a disponibilidade do servidor";
+
+/* iOS: main button in tabbar during connecting to vpn phase */
+"_connecting" = "Conectando";
+
+"_connectingDotDotDot" = "Conectando...";
+
+/* iOS: countries list section header */
+"_countries_free" = "Países gratuitos";
+
+/* iOS: countries list section header */
+"_countries_premium" = "Países premium";
+
+/* MacOS: connecting overlay. %@ is a failure or timeout e.g. Connecting failed */
+"_connecting_vpn" = "Conectando %@";
+
+/* MacOS: connecting overlay. %@ is a country followed by a server e.g. Connecting to Switzerland CH#1. iOS: String in connection status screen. %@ is a country followed by `>> second country` in case it is a connection with SecureCore */
+"_connecting_to" = "Conectando com %@";
+
+"_reconnecting_to" = "Reconectando-se a %@";
+
+/* iOS status view */
+"_connected_to" = "Conectado em";
+
+/* macOS: Text on connection overlay shown after connection timed out */
+"_connection_timed_out" = "Conexão expirada";
+
+/* Text that should be bold in _connection_timed_out string */
+"_connection_timed_out_bold" = "tempo esgotado";
+
+/* %@ is a country followed by a server e.g. Connected to Switzerland CH#1 */
+"_connected_to_vpn" = "Conectado em %@";
+
+/* iOS: connection bar; Main mac app menu item; */
+"_not_connected" = "Não conectado";
+
+/* MacOS: text in main window */
+"_you_are_not_connected" = "Você não está conectado";
+
+/* MacOS: button in connecting overlay */
+"_try_again" = "Tentar novamente";
+
+"_try_again_without_killswitch" = "Desative o kill switch e tente novamente.";
+
+/* Button in some alerts */
+"_retry" = "Tentar novamente";
+
+/* iOS: section header in countries list */
+"_free_servers" = "Servidores gratuitos";
+
+/* iOS: section header in countries list */
+"_plus_servers" = "Servidores Plus";
+
+/* iOS: section header in countries list */
+"_test_servers" = "Servidores de TESTE";
+
+/* MacOS: connecting overlay */
+"_initializing_connection" = "Inicializando conexão...";
+
+/* MacOS: connecting overlay */
+"_successfully_connected" = "Conectado";
+
+/* MacOS: connecting overlay */
+"_failed" = "não funcionou";
+
+/* Connection error translation. iOS quick connect widget: text shown on error. */
+"_connection_failed" = "Erro na conexão";
+
+/* iOS status view */
+"_security" = "Segurança";
+
+/* iOS status view */
+"_status" = "Status";
+
+/* iOS status view */
+"_session_time" = "Tempo de sessão";
+
+/* iOS status view */
+"_location" = "Localização";
+
+/* iOS status view */
+"_city" = "Cidade";
+
+/* iOS status view */
+"_technical_details" = "Detalhes técnicos";
+
+/* Main mac app menu item */
+"_open_app_to_log_in" = "Abrir Proton VPN para iniciar sessão...";
+
+/* Main mac app menu item */
+"_upgrade_to_plus" = "Upgrade para o plano Plus";
+
+/* Main mac app menu item */
+"_upgrade_for_secure_core" = "para usar o Secure Core";
+
+"_switch_side_button_on" = "ATIVADO";
+
+"_switch_side_button_off" = "DESATIVADO";
+
+/* MacOS: shown when connection timed out and user has problematic setup involving ikev2 and kill switch on */
+"_timeout_ks_ike_descritpion" = "Outra aplicação pode estar interferindo com o kill switch. Para resolver este problema, mude para o protocolo OpenVPN ou desative o kill switch e tente novamente.";
+
+/* MacOS: button shown when connection timed out and user has problematic setup involving ikev2 and kill switch on. Don't make this text longer than in english. */
+"_timeout_ks_ike_switch_protocol" = "Troque para o OpenVPN e tente novamente";
+
+/* Disconnect notification */
+"_kill_switch_blocking_connection" = "O kill switch bloqueia todas as conexões";
+
+/* Disconnect notification */
+"_always_on_will_reconnect" = "A VPN sempre ativa irá reconectá-lo automaticamente";
+
+/* MacOS: About window title */
+"_about" = "Sobre";
+
+/* iOS setting: after this word actual version and build number are appended */
+"_version" = "Versão";
+
+/* MacOS: About window */
+"_version_current" = "Versão atual:";
+
+/* MacOS: About window */
+"_release_date" = "Data de lançamento:";
+
+/* MacOS: About window */
+"_changelog" = "Registro de alterações";
+
+/* MacOS: About window */
+"_acknowledgements" = "Reconhecimentos";
+
+/* Used in sign-in, sign-up and in settings */
+"_username" = "Nome de usuário";
+
+/* Used in sign-in, sign-up */
+"_password" = "Senha";
+
+/* Sign-up form */
+"_password_confirm" = "Confirmar senha";
+
+/* Show/hide password switch */
+"_show" = "MOSTRAR";
+
+/* Show/hide password switch */
+"_hide" = "OCULTAR";
+
+/* MacOS: Login button */
+"_login" = "Iniciar sessão";
+
+/* iOS: Login button in several places */
+"_log_in" = "Iniciar sessão";
+
+/* MacOS: label in login and settings screens */
+"_remember_login" = "Lembrar inicio de sessão";
+
+/* MacOS: label in login and settings screens */
+"_start_on_boot" = "Executar ao iniciar";
+
+/* MacOS: button in login screen */
+"_create_account" = "Criar conta";
+
+/* MacOS: button in login screen */
+"_need_help" = "Precisa de ajuda?";
+
+/* MacOS: button in login screen */
+"_reset_password" = "Redefinir senha";
+
+/* MacOS: button in login screen */
+"_common_issues" = "Problemas frequentes ao iniciar a sessão";
+
+/* MacOS: button in login screen */
+"_forgot_username" = "Esqueci meu nome de usuário";
+
+/* MacOS: generic failure message for SSO login */
+"_sso_login_failure" = "Falha ao entrar com SSO. Tente novamente.";
+
+/* iOS: button in login screen */
+"_forgot_password" = "Esqueceu sua senha?";
+
+/* iOS: button in login and onboarding screens */
+"_sign_up" = "Criar conta";
+
+/* MacOS: alert shown during login if already connected to VPN */
+"_warning_vpn_session_is_active" = "A sessão do Proton VPN de outro usuário está ativa neste dispositivo. Deseja continuar com o processo de início de sessão, finalizando a sessão atual. Deseja continuar?";
+
+/* iOS: placeholder for email field in signup and email verification screens */
+"_enter_email_address" = "Digite o endereço de e-mail";
+
+/* iOS: placeholder in phone verification screen */
+"_phone_country_code_placeholder" = "Código";
+
+/* iOS: placeholder in phone verification screen */
+"_phone_number_placeholder" = "Digite o número de telefone";
+
+/* iOS: title of phone country code selection screen */
+"_select_phone_country_code" = "Selecione o código do país";
+
+/* iOS: placeholder in phone country code selection screen */
+"_search_phone_country_code_placeholder" = "Procurar país";
+
+/* iOS: button for switching from sign-up to sign-in screen */
+"_already_have_account" = "Eu já tenho uma conta";
+
+/* iOS: Button in email verification screen */
+"_get_verification_email" = "Receber e-mail de verificação";
+
+/* iOS: Button in SMS verification screen */
+"_get_verification_sms" = "Receber SMS de verificação";
+
+/* iOS: text in human verification options screen */
+"_select_verification_option" = "Selecione uma opção de verificação para continuar:";
+
+/* iOS: text in human verification options screen */
+"_select_verification_option_top_message" = "Para evitar abusos, você deve verificar se é humano.";
+
+/* iOS: human verification option select button */
+"_use_captcha_verification" = "Verificar com CAPTCHA";
+
+/* iOS: human verification option select button */
+"_use_other_email_address" = "Verificar com e-mail";
+
+"_use_sms_verification" = "Verificar com SMS";
+
+/* iOS: human verification option select button */
+"_request_invitation" = "Solicitar ativação manual";
+
+/* iOS: placeholder for code in human verification code form */
+"_enter_verification_code" = "123 456";
+
+/* iOS: button in human verification code form */
+"_submit_verification_code" = "Enviar";
+
+/* iOS: button in human verification code form */
+"_resend_no_code" = "Não recebeu o código?";
+
+/* iOS: button in human verification code form */
+"_resend_code" = "Solicitar novo código";
+
+/* iOS: message after human verification code resending */
+"_resend_success" = "Novo código solicitado";
+
+/* iOS: link inside text under sign-up form */
+"_terms_and_conditions" = "Termos e condições";
+
+/* iOS: text under sign-up form. %@1 is a link with a title of 'Terms and Conditions'; %@2 is a link with a title of 'Privacy Policy' */
+"_terms_and_conditions_disclaimer" = "Ao usar Proton VPN, você concorda com o nosso\n%@ e %@";
+
+/* iOS: link inside text under sign-up form */
+"_privacy_policy" = "Politica de privacidade";
+
+/* iOS: text in human verification code form */
+"_verification_instructions" = "Um código de verificação foi enviado para você. Digite abaixo.";
+
+/* iOS: title of the screen after successfull purchase */
+"_setup_complete" = "Instalação concluída";
+
+/* iOS: title of the screen after successfull purchase */
+"_setup_complete_free" = "Agora você está registrado com um plano Proton VPN gratuito. Para começar, aproveite sete dias de avaliação do nosso plano Proton VPN Plus gratuitamente.";
+
+/* iOS: title of the screen after successfull purchase */
+"_setup_complete_plus" = "A sua compra foi concluída. O seu plano do Proton VPN Plus está ativo.";
+
+/* iOS: data disclaimer screen */
+"_data_disclaimer_title" = "Proteja-se online";
+
+/* iOS: data disclaimer screen */
+"_data_disclaimer_text" = "O Proton VPN está comprometido em proteger e respeitar a sua privacidade. É nossa política primordial coletar o mínimo possível de dados do usuário para garantir uma experiência de usuário privada e anônima no uso do aplicativo, especificamente:\n\n%@ - para iniciar a sessão, ajudar a recuperar uma senha esquecida e enviar atualizações importantes do serviço.\n\n%@ - apenas para relatórios de erros.\n\nO aplicativo do Proton VPN não processa nenhuma informação do usuário além desses dados. Não registamos a sua atividade online nem qualquer informação pessoal identificável. Todos os dados listados acima são armazenados e processados no próprio sistema do Proton VPN, sem que nenhum terceiro tenha acesso a eles.";
+
+/* iOS: data disclaimer screen */
+"_data_disclaimer_user_details" = "Nome de usuário ou endereço de e-mail";
+
+/* iOS: data disclaimer screen */
+"_data_disclaimer_device_details" = "Seu dispositivo e versão do sistema operacional";
+
+/* iOS: data disclaimer screen button */
+"_data_disclaimer_agree" = "Concordar e continuar";
+
+/* iOS: Map screen title and tabbar item */
+"_map" = "Mapa";
+
+/* MacOS: Map view toggle button accessibility label (used by screen readers */
+"_map_show" = "Mostrar mapa";
+
+/* MacOS: Map view toggle button accessibility label (used by screen readers */
+"_map_hide" = "Ocultar mapa";
+
+/* Description shown together with server info icon */
+"_tor_description" = "Conecta-se a rede TOR";
+
+/* Description shown together with server info icon */
+"_p2p_description" = "Suporta o tráfego P2P";
+
+/* Description shown together with server info icon */
+"_premium_description" = "Servidor premium";
+
+/* Used for SecureCore connection labels. %@ is a country e.g. via Switzerland */
+"_via_country" = "via %@";
+
+/* Used in several places in iOS to make SecureCore server description, similar to 'viaCountry' translation */
+"_via" = "via";
+
+/* Server load percentage, shown in the sidebar header when connected to a server. Also shown in the tooltip when hovering over a server load icon in the sidebar country list. %@ is a placeholder for the numeric percentage value. */
+"_server_load_percentage" = "%@%% de carga";
+
+/* iOS: Home screen title, tab bar item title; MacOS: TabBar tab title; */
+"_home" = "Início";
+
+/* iOS: Countries screen title, tab bar item title; MacOS: TabBar tab title; */
+"_countries" = "Países";
+
+"_no_servers_to_show" = "Atualmente não há servidores para mostrar aqui.";
+
+/* MacOS: SecureCore warning alert when users plan has to be upgraded */
+"_plan_does_not_include_secure_core" = "Seu plano não inclui o recurso Secure Core.";
+
+/* MacOS: SecureCore warning alert when users plan has to be upgraded */
+"_learn_more_about_secure_core" = "Saiba mais sobre o Secure Core";
+
+/* MacOS: placeholder for country search */
+"_search_for_country" = "Procurar por país";
+
+/* MacOS: secure core tooltip */
+"_secure_core_info" = "Fornece proteção adicional contra o comprometimento do servidor VPN através do roteamento de conexões através da nossa rede Secure Core";
+
+/* Text in warning screen before actions that will disconnect VPN */
+"_view_toggle_will_cause_disconnect" = "A ativação do Secure Core encerrará sua conexão atual.";
+
+/* MacOS: label in server info view (shown after click on Info icon in countries list */
+"_server_load" = "Carga do servidor:";
+
+/* MacOS: label in server info view (shown after click on Info icon in countries list */
+"_server_ip" = "IP do servidor:";
+
+/* MacOS: label in server info view (shown after click on Info icon in countries list */
+"_auto_assigned" = "Atribuição automática";
+
+/* MacOS: label in server info view (shown after click on Info icon in countries list */
+"_premium_server" = "Servidor Premium";
+
+/* MacOS profile form: feature selection value */
+"_standard" = "Padrão";
+
+/* MacOS profile form: feature selection value; iOS: country.server description in countries list; */
+"_p2p" = "P2P";
+
+/* MacOS profile form: feature selection value; iOS: country.server description in countries list; */
+"_tor" = "Tor";
+
+/* MacOS: label in server info view (shown after click on Info icon in countries list */
+"_p2p_server" = "Servidor P2P";
+
+/* MacOS: label in server info view (shown after click on Info icon in countries list */
+"_tor_server" = "Servidor Tor";
+
+/* MacOS Profiles Overview: Table column header */
+"_profile" = "Perfil";
+
+/* MacOS: menu item, profiles window main header, sidebar tab title; iOS: Profiles screen title and tabbar item title; */
+"_profiles" = "Perfis";
+
+/* iOS: table header section in profiles screen */
+"_recommended" = "Recomendado";
+
+/* iOS: table header section in profiles screen */
+"_my_profiles" = "Meus perfis";
+
+/* Button */
+"_save_as_profile" = "Salvar como perfil";
+
+/* Button */
+"_delete_profile" = "Excluir perfil";
+
+/* iOS: Success message on profile deletion */
+"_profile_deleted_successfully" = "O perfil foi excluído";
+
+/* iOS: Error message if profile can't be deleted */
+"_profile_deletion_failed" = "Não foi possível excluir o perfil.";
+
+/* MacOS: Buttons in several places; iOS: profile creation screen title */
+"_create_new_profile" = "Criar perfil";
+
+/* MacOS: button in profiles tab in main window */
+"_manage_profiles" = "Gerenciar perfis";
+
+/* MacOS: profiles window title */
+"_profiles_overview" = "Visão geral de perfis";
+
+/* iOS: success message after profile is saved */
+"_profile_created_successfully" = "Novo perfil salvo";
+
+/* iOS: failure message after profile is saved */
+"_profile_creation_failed" = "Não foi possível criar o perfil.";
+
+/* iOS: success message after profile is saved */
+"_profile_edited_successfully" = "Perfil atualizado";
+
+/* MacOS menu item; MacOS Profiles tab title; */
+"_overview" = "Visão geral";
+
+/* MacOS Profiles Overview: Table column header; MacOS Settings Tab title; */
+"_connection" = "Conexão";
+
+/* MacOS Profiles Overview: Table header for buttons column */
+"_action" = "Ação";
+
+/* Used for both profile description when fastest server option is selected and Plan speed description */
+"_fastest" = "Mais rápido";
+
+/* Profile create/change form */
+"_fastest_available_server" = "Servidor mais rápido disponível";
+
+/* iOS: Predefined profile with fastest connection */
+"_fastest_connection" = "Mais rápido";
+
+/* Profile create/change form and other places describing profile */
+"_random" = "Aleatório";
+
+/* Profile create/change form */
+"_random_available_server" = "Servidor aleatório disponível";
+
+/* iOS: Predefined profile with random server */
+"_random_connection" = "Aleatório";
+
+/* Profile create/change form */
+"_different_server_each_time" = "Servidor diferente a cada conexão";
+
+/* Text used when no active server information is available */
+"_no_description_available" = "Nenhuma descrição disponível";
+
+"_create_profile" = "Criar perfil";
+
+/* Profile create/change form */
+"_profile_settings" = "Configurações de perfil";
+
+/* Profile create/change form */
+"_connection_settings" = "Configurações de conexão";
+
+/* Profile create/change form */
+"_name" = "Nome";
+
+/* Profile create/change form */
+"_enter_profile_name" = "Digite o nome do perfil";
+
+/* Profile create/change form */
+"_color" = "Cor";
+
+/* Profile create/change form */
+"_make_default_profile" = "Definir perfil como padrão";
+
+/* Profile create/change form */
+"_default_profile_tooltip" = "O botão \"Conexão rápida\" usa o perfil padrão.\n";
+
+"_feature" = "Recurso";
+
+/* Profile create/change form */
+"_use_secure_core" = "Secure Core";
+
+/* Profile create/change form */
+"_select_country" = "Selecione o país";
+
+/* Profile create/change form */
+"_server" = "Servidor";
+
+/* Profile create/change form */
+"_select_server" = "Selecione o servidor";
+
+/* Error in profile create/change form */
+"_profile_name_is_required" = "Digite o nome";
+
+/* Error in profile create/change form */
+"_profile_name_is_too_long" = "O tamanho máximo do nome do perfil é de 25 caracteres";
+
+/* Error when user hasn't selected profile country */
+"_country_selection_is_required" = "Selecione um país";
+
+/* Error when user hasn't selected profile server */
+"_server_selection_is_required" = "Selecione um servidor";
+
+"_profile_name_needs_to_be_unique" = "O perfil com o mesmo nome já existe";
+
+/* MacOS: profile creation cancel alert text */
+"_current_selection_will_be_lost" = "Ao continuar, a seleção atual será perdida. Deseja continuar?";
+
+/* iOS: new profkle can't be created because not all required fields are filled */
+"_check_if_fields_present" = "Verifique se todos os campos estão preenchidos.";
+
+/* MacOS: profile deletion warning */
+"_delete_profile_header" = "Excluir perfil";
+
+/* MacOS: profile deletion warning */
+"_delete_profile_warning" = "O perfil será apagado permanentemente. Deseja continuar?";
+
+/* iOS: new profile screen */
+"_select_profile_color" = "Selecione a cor do perfil";
+
+/* Plan speed */
+"_plan_speed_medium" = "Velocidade média";
+
+/* Plan speed */
+"_plan_speed_high" = "Alta velocidade";
+
+"_plan_speed_fastest" = "Velocidade ultra rápida";
+
+/* Unknown error that has no better description */
+"_error_internal_error" = "Erro de API interno";
+
+/* VPN session is active error */
+"_error_vpn_session_is_active" = "A sessão do Proton VPN está ativa";
+
+/* VPN credentials can't be loaded error */
+"_error_user_credentials_missing" = "Faltam as credenciais do usuário. Não foi possível iniciar sessão";
+
+/* VPN credentials can't be loaded error */
+"_error_user_credentials_expired" = "Credenciais de usuário expiradas. Inicie a sessão.";
+
+/* VPN credentials can't be loaded error */
+"_error_vpn_credentials_missing" = "Está faltando as credenciais de VPN no keychain";
+
+/* Form validation error */
+"_error_field_required" = "Este campo é obrigatório";
+
+"_error_field_email_wrong_format" = "O endereço de e-mail não está no formato correto";
+
+"_error_field_passwords_dont_match" = "As senhas não correspondem";
+
+/* Human validation failed */
+"_error_user_failed_human_validation" = "Não foi possível verificar se você é humano. Tente novamente ou compre um plano premium.";
+
+/* Error decoding an object */
+"_error_decode" = "Erro ao decodificar os dados arquivados na classe: %@";
+
+/* Internal application error */
+"_error_email_verification_disabled" = "Verificação por e-mail temporariamente desativada";
+
+/* Error writing to system keychain */
+"_error_keychain_write" = "Proton não conseguiu se comunicar com o seu dispositivo. Tente novamente mais tarde.";
+
+/* Error when try to parse modulus signature */
+"_error_modulus_signature" = "A assinatura do módulo está vazia";
+
+/* Error when generate srp clint */
+"_error_generate_srp" = "Erro na geração SRP";
+
+/* Error when try to hash password */
+"_error_hash_password" = "Não foi possível efetuar o hash da senha do usuário";
+
+/* Error try to restore user from the session */
+"_error_fetch_session" = "Não foi possível encontrar o usuário da sessão";
+
+/* Network error */
+"_ne_request_timed_out" = "Solicitação de rede expirada";
+
+/* Network error */
+"_ne_unable_to_connect_to_host" = "Serviço indisponível";
+
+/* Network error */
+"_ne_network_connection_lost" = "A conexão com a rede foi perdida";
+
+/* Network error */
+"_ne_not_connected_to_the_internet" = "Não conectado à internet";
+
+/* Network error */
+"_ne_couldnt_reach_server" = "Não foi possível conectar aos servidores do Proton";
+
+/* API error */
+"_ae_wrong_login_credentials" = "Nome de usuário ou senha incorretos";
+
+/* API error */
+"_ae_vpn_info_not_received" = "Não foi possível obter informações da VPN.";
+
+/* Error when try to parse the server info */
+"_error_server_info_parser" = "Não foi possível analisar as informações dos servidores";
+
+/* Error when try to parse the partner info */
+"_error_partner_info_parser" = "Não foi possível analisar as informações do parceiro";
+
+/* Default error when vpn properties fetch failed */
+"_error_vpn_properties" = "Não foi possível capturar as propriedades da VPN!";
+
+/* Parsing error */
+"_error_session_count_parser" = "Não foi possível analisar a contagem das sessões";
+
+/* Parsing error */
+"_error_loads" = "Não é possível atualizar as cargas do servidor";
+
+/* API error */
+"_error_api_offline" = "A API do Proton VPN está atualmente indisponível";
+
+/* Error when try to parse subscription info */
+"_error_subscription_parser" = "Não foi possível analisar as informações da assinatura";
+
+/* Error when try to parse verification methods */
+"_error_verification_methods_parser" = "Não é possível analisar os métodos de verificação";
+
+/* Keychain error */
+"_error_keychain_fetch" = "Erro de cadeia de chaves.";
+
+/* Error when the app fails to create a user */
+"_error_user_creation" = "Erro na criação da conta";
+
+/* General title for several error alerts */
+"_error_unknown_title" = "Erro desconhecido";
+
+/* Delinquent user alert */
+"_delinquent_user_title" = "Fatura não paga";
+
+/* Delinquent user alert */
+"_delinquent_user_description" = "A sua conta tem atualmente uma fatura em atraso. Pague todas as faturas pendentes em account.protonvpn.com";
+
+/* Generic sign in error */
+"_error_sign_in_again" = "Desculpe, algo deu errado. Inicie sessão novamente.";
+
+"_p2p_detected_popup_title" = "O tráfego P2P não é permitido neste servidor";
+
+"_p2p_detected_popup_body" = "Sua conexão foi desativada porque você está usando um servidor que não suporta o tráfego peer-to-peer (P2P). O P2P não é suportado em servidores gratuitos ou servidores com o número 100 ou superior.";
+
+"_p2p_forwarded_popup_title" = "Conexão redirecionada";
+
+/* Under maintenance alert */
+"_server_under_maintenance" = "O servidor está em manutenção";
+
+/* macOS: plan upgrade required alert */
+"_upgrade_plan_to_access_server" = "Lamentamos, mas este servidor não está disponível no seu plano de assinatura. Se você quiser acessar mais servidores, considere a possibilidade de fazer um upgrade em sua assinatura.";
+
+/* Under maintenance alert */
+"_all_servers_in_country_under_maintenance" = "Todos os servidores neste país estão em manutenção. Conecte-se a outro país.";
+
+"_unsecure_wifi" = "Conexão WiFi insegura detectada";
+
+"_unsecure_wifi_learn_more" = "Saiba mais";
+
+"_unsecure_wifi_title" = "Wi-Fi inseguro detectado";
+
+"_maintenance_on_server_detected_title" = "O servidor da VPN está em manutenção";
+
+"_maintenance_on_server_detected_subtitle" = "O servidor que você está conectado está em manutenção";
+
+"_maintenance_on_server_detected_description" = "Reconectando você ao servidor mais rápido disponível.";
+
+/* MacOS: Body of alert shown when user changed some settings and connection has to be re-established */
+"_reconnect_on_settings_change_body" = "Sua conexão precisa ser reiniciada para aplicar esta modificação.";
+
+/* Under maintenance alert */
+"_country_servers_under_maintenance" = "Os servidores em %@ estão em manutenção";
+
+/* Under maintenance alert */
+"_all_servers_in_profile_under_maintenance" = "Servidor(es) do perfil estão em manutenção";
+
+/* Under maintenance alert */
+"_all_servers_under_maintenance" = "Todos os servidores estão em manutenção. Isto normalmente significa que existem dificuldades técnicas na parte do Proton VPN ou a sua rede é limitada.";
+
+"_p2p_forwarded_popup_body" = "Sua conexão foi redirecionada automaticamente para outro servidor porque alguns servidores não suportam o tráfego P2P. Isso pode reduzir a velocidade da sua conexão. Use servidores com o ícone P2P para evitar o reencaminhamento.";
+
+"_p2p_forwarded_popup_body_p1" = "Sua conexão foi redirecionada automaticamente para outro servidor porque alguns servidores não suportam o tráfego P2P. Isso pode reduzir a velocidade da sua conexão. Use servidores com o";
+
+"_p2p_forwarded_popup_body_p2" = "o ícone para evitar o reencaminhamento do tráfego.";
+
+/* VPN stuck alert */
+"_vpn_stuck_disconnecting_title" = "Erro de conexão";
+
+/* VPN stuck alert */
+"_vpn_stuck_disconnecting_body" = "Seu dispositivo não conseguiu encerrar a sessão da VPN anterior. Você precisará reiniciar seu dispositivo antes de estabelecer uma nova conexão VPN.";
+
+"_update_required" = "Atualização necessária";
+
+"_update_required_no_longer_supported" = "Esta versão do Proton VPN não é mais suportada. Atualizeo aplicativo para continuar usando.";
+
+/* Secondary button title in the App update required alert  */
+"_update_required_support" = "Contatar o suporte";
+
+/* Primary button title in the App update required alert  */
+"_update_required_update" = "Atualizar";
+
+"_invalid_refresh_token_please_login" = "Já passou um pouco desde a última vez que você usou o aplicativo Proton VPN. Faça o login novamente.";
+
+"_error_mitm_title" = "Conexão não segura";
+
+"_error_mitm_description" = "Não foi possível validar o certificado TLS ao tentar conectar com a API do Proton VPN. Sua conexão com a internet pode estar sendo monitorada. Para manter seus dados seguros, estamos impedindo que o aplicativo acesse a API do Proton VPN.\nPara iniciar sessão ou acessar sua conta, troque para uma nova rede e tente conectar-se novamente.";
+
+"_error_mitm_vpn_description" = "Não foi possível validar o certificado TLS ao tentar conectar com o servidor VPN. Sua conexão com a internet pode estar sendo monitorada. Para manter seus dados seguros, estamos impedindo que o aplicativo acesse este servidor VPN.\n Selecione outro servidor.";
+
+/* Internal error message when there is a problem with initializing tls and connection cannot be established. */
+"_error_tls_initialisation" = "Erro de inicialização TLS";
+
+/* Internal error message when there is a problem with server certificate and connection cannot be established. */
+"_error_tls_server_verification" = "Não foi possível verificar o certificado do servidor.";
+
+/* Mac: neagent help screen. The numbers refer to a text field and button in an image displayed above this text. Final string with filled in variables looks like this: "You may be asked to provide your computer account password\nto connect to the Proton VPN service. If this request appears,\nenter your Mac password (1) and click ‘Always Allow’ (2)." */
+"_neagent_description" = "Você pode ser solicitado a fornecer sua %@\npara conectar ao serviço do Proton VPN. Se esta solicitação aparecer,\ndigite sua %@ %@ e clique em '%@' %@.";
+
+/* Mac: neagent help screen */
+"_neagent_password" = "senha da conta do computador";
+
+/* Mac: neagent help screen */
+"_mac_password" = "Senha do Mac";
+
+/* Mac: neagent help screen */
+"_neagent_first_step" = "(1)";
+
+/* Mac: neagent help screen name of the Always Allow button the user needs to press in the macOS system dialog asking for account password */
+"_neagent_always_allow" = "Sempre permitir";
+
+/* Mac: neagent help screen */
+"_neagent_second_step" = "(2)";
+
+/* Button in several different alerts */
+"_got_it" = "Entendi!";
+
+/* If the app cannot upgrade the user's plan and they must go to the website to upgrade it. Plan upgrade unavailable alert */
+"_upgrade_unavailable_title" = "Upgrade indisponível no app";
+
+/* Plan upgrade unavailable alert */
+"_upgrade_unavailable_body" = "Não é possível fazer upgrade sua assinatura do Proton VPN a partir do aplicativo. Visite account.protonvpn.com para atualizar.";
+
+/* MacOS: clear application data alert */
+"_delete_application_data_popup_title" = "Limpar cache do aplicativo";
+
+/* MacOS: clear application data alert */
+"_delete_application_data_popup_body" = "Todos os dados do Proton VPN serão excluídos e o aplicativo será encerrado. Você tem certeza que deseja continuar?";
+
+/* MacOS: killswitch blocking alert button */
+"_kill_switch_disable" = "Desativar kill switch";
+
+/* iOS and macOS: Enable kill switch on badly-routed networks */
+"_kill_switch_enable" = "Ativar Kill Switch";
+
+/* MacOS: Settings screen title */
+"_preferences" = "Preferências";
+
+/* iOS: Settings screen title and tab title */
+"_settings" = "Configurações";
+
+/* Account tab button in settings window (MacOS and in several modals (both MacOS and iOS */
+"_account" = "Conta";
+
+/* Alert title for account deletion error */
+"_account_deletion_error" = "Erro";
+
+/* iOS: Message explaining that deleting account closes the VPN connection */
+"_account_deletion_connection_warning" = "A exclusão da conta irá finalizar sua sessão VPN.";
+
+/* MacOS: General tab in setting window */
+"_general" = "Geral";
+
+/* MacOS: Settings -> Account: name of field. */
+"_account_type" = "Tipo da conta";
+
+/* MacOS: Settings -> Account: name of field. */
+"_account_plan" = "Plano da conta";
+
+"_manage_subscription_on_web" = "Gerencie sua assinatura na página da internet";
+
+/* MacOS: Settings -> Connection: name of field. */
+"_kill_switch" = "Kill switch";
+
+/* MacOS: Settings -> Connection. Kill switch functionality description. */
+"_kill_switch_tooltip" = "Bloqueia todo o tráfego de rede quando o túnel VPN é perdido.";
+
+/* iOS Settings: toggle name */
+"_always_on_vpn" = "VPN sempre ligada";
+
+/* iOS Settinsg screen: always-on description under the switch */
+"_always_on_vpn_tooltip_ios" = "A VPN sempre ativa restaura a conexão VPN de forma rápida e automática. Para sua segurança, este recurso está sempre ligado.";
+
+/* MacOS: Settings -> Connection: name of field. */
+"_auto_connect" = "Conexão automática";
+
+/* MacOS: Settings -> Connection: description. */
+"_auto_connect_tooltip" = "Na inicialização do aplicativo, você será conectado ao perfil selecionado";
+
+/* MacOS: Settings -> Connection: description. */
+"_quick_connect_tooltip" = "O botão de conexão rápida irá conecta você ao perfil selecionado";
+
+/* MacOS: Settings -> General: name of field. */
+"_start_minimized" = "Iniciar minimizado";
+
+/* MacOS: Settings -> General: name of field. */
+"_system_notifications" = "Notificações do sistema";
+
+/* MacOS: Settings -> General: name of field. */
+"_early_access" = "Acesso antecipado";
+
+/* MacOS: Settings -> General: description. */
+"_early_access_tooltip" = "Seja o primeiro a receber as últimas atualizações. Lembre-se de que as versões de acesso antecipado podem ser menos estáveis.";
+
+/* MacOS: Settings -> General: name of field. */
+"_unprotected_network" = "Notificar redes desprotegidas";
+
+/* MacOS: Settings -> General: description */
+"_unprotected_network_tooltip" = "Receba uma notificação quando o Proton VPN detectar que você está conectado a uma rede desprotegida.";
+
+/* MacOS: Settings -> Connection: name of field. */
+"_dns_leak_protection" = "Proteção de vazamento DNS";
+
+/* MacOS: Settings -> Connection: description. */
+"_dns_leak_protection_tooltip" = "Prevenir o vazamento de detalhes de consultas DNS por terceiros. Sempre ativo.";
+
+/* iOS Settings: table section header */
+"_security_options" = "Opções de segurança";
+
+/* iOS Settings -> Connection: name of field. */
+"_subscription_plan" = "Plano de assinatura";
+
+/* iOS plan selection: header */
+"_choose_plan" = "Escolha uma assinatura";
+
+"_protocol" = "Protocolo";
+
+/* iOS Settings -> Protocol: screen title */
+"_vpn_protocol" = "Protocolo da VPN";
+
+"_openvpn" = "OpenVPN";
+
+/* iOS Settings -> Protocol: IKEv2 option */
+"_ikev2" = "IKEv2";
+
+/* iOS Settings -> Protocol -> OpenVPN/WireGuard: TCP option */
+"_tcp" = "TCP";
+
+/* iOS Settings -> Protocol -> OpenVPN/WireGuard: UDP option */
+"_udp" = "UDP";
+
+/* iOS Settings -> Protocol -> WireGuard: TLS option */
+"_tls" = "TLS";
+
+/* iOS Settings -> Protocol: WireGuard option */
+"_wireguard" = "WireGuard";
+
+/* Settings -> Protocol: WireGuard TLS Option called "Stealth". Should not be translated. */
+"_wireguard_tls" = "Stealth";
+
+/* MacOS menu item; iOS setting screen item */
+"_view_logs" = "Visualizar registros";
+
+/* iOS logs screen title */
+"_logs" = "Registros";
+
+/* iOS Settings: applications logs row */
+"_application_logs" = "Registros do aplicativo";
+
+/* iOS Settings: OpenVPN logs row */
+"_open_vpn_logs" = "Registros OpenVPN";
+
+/* iOS Settings: WireGuard logs row */
+"_wireguard_logs" = "Logs do WireGuard";
+
+/* iOS widget help screen: title */
+"_activate_widget" = "Ativar widget";
+
+/* iOS widget help screen: text */
+"_activate_widget_step_1" = "Na tela inicial, deslize para a tela mais a esquerda para acessar seus widgets.";
+
+/* iOS widget help screen: text */
+"_activate_widget_step_2" = "Role totalmente para baixo e toque no botão editar.";
+
+/* iOS widget help screen: text */
+"_activate_widget_step_3" = "Adicione o widget Proton VPN na lista de widgets ativos.";
+
+/* Report bug screen title; iOS settings screen: item; */
+"_report_bug" = "Reportar um problema";
+
+"_allow_lan_title" = "Permitir conexões LAN";
+
+"_allow_lan_info" = "Permite contornar a VPN e conectar-se a dispositivos na sua rede local, como sua impressora.";
+
+"_allow_lan_description" = "Para permitir o acesso à LAN, o kill switch deve estar desligado.\n\nContinuar?";
+
+"_allow_lan_note" = "Observe que sua conexão precisa ser reiniciada para aplicar esta mudança";
+
+/* Title of alert shown if user tries to enable both KillSwitch and Allow LAN */
+"_turn_ks_on_title" = "Ativar kill switch?";
+
+/* Description text of alert shown if user tries to enable both KillSwitch and Allow LAN */
+"_turn_ks_on_description" = "Ao ativar o kill switch, você não conseguirá acessar os dispositivos na sua rede local. \n\nContinuar?";
+
+/* %@ is a plan name e.g. Get Plus Plan */
+"_get_plan" = "Obter plano %@";
+
+/* Account plan description */
+"_free_countries" = "3 países";
+
+/* Account plan description */
+"_all_countries" = "Mais de 60 países";
+
+/* %@ is a speed description e.g. Speed: Highest */
+"_speed" = "Velocidade %@";
+
+/* Value of speed in _speed */
+"_medium" = "Média";
+
+/* Value of speed in _speed */
+"_high" = "Alta";
+
+/* Value of speed in _speed */
+"_highest" = "Máxima";
+
+/* Features of account plan */
+"_plus_plan_features" = "Servidores Plus\nSecure Core\nServidores Tor";
+
+/* Used instead of price for free plans. */
+"_free" = "Gratuito";
+
+/* Alert message during In App Purchase */
+"_do_you_want_to_activate_subscription_for" = "Deseja ativar o plano adquirido para ";
+
+/* Label in Plan information */
+"_most_popular" = "Mais popular";
+
+/* Button in plan selection */
+"_select_plan" = "Selecione o plano";
+
+/* Plan information */
+"_advanced_features" = "+ Recursos avançados";
+
+/* Plan information */
+"_adblocker_netshield_feature" = "Bloqueador de anúncios (NetShield)";
+
+/* Text description in plan selection screen */
+"_plans_footer" = "Após confirmar a compra de um plano pago, a sua conta iTunes será cobrada o valor apresentado, que inclui o plano de serviço, e a taxa de compra no aplicativo da Apple (a Apple cobra uma taxa de aproximadamente 30% sobre as compras feitas através do seu iPhone/iPad). Após a realização da compra, você será automaticamente atualizado para o plano selecionado pelo período de 1 ano, e após esse período você poderá renovar ou cancelar, seja online ou através de nosso aplicativo iOS.";
+
+/* Per year. Appended to plan price. */
+"_per_year_short" = "/ ano";
+
+/* iOS plan feature */
+"_feature_server_count" = "Conecte-se aos servidores em";
+
+/* iOS plan feature */
+"_feature_speed" = "Velocidade";
+
+/* iOS plan feature */
+"_feature_connections" = "Conexões VPN simultâneas";
+
+/* iOS plan feature */
+"_feature_secure_streaming" = "Streaming seguro";
+
+/* iOS plan feature */
+"_feature_tor" = "Tor com VPN";
+
+/* iOS plan feature */
+"_feature_secure_core" = "Secure Core";
+
+/* MacOS welcome screen: title */
+"_welcome_title" = "BOAS-VINDAS A BORDO";
+
+"_no_thanks" = "Não, obrigado";
+
+"_welcome_description" = "Obrigado por usar o Proton VPN";
+
+/* Plus word that is put inside `enjoyForFree` translation instead of %@ */
+"_plus" = "Plus";
+
+/* MacOS: Used ir trial welcome and trial expired screens */
+"_p2p_servers" = "Servidores P2P";
+
+"_5_connections" = "5 conexões";
+
+/* Mac: Used in several Trial screens */
+"_multiple_countries" = "Vários países";
+
+/* MAC: is inserted into _free_trial_expired_title insteadof %@ */
+"_expired" = "EXPIRADO";
+
+/* %@ is always 'EXPIRED' e.g. YOUR FREE TRIAL EXPIRED */
+"_free_trial_expired_title" = "Sua avaliação gratuita %@";
+
+/* %@ is always 'Proton VPN Plus' e.g. Your account has been downgraded to Proton VPN Free.\nHere's what you will miss from Proton VPN Plus: A list of Plus plan-only features follows this text */
+"_free_trial_expired_description" = "Sua conta foi rebaixada para a Proton VPN Free.\nVeja aqui o que você vai perder do %@:";
+
+/* Cancel button in trial modals used in both iOS and MacOS */
+"_maybe_later" = "Talvez mais tarde";
+
+/* Upgrade button in trial modals used in both iOS and MacOS */
+"_upgrade_now" = "Fazer upgrade agora";
+
+/* MacOS: Button in Upgrade screen */
+"_upgrade_my_plan" = "Fazer upgrade";
+
+/* MacOS: \Trial about to expire\ screen title */
+"_free_trial_about_to_expire_title" = "Sua avaliação gratuita está prestes a expirar!";
+
+/* %@ is always 'Proton VPN Plus' e.g. Upgrade to Proton VPN Plus and continue enjoying these features: I list of Plus plan-only features follows this text */
+"_free_trial_about_to_expire_description" = "Faça upgrade para %@ e continue a desfrutar desses recursos:";
+
+"_5_connections_description" = "Conecte até 5 dispositivos\nat ao mesmo tempo";
+
+/* MacOS: \Trial about to expire\ screen */
+"_secure_core_description" = "Servidores ultra seguros\nhospedado por nós";
+
+/* MacOS: \Trial about to expire\ screen */
+"_multiple_servers_title" = "Vários servidores";
+
+/* MacOS: \Trial about to expire\ screen */
+"_multiple_servers_description" = "Centenas de servidores\nao redor do mundo";
+
+/* MacOS: \Trial about to expire\ screen */
+"_secure_streaming_title" = "Streaming seguro";
+
+/* MacOS: \Trial about to expire\ screen */
+"_secure_streaming_description" = "Streaming seguro para os seus\nconteúdos favoritos";
+
+/* iOS: Table header in settings screen */
+"_extensions" = "Extensões";
+
+/* iOS: 1. Menu point in settings screen. 2. Widget description screen title. */
+"_widget" = "Widget do iOS";
+
+/* Menu point in settings screen */
+"_usage_statistics" = "Estatísticas de uso";
+
+/* iOS widget: text for not-logged-in user */
+"_log_in_to_use_widget" = "Inicie a sessão para começar";
+
+"_vpnstatus_not_loggedin" = "Você não está iniciado sessão no Proton VPN. Abra o aplicativo Proton VPN e inicie a sessão.";
+
+/* Bug report attachments */
+"_report_attachments" = "Anexos";
+
+/* iOS bug report: header before logs description */
+"_report_logs" = "Registros da VPN";
+
+/* iOS bug report: description of log selection switch */
+"_report_logs_description" = "Ao ativar isso, você adicionará os registros da VPN do lado do cliente neste relatório";
+
+/* iOS bug report: Title before report bug form */
+"_report_report" = "Mensagem";
+
+/* iOS bug report: Placeholder for email form field */
+"_report_placeholder_email" = "E-mail de contato";
+
+/* Bug report: Placeholder for text form field */
+"_report_placeholder_message" = "Sua mensagem...";
+
+/* Bug report: Send report button text */
+"_report_send" = "Enviar relatório";
+
+/* Bug report: Success message after report was sent */
+"_report_success" = "Nós lhe agradecemos por seu relatório.";
+
+/* Mac bug report: description text before bug report form */
+"_report_description" = "Fornecendo os seguintes detalhes, nossa equipe pode identificar seu problema e uma possível solução com maiores chances e menor tempo:\n• Registros do aplicativo Proton VPN\n• Registros do OpenVPN\n• Registros do WireGuard";
+
+/* Mac bug report: email field label */
+"_report_field_email" = "E-mail:";
+
+/* Mac bug report: feedback field label */
+"_report_field_feedback" = "O que aconteceu de errado?";
+
+/* Mac bug report: steps field label */
+"_report_field_steps" = "Quais são exatamente os passos que você realizou?";
+
+/* Mag bug report: textfields placeholder */
+"_report_field_placeholder" = "Começe a digitar...";
+
+/* Mag bug report: attach logs checkbox */
+"_report_attachments_checkbox" = "Incluir registros do aplicativo e detalhes do sistema";
+
+/* Main mac app menu item */
+"_menu_about" = "Sobre o Proton VPN";
+
+/* Main mac app menu item */
+"_menu_check_updates" = "Verificar atualizações...";
+
+/* Main mac app menu item */
+"_menu_preferences" = "Preferências";
+
+/* Main mac app menu item */
+"_menu_hide_self" = "Ocultar Proton VPN";
+
+/* Main mac app menu item */
+"_menu_hide_others" = "Ocultar outros";
+
+/* Main mac app menu item */
+"_menu_show_all" = "Mostrar todos";
+
+/* Main mac app menu item */
+"_menu_logout" = "Encerrar sessão";
+
+/* Main mac app menu item */
+"_menu_quit" = "Sair do Proton VPN";
+
+/* Main mac app menu item */
+"_menu_window" = "Janela";
+
+/* Main mac app menu item */
+"_menu_minimize" = "Minimizar";
+
+"_subscription_will_expire" = "O plano atual irá expirar em %@.";
+
+"_subscription_will_renew" = "O plano atual será automaticamente renovado em %@.";
+
+"_subscription_description" = "Você pode comprar mais créditos para estender automaticamente o seu plano atual. No final do período da sua assinatura, estes créditos serão aplicados para prolongar o seu plano.";
+
+"_subscription_button" = "Estender o plano por 1 ano \n%@.";
+
+"_subscription_extended_success" = "Você comprou créditos para estender o seu plano atual.";
+
+/* Button on alert after a problem with internet connection */
+"_ne_troubleshoot" = "Resolução de problemas";
+
+/* Title of connection troubleshooting screen */
+"_troubleshoot_title" = "Solução de problemas";
+
+"_troubleshoot_item_alt_title" = "Permitir redirecionamento alternativo";
+
+"_troubleshoot_item_alt_description" = "Caso os sites da Proton sejam bloqueados, essa configuração permite que o aplicativo tente um roteamento de rede alternativo para se conectar ao Proton, o que pode ser útil para contornar firewalls ou problemas de rede. Recomendamos manter essa configuração ativada para maior confiabilidade. \nSaiba mais";
+
+"_troubleshoot_item_alt_link1" = "Saiba mais";
+
+"_troubleshoot_item_nointernet_title" = "Sem conexão com a internet";
+
+"_troubleshoot_item_nointernet_description" = "Verifique se sua conexão com à internet esteja funcionando corretamente.";
+
+"_troubleshoot_item_isp_title" = "Problema no provedor de serviços internet (ISP)";
+
+"_troubleshoot_item_isp_description" = "Tente conectar ao Proton a partir de uma rede diferente (ou Tor).";
+
+"_troubleshoot_item_isp_link1" = "Tor";
+
+"_troubleshoot_item_gov_title" = "Bloqueio governamental";
+
+"_troubleshoot_item_gov_description" = "Seu país pode estar bloqueando o acesso ao Proton. Tente usar o Tor para acessar o Proton.";
+
+"_troubleshoot_item_gov_link1" = "Tor";
+
+"_troubleshoot_item_antivirus_title" = "Interferência do antivírus";
+
+"_troubleshoot_item_antivirus_description" = "Desative ou remova temporariamente o seu software antivírus.";
+
+"_troubleshoot_item_proxy_title" = "Interferência de Proxy/Firewall";
+
+"_troubleshoot_item_proxy_description" = "Desative quaisquer proxies ou firewalls, ou entre em contato com o administrador da sua rede.";
+
+"_troubleshoot_item_proton_title" = "O Proton está indisponível";
+
+"_troubleshoot_item_proton_description" = "Verifique o status do Proton em nosso sistema.";
+
+"_troubleshoot_item_proton_link1" = "Status do Proton";
+
+"_troubleshoot_item_other_title" = "Ainda não encontrei uma solução";
+
+"_troubleshoot_item_other_description" = "Entre em contato conosco através de nosso formulário de suporte, e-mail (%@), ou Twitter.";
+
+"_troubleshoot_item_other_link1" = "formulário de suporte";
+
+"_troubleshoot_item_other_link2" = "e-mail";
+
+"_troubleshoot_item_other_link3" = "Twitter";
+
+/* Netshield statistics, the text for the count of bytes of data saved. Text appears in vertical orientation, so we need the next line symbol (\n). This can be a 3 words max text, each separated by \n. This will be preceded by the amount of data. Examples are "1 MB data saved", "56.9 GB data saved" */
+"_netshield_stats_data_saved" = "Dados\neconomizados";
+
+/* Settings -> Netshield, Status -> NetShield: Long description of the feature, displayed below netshield levels for premium users. Contains a link to https://protonvpn.com/support/netshield */
+"_netshield_feature_description" = "Proteja-se contra anúncios, malware e rastreadores em sites e aplicativos. Se os sites não carregarem, tente desativar o NetShield.\nSaiba mais";
+
+/* Link with more info in the NetShield Feature description */
+"_netshield_feature_description_alt_link" = "Saiba mais";
+
+/* Settings -> Netshield, Status -> NetShield: Netshield Upsell cell title */
+"_netshield_upsell_title" = "Navegue sem anúncios com o NetShield";
+
+/* Settings -> Netshield, Status -> NetShield: Netshield Upsell cell subtitle */
+"_netshield_upsell_subtitle" = "Bloqueia anúncios, rastreadores e malware em sites e aplicativos";
+
+/* Settings -> Netshield, Status -> NetShield: Netshield Upsell cell title */
+"_netshield_business_upsell_title" = "Bloqueie anúncios com NetShield";
+
+/* Settings -> Netshield, Status -> NetShield: Netshield Upsell cell subtitle */
+"_netshield_business_upsell_subtitle" = "Quando você fazer upgrade para a VPN Business";
+
+/* Settings -> Netshield: name of field. */
+"_netshield_title" = "NetShield";
+
+"_netshield_title_tooltip" = "Bloquear anúncios, rastreadores e malware";
+
+/* Settings -> Netshield, Status -> NetShield: Off */
+"_netshield_off" = "Desativado";
+
+/* Status -> Netshield: On */
+"_netshield_on" = "Ativado";
+
+/* Settings -> Netshield: Block malware */
+"_netshield_level1" = "Bloqueio de malware";
+
+/* Settings -> Netshield: Block malware, ads, trackers */
+"_netshield_level2" = "Bloquear malware, anúncios e rastreadores";
+
+"_netshield_alert_reconnect_description_on" = "Sua conexão será reiniciada para alterar o modo NetShield.\nObs.: Se alguns sites não carregarem, tente desativar o NetShield.";
+
+"_netshield_alert_reconnect_description_off" = "Sua conexão será reiniciada para alterar o modo NetShield.";
+
+"_netshield_alert_upgrade_description" = "NetShield aumenta sua privacidade ao bloquear anúncios e rastreadores.";
+
+/* Netshield section title in iOS connection screen */
+"_netshield_section_title" = "Bloqueador de anúncios e malware";
+
+/* Title of the screen with news and offers. */
+"_news_title" = "Notícias";
+
+/* Text appears in the welcome offer banner. Indicates the time left before offer expires. Examples: "Ending in 34 minutes", "Ending in 4 days", "Ending in 1 hour" */
+"_offer_ending_" = "Termina %@";
+
+"_quick_settings_title" = "Configurações rápidas";
+
+"_quick_settings_secureCore_description" = "Encaminhe os seus dados mais sensíveis através dos nossos servidores mais seguros em países amigos da privacidade.";
+
+"_quick_settings_netShield_description" = "Navegue pela internet sem anúncios e malware.";
+
+"_quick_settings_killSwitch_description" = "Desativa a internet se a conexão VPN cair para evitar vazamento acidental de IP.";
+
+"_quick_settings_secureCore_note" = "O Secure Core pode reduzir a velocidade da VPN";
+
+"_quick_settings_netShield_note" = "Se os sites não carregarem, tente desativar o NetShield";
+
+"_quick_settings_killSwitch_note" = "Se você não pode se conectar a dispositivos na sua rede local, tente desabilitar o kill switch.";
+
+"_quick_settings_get_plus" = "Obter Plus";
+
+"_applying_settings_" = "Aplicando configurações";
+
+"_reestablish_vpn_connection_" = "Restabelecendo conexão com á VPN.";
+
+"_ip_will_not_be_exposed" = "Seu IP não será exposto.";
+
+"_cancel_reconnection" = "Isto irá cancelar qualquer tentativa de reconexão e mantê-lo desconectado";
+
+"_quick_settings_netshield_option_off" = "Não bloquear";
+
+"_quick_settings_netshield_option_level1" = "Bloquear apenas malware";
+
+"_quick_settings_netshield_option_level2" = "Bloquear malware, anúncios e rastreadores";
+
+"_upgrade_required_securecore_description" = "O Secure Core está disponível no plano Plus. Faça agora o upgrade para direcionar o tráfego através dos nossos servidores mais seguros em países amigos da privacidade.";
+
+/* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
+"_kill_switch_reconnection_header" = "Kill switch está protegendo seu IP";
+
+/* MacOS: connection screen - this text is appended (together with _kill_switch_reconnection in case killswitch is enabled and app tries to reconnect */
+"_kill_switch_reconnection" = "Sua conexão com a Internet será retomada assim que o ProtonVPN se reconectar a um servidor.\nPara usar a Internet sem VPN e proteção kill switch, cancele a reconexão com o servidor.";
+
+/* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
+"_kill_switch_reconnection_bold1" = "sem";
+
+/* MacOS: connection screen - thes part of _kill_switch_reconnection_header is bolded */
+"_kill_switch_reconnection_bold2" = "Proteção de kill switch";
+
+/* MacOS: connection screen - cancel button */
+"_kill_switch_reconnection_cancel" = "Cancelar reconexão";
+
+/* Title for Smart Protocol in Settings */
+"_smart_protocol_title" = "Smart Protocol";
+
+/* Shortened title for Smart Protocol on Settings configuration */
+"_smart_title" = "Smart";
+
+/* Description for Smart Protocol in Settings */
+"_smart_protocol_description" = "Ative o Smart Protocol para usar automaticamente o protocolo e a porta que oferecem a melhor conectividade.";
+
+/* Title for the modal dialog shown when trying to change Smart Protocol in Settings while connected */
+"_smart_protocol_reconnect_modal_title" = "Reconexão requerida";
+
+/* Body for the modal dialog shown when trying to change Smart Protocol in Settings while connected */
+"_smart_protocol_reconnect_modal_body" = "Sua conexão será reiniciada para alterar o modo protocolo inteligente.";
+
+/* Part 1 of the description of the system extension wizard in mac. The whole text: "To use Proton VPN, you’ll need to enable custom VPN protocols on your Mac. Custom protocols allow for faster and more secure connections, and you’ll need them enabled to connect to most Proton VPN servers. To continue, click Open Security Preferences, then follow the video instructions on this screen." */
+"_sysex_description_1" = "Para usar Proton VPN, você precisará ativar **protocolos VPN customizados** no seu Mac.";
+
+/* Part 2 of the description of the system extension wizard in mac */
+"_sysex_description_2" = "Protocolos personalizados permitem conexões mais rápidas e seguras, e você precisará ativá-los para se conectar à maioria dos servidores Proton VPN.";
+
+/* Part 3 of the description of the system extension wizard in mac. Text in bold is the same as the title of the button in the system alert when installing system extensions */
+"_sysex_description_3" = "Para continuar, clique em **Abrir configurações de sistema**. Em seguida, siga as instruções de vídeo nesta tela.";
+
+/* Alternative for Part 3 for pre-ventura of the description of the system extension wizard in mac. Text in bold is the same as the title of the button in the system alert when installing system extensions */
+"_sysex_description_4" = "Para continuar, clique em **Abrir preferências de segurança**, em seguida, siga as instruções de vídeo nesta tela.";
+
+/* Title of the system extension wizard in mac */
+"_sysex_set_up_proton_vpn" = "Configurar Proton VPN";
+
+/* Default action in the system extension wizard in mac. Pre-macOS Ventura */
+"_sysex_open_system_settings" = "Abrir configurações do sistema";
+
+/* Default action in the system extension wizard in mac. macOS Ventura */
+"_sysex_open_security_preferences" = "Abrir preferências de segurança";
+
+"_sysex_settings_description" = "Proton VPN precisa carregar uma extensão do sistema para impulsionar o Smart Protocol, OpenVPN e o WireGuard.";
+
+"_sysex_enabled_title" = "Configuração concluída";
+
+"_sysex_enabled_description" = "Configuração concluída. Agora você pode navegar na internet mais rápido com as melhores tecnologias de VPN.";
+
+"_sysex_cannot_enable" = "Não é possível ativar a extensão do sistema";
+
+"_sysex_error_description" = "Ocorreu um erro ao instalar a extensão do sistema.\nReinstale o Proton VPN, certificando-se de que ele esteja localizado na pasta Aplicativos, para corrigir esse problema. Também pode entrar em contato com nosso suporte.";
+
+"_vpnauth_certfail_title" = "Erro de autenticação";
+
+"_vpnauth_certfail_description" = "Erro ao atualizar o certificado VPN. Verifique sua conexão";
+
+"_vpnauth_too_many_certs_title" = "Erro de autenticação";
+
+"_vpnauth_too_many_certs_description" = "Você atingiu o número máximo de alterações de configuração. Tente novamente em alguns minutos";
+
+"_from_server_title" = "Do servidor:";
+
+"_to_server_title" = "Para o servidor:";
+
+"_update_billing" = "ATUALIZAR MINHAS COBRANÇAS";
+
+"_upgrade_again" = "ATUALIZE O NOVAMENTE";
+
+"_delinquent_title" = "Sua conta VPN possui faturas pendentes";
+
+"_delinquent_description" = "Você será capaz de acessar os recursos premium novamente após pagar as faturas pendentes.";
+
+"_delinquent_reconnection_description" = "Você conseguirá acessar os recursos premium novamente após estes serem pagos. Por enquanto, estamos reconectando ao servidor mais rápido disponível no plano gratuito.";
+
+"_maximum_device_title" = "Você atingiu o número máximo de dispositivos";
+
+"_maximum_device_reached_description" = "Desconecte outro dispositivo para conectar a este.";
+
+/* Description of user account update screen part 1 */
+"maximum_device_plan_limit_part_1" = "Desconecte outro dispositivo para se conectar a este ou atualize para %@";
+
+"_reconnect_title" = "Estamos reconectando para o servidor mais rápido disponível.";
+
+"_subscription_expired_title" = "A assinatura do seu plano de VPN expirou";
+
+"_subscription_expired_description" = "Sua assinatura foi rebaixada.";
+
+"_subscription_expired_reconnection_description" = "Sua assinatura foi rebaixada, então estamos reconectando para o servidor mais rápido disponível.";
+
+"_subscription_upgrade_title" = "Faça o upgrade novamente para aproveitar todos os recursos:";
+
+"_subscription_upgrade_option3" = "Recursos avançados: NetShield, Secure Core, Tor, P2P";
+
+"_tier_free" = "Gratuito";
+
+"_tier_plus" = "Plus";
+
+"_tier_visionary" = "Visionary";
+
+"_information_title" = "Informação";
+
+"_features_title" = "Recursos";
+
+"_performance_title" = "Desempenho";
+
+"_smart_routing_title" = "Smart Routing";
+
+"_streaming_title" = "Streaming";
+
+"_p2p_title" = "P2P/BitTorrent";
+
+"_tor_title" = "Tor";
+
+"_server_load_title" = "Carga do servidor";
+
+"_dw-partner-2022_partners_title" = "Nossos parceiros";
+
+"_streaming_servers_description" = "Conecte-se a um servidor Plus neste país para começar a fazer streaming.";
+
+"_streaming_servers_note" = "Nota: Desative o serviço de localização e limpe o cache dos aplicativos de streaming para garantir que o novo conteúdo apareça.";
+
+"_streaming_servers_extra" = "e mais";
+
+"_feature_free_servers" = "Servidores gratuitos";
+
+"_feature_free_servers_description" = "Segurança e privacidade para todos. Servidores gratuitos sem limites de dados, e nós nunca reduziremos deliberadamente a sua velocidade de navegação.";
+
+"_feature_smart_routing_description" = "Esta tecnologia permite que o Proton VPN ofereça maior velocidade e segurança em países com acesso restrito.";
+
+"_feature_streaming_description" = "Servidores PLUS suportam streaming (Netflix, Disney+, etc) de qualquer lugar do mundo.";
+
+"_feature_p2p_description" = "Esses servidores oferecem o melhor desempenho para BitTorrent e compartilhamento de arquivos.";
+
+"_feature_tor_description" = "Roteie seu tráfego de internet pela rede Tor. Mais lento, mas mais privado.";
+
+"_performance_load_description" = "Servidores com alta carga são mais lentos do que servidores com baixo carregamento.";
+
+"_performance_load_low" = "Baixa";
+
+"_performance_load_medium" = "Média";
+
+"_performance_load_high" = "Alta";
+
+"_locations_all" = "Todas as localizações";
+
+"_locations_free" = "Localizações Free";
+
+"_locations_plus" = "Localizações Plus";
+
+"_locations_gateways" = "Gateways";
+
+/* Header before the list of connections available for free users (in the country list) */
+"_connections_free" = "Conexões gratuitas";
+
+/* Gateways info modals title (both iOS and macOS) */
+"_gateways_modal_title" = "O que é um gateway?";
+
+/* Gateways info modals text (both iOS and macOS) */
+"_gateways_modal_text" = "Um gateway de VPN é uma conexão segura que oferece acesso controlado aos dados e serviços da sua empresa por meio de servidores dedicados";
+
+"_vpn_accelerator_title" = "VPN Accelerator";
+
+"_vpn_accelerator_change_title" = "Alterar VPN Accelerator";
+
+/* Tooltip on Connection Settings for Accelerator toggle, we temporary added a second % at the end of the string to avoid a SwiftGen error that removes single % characters, should be replaced in all languages */
+"_vpn_accelerator_description" = "O VPN Accelerator ativa um exclusivo conjunto de tecnologias de aprimoramento de desempenho, que podem aumentar as velocidades da VPN em até 400%%.\nSaiba mais";
+
+/* Link with more info in the VPN Accelerator description */
+"_vpn_accelerator_description_alt_link" = "Saiba mais";
+
+"_action_requires_reconnect" = "Sua conexão precisa ser reiniciada para aplicar esta modificação";
+
+"_local_agent_server_error_title" = "Erro no servidor";
+
+"_local_agent_server_error_message" = "Ocorreu um erro no servidor. Conecte-se a outro servidor.";
+
+"_local_agent_policy_violation_error_title" = "Violação de política";
+
+"_local_agent_policy_violation_error_message" = "Você não tem permissão para se conectar ao servidor. Escolha um servidor diferente ou atualize seu plano.";
+
+/* Shown when VPN is connected but not yet usable because not all the required data is yet set up */
+"_loading_connection_info" = "Carregando informações de conexão";
+
+/* Shown when VPN is connected but not yet usable because not all the required data is yet set up */
+"_loading_connection_info_for" = "Carregando informações de conexão para %@";
+
+/* Shown on the Welcome screen as the screen headline */
+"_welcome_headline" = "Proteja-se online";
+
+/* Shown on the Welcome screen as the longer screen text */
+"_welcome_body" = "VPN suiça de alta velocidade que protege sua privacidade criptografando sua conexão à internet.";
+
+"_force_upgrade_title" = "Atualização do aplicativo necessária";
+
+"_force_upgrade_message" = "A versão do aplicativo Proton VPN que você está usando no momento não é mais compatível. Atualizepara a versão mais recente.";
+
+"login_fetch_vpn_data" = "Configurando seu acesso VPN";
+
+"login_summary_button" = "Iniciar usando o Proton VPN";
+
+/* Also used for disabling kill switch in the 'NetworkExtension + KillSwitch on T2 Macs' case below */
+"_wgks_ks_off" = "Desativar kill switch";
+
+/* NetworkExtension + KillSwitch on T2 Macs */
+"_neks_t2_title" = "Aviso de estabilidade do kill switch";
+
+/* Hyperlink to the "T2 Security Chip" page on Apple's website. String must also appear in the `_neks_t2_description' localized string. */
+"_neks_t2_hyperlink" = "Chip de segurança T2";
+
+"_neks_t2_description" = "O uso do kill switch é instável neste dispositivo.\n\nSeu dispositivo tem um chip de segurança T2, o que pode resultar em problemas de estabilidade do sistema se a funcionalidade kill switch do MacOS for usada pelo Proton VPN.";
+
+"_neks_t2_connect" = "Ativar mesmo assim";
+
+"_subuser_alert_title" = "Nós lhe agradecemos por fazer upgrade para Business/Visionary.";
+
+"_subuser_alert_description1" = "Para iniciar sua jornada no Proton VPN, ative conexões VPN à sua conta ou a qualquer outra subconta.";
+
+"_subuser_alert_description2" = "Esta etapa levará apenas alguns minutos. Depois disso, você poderá iniciar sessão e proteger todos os seus dispositivos.";
+
+"_subuser_alert_description3" = "Não há conexões VPN ativadas para esta conta. Para iniciar sua jornada no Proton VPN, entre em contato com seu administrador.";
+
+"_subuser_alert_enable_connections_button" = "Ativar conexões VPN";
+
+"_subuser_alert_login_button" = "Iniciar sessão novamente";
+
+/* Moderate NAT feature title in Settings */
+"_moderate_nat_title" = "NAT moderado";
+
+/* Explanation for the Moderate NAT feature shown next to the feature in Settings */
+"_moderate_nat_explanation" = "NAT moderado desativa a aleatoriedade do seu mapeamento de endereço. Isso pode reduzir ligeiramente sua segurança, mas permite que aplicações peer-to-peer como jogos online estabeleçam conexões diretas.\nSaiba mais";
+
+/* Link at the end of Moderate NAT feature explanation. Must match the explanation value */
+"_moderate_nat_explanation_link" = "Saiba mais";
+
+/* Title for alert shown when enabling Moderate NAT requires reconnection */
+"_moderate_nat_enable_title" = "Ativar NAT moderado";
+
+/* Title for alert shown when enabling Moderate NAT requires reconnection */
+"_moderate_nat_change_title" = "Ativar NAT moderado";
+
+/* Clickable label title in the onboarding screen for mac */
+"_settings_mac_telemetry_learn_more" = "Saiba mais";
+
+/* Telemetry label in the onboarding screen for mac next to a toggle */
+"_onboarding_mac_usage_stats" = "Compartilha estatísticas anônimas de uso. Isso nos ajuda a superar bloqueios de VPN e a melhorar o aplicativo.";
+
+/* Telemetry label in the onboarding screen for mac next to a toggle */
+"_onboarding_mac_crash_reports" = "Compartilha relatórios de erros anônimos. Isso nos ajuda a corrigir erros, detetar firewalls e evitar bloqueios de VPN.";
+
+/* Telemetry label in the settings window for mac */
+"_settings_mac_usage_stats_title" = "Compartilhar estatísticas anônimas de uso";
+
+/* Telemetry tooltip in the settings window for mac */
+"_settings_mac_usage_stats_tooltip" = "Dados de uso nos ajudam a superar bloqueios de VPN e a melhorar o aplicativo.";
+
+/* Telemetry label in the settings window for mac */
+"_settings_mac_crash_reports_title" = "Compartilhar relatórios de erros anônimos";
+
+/* Telemetry tooltip in the settings window for mac */
+"_settings_mac_crash_reports_tooltip" = "Os relatórios de erros nos ajudam a corrigir erros, detectar firewalls e evitar bloqueios de VPN.";
+
+/* Section title in Settings */
+"_advanced" = "Avançado";
+
+/* Non-standard ports feature title in Settings */
+"_non_standard_ports_title" = "Portas não padrão";
+
+/* Explanation for the Non-standard ports feature shown next to the feature in Settings */
+"_non_standard_ports_explanation" = "Use o Proton VPN para qualquer necessidade especial ao permitir o tráfego para portas não padrão através da rede VPN.\nSaiba mais";
+
+/* Link at the end of Non-standard ports feature explanation. Must match the explanation value */
+"_non_standard_ports_explanation_link" = "Saiba mais";
+
+/* Title for alert shown when enabling Non-standard ports requires reconnection */
+"_non_standard_ports_change_title" = "Ativar portas não padrão";
+
+/* Error message shown when the user clicks Create Account in the macOS app but the Proton website is not reachable */
+"proton_website_unreachable" = "O site da Proton VPN pode estar temporariamente inacessível devido a restrições de rede. Use o aplicativo móvel para criar uma conta Proton.";
+
+/* Title of the Use coupon button in Settings */
+"use_coupon" = "Usar cupom";
+
+/* Title of the screen to apply a coupon */
+"coupon_code" = "Código de cupom";
+
+/* Button to apply coupon */
+"apply_coupon" = "Aplicar";
+
+/* Banner shown after coupon is applied */
+"coupon_applied" = "O cupom foi aplicado.";
+
+/* Banner shown after coupon is applied but the plan is not yet upgraded */
+"coupon_applied_plan_not_upgraded_yet" = "O cupom foi aplicado. Sua assinatura será atualizada em alguns minutos.";
+
+/* Title for the Two-factor authentication screen */
+"two_factor_authentication" = "Autenticação de dois fatores";
+
+/* Placeholder for the Two Factor text field */
+"two_factor_code" = "Código de dois fatores";
+
+/* Title for the button to switch to entering two-factor code */
+"use_two_factor_code" = "Usar código de autenticação de dois fatores";
+
+/* Placeholder for the Recovery code text field */
+"recovery_code" = "Código de recuperação";
+
+/* Title for the button to switch to entering recovery code */
+"use_recovery_code" = "Usar código de recuperação";
+
+/* Button to confirm two-factor or recovery code in login */
+"authenticate" = "Autenticar";
+
+/* Error message shown when tryng to log in with an unsupported method */
+"login_unsupported_state" = "O método de início de sessão não é valido. Entra em contato com o suporte.";
+
+/* Error message shown when setting a VPN feature like VPN Accelerator is not possible at the moment */
+"vpn_feature_cannot_be_set_error" = "Não foi possível alterar a configuração %@. Tente novamente mais tarde ou conecte-se a outro servidor.";
+
+/* The hint that appears on mac when user hovers with a mouse over the value of netshield stats - advertisements blocked */
+"netshield_stats_hint_ads" = "Os sites de publicidade usam cookies e rastreadores para atingir você.";
+
+/* The hint that appears on mac when user hovers with a mouse over the value of netshield stats - trackers stopped */
+"netshield_stats_hint_trackers" = "Rastreadores são sites de terceiros que coletam, armazenam e vendem informações sobre sua atividade na web.";
+
+/* The hint that appears on mac when user hovers with a mouse over the value of netshield stats - data saved */
+"netshield_stats_hint_data" = "Quantidade estimada de anúncios, rastreadores e malware que o NetShield bloqueou.";
+
+"_netshield_stats_data_saved" = "Dados\neconomizados";
+
+/* The count of trackers/ads blocked in thousands */
+"_netshield_stats_blocked_K" = "%@ K";
+
+/* The count of trackers/ads blocked in millions */
+"_netshield_stats_blocked_M" = "%@ M";
+
+/* The count of trackers/ads blocked in billions */
+"_netshield_stats_blocked_G" = "%@ G";
+
+/* The count of trackers/ads blocked in trillions */
+"_netshield_stats_blocked_T" = "%@ T";
+
+/* The count of trackers/ads blocked in quadrillions */
+"_netshield_stats_blocked_P" = "%@ P";
+
+/* The count of trackers/ads blocked in sextillions */
+"_netshield_stats_blocked_E" = "%@ E";
+
+/* Title of the deprecated protocol alert. Shown when the user attempts to connect to a profile with OpenVPN */
+"_alert_protocol_deprecated_title" = "Protocolo indisponível";
+
+/* Body of the deprecated protocol alert on MacOS. Shown when the user attempts to connect to a profile with OpenVPN. 'Update' references the text of the alert button, and is emphasized with quotation marks (") which must be escaped with a single backslash (\). The 'Learn More' text is a hyperlink to https://protonvpn.com/blog/remove-vpn-protocols-apple */
+"_alert_protocol_deprecated_body_macos" = "Este perfil usa um protocolo desatualizado e não é mais suportado. Clique em \"Atualizar\" para alternar para o Smart Protocol padrão. Saiba mais";
+
+/* The text inside the deprecated protocol alert that should be displayed as a hyperlink to https://protonvpn.com/blog/remove-vpn-protocols-apple (MacOS only) */
+"_alert_protocol_deprecated_link_text" = "Saiba mais";
+
+/* Body of the deprecated protocol alert on iOS. Shown when the user attempts to connect to a profile with OpenVPN or IKEv2. 'Update' references the text of the alert button, and is emphasized with quotation marks (") which must be escaped with a single backslash (\). */
+"_alert_protocol_deprecated_body_ios" = "Este perfil usa um protocolo desatualizado e não é mais compatível. Clique em \"Atualizar\" para alternar para o Smart Protocol padrão.";
+
+/* Text for the 'Enable Smart protocol' action of the deprecated protocol alert. The alert is shown when the user attempts to quick connect, or connect to a profile that uses a deprecated protocol. This action enables Smart protocol, but does not continue the connection. */
+"_alert_protocol_deprecated_enable_smart" = "Atualizar";
+
+/* Text for the 'Learn more' action of the deprecated protocol alert on iOS. When tapped, opens https://protonvpn.com/blog/remove-vpn-protocols-apple in the device browser */
+"_alert_protocol_deprecated_learn_more" = "Saiba mais";
+
+/* Text for the 'Close' action of the deprecated protocol alert. */
+"_alert_protocol_deprecated_close" = "Fechar";
+
+/* Error title warning the user that one of the device's interfaces has a badly-configured local network. This can result in traffic leaks if the user is not careful. */
+"_bad_interface_ip_range_alert_title" = "Interface de rede incorreta";
+
+/* Error message indicating that one of the device's interfaces to the local network is poorly configured, which can result in traffic leaks if Kill Switch is not enabled. %@1 is the name of the bad network interface, %@2 is the IP and network prefix assigned to that interface in CIDR notation (an example would be 10.0.1.3/24). */
+"_prompt_kill_switch_due_to_bad_interface_ip_range" = "Sua rede local pode não ser segura (a interface '%@' possui o IP e o prefixo '%@'). Seus dados podem ser enviados sem criptografia pela rede local. A ativação do Kill Switch bloqueará esse tráfego. As conexões com periféricos locais serão interrompidas.";
+
+/* Title of the search screen */
+"search_title" = "Procurar";
+
+/* Title of the Search screen infographic */
+"search_subtitle" = "Pesquisar qualquer localização";
+
+/* Section header in search */
+"search_countries" = "Países";
+
+/* Sample countries the user can search for */
+"search_countries_sample" = "Suíça, Estados Unidos, Itália...";
+
+/* Section header in search */
+"search_cities" = "Cidades";
+
+/* Sample cities the user can search for */
+"search_cities_sample" = "Nova York, Londres, Tóquio...";
+
+/* Section header in Search */
+"search_servers" = "Servidores";
+
+/* Sample servers the user can search for */
+"search_servers_sample" = "JP#50, CA#3, IT#14...";
+
+/* Section header in search */
+"search_us_regions" = "Regiões dos EUA";
+
+/* Sample US regions the user can search for */
+"search_us_regions_sample" = "Califórnia, Flórida, Colorado...";
+
+/* Title shown when nothing is found in search */
+"search_no_results_title" = "Nenhum resultado encontrado";
+
+/* Subtitle shown when nothing is found in search */
+"search_no_results_subtitle" = "Tente uma palavra-chave diferente.";
+
+/* Header for the recent searches section in search */
+"search_recent_header" = "Visto recentemente";
+
+/* Button to clear recent searches history */
+"search_recent_clear" = "Limpar";
+
+/* Title for the alert asking for confirmation before deleting recent searches */
+"search_recent_clear_title" = "Seu histórico de pesquisa será perdido. Continuar?";
+
+/* Cancel button title in the alert asking for confirmation before deleting recent searches */
+"search_recent_clear_cancel" = "Cancelar";
+
+/* Confirmation button title in alert asking for confirmation before deleting recent searches */
+"search_recent_clear_continue" = "Continuar";
+
+/* Placeholder text showing in the search bar on the search screen */
+"search_bar_placeholder" = "País, cidade ou servidor";
+
+/* Subtitle for the upsell banner shown to free users in search */
+"search_upsell_subtitle" = "Mais localizações significam mais conteúdos desbloqueados, segurança adicional e velocidades mais rápidas.";
+
+/* Section header in search */
+"search_secure_core_countries" = "Países do Secure Core";
+
+/* Section header in search */
+"search_results_countries" = "Países";
+
+/* Section header in search */
+"search_results_cities" = "Cidades";
+
+/* Section header in search */
+"_free_servers" = "Servidores gratuitos";
+
+/* Section header in search */
+"_plus_servers" = "Servidores Plus";
+
+/* Upgrade plan button title */
+"modals_get_plus" = "Atualizar";
+
+/* Dismiss upsell screen button title */
+"modals_upsell_stay_free" = "Agora não";
+
+/* Subtitle of All Countries, NetShield and Secure Core upsell screens */
+"modals_upsell_features_subtitle" = "Ao fazer upgrade para o Plus";
+
+/* Subtitle of the Safe Mode upsell screen */
+"modals_upsell_features_safe_mode_subtitle" = "Tem necessidades de computação avançada ou profissional que exigem portas não padrão?\n\nAtualize para a VPN Plus para acessar este e outros recursos premium.";
+
+/* Title of the Safe Mode upsell screen */
+"modals_upsell_safe_mode_title" = "Permitir tráfego para portas não padrão";
+
+/* Title of the Moderate NAT upsell screen */
+"modals_upsell_moderate_nat_title" = "Leve sua experiência de jogo ao próximo nível";
+
+/* Subtitle of Moderate NAT upsell screens */
+"modals_upsell_moderate_nat_subtitle" = "Desbloqueie o NAT Tipo 2 com VPN Plus";
+
+/* Bold part of the subtitle of Moderate NAT upsell screens */
+"modals_upsell_moderate_nat_subtitle_bold" = "NAT tipo 2";
+
+/* Feature of the Moderate NAT upsell screen */
+"modals_upsell_features_moderate_nat_gaming" = "Melhore o desempenho de jogos online e videochamadas";
+
+/* Feature of the Moderate NAT upsell screen */
+"modals_upsell_features_moderate_nat_direct_connections" = "O NAT tipo 2 (moderado) otimiza a velocidade e a estabilidade ao permitir conexões diretas entre dispositivos";
+
+/* Feature of the All Countries upsell screen */
+"modals_upsell_all_countries_feature_streaming" = "Assista aos seus filmes favoritos";
+
+/* Feature of the All Countries upsell screen */
+"modals_upsell_all_countries_feature_highSpeed" = "Navegue com velocidade máxima (10 Gbps).";
+
+/* Feature of the All Countries upsell screen */
+"modals_upsell_all_countries_feature_netshield" = "Bloqueie anúncios e malware com o NetShield";
+
+/* Title of the NetShield upsell screen */
+"modals_upsell_net_shield_title" = "Desfrute de navegação sem anúncios com o NetShield";
+
+/* Feature of the NetShield upsell screen */
+"modals_upsell_net_shield_ads" = "Bloqueie anúncios e rastreadores";
+
+/* Feature of the NetShield upsell screen */
+"modals_upsell_net_shield_malware" = "Proteja seu dispositivo contra malware";
+
+/* Feature of the NetShield upsell screen */
+"modals_upsell_net_shield_highSpeed" = "Navegue nas velocidades mais altas";
+
+/* Title of the Secure Core upsell screen */
+"modals_upsell_secure_core_title" = "Duplique a criptografia com o Secure Core";
+
+/* Feature of the Secure Core upsell screen */
+"modals_upsell_secure_core_route" = "Roteie por servidores ultra seguros na Suíça, Suécia e Islândia.";
+
+/* Feature of the Secure Core upsell screen */
+"modals_upsell_secure_core_layer" = "Adicione outra camada de criptografia à sua conexão VPN";
+
+/* Feature of the Secure Core upsell screen */
+"modals_upsell_secure_core_attacks" = "Proteja-se contra ataques de rede";
+
+/* Title of the Secure Core discouragement screen */
+"modals_discourage_secure_core_title" = "Uma nota sobre velocidade...";
+
+/* Subtitle of the Secure Core discouragement screen */
+"modals_discourage_secure_core_subtitle" = "O Secure Core oferece o mais alto nível de segurança e privacidade, mas pode reduzir a velocidade da sua internet. Se precisar de mais desempenho, você pode desabilitar o Secure Core.";
+
+/* Turn off Secure Core discouragement screen */
+"modals_discourage_secure_core_dont_show" = "Não mostrar novamente";
+
+/* Positive user action on Secure Core discouragement screen */
+"modals_discourage_secure_core_activate" = "Ativar Secure Core";
+
+/* Title of the New Brand screen */
+"new_plans_brand_title" = "Proton atualizado, proteção unificada";
+
+/* Subtitle of the New Brand screen */
+"new_plans_brand_subtitle" = "Apresentando a aparência renovada da Proton.\nMuitos serviços, uma missão. Boas-vindas a uma internet onde a privacidade é o padrão.";
+
+/* Title of "done" button in New Brand screen */
+"new_plans_brand_got_it" = "Entendi";
+
+/* Common button title */
+"modals_common_cancel" = "Cancelar";
+
+/* Common button title */
+"modals_common_learn_more" = "Saiba mais";
+
+/* Common button title */
+"modals_common_next" = "Próximo";
+
+/* Common button title */
+"modals_common_get_started" = "Começar";
+
+/* Description of user account update screen part 1 */
+"maximum_device_plan_limit_part_1" = "Desconecte outro dispositivo para se conectar a este ou atualize para %@";
+
+/* Description of user account update screen */
+"maximum_device_limit" = "Desconecte outro dispositivo para conectar a este.";
+
+/* Title of VPN Accelerator upsell modal */
+"upsell_vpn_accelerator_title" = "Navegue em velocidades ainda mais rápidas (até 10 Gbps)";
+
+/* Feature of VPN Accelerator upsell modal */
+"upsell_vpn_accelerator_faster_servers" = "Acesse servidores mais rápidos e menos sobrecarregados";
+
+/* Feature of VPN Accelerator upsell modal */
+"upsell_vpn_accelerator_increase_connection_speeds" = "Aumente a velocidade de conexão em até 400%% com o VPN Accelerator.";
+
+/* Bold part of the feature of VPN Accelerator upsell modal */
+"upsell_vpn_accelerator_increase_connection_speeds_bold" = "VPN Accelerator.";
+
+/* Feature of VPN Accelerator upsell modal */
+"upsell_vpn_accelerator_distant_servers" = "Velocidade e estabilidade aprimoradas ao conectar a servidores distantes";
+
+/* Title of Customization upsell modal */
+"upsell_customization_title" = "Desbloqueie personalizações avançadas de VPN";
+
+/* Feature of Customization upsell modal */
+"upsell_customization_access_LAN" = "Acesse dispositivos em sua rede local (LAN)";
+
+/* Bold part of the feature of Customization upsell modal */
+"upsell_customization_access_LAN_bold" = "rede de área local (LAN)";
+
+/* Feature of Customization upsell modal */
+"upsell_customization_profiles" = "Salve conexões usadas com frequência com diferentes perfis";
+
+/* Bold part of the feature of Customization upsell modal */
+"upsell_customization_profiles_bold" = "perfis";
+
+/* Feature of Customization upsell modal */
+"upsell_customization_quick_connect" = "Obtenha um acesso mais rápido aos seus perfis com Quick Connect";
+
+/* Bold part of the feature of Customization upsell modal */
+"upsell_customization_quick_connect_bold" = "Conexão rápida";
+
+/* Title of Profiles upsell modal */
+"upsell_profiles_title" = "Obtenha acesso rápido às suas conexões frequentes";
+
+/* Subtitle of Profiles upsell modal */
+"upsell_profiles_subtitle" = "Desbloqueie perfis com VPN Plus";
+
+/* Bold part of the subtitle of Profiles upsell modal */
+"upsell_profiles_subtitle_bold" = "perfis";
+
+/* Feature of Profiles upsell modal */
+"upsell_profiles_feature_location" = "Salve seu servidor, cidade ou país preferidos.";
+
+/* Feature of Profiles upsell modal */
+"upsell_profiles_feature_protocols" = "Defina protocolos personalizados e recursos de VPN premium.";
+
+/* Feature of Profiles upsell modal */
+"upsell_profiles_feature_auto_connect" = "Configure a conexão automática para um acesso ainda mais rápido.";
+
+/* Feature of Countries upsell modal */
+"upsell_countries_any_location" = "Escolha qualquer local";
+
+/* Feature of Countries upsell modal */
+"upsell_countries_even_higher_speed" = "VPN ainda mais rápida";
+
+/* Feature of Countries upsell modal */
+"upsell_countries_geoblocked_content" = "Acesse conteúdos bloqueados geograficamente";
+
+/* Feature of Country upsell modal */
+"upsell_countries_connect_to" = "Conecte-se a %d países";
+
+/* Feature of Country upsell modal */
+"upsell_countries_higher_speeds" = "VPN ainda mais rápida";
+
+/* Feature of Country upsell modal */
+"upsell_countries_money_back" = "Garantimos a devolução do seu dinheiro por até 30 dias";
+
+/* Feature of Country upsell modal */
+"upsell_country_feature_title" = "Quer escolher um país específico?";
+
+/* Feature of Country upsell modal */
+"upsell_country_feature_subtitle" = "Desbloqueie a seleção de país com VPN Plus";
+
+/* Bold part of the feature of Country upsell modal */
+"upsell_country_feature_subtitle_bold" = "seleção de país";
+
+/* Title of the "What's new" screen */
+"modals_whats_new" = "Novidades";
+
+/* Title of the first section of the "What's new" screen */
+"modals_free_countries" = "Novos países gratuitos";
+
+/* Description of the first section of the "What's new" screen */
+"modals_new_servers" = "Agora há servidores grátis na Polônia e Romênia.";
+
+/* Title of the second section of the "What's new" screen */
+"modals_server_selection" = "Mudanças na seleção de servidor";
+
+/* Description of the second section of the "What's new" screen */
+"modals_server_crowding" = "Para prevenir a lotação de servidores e garantir que todos tenham acesso a uma navegação rápida e segura, nós removemos a seleção manual de países e fizemos grandes melhorias na seleção automática de servidores.";
+
+/* Displayed when the user clicks "Connect to Random Server" after they've just clicked it. */
+"upsell_specific_location_subtitle" = "Obtenha alterações ilimitadas com VPN Plus";
+
+/* Displayed when the user clicks "Connect to Random Server" too many times in a given time interval. */
+"upsell_specific_location_title" = "Por enquanto, você alcançou o número máximo de mudanças de servidor grátis.";
+
+/* The button text that will appear when the user has waited for the countdown and can proceed without upgrading. */
+"upsell_specific_location_change_server_button_title" = "Alterar servidor";
+
+/* The name of one of the features in the Welcome screen that the user sees after upgrading */
+"welcome_upgrade_advanced_features" = "Recursos avançados de segurança";
+
+/* The title of the Welcome screen when user upgrades to VPN Plus */
+"welcome_upgrade_title_plus" = "Boas-vindas ao VPN Plus";
+
+/* The title of the Welcome screen when user upgrades to VPN Unlimited */
+"welcome_upgrade_title_unlimited" = "Bem-vindo a Proton Unlimited";
+
+/* The title of the Welcome screen when user upgrades, but we couldn't determine to what plan */
+"welcome_upgrade_title_fallback" = "Parabéns!";
+
+/* The subtitle of the Welcome screen when user upgrades to VPN Plus */
+"welcome_upgrade_subtitle_plus" = "Aproveite recursos extras de privacidade, desempenho aprimorado e customização de VPN de próximo nível.";
+
+/* The subtitle of the Welcome screen when user upgrades to VPN Unlimited */
+"welcome_upgrade_subtitle_Unlimited" = "Parabéns! Você desbloqueou recursos premium de segurança e desempenho em todos os serviços da Proton, além de 500 GB de armazenamento total.\n\nAproveite o melhor da privacidade da Proton.";
+
+/* The subtitle of the Welcome screen when user upgrades to VPN Unlimited with markdown */
+"welcome_upgrade_subtitle_Unlimited_markdown" = "Parabéns! Você desbloqueou recursos premium de segurança e desempenho em todos os serviços da Proton, além de **500 GB** de armazenamento total.\n\nAproveite o melhor da privacidade da Proton.";
+
+/* The bold portion of the subtitle of the Welcome screen when user upgrades to VPN Unlimited */
+"welcome_upgrade_subtitle_Unlimited_bold" = "500 GB";
+
+/* The subtitle of the Welcome screen when user upgrades, but we couldn't determine to what plan */
+"welcome_upgrade_subtitle_fallback" = "Você fez o upgrade da sua assinatura. Desfrute dos recursos avançados de privacidade e do desempenho de próximo nível.";
+
+/* Welcome to Proton screen shown during onboarding. Title label. */
+"welcome_to_proton_title" = "Boas-vindas ao Proton VPN";
+
+/* Welcome to Proton screen shown during onboarding. Subtitle label. */
+"welcome_to_proton_subtitle" = "Navegue com privacidade, acesse conteúdo bloqueado e desfrute da liberdade digital.";
+
+/* Welcome to Proton screen shown during onboarding. Banner title label. */
+"welcome_to_proton_banner_title" = "VPN sem registros certificada";
+
+/* Welcome to Proton screen shown during onboarding. Banner subtitle label. */
+"welcome_to_proton_banner_subtitle" = "Sua atividade de VPN é protegida pelas leis de privacidade suiças. Nunca rastreamos você on-line nem compartilhamos seus dados com terceiros.";
+
+/* This is for a tooltip appearing over a "VPN Business" badge. Appears for users of the VPN Essentials plan to communicate the fact that their current plan does not support a given feature. */
+"_available_with_vpn_business_tooltip" = "Disponível com VPN Business.";
+
+"onboarding_usage_stats_title" = "Compartilhar estatísticas anônimas de uso";
+
+"onboarding_usage_stats_description" = "Dados de uso nos ajudam a superar bloqueios de VPN e a melhorar o aplicativo.";
+
+"onboarding_crash_reports_title" = "Compartilhar relatórios de erros anônimos";
+
+"onboarding_crash_reports_description" = "Os relatórios de erros nos ajudam a corrigir erros, detectar firewalls e evitar bloqueios de VPN.";
+
+"onboarding_footer" = "Essas estatísticas não contêm seu endereço IP e não podem ser usadas para identificá-lo. Nunca as compartilharemos com terceiros.";
+
+"onboarding_footer_learn_more" = "Saiba mais";
+
+/* Modal that lists countries in which servers are available to free users: Title */
+"free_connections_modal_title" = "Conexões gratuitas";
+
+/* Modal that lists countries in which servers are available to free users: Description */
+"free_connections_modal_description" = "O Proton Free automaticamente se conecta ao servidor grátis mais rápido. Normalmente será o servidor mais próximo da sua localização.";
+
+/* Modal that lists countries in which servers are available to free users: banner with CTA */
+"free_connections_modal_banner" = "Obtenha cobertura global com o VPN Plus";
+
+/* Text on upsell banner in country list */
+"_free_banner_text" = "Obtenha cobertura global com o VPN Plus";
+
+/* Title of banner shown on iOS apps to upsell users who want to select a country */
+"_wrong_country_banner_title" = "Não é o país que você queria?";
+
+/* Subtitle of banner shown on iOS apps to upsell users who want to select a country */
+"_wrong_country_banner_subtitle" = "Faça upgrade para escolher qualquer servidor";
+
+/* Text of banner shown on macOS apps to upsell users who want to select a country */
+"_wrong_country_banner_text" = "Não é o país que você queria? Atualize seu plano para escolher qualquer servidor";

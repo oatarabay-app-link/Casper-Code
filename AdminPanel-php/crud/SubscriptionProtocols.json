@@ -1,0 +1,48 @@
+{
+  "fields": [
+    {
+      "name": "subscription_uuid",
+      "type": "string"
+    },
+    {
+      "name": "protocol_uuid",
+      "type": "string"
+    },
+
+    {
+      "name": "protocol_id",
+      "type": "integer#unsigned"
+    },
+    {
+      "name": "subscription_id",
+      "type": "integer#unsigned"
+    }
+
+  ],
+
+  "relationships": [
+    {
+      "name": "subscriptions",
+      "type": "belongsTo",
+      "class": "App\\Subscription"
+    },
+    {
+      "name": "protocols",
+      "type": "belongsTo",
+      "class": "App\\Protocol"
+    }
+
+  ],
+  "foreign_keys": [
+    {
+      "column": "subscription_id",
+      "references": "id",
+      "on": "subscriptions"
+    },
+    {
+      "column": "protocol_id",
+      "references": "id",
+      "on": "protocols"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="UltraLightBlue">#e4eaef</color>
+    <color name="LightBlue">#84a6cf</color>
+    <color name="Blue">#6ba0e0</color>
+    <color name="PopupColor">#4e89cf</color>
+    <color name="DarkBlue">#3b7cca</color>
+    <color name="DarkBlueFocus">#2c63a6</color>
+    <color name="Navy">#212d3b</color>
+
+    <color name="LightGreen">#bcf0da</color>
+    <color name="Green">#1dae6f</color>
+    <color name="DarkGreen">#17955e</color>
+
+    <color name="LightOrange">#ffd8ba</color>
+    <color name="Orange">#ff6132</color>
+    <color name="DarkOrange">#a83c1e</color>
+    <color name="Red">#e30000</color>
+    <color name="DarkRed">#a30000</color>
+
+    <color name="Black">#000000</color>
+    <color name="LightBlack">#222222</color>
+    <color name="DarkGray">#4F4F4F</color>
+    <color name="Gray">#cccccc</color>
+    <color name="LightMediumGray">#e3e3e3</color>
+    <color name="LightGray">#f5f5f5</color>
+    <color name="UltraLightGray">#f8f8f8</color>
+    <color name="White">#FFFFFF</color>
+    <color name="Transparent">#22000000</color>
+    <color name="HalfTransparent">#88000000</color>
+    <color name="ThirdTransparent">#DD000000</color>
+    <color name="FullTransparent">#00000000</color>
+</resources>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Success</title>
+</head>
+<body>
+    <h1>Login Successful! 🎉</h1>
+    <p>You have been successfully authenticated.</p>
+    <button onclick="checkUserStatus()">Check User Status</button>
+    <div id="userInfo"></div>
+    
+    <script>
+        function checkUserStatus() {
+            fetch('/api/Auth/external-login-status', { 
+                credentials: 'include' 
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('userInfo').innerHTML = 
+                    '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+            });
+        }
+        
+        // Check status automatically when page loads
+        checkUserStatus();
+    </script>
+</body>
+</html>

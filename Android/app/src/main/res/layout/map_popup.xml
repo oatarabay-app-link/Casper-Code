@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:clickable="false">
+
+    <LinearLayout
+        android:id="@+id/box"
+        android:background="@drawable/map_popup_bg"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false">
+
+
+        <com.caspervpn.vpn.helper.MyTextView
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            style="@style/MAP_Popup_Message"
+            android:id="@+id/Map_Popup_Message"
+            android:text="@string/GettingStarted1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false">
+
+            <com.caspervpn.vpn.helper.MyButton
+                style="@style/Map_Popup_Button"
+                android:id="@+id/dialogButtonCancel"
+                android:text="@string/NO"/>
+
+            <com.caspervpn.vpn.helper.MyButton
+                style="@style/Map_Popup_Button"
+                android:id="@+id/dialogButtonOK"
+                android:text="@string/YES"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

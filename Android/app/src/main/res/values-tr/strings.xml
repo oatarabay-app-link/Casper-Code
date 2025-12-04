@@ -1,0 +1,436 @@
+<resources>
+    <!-- Language-->
+    <string name="SelectedLanguage">Türkçe</string>
+
+    <!-- Rate Us -->
+    <string name="RateUsText">Eğer CasperVPN kullanarak hoşlanıyorsanız barındırılan için, bir dakikanızı ayırın. Desteğiniz için teşekkür ederiz!</string>
+    <string name="Later">Daha sonra</string>
+    <string name="NoThanks">Hyır teşekkürler</string>
+    <string name="RateNow">Puan Şimdi</string>
+
+    <!-- Crash -->
+    <string name="crash_dialog_title">Uygulamayı çökmesine CasperVPN</string>
+    <string name="crash_dialog_text">Beklenmeyen bir hata uygulamayı durmaya zorlamak oluştu. Bize hata verileri göndererek bize bunu düzeltmek yardım edin</string>
+    <string name="crash_dialog_comment_prompt">Aşağıdaki sorun hakkında yorumlarınızı ekleyebilir</string>
+
+    <string name="ShouldDownloadApp">Uygulamayı indirmelisiniz</string>
+    <string name="FreebeeCenter">Freebee Merkezi</string>
+    <string name="FillOutSurvey">15 saniyelik bir ankete katılın ve CasperVPN ile 3 günlük ücretsiz Premium kazanın</string>
+    <string name="WatchVideo">CasperVPN ile 30 saniyelik bir video izleyin ve bir saatlik Premium alın</string>
+    <string name="ShareUs">Sosyal medya sayfalarımızı paylaşın ve CasperVPN ile bir saatlik Premium satın alın</string>
+    <string name="SocialMedia">Sosyal medya</string>
+
+
+    <string name="AffiliateText"></string>
+    <string name="AffiliateGenerated"></string>
+    <string name="AffiliateError"></string>
+    <string name="Affiliatebtn"></string>
+    <string name="AffiliateSharebtn"></string>
+    <string name="AffiliateDescr"></string>
+    <string name="LoadingAffiliate"></string>
+    <string name="TweetAffiliate"></string>
+    <string name="ShareAffiliateFb"></string>
+    <string name="ShareAffiliateGP"></string>
+    <string name="TweetAffiliatetxt"></string>
+    <string name="ShareAffiliateFbtxt"></string>
+    <string name="ShareAffiliateGPtxt"></string>
+    <string name="AffiliateShared"></string>
+    <string name="Affiliate"></string>
+    <string name="AffiliateAccount1"></string>
+    <string name="AffiliateAccount2"></string>
+    <string name="AffiliateAccount3"></string>
+    <string name="AffiliateAccount4"></string>
+    <string name="Username"></string>
+    <string name="BlockError"></string>
+
+
+    <!-- Social Media -->
+    <string name="TweetOnTwitter">Bugünün siber tehditleri hakkında bilgi sahibi olmak için bizi Twitter\'da takip edin</string>
+    <string name="ShareOnFacebook">Bugünün siber tehditleri hakkında bilgi sahibi olmak için bizi Facebook\'ta takip edin</string>
+    <string name="ShareOurInstagram">Bugünün siber tehditleri hakkında bilgi sahibi olmak için bizi Instagram\'da takip edin</string>
+    <string name="ShareOurGooglePlus">Bugünün siber tehditleri hakkında bilgi sahibi olmak için bizi Google+ \'da takip edin</string>
+
+    <string name="ErrorTitle">Hata</string>
+    <string name="InvalidRecaptcha">Geçersiz reCAPTCHA</string>
+    <string name="AvailableSurvey">Anket Mevcut</string>
+    <string name="allset">hepiniz ayarlandınız</string>
+    <string name="SubscriptionActivated">Hesabınız başarıyla etkinleştirildi.</string>
+    <string name="FreeBeeCenterActivated">Ücretsiz premium hizmetiniz başarılı oldu.</string>
+
+    <string name="MapView">Harita Görünümü</string>
+    <string name="Refresh">Yenile</string>
+
+    <string name="LoadingSurvey">Anket Yükleniyor ...</string>
+    <string name="WaitfinishLoading">Yükleniyor lütfen bekleyin...</string>
+    <string name="ServerList">Sunucu listesi</string>
+    <string name="Guide">Kılavuz</string>
+
+    <string name="Welcome_Back">Tekrar hoşgeldiniz!</string>
+    <string name="UserIsBlocked">kullanıcı engellenmışdır!</string>
+    <string name="Invalid_Login_Credentials">Geçersiz E-posta ve / veya şifre.</string>
+    <string name="Email">e posta*</string>
+    <string name="Password">şıfre/parol*</string>
+    <string name="LOGIN">gırış</string>
+    <string name="Login">gırış</string>
+    <string name="ForgotPassword">Parolanızı mı unuttunuz?</string>
+    <string name="DontHaveAnAccount">Hesabınız yok mu?</string>
+    <string name="SignUp">kaydol</string>
+    <string name="InvalidUserName">Geçersiz kullanıcı adı</string>
+    <string name="InvalidPassword">Geçersiz şifre</string>
+    <string name="InvalidOldPassword">Geçersiz Geçersiz Şifre</string>
+    <string name="InvalidNewPassword">Geçersiz Yeni Şifre</string>
+    <string name="KindlySetYourEmail">Lütfen e-postanızı ayarlayın</string>
+    <string name="ResetPassword">şıfrenızı ayarlayın</string>
+    <string name="PasswordChanged">Şifre değişti</string>
+    <string name="GoBack">Geri dön</string>
+    <string name="Error">Hata, lütfen daha sonra tekrar deneyin</string>
+    <string name="UserAlreadyExists">Kullanıcı zaten var!</string>
+    <string name="InvalidResetLink">Geçersiz Bağlantıyı Sıfırla!</string>
+    <string name="LinkAlreadyUsed">Daha önce bağlantıyı kullanarak edildi!</string>
+    <string name="LinkHasExpired">Bağlantı süresi doldu!</string>
+    <string name="UserNotFound">Kullanıcı bulunamadı</string>
+    <string name="CheckYourInternet">Lütfen internet bağlantınızı kontrol edin</string>
+    <string name="CheckYourEmailReset">Lütfen e-postanızı kontrol edin ve şifre sıfırlama bağlantısını tıklayın</string>
+    <string name="EmailVerified">CasperVPN\'ye başarıyla üye oldunuz, Nazikçe Giriş Yapın</string>
+    <string name="CheckYourEmailVerification">Lütfen e-postanızı kontrol edin ve onay bağlantısını tıklayın. E-postayı almadıysanız, SPAM klasörünüzü kontrol edin \nTamamlama Onayı E-postasını Yeniden Tıklama\'ya tıklayın</string>
+    <string name="ReCheckYourEmailVerification">Lütfen e-postanızı tekrar kontrol edin ve onay bağlantısını tıklayın..</string>
+    <string name="ResendEmail">Doğrulama epostasını yeniden gönder</string>
+
+    <string name="PleaseVerifyYourEmail">Lütfen önce e-postanızı doğrulayın</string>
+    <string name="EmailAlreadyVerified">E-posta zaten doğrulandı</string>
+    <string name="ResettingYourPassword">Parolanızı Sıfırlama...</string>
+    <string name="RegisteringYourAccount">Hesabınızı Kaydetme...</string>
+    <string name="Saving">Veri kaydediliyor...</string>
+    <string name="Subscribing">Abone oluyor...</string>
+    <string name="LoggingIn">Giriş...</string>
+    <string name="SigningIn">Giriş yapılıyor...</string>
+    <string name="Loading">Yükleniyor...</string>
+    <string name="CannotConnectCheckYourInternet">Hata! Sunucu tekrar ulaşılamıyor gibi görünüyor veya başka bir sunucuya bağlanın!</string>
+    <string name="CannotConnectNоServerAvailable">Bağlanamıyor\nSunucu mevcut değil</string>
+
+    <!-- *********************************** -->
+
+
+    <string name="CantRemember">Hatırlamıyor musun?</string>
+    <string name="Reset">şıfrenızı ayarlayın</string>
+    <string name="Connecting">Bağlanıyor</string>
+    <string name="Connect">bağlanmak</string>
+    <string name="Disconnect">bağlantıyı kes</string>
+    <string name="pauseVPN">Duraklama</string>
+    <string name="resumevpn">Devam et</string>
+
+
+    <string name="Hello">Merhaba, Ücretsiz üye olun ve 15 günlük ücretsiz deneme sürümü alın !</string>
+    <string name="ConfirmPassword">Şıfreyı onayla*</string>
+    <string name="OldPassword">Eskı şıfre</string>
+    <string name="NewPassword">Yenı şıfre</string>
+    <string name="Register">KAYIT OLMAK</string>
+    <string name="VerifyEmail">E-postanızın Doğruluğunu Doğrulayın</string>
+    <string name="save">KAYIT ETMEK</string>
+    <string name="EditProfile">Editar perfil</string>
+    <string name="ChangePassword">Cambia la contraseña</string>
+    <string name="SetNewPassword">Yeni bir şifre ayarla</string>
+    <string name="AlreadyaMember">Zaten bir üye misiniz?</string>
+    <string name="SignIn">Gırış</string>
+    <string name="YouAreIn">Estás dentro</string>
+    <string name="SafeHands">manos seguras</string>
+    <string name="GoBackTo">Geri dönmek</string>
+    <string name="IncorrectPasswordLength">Şifre en az 6 karakter olmalıdır</string>
+    <string name="PasswordsDoNotMatch">Parolalarınız uyuşmuyor</string>
+    <string name="NoInternetConnection">İnternet bağlantısı yok</string>
+    <string name="PleaseCheckYourInternetConnectivity">Lütfen internet bağlantınızı kontrol edin</string>
+    <string name="OK">TAMAM</string>
+    <string name="Cancel">İptal etmek</string>
+    <string name="CANCEL">İPTAL ETMEK</string>
+    <string name="ACCEPT">KABUL ETMEK</string>
+    <string name="SubscriptionType">Abonelik Türü</string>
+
+    <string name="RestartConfirmation">Onayı Yeniden Başlatın</string>
+    <string name="ApplicationRestart">Dilin değiştirilmesi, uygulamanın yeniden başlatılmasını gerektiriyor.\nDevam etmek istiyor musunuz?</string>
+
+    <string name="About">hakkında</string>
+    <string name="AutoConnect">Devreye başlatıldığında</string>
+    <string name="ConnectOnWifi">Conectarse en wifi</string>
+    <string name="AboutUs">hakkımızda</string>
+    <string name="ABOUTUS">HAKKIMIZDA</string>
+    <string name="AboutCasperVPN">CasperVPN Hakkinda</string>
+    <string name="OnlineChat">Çevrim içi sohbet</string>
+    <string name="ReportABug">Hata bildir</string>
+    <string  name="SendLogFile">Günlük dosyası gönder</string>
+    <string name="Subscribe">Abone ol</string>
+    <string name="FrequentlyAskedQuestions">Sık Sorulan Sorular</string>
+    <string name="GetFreePremium">Bedava permıum alın</string>
+    <string name="TermsAndConditions">Şartlar ve koşullar</string>
+    <string name="WhatIsCasperVPN">CasperVPN nedir</string>
+    <string name="PrivacyPolicy">Gızlılık Polıtıkası</string>
+
+    <string name="HowSubscriptionWorks">Abonelik Nasıl Çalışır?</string>
+    <string name="RestorePurchases">Satın Alma İşlemlerini Geri Yükle</string>
+    <string name="twocheckout">2Checkout</string>
+    <string name="GooglePay">Google Pay</string>
+    <string name="Devices">Cihazlar</string>
+
+    <string name="SubscriptionStatus">Abonelik Durumu</string>
+    <string name="Active">Aktif</string>
+    <string name="Expired">Süresi doldu</string>
+
+    <string name="UPGRADE">YÜKSELT</string>
+    <string name="UNSUBSCRIBE">ABONELIKTEN ÇIK</string>
+
+    <string name="CONNECT">BAĞLANMAK</string>
+    <string name="DISCONNECT">BAĞLANTIYI KES</string>
+    <string name="PING">PING</string>
+
+    <string name="SupportedProtocols">Desteklenen protokoller</string>
+    <string name="Country">Ülke</string>
+    <string name="Load">YÜK</string>
+    <string name="CPU">İşlemci</string>
+    <string name="RAM">Veri deposu</string>
+    <string name="Bandwidth">Bant genişliği</string>
+    <string name="Distance">Mesafe</string>
+
+    <string  name="Validtill">kadar geçerli</string>
+    <string  name="ExpiredIn">Süresi doldu</string>
+    <string  name="ExpiryDate">Son kullanma tarihi</string>
+    <string name="Upgrade">Yükselt</string>
+    <string  name="Downgrade">bozmak</string>
+    <string name="Unsubscribe">Abonelikten çık</string>
+    <string name="UnsubscribeConfirmation">Abonelikten Ayrılma Onayı</string>
+    <string name="UnsubscribeText">Aboneliğinizi iptal etmek istiyor musunuz?</string>
+
+    <string name="FeelSecure">Güvende hısset</string>
+    <string name="TrackingProtection">Takıp koruması</string>
+    <string name="CasperVPNSound">CasperVPN sesı</string>
+
+    <string name="ContactUs">Bizimle iletişime geçin</string>
+    <string name="RateUs">Bizi değerlendirin</string>
+    <string name="Logout">Çıkış yap</string>
+
+    <string name="SUBSCRIBE">ABONE OL</string>
+    <string name="Buy">ALIN</string>
+    <string  name="Month">Ay</string>
+    <string name="OneMonth">1 Ay</string>
+    <string name="MonthlyPrice">6.99$ / Ay</string>
+    <string name="SixMonth">6 Ay</string>
+    <string name="HalfYearPrice">5.99$ / Ay</string>
+    <string name="OneYear">1 Yıl</string>
+    <string name="YearlyPrice">4.99$ / Ay</string>
+    <string  name="HalfYearSave">(Tasarruf edin 16.9%)</string>
+    <string  name="YearlySave">(Tasarruf edin 33.9%)</string>
+    <string name="LimitedOffer">(Sınırlı teklif)</string>
+    <string name="Insteadof">Yerine</string>
+
+    <string name="LifetimePrice">350$</string>
+    <string name="Lifetime">Ömür</string>
+    <string name="LifetimesSave">(Tasarruf edin 36.3%)</string>
+
+    <string name="ThreeDevices">3 Cihaz</string>
+    <string name="UnlimitedAccessToAllServers">Tüm sunuculara Sınırsız Erişim</string>
+    <string name="UnlimitedBandwidth">Sınırsız Bant Genişliği</string>
+    <string name="FiveEncryptionProtocols">5 Şifreleme Protokolleri</string>
+
+    <string name="SubscriptionPackages">Abonelik Paketleri</string>
+
+    <string name="TimeoutTitle">Zaman Aşımı Uyarısı</string>
+    <string name="TimeoutMessage">Oturumunuz zaman aşımına uğradı. Lütfen tekrar giriş yapın.</string>
+
+
+    <string name="You">Sen</string>
+    <string name="CasperVPNSecureYourData">Verilerinizi güvence altına alın</string>
+    <string name="TheInternet">İnternet</string>
+
+    <string name="WHATISCASPERVPN">CASPERVPN NEDIR</string>
+    <string name="ABOUTCASPERVPN">CASPERVPN HAKKINDA</string>
+    <string name="WhyChooseCasperVPN">Neden CasperVPN tercih edilmeli?</string>
+    <string name="TotalSecurity">Toplam Güvenlik</string>
+    <string name="BreakFirewalls">Güvenlik Duvarlarını Kes</string>
+    <string name="FastAndPowerfulServers">Hızlı ve Güçlü Sunucular</string>
+    <string name="Anonymity">İsimsizlik</string>
+    <string name="Flexibility">Esneklik</string>
+    <string name="Table">Aşağıdaki tablo CasperVPN tarafından desteklenen farklı VPN protokollerini listeler ve karşılaştırır</string>
+    <string name="Feature">Özellik</string>
+
+
+    <string name="Speed">Hız</string>
+    <string name="Fastest">En hızlısı</string>
+    <string name="VeryFast">Çok hızlı</string>
+    <string name="Slow">Yavaş</string>
+    <string name="Intermediate">Orta düzey</string>
+    <string name="Fast">Hızlı</string>
+    <string name="Security">Güvenlik</string>
+    <string name="Unsecure">Güvensiz</string>
+    <string name="Secure">Güvenli</string>
+    <string name="HighlySecure">Oldukça Güvenli</string>
+    <string name="Usage">Kullanımı</string>
+    <string name="EasyToUse">Kullanımı kolay</string>
+    <string name="UsedPorts">Kullanılmış Limanlar</string>
+
+
+    <string name="FAQ">SSS</string>
+    <string name="WhatisVPN">VPN nedir?</string>
+    <string name="CanVpnBreakFirewall">VPN, güvenlik duvarlarını kırabilir mi?</string>
+    <string name="IsVpnLegal">VPN Legal mı?</string>
+    <string name="AreVPNsecure">VPN güvenli mi?</string>
+    <string name="CanVpnProvidersSeeMyTraffic">VPN sağlayıcıları trafiğini görüyor olabilir mi?</string>
+    <string name="DoesMyIspSeeThatIAmConnectedToAVpn">ISP\'m bir VPN\'ye bağlı olduğumu görüyor mu?</string>
+    <string name="HowCanIStartUsingCasperVPN">CasperVPN\'yi nasıl kullanmaya başlayabilirim?</string>
+    <string name="PRIVACYPOLICY">GIZLILIK POLITIKASI</string>
+    <string name="CasperVPNPrivacyPolicy">CasperVPN Gizlilik Politikası</string>
+    <string name="WeCollect">Topluyoruz</string>
+    <string name="InfoUsed">Bilgi Kullanılmış</string>
+    <string name="Disclosure">Açıklama</string>
+    <string name="TERMSANDCONDITIONS">Şartlar ve koşullar</string>
+    <string name="General">Genel</string>
+    <string name="ProhibitedActivities">Yasak Faaliyetler</string>
+    <string name="SignInPolicies">Oturum Açma Politikaları</string>
+    <string name="PrivacyTermsAndPolicy">Gizlilik Koşulları ve Politikası</string>
+    <string name="AcceptanceOfTermsAndPolicies">Şartların ve Politikaların Kabul Edilmesi</string>
+
+
+    <string name="GETFREEPREMIUM">BEDAVA PERMIUM ALIN</string>
+
+
+    <string name="DiscountText">Sitemiz üzerinden abone ve% 10 indirim</string>
+    <string name="GetFreeDiscount">Ücretsiz İndirim alın</string>
+    <string name="OFF">Indirim</string>
+
+    <string  name="SubscriptionExpired">Abonelik Süresi</string>
+    <string  name="SubscriptionExpiredText">Maalesef! Bu sizin aboneliğiniz sona erdi gibi görünüyor\nAboneliğinizi yenileme korunmak için</string>
+
+    <string name="TryCasperVPNForFree">Bedava CasperVPN\'yi deneyin!</string>
+    <string name="ThankYou">Teşekkür ederim</string>
+
+
+    <string name="pull_to_refresh_pull_label">Yenilemek için çekin...</string>
+    <string name="pull_to_refresh_release_label">Yenilemek için bırakın...</string>
+    <string name="pull_to_refresh_refreshing_label">Yükleniyor...</string>
+    <string name="pull_to_refresh_tap_label">Tazelenmek için hafifçe dokunun...</string>
+    <string name="pull_to_refresh_last_updated">Güncellenmiş: %1$s</string>
+
+
+    <string name="NoDataAvailable">Veri yok</string>
+    <string name="ConnectionErrorClickToRefresh">Bağlantı hatası\nyenilemek için tıklayın</string>
+
+    <string name="day">gün</string>
+    <string name="days">günler</string>
+    <string name="One_Month">1 ay</string>
+    <string name="Two_Months">2 ay</string>
+    <string name="Three_Months">3 ay</string>
+    <string name="Four_Months">4 ay</string>
+    <string name="Five_Months">5 ay</string>
+    <string name="Six_Months">6 ay</string>
+    <string name="Seven_Months">7 ay</string>
+    <string name="Eight_Months">8 ay</string>
+    <string name="Nine_Months">9 ay</string>
+    <string name="Ten_Months">10 ay</string>
+    <string name="Eleven_Months">11 ay</string>
+    <string name="One_Months">1 yıl</string>
+    <string name="HardDisk">Hard disk</string>
+    <string name="RETRY">GERİ DÖN</string>
+    <string name="CLOSE">KAPAT</string>
+    <string name="PingResults">Ping Sonuçları</string>
+    <string name="PingStarted">Ping Başladı</string>
+
+
+    <string name="GettingStarted1">CASPERVPN\'E HOŞ GELDİNİZ</string>
+    <string name="GettingStarted2">BAĞLANTI DÜĞMESİNİ BASIN</string>
+    <string name="GettingStarted3">BAĞLANMADIĞINDA BİR MADENİ BEKLEYİNİZ</string>
+    <string name="GettingStarted4">SİZİN SONRA BAĞLANTI DÜĞMESİNİ BASIN</string>
+
+
+    <string name="TipsTitle1">Çevrimiçi Özgürlük</string>
+    <string name="TipsSubTitle1">En sevdiğiniz içeriğe istediğiniz yere göz atın</string>
+    <string name="TipsTitle2">Bilgi Gizliliği</string>
+    <string name="TipsSubTitle2">Çevrimiçi gizlilik hakkınızı koruyun</string>
+    <string name="TipsTitle3">Ağ güvenliği</string>
+    <string name="TipsSubTitle3">Ağ etkinliğini şifreleme</string>
+    <string name="TipsTitle4">Veri koruması</string>
+    <string name="TipsSubTitle4">Verilerinizi hırsızlık ve hack saldırılarından korumak</string>
+
+
+    <string name="MapInstructionTop">Bir sunucu seçin</string>
+    <string name="MapInstructionButton">Veya otomatik bağlan düğmesini tıklayın</string>
+    <string name="NO">HAYIR</string>
+    <string name="YES">EVET</string>
+    <string name="YourLocation">Konumunuz</string>
+    <string name="DisconnectFrom">Bağlantısını kes</string>
+    <string name="Unknown">Bilinmiyor</string>
+    <string name="KM">KM</string>
+
+    <string name="GotIt">ANLADIM</string>
+    <string name="TermsNotification">Kaydolarak, &lt;font color=\'#1dae6f\'&gt;&lt;u&gt;Şartlar ve Koşulları&lt;/u&gt;&lt;/font&gt; kabul etmiş oluyorsunuz</string>
+
+
+
+    <string name="FreeEdition" >Ücretsiz Sürüm</string>
+    <string name="CommingSoon" >Çok yakında</string>
+    <string name="NeedHelp">Yardıma Ihtiyacınız?</string>
+
+
+    <string name="WhyChooseCasperVPN_data">CasperVPN, internette gezinirken verilerinizi şifreleyen bir VPN istemci yazılımıdır. Bu şifreleme sayesinde CasperVPN, kullanıcılar için en üst seviyede güvenlik, toplam anonimlik ve nihai gizlilik sağlar.</string>
+    <string name="TotalSecurity_Data">CasperVPN, bilgisayarınız ile sunucularımız arasında şifreli bir tünel oluşturur. Bu şifreli tünel, Internet Hizmet Sağlayıcınız (ISS) veya yerel Wi-Fi operatörünüz gibi herhangi bir üçüncü parti tarafından size bilgi kesmek veya onları görüntülemek için olası herhangi bir girişimin ortadan kaldırır. Şifreleme, genellikle iyi test edilmiş uygulama ve gelişmiş matematiğe dayanan karmaşık bir görevdir. CasperVPN verilerinizi korumak ve iletişim güvenliğini sağlamak için gelişmiş şifreleme algoritmaları kullanır.</string>
+    <string name="BreakFirewalls_Data">CasperVPN\'ye bağlandığınızda, İSS\'iniz yalnızca VPN sunucularımıza geçen şifreli trafiği görür ancak içeriğini analiz etmek için verilerin şifresini çözemezler. Temel olarak, ISS\'niz tarafından CasperVPN aracılığıyla konan kısıtlamaları veya sansürleri geçirebilirsiniz. CasperVPN\'de internetin, herhangi bir varlık tarafından kısıtlanmamalı ya da bağlı kalmamasını gerektiren birbirine bağlı ağların serbest küresel bir sistemi olduğuna inanıyoruz. Ve bizim inancımızı desteklemek için internet özgürlüğü sağlamak için CasperVPN\'yi yarattık, çünkü bu böyle olmalıdır!</string>
+    <string name="FastAndPowerfulServers_Data">CasperVPN\'de geniş bant İnternet bağlantıları için çok yüksek bir hız ve güvenlik seviyesine sahibiz. Sunucularımızın sahibi ve en hızlı VPN hızını sunmak için global bir ağ yönetiyoruz. Üst düzey güvenlikle son derece hızlı VPN bağlantıları sağlamak için optimize edilmiş kod yazıyoruz. Sunucularımıza sahip olduğumuzdan, aramızdaki kullanıcıyla etkileşim kurabilecek hiçbir üçüncü taraf yoktur. Güvenlik ve gizlilik, bir numaralı endişemizdir, bu nedenle, üçüncü şahısların herhangi bir şekilde veya anonimliği sağlamak için sunucularımızdan herhangi birine erişmesi gerektiğine inanıyoruz. Ve şifreleme ekstra bir katman eklemek için yazılımımızı sistem yöneticilerinin bile kullanıcı etkinliğini izleyemeyeceği gibi sunucularımızda saklanan herhangi bir günlük oluşturmayacak şekilde hazırladık.</string>
+    <string name="Anonymity_Data">CasperVPN sizi farklı bir yere veya ülkeye yerleştirir. CasperVPN\'i kullanarak gerçek IP adresinizi ve coğrafi konumunuzu gizleyerek dijital ayak izini bırakabilirsiniz. CasperVPN, herkesin kişisel bilgilerini gizli tutma hakkına sahip olduğuna inanmaktadır.</string>
+    <string name="Flexibility_Data">CasperVPN, bir dizi şifreleme protokolü kullanarak internete güvenli bir şekilde göz atmanızı sağlar. Kullanıcı buna göre bu protokoller arasında geçiş yapabilir ve etkinliğinize göre hangi VPN protokolünün en uygun olduğunu seçebilir.</string>
+    <string name="AboutCasperVPN_Data">CasperVPN, yüksek düzeyde bir hizmet kalitesi ve kullanıcı deneyimi sağlayarak geleneksel VPN çözümlerinin ötesine geçer. Amacımız, müşteri memnuniyetini sağlamakla kalmaz, hızlı, güvenli ve güvenilir bir VPN hizmeti sunarak müşterilerimizin beklentilerini aşar. İnternet kullanırken sanal kısıtlamaları ve güvenlik duvarlarını atlamakla kalmayıp, her kullanıcının gizliliğini korumak ve bilgi hırsızlıktan ve kafa karışıklığına karşı koruma hakkına sahip olduğuna inanıyoruz. Amacımıza hedeflemek için, müşterilerimize şifreleme, gizli ve üst düzey VPN güvenliği sağlamak için son derece güvenli bir altyapıya inşa etmişlerdir. Bizim samimi misyonumuz, kullanıcının gizliliğini korumaktır. Bu vizyona dayanarak, sistemimize herhangi bir günlük kaydetmeyen bir yazılım hazırladık. Daha da fazlası, altyapımız, sistem operatörlerinin kendilerinin kullanıcı etkinliğini izlemesi mümkün olmayan bir şekilde inşa edilmiştir.</string>
+    <string name="WhatisVPN_Data">İnternet trafiği halka açıktır. Üçüncü taraf izleyicileri, hırsızlar ve bilgisayar korsanları kimliğinizi belirleyebilir, bulunduğunuz yeri belirleyebilir ve faaliyetlerinizi IP adresinizden izleyebilir. Sanal Özel şebeke (VPN), tüm istemci trafiğinin güvenli bir tünel yoluyla kapsüllendiği ve şifrelendiği, istemciler ve VPN sunucusu arasındaki güvenli, özel bir ağdır. Bir VPN kullanarak İnternet servis sağlayıcıları (ISS), hükümet ve bilgisayar korsanları verilerinizi göremez veya izleyemez.</string>
+    <string name="CanVpnBreakFirewall_Data">VPN kullanarak, güvenlik duvarları, derin paket denetimi kullansalar bile verilerinizi engelleyemez. VPN kullanırken, verileriniz VPN tüneli ile şifrelenecek, güvenlik duvarlarının şifreli paket analiz etmesi veya kullanıcı etkinliğini görememesi mümkün değildir. Böylece VPN istemcileri güvenlik duvarlarından görünmez şekilde istedikleri her şeye erişebilirler.</string>
+    <string name="IsVpnLegal_Data">Çoğu ülkede, VPN\'ler yasaldır. Kullanıcı mahremiyetini koruma ve verilerini kamuoyundan gizleme hakkına sahiptir. VPN, şirketlerin, kuruluşların ve hatta hükümetlerin bile verilerinin korunmasını ve korunmasını sağlamak için kullanılan bir araçtır.</string>
+    <string name="AreVPNsecure_Data">Bir VPN aracılığıyla, kullanıcılar sanal IP adresi ve sanal konumu kullanarak kimliğini gizleyebilir; bu, tüm etkinliğinizin bilinmemektedir ve bir göz atmak isteyen herkes için anlamsız olduğu anlamına gelir. Bununla birlikte, bir VPN seçmeden önce VPN sağlayıcınıza güvenmeniz gerekir; CasperVPN\'de sunduğumuz şey budur, müşterilerimize paylaştığımız sorumluluk ve güvenlik bizim sorumluluğumuzdur.CasperVPN hiçbir günlük kaydetmez. Kullanıcı, istediği her şeyi yapmakta serbestken, kişisel verileri tamamen güvenli olacak ve VPN operatörlerine bile tamamen özel kalacaktır.</string>
+    <string name="CanVpnProvidersSeeMyTraffic_Data">Teknik olarak evet, kullanıcıların VPN sağlayıcılarına güvenmeleri çok önemlidir. Aslında VPN kullanıcıları, ücretsiz VPN hizmetleri sunan VPN sağlayıcılarına güvenmekten kaçınmalıdır. CasperVPN\'yi kullanmak, herhangi bir VPN sağlayıcısına güvenmeyen kullanıcılar için akıllı bir seçimdir. CasperVPN\'nin kullanıcı gizliliğini koruması ve eksiksiz güvenlik ve güvenlik sunması son derece önemlidir. CasperVPN\'de, herhangi bir koşulda kullanıcılarımız için herhangi bir çevrimiçi etkinlik günlüğü tutmamaktayız. CasperVPN, VPN altyapısını, VPN operatörlerinin kendilerinin kullanıcıları izlemesi veya herhangi bir günlük kaydetme yeteneği olmayan bir şekilde yapılandırması. Kullanıcılarımıza daha güvende hissetmek ve bize güvenmek için, ihtiyaç duyduğumuz son derece güvenli altyapılarımızı kanıtlayan kullanıcılarımızın yanıtlarını ve verilerini vermek için hazırız ve hazırız. Günün sonunda güvenlik, sorumluluk ve mahremiyet neden bizim var olduğumuz.</string>
+    <string name="DoesMyIspSeeThatIAmConnectedToAVpn_Data">CasperVPN OpenVPN protokolü sunduğu için, ISS\'nin görebileceği şey, kullanıcının normal, Google, Face book ve PayPal gibi birçok web sitesinin kullandığı güvenli bir soket katmanı (HTTPS) kullanarak güvenli bir web sitesine göz atmasıdır.</string>
+    <string name="HowCanIStartUsingCasperVPN_Data">Uygulamayı cihazınıza indirip yüklemeniz ve ardından bağlan düğmesine basmanız yeterlidir. Temel olarak bu kadar basit!</string>
+    <string name="CasperVPNPrivacyPolicy_Data">CasperVPN\'de, kullanıcılarımızın gizliliğinin ve güvenliğinin son derece önemli olduğuna inanıyoruz. Dolayısıyla, gizliliğinizi ve güvenliğinizi korumak için sıkı idari politikalar sağlarız.</string>
+    <string name="WeCollect_Data">E-posta adresi ve ödeme Verileri. İsteğe bağlı kontrol panelini kullanan müşteriler geçici bir çerez alacaktır. Google temelde bir Google Analytics\'te bir tanımlama bilgisi depolayabilir. Google eklentisinden çekinmeden çekinmeyin.</string>
+    <string name="InfoUsed_Data">E-posta sızın bılgılerınızı ödeme sertıfıkatla kullanır abone olup ıçın, ve özel ınternet erışım ve sadece promosyon teklıflerı ıçın. Tüm odeme bılgılerı muşterının gırıp odeme yapdışını ve yapmadını yonetıyor. Cookıeler ve Google analıtıkler bılgılerı gelıştırme ve test yaparlar bızım websıtımıza. Fazlası, sunucu günlüklerimız duzenlı olarak budamakışdır. CasperVPN herhangı bır traffıc toplamaz onun sanal özel şebekede.</string>
+    <string name="PrivacyPolicyDisclosure_Data">CasperVPN, kullanıcının gizlilik haklarını korumaya ve onlardan tüm celbi taleplerini sağlamaya çalışır. Tüm uygunluklar, yasal departmanımız tarafından gözden geçirilir ve irdelenir. Kullanıcı bilgilerini vermemiz istenirse, herhangi bir nedenden veya iddia için bu bilgiyi açıklamamızı isteyen herhangi bir tarafın herhangi bir girişimine karşı tüm kaynaklarımızla savaşacağız. Buna ek olarak, bu talep mahkeme kararı ile yedeklenmelidir, aksi takdirde dikkate alınmayacaktır. CasperVPN, yalnızca kullanıcının gizliliğini korumaya inandığımız yasadışı veya anayasaya aykırı herhangi bir faaliyete katılmamaktadır. CasperVPN, bu gizlilik politikasında halihazırda yapılan açıklamalardan başka, üçüncü şahıslarla kişisel bilgilerinizi paylaşmaz. Bununla birlikte, CasperVPN\'nin kullanıcının kişisel bilgilerini üçüncü taraflarla nasıl paylaşmadığını sorgulamak istiyorsanız bizimle iletişime geçmekten çekinmeyin.</string>
+    <string name="General_Data">Bunlar, CasperVPN hizmetlerini kaydettirerek ve kullanırken kabul ettikleri hizmet şartlarıdır. CasperVPN, bu koşullar altında yalnızca kullanıcıların hizmetini kullanmasına izin verir.CasperVPN, suç faaliyetleri için kullanılacak bir hizmet değildir. İnternet güvenliği ve gizlilik servisidir. Sizden kaynaklandığınız herhangi bir yargı yasasını ihlal etmemeyi kabul ediyorsunuz. Sizi ilgilendiren herhangi bir yargı veya mekanla ve eylemlerinizle ilgili tüm kanunları bilmek ve anlamak, kullanıcıların sorumluluğundadır. CasperVPN, kullanıcıları tarafından gerçekleştirilen işlemler için hiçbir şekilde sorumlu tutulamaz. CasperVPN hizmetleri için herhangi bir kişi tarafından ödenen paranın ötesinde yürütülen veya infaz edilen herhangi bir cezai veya hukuki sorumluluğu içerir. Kullanıcı adınızı / şifrenizi ve CasperVPN sisteminizi yetkisiz kullanımdan korumayı kabul ediyorsunuz. CasperVPN\'de VPN bağlantısını oluşturmak için kullanıcı adınızın / şifrenizin kullanıldığı her eylemden siz sorumlusunuz. Hizmetlerimizi liman tarama, spam gönderme, opt-in e-posta gönderme, açık röleler veya açık proxy\'ler için tarama, istenmeyen e-postalar gönderme veya geniş bir miktarda gönderilmiş herhangi bir e-posta veya e-posta türü göndermeme konusunda hemfikirsiniz E-posta son olarak başka bir sunucu üzerinden gönderilir. Hizmetimizden herhangi bir pop-up başlatması yasaktır. Hizmetlerimizi kullanırken herhangi bir saldırı ya da başka bir ağ ya da bilgisayar kurmamayı kabul ediyorsunuz. CasperVPN, çocukların fotoğraf yoluyla, dijital olarak ya da başka herhangi bir biçimde sömürülmesine tolerans göstermez.</string>
+    <string name="Usage_Data">Kullanıcı adınızı ve şifrenizi başkalarına vermenizi veya vermemenizi kabul ediyorsunuz. CasperVPN, sahipleri, çalışanları, acenteleri ve CasperVPN hizmetlerine katılan diğer kişiler, CasperVPN hizmetlerine kayıtlı herhangi bir hesabın sonucu olarak veya CasperVPN hizmetlerine kayıtlı herhangi bir hesabın kullanımından kaynaklanan veya yapılmayan herhangi bir zarar için hiçbir şekilde sorumlu değildir veya sorumlu değildir. Herhangi bir olayda CasperVPN, hizmetin kullanıcıların özlediminden kaynaklanan herhangi bir zarardan hiçbir zaman sorumlu olmayacaktır. Ve bunun dışında, avukat ücretleri veya mahkeme masrafları, aksini ispatlayabilecek kanunlara bakılmaksızın bunlarla sınırlı olmamakla birlikte bunlarla sınırlı değildir.</string>
+    <string name="ProhibitedActivities_Data">Ceza Aktivitesi - Bu cezai işlemlerden herhangi birini yapan herhangi bir müşteri: çalınan kredi kartlarının, kredi kartı dolandırıcılığının, PayPal dolandırıcılığının, banka dolandırıcılığının, e-altın dolandırıcılığının, Paysera dolandırıcılığının, WebMoney dolandırıcılığının, Bitcoin dolandırıcılığının, posta dolandırıcılığının, gasp, şantajın, Kimlik hırsızlığı, korsanlık, zarar verme, kimlik avı, herhangi bir biçimde spam gönderme, servislerimizde veya hizmetlerimiz aracılığıyla kaynaklarımızı kullanarak e-postalar göndermek veya web siteleri işletmek için e-postalar göndermek veya işletmek için web siteleri göndermek, işkence, kaçırma, tecavüz, cinayet, çalınmış kredi kartlarının satışı, Hesabı. Tüm anlaşma budur. CasperVPN, zaman zaman hizmet koşullarını yeniden yazabilir. Hizmet şartları, web sitemizde güncellendikten sonra aktif hale gelir. Her seferinde yeni Hizmet Şartlarını kontrol etmek müşterinin sorumluluğundadır.CasperVPN, herhangi bir kullanıcı hesabını herhangi bir geri ödeme ve bildirim olmaksızın anında hizmet şartlarını ihlal ettiği için feshedebilir. Veya kullanıcıyı daha ayrıntılı aydınlatmaya veya araştırmaya başlayana kadar hesabı askıya alabilir. Hesabınız askıya alınmışsa davanın giderilip giderilip giderilmediğini görmek için bizimle iletişime geçmelisiniz. Bir kullanıcı hesabını kalıcı olarak kapatmadan ve tüm faturaları kapatmadan önce, kesin bir süre bekleyeceğiz.</string>
+    <string name="SignInPolicies_Data">CasperVPN herhangi bir VPN kullanıcısı için günlükleri izlemiyor, depolamıyor veya kaydetmiyor. Bağlantı zaman damgalarını, kullanılan bant genişliğini, trafik günlüklerini veya IP adreslerini saklamıyoruz. Sansürün herhangi bir biçimi ile ilgili değiliz ve kişisel bilgilerinizi hiçbir zaman üçüncü şahıslara vermeyeceğiz. Yetkili mahkeme kararıyla gelmediği sürece herhangi bir bilgi talebini yerine getirmiyoruz. Son derece güvenli bir çevrede oldukları için sunucularımıza kimse erişemez. Buna ek olarak, hiçbir kullanıcı etkinliği sunucularımızda saklanmayacak. Mahremiyetinizi koruyor ve daima koruyacağız.</string>
+    <string name="PrivacyTermsAndPolicy_Data">CasperVPN herhangi bir günlük kaydetmez veya saklamaz. Bununla birlikte, varoluşumuz ve kullanıcı desteği için gerekli olan bazı kullanıcılar hakkında bilgi sahibi olmamız gerekiyor. • Kullanıcı e-postası - en son CasperVPN haberlerini göndermek ve kayıp bir şifre almak için. • Kullanıcı adı - VPN bağlantısı kurmanız gerekir. • Ödeme bilgisi - geri ödeme talebi durumunda faturalandırma bilgilerini depolarız.</string>
+    <string name="TermsAndConditionDisclosure_Data">Bize başvurarak hesabınızı istediğiniz zaman iptal etme hakkınız vardır. Hesap iptal edilirse, VPN hesabında harcadığınız paralar iade edilmez. Hesabınızı iptal etmek için etkin olmalısınız.</string>
+    <string name="AcceptanceOfTermsAndPolicies_Data">Herhangi bir CasperVPN hizmetinde oturum açarak, CasperVPN Hizmet Şartları\'nı ve Hizmet Şartlarını kabul ettiğinizi kabul edersiniz. Bu kayıt ve koşullar, bu şartlar ve koşulları kabul ederek periyodik olarak güncellenebilir ve gelecekle ilgili herhangi bir bilgiyi kabul edersiniz Uygulanırsa bu sözleşmeyi değiştirir.</string>
+
+    <string name="paymentsuccessful">HESAP ETKİNLEŞTİRİLDİ</string>
+    <string name="DOWNGRADE">ESKİ SÜRÜME GEÇME</string>
+    <string name="SelectPaymentMethod">Ödeme Yöntemini Seçin</string>
+    <string name="UpgradeInfo">Yeni sürüme geçirmek için mevcut paketiniz sona erene kadar bekleyin, \nGoogle Hesabı profilinizden tekrarlanan siparişleri kapatmayı unutmayın.</string>
+    <string name="DowngradeInfo">İndirme Sürümü uygulamak için mevcut paketiniz sona erene kadar bekleyin, \nGoogle Hesabı profilinizden tekrarlanan siparişleri kapatmayı unutmayın</string>
+    <string name="NoteInfo">Lütfen şu anki paket bitene kadar bekleyin</string>
+    <string name="WrongAccount">Hizmete aktardığınız abone olduğunuz hesabı daha önce hizmetlerimize kullandığınızdan emin olun.</string>
+    <string name="TURNOFFRECURRING">DÖNÜŞTÜRÜCÜ DURDURMAK</string>
+    <string name="NOTE">NOT</string>
+    <string name="ExpiryDateMessage">Deneme süreniz bittikten sonra hesabınızdan ücret alınacak, deneme süreniz sona erdiğinde otomatik olarak aktive edileceksiniz.</string>
+    <string name="PACKAGES">PAKETLERİ</string>
+    <string name="Package">paket</string>
+    <string name="REFRESH">YENİLEME</string>
+    <string name="Ourservice">Hizmet Şartlarımızı görebilirsiniz <font color='red'>here</font></string>
+    <string name="here">İşte</string>
+    <string name="HowsubscriptionworksInfo">Ödeme, satın alma işleminin onaylanması üzerine Google play Store Hesabından tahsil edilecektir. \n \nBaşvuru, geçerli dönemin bitiminden en az 24 saat önce otomatik yenileme kapalı olmadığı sürece otomatik olarak yenilenir. \n \nHesap, cari dönemin bitiş tarihinden 24 saat önce yenileme için ücretlendirilecek ve yenileme maliyetini belirtecektir. \n \nBaşvuru kullanıcı tarafından yönetilebilir ve satın alma işleminden sonra kullanıcının Hesap Ayarlarına giderek otomatik yenileme kapatılabilir.</string>
+
+    <string name="ErrorContactUs">Hata, Lütfen çevrimiçi sohbet kullanarak ya da support@caspervpn.com adresine e-posta göndererek İletişim kurun.</string>
+    <string name="Waitingrewardvideo">Ödüllü Video kullanılamıyor, lütfen tekrar deneyin</string>
+
+    <string name="SIGNUP">kaydol</string>
+    <string name="SIGNIN">OTURUM AÇ</string>
+    <string name="chooseurpackage">CasperVPN\'ye hoş geldiniz, \nÜcretsiz deneme sürümünüzü etkinleştirmek için lütfen tur paketi seçin. \nDeneme işleminin bitiminden 27 saat önce istediğiniz zaman aboneliğinizi iptal edebilirsiniz.</string>
+    <string name="Signinrequiredsubscription">CasperVPN\'ye hoş geldiniz, \n Hesabınızı Kaydettirmek için \nSınır denemenizi başlatmak için paketinizi seçin</string>
+    <string name="NewAppVersion">Yeni Sürüm Bulundu</string>
+    <string name="NewAppVersionDesc">Yeni bir sürüm mevcut, \nfarkına uygulama güncellen</string>
+    <string name="UPDATE">GÜNCELLEŞTİRME</string>
+    <string name="SubscriptionRequiredText">CasperVPN\'ye hoş geldiniz, \nSınır denemenizi başlatmak için paketinizi seçin, ücretsiz deneme sürümünü etkinleştirmek için lütfen Giriş Yap /</string>
+
+    <string name="CofirmationEmail">Doğrulama maili</string>
+
+
+    <string name="verify">DOĞRULAYIN</string>
+    <string name="HowsubscriptionworksInfo1">Ödeme, satın alma işleminin onaylanışında Coogle Play Store Hesabından tahsil edilecektir.</string>
+    <string name="HowsubscriptionworksInfo2">Abonelik, geçerli dönemin bitiminden en az 24 saat önce otomatik yenileme kapalı olmadığı sürece otomatik olarak yenilenir.</string>
+    <string name="HowsubscriptionworksInfo3">Hesap, cari döneme ait bitimden 24 saat önce yenileme ücreti alınacak ve yenileme maliyetini belirleyecektir.</string>
+    <string name="HowsubscriptionworksInfo4">Abonelik kullanıcı tarafından yönetilebilir ve satın alma işleminden sonra kullanıcının Hesap Ayarlarına giderek otomatik yenileme kapatılabilir.</string>
+    <string name="HowsubscriptionworksInfo5">Varsa, kullanıcı, o yayına abonelik satın aldığında, ücretsiz deneme süresinin kullanılmayan bir kısmı kaybedilecektir.</string>
+    <string name="YourPrivacy">Gizliliğiniz</string>
+    <string name="YourPrivacyInfo">Hizmetimizi işletmek için gereken minimum miktarda bilgi toplamaya çalışıyoruz. Gizlilik politikamızı görebilirsiniz <font color='blue'>İşte</font></string>
+</resources>

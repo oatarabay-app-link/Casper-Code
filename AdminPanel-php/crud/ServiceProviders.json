@@ -1,0 +1,27 @@
+{
+  "fields": [
+    {
+      "name": "uuid",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "url",
+      "type": "string"
+    },{
+      "name": "username",
+      "type": "string"
+    },
+    {
+      "name": "password",
+      "type": "string"
+    },
+    {
+      "name": "provider_type",
+      "type": "string"
+    }
+  ]
+}

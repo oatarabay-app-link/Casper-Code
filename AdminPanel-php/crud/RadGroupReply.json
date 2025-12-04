@@ -1,0 +1,22 @@
+{
+  "fields": [
+    {
+      "name": "groupname",
+      "type": "string"
+    },
+    {
+      "name": "attribute",
+      "type": "string"
+    },
+    {
+      "name": "op",
+      "type": "string"
+    },
+
+    {
+      "name": "value",
+      "type": "string"
+    }
+
+  ]
+}

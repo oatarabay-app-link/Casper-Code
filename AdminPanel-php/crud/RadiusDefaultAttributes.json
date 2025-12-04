@@ -1,0 +1,29 @@
+{
+  "fields": [
+    {
+      "name": "attribute",
+      "type": "string"
+    },
+    {
+      "name": "op",
+      "type": "string"
+    },
+
+    {
+      "name": "value",
+      "type": "string"
+    },
+
+    {
+      "name": "description",
+      "type": "longtext"
+    },
+
+    {
+      "name": "status",
+      "type": "boolean"
+    }
+
+
+  ]
+}
