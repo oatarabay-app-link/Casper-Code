@@ -1,0 +1,184 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database (Development)
+  postgres:
+    image: postgres:16-alpine
+    container_name: caspervpn-postgres-dev
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: caspervpn_dev
+      POSTGRES_USER: devuser
+      POSTGRES_PASSWORD: devpass123
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"  # Different port for dev
+    networks:
+      - caspervpn-dev-network
+
+  # Redis Cache (Development)
+  redis:
+    image: redis:7-alpine
+    container_name: caspervpn-redis-dev
+    restart: unless-stopped
+    command: redis-server --requirepass devredis123
+    ports:
+      - "6380:6379"  # Different port for dev
+    networks:
+      - caspervpn-dev-network
+
+  # .NET Core API Backend (Development with hot reload)
+  api:
+    build:
+      context: ./backend-dotnet-core
+      dockerfile: Dockerfile
+      target: build  # Stop at build stage for development
+    container_name: caspervpn-api-dev
+    restart: unless-stopped
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=caspervpn_dev
+      - DB_USER=devuser
+      - DB_PASSWORD=devpass123
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    ports:
+      - "8080:8080"
+      - "5000:5000"  # Debug port
+    volumes:
+      - ./backend-dotnet-core:/src:cached
+      - dotnet_packages:/root/.nuget/packages
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - caspervpn-dev-network
+    command: dotnet watch run --no-restore
+
+  # React Admin Panel (Development with hot reload)
+  admin-react:
+    build:
+      context: ./admin-panel-react
+      dockerfile: Dockerfile
+      target: build  # Stop at build stage
+    container_name: caspervpn-admin-react-dev
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=development
+      - REACT_APP_API_URL=http://localhost:8080
+      - CHOKIDAR_USEPOLLING=true  # Enable polling for file watching
+      - WDS_SOCKET_PORT=0
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./admin-panel-react:/app:cached
+      - /app/node_modules
+    depends_on:
+      - api
+    networks:
+      - caspervpn-dev-network
+    command: npm start
+
+  # Rust Server Agent (Development)
+  server-agent:
+    build:
+      context: ./rust-server-agent
+      dockerfile: Dockerfile
+      target: builder  # Stop at builder stage
+    container_name: caspervpn-server-agent-dev
+    restart: unless-stopped
+    environment:
+      - RUST_LOG=debug
+      - API_HOST=api
+      - API_PORT=8080
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./rust-server-agent:/usr/src/app:cached
+      - rust_target:/usr/src/app/target
+      - rust_registry:/usr/local/cargo/registry
+    depends_on:
+      - api
+    networks:
+      - caspervpn-dev-network
+    command: cargo watch -x run
+
+  # PHP Laravel Admin Panel (Development)
+  admin-php:
+    build:
+      context: ./admin-panel-php-laravel
+      dockerfile: Dockerfile
+    container_name: caspervpn-admin-php-dev
+    restart: unless-stopped
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - APP_KEY=base64:DEV123456789012345678901234567890123456=
+      - DB_CONNECTION=pgsql
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_DATABASE=caspervpn_dev
+      - DB_USERNAME=devuser
+      - DB_PASSWORD=devpass123
+      - CACHE_DRIVER=redis
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=devredis123
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./admin-panel-php-laravel:/var/www/html:cached
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - caspervpn-dev-network
+
+  # Database Admin Tool (pgAdmin)
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: caspervpn-pgadmin-dev
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@caspervpn.local
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "5050:80"
+    networks:
+      - caspervpn-dev-network
+    depends_on:
+      - postgres
+
+  # Redis Commander (Redis GUI)
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: caspervpn-redis-commander-dev
+    restart: unless-stopped
+    environment:
+      - REDIS_HOSTS=local:redis:6379:0:devredis123
+    ports:
+      - "8082:8081"
+    networks:
+      - caspervpn-dev-network
+    depends_on:
+      - redis
+
+networks:
+  caspervpn-dev-network:
+    driver: bridge
+    name: caspervpn-dev-network
+
+volumes:
+  postgres_dev_data:
+    name: caspervpn-postgres-dev-data
+  dotnet_packages:
+    name: caspervpn-dotnet-packages
+  rust_target:
+    name: caspervpn-rust-target
+  rust_registry:
+    name: caspervpn-rust-registry

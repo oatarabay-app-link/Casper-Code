@@ -1,0 +1,91 @@
+.
+├── DEVOPS_SETUP_SUMMARY.md
+├── DEVOPS_SETUP_SUMMARY.pdf
+├── PROJECT_STRUCTURE.txt
+├── README.md
+├── admin-panel-php-laravel
+│   ├── Dockerfile
+│   ├── app
+│   │   └── Http
+│   ├── artisan
+│   ├── bootstrap
+│   │   └── app.php
+│   ├── composer.json
+│   ├── config
+│   ├── docker
+│   │   ├── nginx.conf
+│   │   └── supervisord.conf
+│   ├── public
+│   │   └── index.php
+│   ├── resources
+│   │   └── views
+│   ├── routes
+│   │   └── web.php
+│   └── storage
+│       ├── framework
+│       └── logs
+├── admin-panel-react
+│   ├── Dockerfile
+│   ├── nginx.conf
+│   ├── package.json
+│   ├── public
+│   │   └── index.html
+│   └── src
+│       ├── App.js
+│       └── index.js
+├── backend-dotnet-core
+│   ├── CasperVPN.csproj
+│   ├── Controllers
+│   │   └── ApiController.cs
+│   ├── Dockerfile
+│   ├── Program.cs
+│   └── appsettings.json
+├── config
+│   ├── development.env
+│   ├── production.env.example
+│   └── staging.env
+├── docker-compose.dev.yml
+├── docker-compose.yml
+├── docs
+│   ├── DEPLOYMENT.md
+│   ├── DEPLOYMENT.pdf
+│   ├── DEVOPS.md
+│   ├── DEVOPS.pdf
+│   ├── LOCAL_DEVELOPMENT.md
+│   ├── LOCAL_DEVELOPMENT.pdf
+│   ├── MONITORING.md
+│   ├── TROUBLESHOOTING.md
+│   └── TROUBLESHOOTING.pdf
+├── monitoring
+│   ├── alertmanager
+│   │   └── alertmanager.yml
+│   ├── docker-compose.monitoring.yml
+│   ├── grafana
+│   │   ├── dashboards
+│   │   └── provisioning
+│   └── prometheus
+│       ├── alerts
+│       └── prometheus.yml
+├── nginx
+│   ├── nginx.conf
+│   ├── sites
+│   │   ├── admin.conf
+│   │   ├── agent.conf
+│   │   └── api.conf
+│   └── ssl
+│       └── README.md
+├── rust-server-agent
+│   ├── Cargo.toml
+│   ├── Dockerfile
+│   └── src
+│       └── main.rs
+└── scripts
+    ├── README.md
+    ├── backup.sh
+    ├── deploy.sh
+    ├── health-check.sh
+    ├── logs.sh
+    ├── restore.sh
+    └── setup.sh
+
+34 directories, 55 files
