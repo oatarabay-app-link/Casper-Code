@@ -8,76 +8,85 @@
 
 /* Begin PBXBuildFile section */
 		/* Main App Files */
-		A1000001201000001000001 /* CasperVPNApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000001000001; };
-		A1000001201000001000002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000001000002; };
-		A1000001201000001000003 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000001000003; };
+		APP001 /* CasperVPNApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC001; };
+		APP002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC002; };
+		APP003 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC003; };
+		APP004 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC004; };
 		
-		/* Models */
-		A1000001201000002000001 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000002000001; };
-		A1000001201000002000002 /* VPNServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000002000002; };
-		A1000001201000002000003 /* VPNConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000002000003; };
-		A1000001201000002000004 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000002000004; };
+		/* Core Models */
+		MOD001 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC010; };
+		MOD002 /* VPNServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC011; };
+		MOD003 /* VPNConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC012; };
+		MOD004 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC013; };
+		MOD005 /* VPNError.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC014; };
+		MOD006 /* ConnectionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC015; };
 		
-		/* Services */
-		A1000001201000003000001 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000003000001; };
-		A1000001201000003000002 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000003000002; };
-		A1000001201000003000003 /* VPNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000003000003; };
-		A1000001201000003000004 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000003000004; };
-		A1000001201000003000005 /* ServerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000003000005; };
+		/* Core Services */
+		SVC001 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC020; };
+		SVC002 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC021; };
+		SVC003 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC022; };
+		SVC004 /* ServerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC023; };
+		SVC005 /* WireGuardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC024; };
+		SVC006 /* VPNConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC025; };
+		SVC007 /* KillSwitchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC026; };
+		SVC008 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC027; };
+		SVC009 /* ConnectionLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC028; };
 		
-		/* Protocols */
-		A1000001201000004000001 /* ServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000004000001; };
-		A1000001201000004000002 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000004000002; };
+		/* Core Protocols */
+		PRT001 /* ServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC030; };
+		PRT002 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC031; };
 		
-		/* Extensions */
-		A1000001201000005000001 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000005000001; };
+		/* Features - Auth */
+		FTA001 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC040; };
+		FTA002 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC041; };
 		
-		/* Views */
-		A1000001201000006000001 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000006000001; };
-		A1000001201000006000002 /* ServerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000006000002; };
-		A1000001201000006000003 /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000006000003; };
-		A1000001201000006000004 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000006000004; };
+		/* Features - Connection */
+		FTC001 /* ConnectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC050; };
+		FTC002 /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC051; };
 		
-		/* ViewModels */
-		A1000001201000007000001 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000007000001; };
-		A1000001201000007000002 /* ServerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000007000002; };
-		A1000001201000007000003 /* ConnectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000007000003; };
-		A1000001201000007000004 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000007000004; };
+		/* Features - ServerList */
+		FTS001 /* ServerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC060; };
+		FTS002 /* ServerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC061; };
+		
+		/* Features - Settings */
+		FTST001 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC070; };
+		FTST002 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC071; };
 		
 		/* UI */
-		A1000001201000008000001 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000008000001; };
-		A1000001201000008000002 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000001101000008000002; };
+		UI001 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC080; };
 		
-		/* Network Extension */
-		A1000002201000001000001 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002101000001000001; };
-		A1000002201000001000002 /* TunnelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002101000001000002; };
+		/* Tunnel Extension */
+		TNL001 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC090; };
+		TNL002 /* TunnelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC091; };
 		
 		/* Frameworks */
-		A1000003201000001000001 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1000003101000001000001; };
-		A1000003201000001000002 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1000003101000001000001; };
+		FRW001 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FRM001; };
+		FRW002 /* CryptoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FRM002; };
+		FRW003 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FRM003; };
+		FRW004 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FRM001; };
 		
-		/* App Extension */
-		A1000004201000001000001 /* CasperVPNTunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A1000004101000001000001; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		/* Tunnel Extension Embed */
+		EMB001 /* CasperVPNTunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = PRD002; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A1000005001000001000001 /* PBXContainerItemProxy */ = {
+		PRX001 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A1000000001000001000001 /* Project object */;
+			containerPortal = PRJ001;
 			proxyType = 1;
-			remoteGlobalIDString = A1000004001000001000001;
+			remoteGlobalIDString = TGT002;
 			remoteInfo = CasperVPNTunnel;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A1000006001000001000001 /* Embed Foundation Extensions */ = {
+		CPY001 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				A1000004201000001000001 /* CasperVPNTunnel.appex in Embed Foundation Extensions */,
+				EMB001 /* CasperVPNTunnel.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,297 +94,312 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		/* Main App */
-		A1000001001000001000001 /* CasperVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CasperVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		
-		/* App Files */
-		A1000001101000001000001 /* CasperVPNApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasperVPNApp.swift; sourceTree = "<group>"; };
-		A1000001101000001000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A1000001101000001000003 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		
-		/* Models */
-		A1000001101000002000001 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		A1000001101000002000002 /* VPNServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNServer.swift; sourceTree = "<group>"; };
-		A1000001101000002000003 /* VPNConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNConfig.swift; sourceTree = "<group>"; };
-		A1000001101000002000004 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
-		
-		/* Services */
-		A1000001101000003000001 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		A1000001101000003000002 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		A1000001101000003000003 /* VPNService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNService.swift; sourceTree = "<group>"; };
-		A1000001101000003000004 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
-		A1000001101000003000005 /* ServerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerService.swift; sourceTree = "<group>"; };
-		
-		/* Protocols */
-		A1000001101000004000001 /* ServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocols.swift; sourceTree = "<group>"; };
-		A1000001101000004000002 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
-		
-		/* Extensions */
-		A1000001101000005000001 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		
-		/* Views */
-		A1000001101000006000001 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		A1000001101000006000002 /* ServerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListView.swift; sourceTree = "<group>"; };
-		A1000001101000006000003 /* ConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
-		A1000001101000006000004 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		
-		/* ViewModels */
-		A1000001101000007000001 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
-		A1000001101000007000002 /* ServerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewModel.swift; sourceTree = "<group>"; };
-		A1000001101000007000003 /* ConnectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewModel.swift; sourceTree = "<group>"; };
-		A1000001101000007000004 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		
-		/* UI */
-		A1000001101000008000001 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
-		A1000001101000008000002 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		
-		/* Network Extension */
-		A1000004101000001000001 /* CasperVPNTunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CasperVPNTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1000002101000001000001 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
-		A1000002101000001000002 /* TunnelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelConfiguration.swift; sourceTree = "<group>"; };
-		A1000002101000001000003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		/* Products */
+		PRD001 /* CasperVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CasperVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		PRD002 /* CasperVPNTunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CasperVPNTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		
 		/* Frameworks */
-		A1000003101000001000001 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		FRM001 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		FRM002 /* CryptoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoKit.framework; path = System/Library/Frameworks/CryptoKit.framework; sourceTree = SDKROOT; };
+		FRM003 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		
+		/* Source Files - App */
+		SRC001 /* CasperVPNApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasperVPNApp.swift; sourceTree = "<group>"; };
+		SRC002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		SRC003 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		SRC004 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		
+		/* Source Files - Models */
+		SRC010 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		SRC011 /* VPNServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNServer.swift; sourceTree = "<group>"; };
+		SRC012 /* VPNConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNConfig.swift; sourceTree = "<group>"; };
+		SRC013 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		SRC014 /* VPNError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNError.swift; sourceTree = "<group>"; };
+		SRC015 /* ConnectionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionState.swift; sourceTree = "<group>"; };
+		
+		/* Source Files - Services */
+		SRC020 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		SRC021 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		SRC022 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		SRC023 /* ServerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerService.swift; sourceTree = "<group>"; };
+		SRC024 /* WireGuardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireGuardManager.swift; sourceTree = "<group>"; };
+		SRC025 /* VPNConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNConnectionManager.swift; sourceTree = "<group>"; };
+		SRC026 /* KillSwitchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KillSwitchManager.swift; sourceTree = "<group>"; };
+		SRC027 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		SRC028 /* ConnectionLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLogger.swift; sourceTree = "<group>"; };
+		
+		/* Source Files - Protocols */
+		SRC030 /* ServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocols.swift; sourceTree = "<group>"; };
+		SRC031 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		
+		/* Source Files - Features */
+		SRC040 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		SRC041 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		SRC050 /* ConnectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewModel.swift; sourceTree = "<group>"; };
+		SRC051 /* ConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
+		SRC060 /* ServerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListViewModel.swift; sourceTree = "<group>"; };
+		SRC061 /* ServerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListView.swift; sourceTree = "<group>"; };
+		SRC070 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		SRC071 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		
+		/* Source Files - UI */
+		SRC080 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		
+		/* Source Files - Tunnel */
+		SRC090 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		SRC091 /* TunnelConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelConfiguration.swift; sourceTree = "<group>"; };
+		
+		/* Config Files */
+		CFG001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFG002 /* CasperVPN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CasperVPN.entitlements; sourceTree = "<group>"; };
+		CFG003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFG004 /* CasperVPNTunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CasperVPNTunnel.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A1000001301000001000001 /* Frameworks */ = {
+		FBP001 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1000003201000001000001 /* NetworkExtension.framework in Frameworks */,
+				FRW001 /* NetworkExtension.framework in Frameworks */,
+				FRW002 /* CryptoKit.framework in Frameworks */,
+				FRW003 /* Network.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A1000002301000001000001 /* Frameworks */ = {
+		FBP002 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1000003201000001000002 /* NetworkExtension.framework in Frameworks */,
+				FRW004 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A1000000101000001000001 = {
+		GRP001 = {
 			isa = PBXGroup;
 			children = (
-				A1000001401000001000001 /* CasperVPN */,
-				A1000002401000001000001 /* CasperVPNTunnel */,
-				A1000003401000001000001 /* Frameworks */,
-				A1000000201000001000001 /* Products */,
+				GRP002 /* CasperVPN */,
+				GRP020 /* CasperVPNTunnel */,
+				GRP030 /* Frameworks */,
+				GRP040 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A1000000201000001000001 /* Products */ = {
+		GRP002 /* CasperVPN */ = {
 			isa = PBXGroup;
 			children = (
-				A1000001001000001000001 /* CasperVPN.app */,
-				A1000004101000001000001 /* CasperVPNTunnel.appex */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		A1000001401000001000001 /* CasperVPN */ = {
-			isa = PBXGroup;
-			children = (
-				A1000001401000002000001 /* App */,
-				A1000001401000003000001 /* Core */,
-				A1000001401000004000001 /* Features */,
-				A1000001401000005000001 /* UI */,
-				A1000001401000006000001 /* Resources */,
+				GRP003 /* App */,
+				GRP004 /* Core */,
+				GRP010 /* Features */,
+				GRP015 /* UI */,
+				CFG001 /* Info.plist */,
+				CFG002 /* CasperVPN.entitlements */,
 			);
 			path = CasperVPN;
 			sourceTree = "<group>";
 		};
-		A1000001401000002000001 /* App */ = {
+		GRP003 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				A1000001101000001000001 /* CasperVPNApp.swift */,
-				A1000001101000001000002 /* AppDelegate.swift */,
-				A1000001101000001000003 /* Config.swift */,
+				SRC001 /* CasperVPNApp.swift */,
+				SRC002 /* AppDelegate.swift */,
+				SRC003 /* Config.swift */,
+				SRC004 /* AppCoordinator.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
 		};
-		A1000001401000003000001 /* Core */ = {
+		GRP004 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				A1000001401000003100001 /* Models */,
-				A1000001401000003200001 /* Services */,
-				A1000001401000003300001 /* Protocols */,
-				A1000001401000003400001 /* Extensions */,
+				GRP005 /* Models */,
+				GRP006 /* Services */,
+				GRP007 /* Protocols */,
+				GRP008 /* Extensions */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		A1000001401000003100001 /* Models */ = {
+		GRP005 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A1000001101000002000001 /* User.swift */,
-				A1000001101000002000002 /* VPNServer.swift */,
-				A1000001101000002000003 /* VPNConfig.swift */,
-				A1000001101000002000004 /* Subscription.swift */,
+				SRC010 /* User.swift */,
+				SRC011 /* VPNServer.swift */,
+				SRC012 /* VPNConfig.swift */,
+				SRC013 /* Subscription.swift */,
+				SRC014 /* VPNError.swift */,
+				SRC015 /* ConnectionState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		A1000001401000003200001 /* Services */ = {
+		GRP006 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A1000001101000003000001 /* APIClient.swift */,
-				A1000001101000003000002 /* AuthService.swift */,
-				A1000001101000003000003 /* VPNService.swift */,
-				A1000001101000003000004 /* KeychainService.swift */,
-				A1000001101000003000005 /* ServerService.swift */,
+				SRC020 /* APIClient.swift */,
+				SRC021 /* AuthService.swift */,
+				SRC022 /* KeychainService.swift */,
+				SRC023 /* ServerService.swift */,
+				SRC024 /* WireGuardManager.swift */,
+				SRC025 /* VPNConnectionManager.swift */,
+				SRC026 /* KillSwitchManager.swift */,
+				SRC027 /* NetworkMonitor.swift */,
+				SRC028 /* ConnectionLogger.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		A1000001401000003300001 /* Protocols */ = {
+		GRP007 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				A1000001101000004000001 /* ServiceProtocols.swift */,
-				A1000001101000004000002 /* ViewModelProtocol.swift */,
+				SRC030 /* ServiceProtocols.swift */,
+				SRC031 /* ViewModelProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		A1000001401000003400001 /* Extensions */ = {
+		GRP008 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A1000001101000005000001 /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		A1000001401000004000001 /* Features */ = {
+		GRP010 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				A1000001401000004100001 /* Auth */,
-				A1000001401000004200001 /* ServerList */,
-				A1000001401000004300001 /* Connection */,
-				A1000001401000004400001 /* Settings */,
+				GRP011 /* Auth */,
+				GRP012 /* Connection */,
+				GRP013 /* ServerList */,
+				GRP014 /* Settings */,
 			);
 			path = Features;
 			sourceTree = "<group>";
 		};
-		A1000001401000004100001 /* Auth */ = {
+		GRP011 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				A1000001101000006000001 /* LoginView.swift */,
-				A1000001101000007000001 /* AuthViewModel.swift */,
+				SRC040 /* AuthViewModel.swift */,
+				SRC041 /* LoginView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		A1000001401000004200001 /* ServerList */ = {
+		GRP012 /* Connection */ = {
 			isa = PBXGroup;
 			children = (
-				A1000001101000006000002 /* ServerListView.swift */,
-				A1000001101000007000002 /* ServerListViewModel.swift */,
-			);
-			path = ServerList;
-			sourceTree = "<group>";
-		};
-		A1000001401000004300001 /* Connection */ = {
-			isa = PBXGroup;
-			children = (
-				A1000001101000006000003 /* ConnectionView.swift */,
-				A1000001101000007000003 /* ConnectionViewModel.swift */,
+				SRC050 /* ConnectionViewModel.swift */,
+				SRC051 /* ConnectionView.swift */,
 			);
 			path = Connection;
 			sourceTree = "<group>";
 		};
-		A1000001401000004400001 /* Settings */ = {
+		GRP013 /* ServerList */ = {
 			isa = PBXGroup;
 			children = (
-				A1000001101000006000004 /* SettingsView.swift */,
-				A1000001101000007000004 /* SettingsViewModel.swift */,
+				SRC060 /* ServerListViewModel.swift */,
+				SRC061 /* ServerListView.swift */,
+			);
+			path = ServerList;
+			sourceTree = "<group>";
+		};
+		GRP014 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				SRC070 /* SettingsViewModel.swift */,
+				SRC071 /* SettingsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		A1000001401000005000001 /* UI */ = {
+		GRP015 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				A1000001401000005100001 /* Components */,
-				A1000001401000005200001 /* Theme */,
+				GRP016 /* Components */,
+				GRP017 /* Theme */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		A1000001401000005100001 /* Components */ = {
+		GRP016 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A1000001101000008000001 /* Components.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		A1000001401000005200001 /* Theme */ = {
+		GRP017 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
-				A1000001101000008000002 /* Theme.swift */,
+				SRC080 /* Theme.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
 		};
-		A1000001401000006000001 /* Resources */ = {
+		GRP020 /* CasperVPNTunnel */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		A1000002401000001000001 /* CasperVPNTunnel */ = {
-			isa = PBXGroup;
-			children = (
-				A1000002101000001000001 /* PacketTunnelProvider.swift */,
-				A1000002101000001000002 /* TunnelConfiguration.swift */,
-				A1000002101000001000003 /* Info.plist */,
+				SRC090 /* PacketTunnelProvider.swift */,
+				SRC091 /* TunnelConfiguration.swift */,
+				CFG003 /* Info.plist */,
+				CFG004 /* CasperVPNTunnel.entitlements */,
 			);
 			path = CasperVPNTunnel;
 			sourceTree = "<group>";
 		};
-		A1000003401000001000001 /* Frameworks */ = {
+		GRP030 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A1000003101000001000001 /* NetworkExtension.framework */,
+				FRM001 /* NetworkExtension.framework */,
+				FRM002 /* CryptoKit.framework */,
+				FRM003 /* Network.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		GRP040 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				PRD001 /* CasperVPN.app */,
+				PRD002 /* CasperVPNTunnel.appex */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A1000001501000001000001 /* CasperVPN */ = {
+		TGT001 /* CasperVPN */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1000001601000001000001 /* Build configuration list for PBXNativeTarget "CasperVPN" */;
+			buildConfigurationList = BCL001;
 			buildPhases = (
-				A1000001701000001000001 /* Sources */,
-				A1000001301000001000001 /* Frameworks */,
-				A1000001801000001000001 /* Resources */,
-				A1000006001000001000001 /* Embed Foundation Extensions */,
+				SBP001 /* Sources */,
+				FBP001 /* Frameworks */,
+				RBP001 /* Resources */,
+				CPY001 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A1000005101000001000001 /* PBXTargetDependency */,
+				DEP001 /* PBXTargetDependency */,
 			);
 			name = CasperVPN;
+			packageProductDependencies = (
+			);
 			productName = CasperVPN;
-			productReference = A1000001001000001000001 /* CasperVPN.app */;
+			productReference = PRD001 /* CasperVPN.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A1000004001000001000001 /* CasperVPNTunnel */ = {
+		TGT002 /* CasperVPNTunnel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1000004601000001000001 /* Build configuration list for PBXNativeTarget "CasperVPNTunnel" */;
+			buildConfigurationList = BCL002;
 			buildPhases = (
-				A1000004701000001000001 /* Sources */,
-				A1000002301000001000001 /* Frameworks */,
+				SBP002 /* Sources */,
+				FBP002 /* Frameworks */,
+				RBP002 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -383,28 +407,28 @@
 			);
 			name = CasperVPNTunnel;
 			productName = CasperVPNTunnel;
-			productReference = A1000004101000001000001 /* CasperVPNTunnel.appex */;
+			productReference = PRD002 /* CasperVPNTunnel.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A1000000001000001000001 /* Project object */ = {
+		PRJ001 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					A1000001501000001000001 = {
+					TGT001 = {
 						CreatedOnToolsVersion = 15.0;
 					};
-					A1000004001000001000001 = {
+					TGT002 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = A1000000301000001000001 /* Build configuration list for PBXProject "CasperVPN" */;
+			buildConfigurationList = BCL003;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -412,19 +436,28 @@
 				en,
 				Base,
 			);
-			mainGroup = A1000000101000001000001;
-			productRefGroup = A1000000201000001000001 /* Products */;
+			mainGroup = GRP001;
+			packageReferences = (
+			);
+			productRefGroup = GRP040 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A1000001501000001000001 /* CasperVPN */,
-				A1000004001000001000001 /* CasperVPNTunnel */,
+				TGT001 /* CasperVPN */,
+				TGT002 /* CasperVPNTunnel */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A1000001801000001000001 /* Resources */ = {
+		RBP001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		RBP002 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -434,59 +467,179 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A1000001701000001000001 /* Sources */ = {
+		SBP001 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1000001201000001000001 /* CasperVPNApp.swift in Sources */,
-				A1000001201000001000002 /* AppDelegate.swift in Sources */,
-				A1000001201000001000003 /* Config.swift in Sources */,
-				A1000001201000002000001 /* User.swift in Sources */,
-				A1000001201000002000002 /* VPNServer.swift in Sources */,
-				A1000001201000002000003 /* VPNConfig.swift in Sources */,
-				A1000001201000002000004 /* Subscription.swift in Sources */,
-				A1000001201000003000001 /* APIClient.swift in Sources */,
-				A1000001201000003000002 /* AuthService.swift in Sources */,
-				A1000001201000003000003 /* VPNService.swift in Sources */,
-				A1000001201000003000004 /* KeychainService.swift in Sources */,
-				A1000001201000003000005 /* ServerService.swift in Sources */,
-				A1000001201000004000001 /* ServiceProtocols.swift in Sources */,
-				A1000001201000004000002 /* ViewModelProtocol.swift in Sources */,
-				A1000001201000005000001 /* Extensions.swift in Sources */,
-				A1000001201000006000001 /* LoginView.swift in Sources */,
-				A1000001201000006000002 /* ServerListView.swift in Sources */,
-				A1000001201000006000003 /* ConnectionView.swift in Sources */,
-				A1000001201000006000004 /* SettingsView.swift in Sources */,
-				A1000001201000007000001 /* AuthViewModel.swift in Sources */,
-				A1000001201000007000002 /* ServerListViewModel.swift in Sources */,
-				A1000001201000007000003 /* ConnectionViewModel.swift in Sources */,
-				A1000001201000007000004 /* SettingsViewModel.swift in Sources */,
-				A1000001201000008000001 /* Components.swift in Sources */,
-				A1000001201000008000002 /* Theme.swift in Sources */,
+				APP001 /* CasperVPNApp.swift in Sources */,
+				APP002 /* AppDelegate.swift in Sources */,
+				APP003 /* Config.swift in Sources */,
+				APP004 /* AppCoordinator.swift in Sources */,
+				MOD001 /* User.swift in Sources */,
+				MOD002 /* VPNServer.swift in Sources */,
+				MOD003 /* VPNConfig.swift in Sources */,
+				MOD004 /* Subscription.swift in Sources */,
+				MOD005 /* VPNError.swift in Sources */,
+				MOD006 /* ConnectionState.swift in Sources */,
+				SVC001 /* APIClient.swift in Sources */,
+				SVC002 /* AuthService.swift in Sources */,
+				SVC003 /* KeychainService.swift in Sources */,
+				SVC004 /* ServerService.swift in Sources */,
+				SVC005 /* WireGuardManager.swift in Sources */,
+				SVC006 /* VPNConnectionManager.swift in Sources */,
+				SVC007 /* KillSwitchManager.swift in Sources */,
+				SVC008 /* NetworkMonitor.swift in Sources */,
+				SVC009 /* ConnectionLogger.swift in Sources */,
+				PRT001 /* ServiceProtocols.swift in Sources */,
+				PRT002 /* ViewModelProtocol.swift in Sources */,
+				FTA001 /* AuthViewModel.swift in Sources */,
+				FTA002 /* LoginView.swift in Sources */,
+				FTC001 /* ConnectionViewModel.swift in Sources */,
+				FTC002 /* ConnectionView.swift in Sources */,
+				FTS001 /* ServerListViewModel.swift in Sources */,
+				FTS002 /* ServerListView.swift in Sources */,
+				FTST001 /* SettingsViewModel.swift in Sources */,
+				FTST002 /* SettingsView.swift in Sources */,
+				UI001 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A1000004701000001000001 /* Sources */ = {
+		SBP002 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1000002201000001000001 /* PacketTunnelProvider.swift in Sources */,
-				A1000002201000001000002 /* TunnelConfiguration.swift in Sources */,
+				TNL001 /* PacketTunnelProvider.swift in Sources */,
+				TNL002 /* TunnelConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A1000005101000001000001 /* PBXTargetDependency */ = {
+		DEP001 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A1000004001000001000001 /* CasperVPNTunnel */;
-			targetProxy = A1000005001000001000001 /* PBXContainerItemProxy */;
+			target = TGT002 /* CasperVPNTunnel */;
+			targetProxy = PRX001 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		A1000000401000001000001 /* Debug */ = {
+		/* Debug - Main App */
+		CFG_APP_DBG /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CasperVPN/CasperVPN.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CasperVPN/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.caspervpn.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+			};
+			name = Debug;
+		};
+		/* Release - Main App */
+		CFG_APP_REL /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CasperVPN/CasperVPN.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CasperVPN/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.caspervpn.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+			};
+			name = Release;
+		};
+		/* Debug - Tunnel Extension */
+		CFG_TNL_DBG /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CasperVPNTunnel/CasperVPNTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CasperVPNTunnel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CasperVPNTunnel;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.caspervpn.app.tunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		/* Release - Tunnel Extension */
+		CFG_TNL_REL /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CasperVPNTunnel/CasperVPNTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CasperVPNTunnel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CasperVPNTunnel;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.caspervpn.app.tunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		/* Debug - Project */
+		CFG_PRJ_DBG /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -549,7 +702,8 @@
 			};
 			name = Debug;
 		};
-		A1000000501000001000001 /* Release */ = {
+		/* Release - Project */
+		CFG_PRJ_REL /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -605,149 +759,37 @@
 			};
 			name = Release;
 		};
-		A1000001901000001000001 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = CasperVPN/CasperVPN.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = CasperVPN;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.caspervpn.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A1000001A01000001000001 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = CasperVPN/CasperVPN.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = CasperVPN;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.caspervpn.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		A1000004801000001000001 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = CasperVPNTunnel/CasperVPNTunnel.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CasperVPNTunnel/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "CasperVPN Tunnel";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.caspervpn.app.tunnel;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A1000004901000001000001 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = CasperVPNTunnel/CasperVPNTunnel.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CasperVPNTunnel/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "CasperVPN Tunnel";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.caspervpn.app.tunnel;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A1000000301000001000001 /* Build configuration list for PBXProject "CasperVPN" */ = {
+		BCL001 /* Build configuration list for PBXNativeTarget "CasperVPN" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A1000000401000001000001 /* Debug */,
-				A1000000501000001000001 /* Release */,
+				CFG_APP_DBG /* Debug */,
+				CFG_APP_REL /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1000001601000001000001 /* Build configuration list for PBXNativeTarget "CasperVPN" */ = {
+		BCL002 /* Build configuration list for PBXNativeTarget "CasperVPNTunnel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A1000001901000001000001 /* Debug */,
-				A1000001A01000001000001 /* Release */,
+				CFG_TNL_DBG /* Debug */,
+				CFG_TNL_REL /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1000004601000001000001 /* Build configuration list for PBXNativeTarget "CasperVPNTunnel" */ = {
+		BCL003 /* Build configuration list for PBXProject "CasperVPN" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A1000004801000001000001 /* Debug */,
-				A1000004901000001000001 /* Release */,
+				CFG_PRJ_DBG /* Debug */,
+				CFG_PRJ_REL /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A1000000001000001000001 /* Project object */;
+	rootObject = PRJ001 /* Project object */;
 }

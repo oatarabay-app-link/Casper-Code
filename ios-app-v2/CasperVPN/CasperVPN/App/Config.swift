@@ -3,225 +3,92 @@
 //  CasperVPN
 //
 //  Created by CasperVPN Team
-//  Copyright © 2024 CasperVPN. All rights reserved.
 //
 
 import Foundation
 
-/// Application configuration and constants.
-/// Centralizes all configuration values for easy management.
-enum AppConfig {
-    
-    // MARK: - Environment
-    
-    /// Current environment (development, staging, production)
-    static let environment: Environment = {
+enum Config {
+    // MARK: - API Configuration
+    static let apiBaseURL: String = {
         #if DEBUG
-        return .development
+        return ProcessInfo.processInfo.environment["API_BASE_URL"] ?? "https://api.caspervpn.com"
         #else
-        return .production
+        return "https://api.caspervpn.com"
         #endif
     }()
     
-    enum Environment: String {
-        case development
-        case staging
-        case production
-    }
-    
-    // MARK: - API Configuration
-    
-    /// Base URL for the API
-    static var apiBaseURL: String {
-        switch environment {
-        case .development:
-            return "http://localhost:5000"
-        case .staging:
-            return "https://staging-api.caspervpn.com"
-        case .production:
-            return "https://api.caspervpn.com"
-        }
-    }
-    
-    /// API version
     static let apiVersion = "v1"
     
-    /// Request timeout in seconds
-    static let requestTimeout: TimeInterval = 30
+    static var fullAPIURL: String {
+        return "\(apiBaseURL)/api/\(apiVersion)"
+    }
     
-    /// Upload timeout in seconds
-    static let uploadTimeout: TimeInterval = 120
-    
-    // MARK: - App Information
-    
-    /// App display name
+    // MARK: - App Configuration
     static let appName = "CasperVPN"
-    
-    /// App version from bundle
-    static var appVersion: String {
-        Bundle.main.appVersion
-    }
-    
-    /// Build number from bundle
-    static var buildNumber: String {
-        Bundle.main.buildNumber
-    }
-    
-    /// Full version string
-    static var fullVersion: String {
-        Bundle.main.fullVersion
-    }
-    
-    /// User agent for API requests
-    static var userAgent: String {
-        "CasperVPN-iOS/\(appVersion) (\(UIDevice.current.systemName) \(UIDevice.current.systemVersion))"
-    }
-    
-    // MARK: - Bundle Identifiers
-    
-    /// Main app bundle identifier
-    static let mainBundleIdentifier = "com.caspervpn.app"
-    
-    /// Network extension bundle identifier
+    static let appBundleIdentifier = "com.caspervpn.app"
     static let tunnelBundleIdentifier = "com.caspervpn.app.tunnel"
     
     // MARK: - Keychain Configuration
-    
-    /// Keychain service name
-    static let keychainServiceName = "com.caspervpn.keychain"
-    
-    /// Keychain access group (for sharing between app and extension)
-    static let keychainAccessGroup: String? = {
-        // Use app group for keychain sharing
-        // Format: "TEAM_ID.com.caspervpn.shared"
-        // Return nil to use default (no sharing)
-        return nil
-    }()
-    
-    // MARK: - App Groups
-    
-    /// App group identifier for sharing data between app and extensions
-    static let appGroupIdentifier = "group.com.caspervpn.shared"
+    static let keychainService = "com.caspervpn.keychain"
+    static let keychainAccessGroup: String? = nil // Set for shared keychain access
     
     // MARK: - VPN Configuration
+    static let vpnLocalizedDescription = "CasperVPN"
+    static let defaultMTU = 1280
+    static let defaultPersistentKeepalive = 25
     
-    /// Default VPN protocol
-    static let defaultVPNProtocol: VPNProtocolType = .wireGuard
+    // MARK: - Network Configuration
+    static let connectionTimeout: TimeInterval = 30
+    static let requestTimeout: TimeInterval = 15
+    static let maxRetryAttempts = 3
+    static let retryBaseDelay: TimeInterval = 1.0
     
-    /// WireGuard default port
-    static let wireGuardDefaultPort = 51820
-    
-    /// Keep-alive interval in seconds
-    static let keepAliveInterval: Int = 25
-    
-    /// Default DNS servers
-    static let defaultDNSServers = ["1.1.1.1", "1.0.0.1"]
-    
-    /// MTU value
-    static let defaultMTU = 1420
+    // MARK: - WireGuard Configuration
+    static let wireGuardDefaultPort: UInt16 = 51820
+    static let wireGuardDefaultDNS = ["1.1.1.1", "1.0.0.1"]
+    static let wireGuardDefaultAllowedIPs = ["0.0.0.0/0", "::/0"]
     
     // MARK: - Feature Flags
+    static let enableKillSwitch = true
+    static let enableAutoReconnect = true
+    static let enableConnectionLogging = true
     
-    /// Whether analytics are enabled
-    static let analyticsEnabled: Bool = {
-        environment == .production
-    }()
-    
-    /// Whether crash reporting is enabled
-    static let crashReportingEnabled: Bool = {
-        environment != .development
-    }()
-    
-    /// Whether debug logging is enabled
-    static let debugLoggingEnabled: Bool = {
-        environment == .development
-    }()
-    
-    // MARK: - Cache Configuration
-    
-    /// Server list cache duration in seconds
-    static let serverListCacheDuration: TimeInterval = 300 // 5 minutes
-    
-    /// User data cache duration in seconds
-    static let userDataCacheDuration: TimeInterval = 600 // 10 minutes
-    
-    // MARK: - UI Configuration
-    
-    /// Connection animation duration
-    static let connectionAnimationDuration: TimeInterval = 0.5
-    
-    /// Minimum password length
-    static let minimumPasswordLength = 8
-    
-    // MARK: - External URLs
-    
-    /// Help center URL
-    static let helpCenterURL = URL(string: "https://help.caspervpn.com")!
-    
-    /// Privacy policy URL
-    static let privacyPolicyURL = URL(string: "https://caspervpn.com/privacy")!
-    
-    /// Terms of service URL
-    static let termsOfServiceURL = URL(string: "https://caspervpn.com/terms")!
-    
-    /// Support email
-    static let supportEmail = "support@caspervpn.com"
-    
-    /// Website URL
-    static let websiteURL = URL(string: "https://caspervpn.com")!
+    // MARK: - Debug Configuration
+    #if DEBUG
+    static let isDebugMode = true
+    static let logLevel: LogLevel = .debug
+    #else
+    static let isDebugMode = false
+    static let logLevel: LogLevel = .info
+    #endif
 }
 
 // MARK: - API Endpoints
-
-/// Centralized API endpoint definitions.
-enum APIEndpoints {
-    
-    // Auth endpoints
-    static let register = "/api/auth/register"
-    static let login = "/api/auth/login"
-    static let logout = "/api/auth/logout"
-    static let refreshToken = "/api/auth/refresh"
-    static let forgotPassword = "/api/auth/forgot-password"
-    static let resetPassword = "/api/auth/reset-password"
-    static let verifyEmail = "/api/auth/verify-email"
-    static let changePassword = "/api/auth/change-password"
-    
-    // User endpoints
-    static let currentUser = "/api/users/me"
-    static let updateProfile = "/api/users/me"
-    static let deleteAccount = "/api/users/me"
-    
-    // Server endpoints
-    static let servers = "/api/servers"
-    static func server(id: UUID) -> String { "/api/servers/\(id)" }
-    static func serverConfig(id: UUID) -> String { "/api/servers/\(id)/config" }
-    static func connect(serverId: UUID) -> String { "/api/servers/\(serverId)/connect" }
-    static func disconnect(serverId: UUID) -> String { "/api/servers/\(serverId)/disconnect" }
-    static let recommendedServer = "/api/servers/recommended"
-    
-    // Subscription endpoints
-    static let plans = "/api/plans"
-    static func plan(id: UUID) -> String { "/api/plans/\(id)" }
-    static let subscription = "/api/subscriptions/me"
-    static let createSubscription = "/api/subscriptions"
-    static let cancelSubscription = "/api/subscriptions/me"
-    
-    // Payment endpoints
-    static let createCheckoutSession = "/api/payments/checkout-session"
-    static let billingPortal = "/api/payments/billing-portal"
-    static let paymentHistory = "/api/payments/history"
+extension Config {
+    enum Endpoints {
+        static let login = "/auth/login"
+        static let register = "/auth/register"
+        static let refreshToken = "/auth/refresh"
+        static let logout = "/auth/logout"
+        
+        static let servers = "/servers"
+        static func serverConfig(id: String) -> String { "/servers/\(id)/config" }
+        static func serverConnect(id: String) -> String { "/servers/\(id)/connect" }
+        static func serverDisconnect(id: String) -> String { "/servers/\(id)/disconnect" }
+        
+        static let user = "/user"
+        static let subscription = "/user/subscription"
+    }
 }
 
-// MARK: - User Defaults Keys
-
-/// Centralized UserDefaults key definitions.
-enum UserDefaultsKeys {
-    static let hasCompletedOnboarding = "hasCompletedOnboarding"
-    static let lastSelectedServerId = "lastSelectedServerId"
-    static let preferredProtocol = "preferredProtocol"
-    static let autoConnect = "autoConnect"
-    static let killSwitch = "killSwitch"
-    static let notificationsEnabled = "notificationsEnabled"
-    static let appearance = "appearance"
-    static let lastSyncDate = "lastSyncDate"
+// MARK: - Log Level
+enum LogLevel: Int, Comparable {
+    case debug = 0
+    case info = 1
+    case warning = 2
+    case error = 3
+    
+    static func < (lhs: LogLevel, rhs: LogLevel) -> Bool {
+        return lhs.rawValue < rhs.rawValue
+    }
 }

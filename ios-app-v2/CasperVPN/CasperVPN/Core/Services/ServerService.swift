@@ -3,335 +3,180 @@
 //  CasperVPN
 //
 //  Created by CasperVPN Team
-//  Copyright © 2024 CasperVPN. All rights reserved.
 //
 
 import Foundation
-import CoreLocation
 
-/// Service responsible for fetching and managing VPN server data.
+/// Service for fetching VPN server information and configurations
 final class ServerService: ServerServiceProtocol {
     
     // MARK: - Singleton
-    
     static let shared = ServerService()
     
     // MARK: - Properties
-    
     private let apiClient: APIClientProtocol
-    private let logger = AppLogger.shared
+    private let logger = ConnectionLogger.shared
     
-    /// Cache for servers
-    private var serverCache: [VPNServer] = []
-    
-    /// Last cache update time
-    private var lastCacheUpdate: Date?
-    
-    /// Cache duration in seconds
-    private let cacheDuration: TimeInterval = 300 // 5 minutes
+    // MARK: - Cache
+    private var cachedServers: [VPNServer] = []
+    private var lastFetchTime: Date?
+    private let cacheExpiration: TimeInterval = 300 // 5 minutes
     
     // MARK: - Initialization
-    
-    init(apiClient: APIClientProtocol = APIClient.shared) {
+    private init(apiClient: APIClientProtocol = APIClient.shared) {
         self.apiClient = apiClient
     }
     
-    // MARK: - Public Methods
+    // MARK: - Server Operations
     
     func fetchServers() async throws -> [VPNServer] {
         // Check cache
-        if let cached = getCachedServers() {
-            logger.debug("Returning cached servers")
-            return cached
+        if let lastFetch = lastFetchTime,
+           Date().timeIntervalSince(lastFetch) < cacheExpiration,
+           !cachedServers.isEmpty {
+            logger.log("Returning cached servers", level: .debug)
+            return cachedServers
         }
         
-        logger.info("Fetching servers from API")
+        logger.log("Fetching server list", level: .info)
         
-        let response: APIResponse<[VPNServer]> = try await apiClient.get(
-            endpoint: "/api/servers",
-            queryItems: nil
-        )
+        let response: ServersResponse = try await apiClient.get(Config.Endpoints.servers)
         
-        guard let servers = response.data else {
-            logger.error("No servers in response")
-            throw APIError.noData
+        guard response.success, let servers = response.data else {
+            throw ServerServiceError.fetchFailed(response.message ?? "Failed to fetch servers")
         }
         
         // Update cache
-        serverCache = servers
-        lastCacheUpdate = Date()
+        cachedServers = servers
+        lastFetchTime = Date()
         
-        logger.info("Fetched \(servers.count) servers")
+        logger.log("Fetched \(servers.count) servers", level: .info)
         
         return servers
     }
     
-    func getServer(id: UUID) async throws -> VPNServer {
-        logger.info("Fetching server: \(id)")
+    func fetchServer(id: String) async throws -> VPNServer {
+        logger.log("Fetching server: \(id)", level: .debug)
         
-        // Check cache first
-        if let cachedServer = serverCache.first(where: { $0.id == id }) {
-            logger.debug("Found server in cache")
-            return cachedServer
-        }
+        let endpoint = "\(Config.Endpoints.servers)/\(id)"
+        let response: ServerResponse = try await apiClient.get(endpoint)
         
-        let response: APIResponse<VPNServer> = try await apiClient.get(
-            endpoint: "/api/servers/\(id.uuidString)",
-            queryItems: nil
-        )
-        
-        guard let server = response.data else {
-            throw APIError.notFound
+        guard response.success, let server = response.data else {
+            throw ServerServiceError.serverNotFound
         }
         
         return server
     }
     
-    func getServerConfig(for server: VPNServer) async throws -> VPNConfig {
-        logger.info("Fetching config for server: \(server.name)")
+    func fetchServerConfig(serverId: String) async throws -> VPNConfig {
+        logger.log("Fetching configuration for server: \(serverId)", level: .info)
         
-        let response: APIResponse<VPNConfigResponse> = try await apiClient.get(
-            endpoint: "/api/servers/\(server.id.uuidString)/config",
-            queryItems: nil
+        let endpoint = Config.Endpoints.serverConfig(id: serverId)
+        let response: VPNConfigResponse = try await apiClient.get(endpoint)
+        
+        guard response.success, let config = response.data else {
+            throw VPNError.serverConfigFetchFailed(reason: response.message ?? "Failed to fetch server configuration")
+        }
+        
+        // Validate configuration
+        guard config.isValid else {
+            throw VPNError.invalidConfiguration(reason: "Server returned invalid configuration")
+        }
+        
+        logger.log("Server configuration fetched successfully", level: .debug)
+        
+        return config
+    }
+    
+    // MARK: - Connection Logging
+    
+    func logConnection(serverId: String) async throws {
+        logger.log("Logging connection start for server: \(serverId)", level: .debug)
+        
+        let endpoint = Config.Endpoints.serverConnect(id: serverId)
+        let request = ConnectionLogRequest(
+            serverId: serverId,
+            connectedAt: Date(),
+            disconnectedAt: nil,
+            bytesReceived: nil,
+            bytesSent: nil,
+            duration: nil
         )
         
-        guard let configResponse = response.data else {
-            throw APIError.noData
-        }
-        
-        return configResponse.toVPNConfig()
+        let _: ConnectionLogResponse = try await apiClient.post(endpoint, body: request)
     }
     
-    func getRecommendedServer(request: RecommendationRequest?) async throws -> VPNServer {
-        logger.info("Getting recommended server")
+    func logDisconnection(serverId: String, duration: TimeInterval?, bytesReceived: Int64?, bytesSent: Int64?) async throws {
+        logger.log("Logging disconnection for server: \(serverId)", level: .debug)
         
-        var queryItems: [URLQueryItem] = []
-        
-        if let request = request {
-            if let lat = request.latitude {
-                queryItems.append(URLQueryItem(name: "latitude", value: String(lat)))
-            }
-            if let lon = request.longitude {
-                queryItems.append(URLQueryItem(name: "longitude", value: String(lon)))
-            }
-            if let country = request.preferredCountry {
-                queryItems.append(URLQueryItem(name: "preferredCountry", value: country))
-            }
-            if let proto = request.preferredProtocol {
-                queryItems.append(URLQueryItem(name: "preferredProtocol", value: proto.rawValue))
-            }
-        }
-        
-        let response: APIResponse<VPNServer> = try await apiClient.get(
-            endpoint: "/api/servers/recommended",
-            queryItems: queryItems.isEmpty ? nil : queryItems
+        let endpoint = Config.Endpoints.serverDisconnect(id: serverId)
+        let request = ConnectionLogRequest(
+            serverId: serverId,
+            connectedAt: nil,
+            disconnectedAt: Date(),
+            bytesReceived: bytesReceived,
+            bytesSent: bytesSent,
+            duration: duration
         )
         
-        guard let server = response.data else {
-            // If no recommendation available, return first available from cache
-            if let firstAvailable = serverCache.first(where: { $0.isAvailable }) {
-                return firstAvailable
-            }
-            throw APIError.notFound
-        }
-        
-        return server
+        let _: ConnectionLogResponse = try await apiClient.post(endpoint, body: request)
     }
     
-    func logConnection(to server: VPNServer, request: ConnectRequest) async throws -> ConnectionLog {
-        logger.info("Logging connection to server: \(server.name)")
-        
-        let response: APIResponse<ConnectionLog> = try await apiClient.post(
-            endpoint: "/api/servers/\(server.id.uuidString)/connect",
-            body: request
-        )
-        
-        guard let log = response.data else {
-            throw APIError.noData
-        }
-        
-        return log
+    // MARK: - Utility Methods
+    
+    func clearCache() {
+        cachedServers = []
+        lastFetchTime = nil
+        logger.log("Server cache cleared", level: .debug)
     }
     
-    func logDisconnection(from server: VPNServer, request: DisconnectRequest) async throws -> ConnectionLog {
-        logger.info("Logging disconnection from server: \(server.name)")
+    func getRecommendedServer() async throws -> VPNServer? {
+        let servers = try await fetchServers()
         
-        let response: APIResponse<ConnectionLog> = try await apiClient.post(
-            endpoint: "/api/servers/\(server.id.uuidString)/disconnect",
-            body: request
-        )
+        // Filter online servers
+        let onlineServers = servers.filter { $0.isOnline }
         
-        guard let log = response.data else {
-            throw APIError.noData
-        }
-        
-        return log
-    }
-    
-    // MARK: - Server Filtering & Sorting
-    
-    /// Filters servers by search query
-    func filterServers(_ servers: [VPNServer], query: String) -> [VPNServer] {
-        guard !query.isEmpty else { return servers }
-        
-        let lowercaseQuery = query.lowercased()
-        return servers.filter { server in
-            server.name.lowercased().contains(lowercaseQuery) ||
-            server.country.lowercased().contains(lowercaseQuery) ||
-            (server.city?.lowercased().contains(lowercaseQuery) ?? false) ||
-            server.countryCode.lowercased().contains(lowercaseQuery)
-        }
-    }
-    
-    /// Sorts servers by the specified option
-    func sortServers(_ servers: [VPNServer], by option: ServerSortOption) -> [VPNServer] {
-        switch option {
-        case .recommended:
-            // Sort by availability, then load, then ping
-            return servers.sorted { lhs, rhs in
-                if lhs.isAvailable != rhs.isAvailable {
-                    return lhs.isAvailable
-                }
-                if lhs.load != rhs.load {
-                    return lhs.load < rhs.load
-                }
-                return (lhs.ping ?? Int.max) < (rhs.ping ?? Int.max)
-            }
-        case .name:
-            return servers.sorted { $0.name < $1.name }
-        case .country:
-            return servers.sorted { $0.country < $1.country }
-        case .load:
-            return servers.sorted { $0.load < $1.load }
-        case .ping:
-            return servers.sorted { ($0.ping ?? Int.max) < ($1.ping ?? Int.max) }
-        }
-    }
-    
-    /// Groups servers by country
-    func groupServersByCountry(_ servers: [VPNServer]) -> [ServerCountryGroup] {
-        let grouped = Dictionary(grouping: servers) { $0.countryCode }
-        
-        return grouped.map { (code, servers) in
-            ServerCountryGroup(
-                id: code,
-                country: servers.first?.country ?? code,
-                countryCode: code,
-                servers: servers.sorted { $0.name < $1.name }
-            )
-        }.sorted { $0.country < $1.country }
-    }
-    
-    /// Filters servers for premium users only
-    func filterPremiumServers(_ servers: [VPNServer], isPremium: Bool) -> [VPNServer] {
-        if isPremium {
-            return servers
-        }
-        return servers.filter { !$0.isPremium }
-    }
-    
-    // MARK: - Cache Management
-    
-    /// Invalidates the server cache
-    func invalidateCache() {
-        serverCache = []
-        lastCacheUpdate = nil
-        logger.debug("Server cache invalidated")
-    }
-    
-    /// Gets cached servers if still valid
-    private func getCachedServers() -> [VPNServer]? {
-        guard !serverCache.isEmpty,
-              let lastUpdate = lastCacheUpdate,
-              Date().timeIntervalSince(lastUpdate) < cacheDuration else {
+        guard !onlineServers.isEmpty else {
             return nil
         }
-        return serverCache
-    }
-}
-
-// MARK: - Location-based Server Selection
-
-extension ServerService {
-    
-    /// Gets the nearest server based on user location
-    func getNearestServer(
-        from servers: [VPNServer],
-        userLocation: CLLocationCoordinate2D
-    ) -> VPNServer? {
-        let availableServers = servers.filter { $0.isAvailable && $0.coordinate != nil }
         
-        guard !availableServers.isEmpty else {
-            return servers.first { $0.isAvailable }
-        }
-        
-        return availableServers.min { lhs, rhs in
-            guard let lhsCoord = lhs.coordinate,
-                  let rhsCoord = rhs.coordinate else {
-                return false
+        // Sort by load and latency
+        let sorted = onlineServers.sorted { server1, server2 in
+            // Prefer lower load
+            if server1.load != server2.load {
+                return server1.load < server2.load
             }
             
-            let lhsDistance = calculateDistance(from: userLocation, to: lhsCoord)
-            let rhsDistance = calculateDistance(from: userLocation, to: rhsCoord)
-            
-            return lhsDistance < rhsDistance
+            // Then prefer lower latency
+            let latency1 = server1.latency ?? Int.max
+            let latency2 = server2.latency ?? Int.max
+            return latency1 < latency2
+        }
+        
+        return sorted.first
+    }
+    
+    func getServersByCountry() async throws -> [String: [VPNServer]] {
+        let servers = try await fetchServers()
+        return Dictionary(grouping: servers) { $0.country }
+    }
+}
+
+// MARK: - Server Service Error
+
+enum ServerServiceError: LocalizedError {
+    case fetchFailed(String)
+    case serverNotFound
+    case configurationUnavailable
+    
+    var errorDescription: String? {
+        switch self {
+        case .fetchFailed(let message):
+            return "Failed to fetch servers: \(message)"
+        case .serverNotFound:
+            return "Server not found"
+        case .configurationUnavailable:
+            return "Server configuration unavailable"
         }
     }
-    
-    /// Calculates distance between two coordinates using Haversine formula
-    private func calculateDistance(
-        from coord1: CLLocationCoordinate2D,
-        to coord2: CLLocationCoordinate2D
-    ) -> Double {
-        let lat1 = coord1.latitude * .pi / 180
-        let lat2 = coord2.latitude * .pi / 180
-        let lon1 = coord1.longitude * .pi / 180
-        let lon2 = coord2.longitude * .pi / 180
-        
-        let dLat = lat2 - lat1
-        let dLon = lon2 - lon1
-        
-        let a = sin(dLat / 2) * sin(dLat / 2) +
-                cos(lat1) * cos(lat2) *
-                sin(dLon / 2) * sin(dLon / 2)
-        
-        let c = 2 * atan2(sqrt(a), sqrt(1 - a))
-        
-        let earthRadius = 6371.0 // kilometers
-        return earthRadius * c
-    }
-}
-
-// MARK: - Server Statistics
-
-extension ServerService {
-    
-    /// Gets statistics about the current server list
-    func getServerStatistics(from servers: [VPNServer]) -> ServerStatistics {
-        let available = servers.filter { $0.isAvailable }
-        let premium = servers.filter { $0.isPremium }
-        let countries = Set(servers.map { $0.countryCode })
-        let avgLoad = servers.isEmpty ? 0 : servers.map { $0.load }.reduce(0, +) / servers.count
-        let avgPing = servers.compactMap { $0.ping }.isEmpty ? nil :
-            servers.compactMap { $0.ping }.reduce(0, +) / servers.compactMap { $0.ping }.count
-        
-        return ServerStatistics(
-            totalServers: servers.count,
-            availableServers: available.count,
-            premiumServers: premium.count,
-            countries: countries.count,
-            averageLoad: avgLoad,
-            averagePing: avgPing
-        )
-    }
-}
-
-/// Statistics about the server list
-struct ServerStatistics {
-    let totalServers: Int
-    let availableServers: Int
-    let premiumServers: Int
-    let countries: Int
-    let averageLoad: Int
-    let averagePing: Int?
 }

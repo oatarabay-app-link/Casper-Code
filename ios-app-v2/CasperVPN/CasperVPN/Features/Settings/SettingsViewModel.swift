@@ -3,248 +3,202 @@
 //  CasperVPN
 //
 //  Created by CasperVPN Team
-//  Copyright © 2024 CasperVPN. All rights reserved.
 //
 
 import Foundation
 import Combine
-import UIKit
 
-/// ViewModel for managing app settings and preferences.
+/// ViewModel for managing app settings including kill switch and preferences
 @MainActor
 final class SettingsViewModel: ObservableObject {
     
     // MARK: - Published Properties
-    
-    /// Preferred VPN protocol
-    @Published var preferredProtocol: VPNProtocolType {
+    @Published var isKillSwitchEnabled: Bool = false {
         didSet {
-            savePreference(key: .preferredProtocol, value: preferredProtocol.rawValue)
-        }
-    }
-    
-    /// Auto-connect on app launch
-    @Published var autoConnect: Bool {
-        didSet {
-            savePreference(key: .autoConnect, value: autoConnect)
-        }
-    }
-    
-    /// Kill switch enabled
-    @Published var killSwitch: Bool {
-        didSet {
-            savePreference(key: .killSwitch, value: killSwitch)
-        }
-    }
-    
-    /// Push notifications enabled
-    @Published var notificationsEnabled: Bool {
-        didSet {
-            savePreference(key: .notificationsEnabled, value: notificationsEnabled)
-            updateNotificationSettings()
-        }
-    }
-    
-    /// App appearance mode
-    @Published var appearance: AppAppearance {
-        didSet {
-            savePreference(key: .appearance, value: appearance.rawValue)
-            updateAppearance()
-        }
-    }
-    
-    /// Whether data is loading
-    @Published var isLoading = false
-    
-    /// Current error message
-    @Published var errorMessage: String?
-    
-    /// Whether to show error alert
-    @Published var showError = false
-    
-    // MARK: - Properties
-    
-    private let userDefaults: UserDefaults
-    private var cancellables = Set<AnyCancellable>()
-    
-    // MARK: - Preference Keys
-    
-    private enum PreferenceKey: String {
-        case preferredProtocol = "com.caspervpn.preferredProtocol"
-        case autoConnect = "com.caspervpn.autoConnect"
-        case killSwitch = "com.caspervpn.killSwitch"
-        case notificationsEnabled = "com.caspervpn.notificationsEnabled"
-        case appearance = "com.caspervpn.appearance"
-        case lastSelectedServerId = "com.caspervpn.lastSelectedServerId"
-    }
-    
-    // MARK: - Initialization
-    
-    init(userDefaults: UserDefaults = .standard) {
-        self.userDefaults = userDefaults
-        
-        // Load saved preferences
-        self.preferredProtocol = Self.loadProtocol(from: userDefaults)
-        self.autoConnect = userDefaults.bool(forKey: PreferenceKey.autoConnect.rawValue)
-        self.killSwitch = userDefaults.bool(forKey: PreferenceKey.killSwitch.rawValue)
-        self.notificationsEnabled = userDefaults.bool(forKey: PreferenceKey.notificationsEnabled.rawValue)
-        self.appearance = Self.loadAppearance(from: userDefaults)
-    }
-    
-    // MARK: - Public Methods
-    
-    /// Opens the billing portal in Safari
-    func openBillingPortal() async {
-        isLoading = true
-        
-        // TODO: Implement billing portal API call
-        // For now, open the web portal
-        if let url = URL(string: "https://caspervpn.com/account/billing") {
-            await MainActor.run {
-                UIApplication.shared.open(url)
-            }
-        }
-        
-        isLoading = false
-    }
-    
-    /// Deletes the user's account
-    func deleteAccount() async {
-        isLoading = true
-        clearError()
-        
-        // TODO: Implement account deletion API call
-        // This would call the UserService to delete the account
-        
-        isLoading = false
-    }
-    
-    /// Saves the last selected server ID
-    func saveLastSelectedServer(id: UUID) {
-        userDefaults.set(id.uuidString, forKey: PreferenceKey.lastSelectedServerId.rawValue)
-    }
-    
-    /// Gets the last selected server ID
-    func getLastSelectedServerId() -> UUID? {
-        guard let idString = userDefaults.string(forKey: PreferenceKey.lastSelectedServerId.rawValue) else {
-            return nil
-        }
-        return UUID(uuidString: idString)
-    }
-    
-    /// Resets all settings to defaults
-    func resetToDefaults() {
-        preferredProtocol = .wireGuard
-        autoConnect = false
-        killSwitch = false
-        notificationsEnabled = true
-        appearance = .system
-        
-        // Clear last selected server
-        userDefaults.removeObject(forKey: PreferenceKey.lastSelectedServerId.rawValue)
-    }
-    
-    /// Exports settings as a dictionary
-    func exportSettings() -> [String: Any] {
-        [
-            "preferredProtocol": preferredProtocol.rawValue,
-            "autoConnect": autoConnect,
-            "killSwitch": killSwitch,
-            "notificationsEnabled": notificationsEnabled,
-            "appearance": appearance.rawValue
-        ]
-    }
-    
-    /// Imports settings from a dictionary
-    func importSettings(_ settings: [String: Any]) {
-        if let protocolString = settings["preferredProtocol"] as? String,
-           let proto = VPNProtocolType(rawValue: protocolString) {
-            preferredProtocol = proto
-        }
-        
-        if let autoConnect = settings["autoConnect"] as? Bool {
-            self.autoConnect = autoConnect
-        }
-        
-        if let killSwitch = settings["killSwitch"] as? Bool {
-            self.killSwitch = killSwitch
-        }
-        
-        if let notificationsEnabled = settings["notificationsEnabled"] as? Bool {
-            self.notificationsEnabled = notificationsEnabled
-        }
-        
-        if let appearanceString = settings["appearance"] as? String,
-           let appearance = AppAppearance(rawValue: appearanceString) {
-            self.appearance = appearance
-        }
-    }
-    
-    // MARK: - Private Methods
-    
-    private func savePreference<T>(key: PreferenceKey, value: T) {
-        userDefaults.set(value, forKey: key.rawValue)
-    }
-    
-    private static func loadProtocol(from userDefaults: UserDefaults) -> VPNProtocolType {
-        guard let rawValue = userDefaults.string(forKey: PreferenceKey.preferredProtocol.rawValue),
-              let proto = VPNProtocolType(rawValue: rawValue) else {
-            return .wireGuard
-        }
-        return proto
-    }
-    
-    private static func loadAppearance(from userDefaults: UserDefaults) -> AppAppearance {
-        guard let rawValue = userDefaults.string(forKey: PreferenceKey.appearance.rawValue),
-              let appearance = AppAppearance(rawValue: rawValue) else {
-            return .system
-        }
-        return appearance
-    }
-    
-    private func updateNotificationSettings() {
-        if notificationsEnabled {
-            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
-                if let error = error {
-                    Task { @MainActor in
-                        self.errorMessage = "Failed to enable notifications: \(error.localizedDescription)"
-                        self.showError = true
-                    }
+            if oldValue != isKillSwitchEnabled {
+                Task {
+                    await toggleKillSwitch()
                 }
             }
         }
     }
     
-    private func updateAppearance() {
-        let scenes = UIApplication.shared.connectedScenes
-        let windowScene = scenes.first as? UIWindowScene
-        let window = windowScene?.windows.first
+    @Published var isAutoConnectEnabled: Bool = false {
+        didSet {
+            UserDefaults.standard.set(isAutoConnectEnabled, forKey: UserDefaultsKeys.autoConnect)
+        }
+    }
+    
+    @Published var isNotificationsEnabled: Bool = true {
+        didSet {
+            UserDefaults.standard.set(isNotificationsEnabled, forKey: UserDefaultsKeys.notifications)
+        }
+    }
+    
+    @Published var selectedProtocol: VPNProtocolType = .wireGuard {
+        didSet {
+            UserDefaults.standard.set(selectedProtocol.rawValue, forKey: UserDefaultsKeys.vpnProtocol)
+        }
+    }
+    
+    @Published private(set) var isLoading: Bool = false
+    @Published private(set) var error: String?
+    @Published var showError: Bool = false
+    @Published var showExportLogs: Bool = false
+    @Published var showLogViewer: Bool = false
+    @Published var showAbout: Bool = false
+    
+    // MARK: - User Info
+    @Published var currentUser: User?
+    
+    // MARK: - Dependencies
+    private let killSwitchManager: KillSwitchManager
+    private let connectionLogger: ConnectionLogger
+    private var cancellables = Set<AnyCancellable>()
+    
+    // MARK: - User Defaults Keys
+    private enum UserDefaultsKeys {
+        static let autoConnect = "autoConnectEnabled"
+        static let notifications = "notificationsEnabled"
+        static let vpnProtocol = "selectedVPNProtocol"
+    }
+    
+    // MARK: - Initialization
+    init(killSwitchManager: KillSwitchManager = .shared,
+         connectionLogger: ConnectionLogger = .shared) {
+        self.killSwitchManager = killSwitchManager
+        self.connectionLogger = connectionLogger
         
-        switch appearance {
-        case .system:
-            window?.overrideUserInterfaceStyle = .unspecified
-        case .light:
-            window?.overrideUserInterfaceStyle = .light
-        case .dark:
-            window?.overrideUserInterfaceStyle = .dark
+        loadSettings()
+    }
+    
+    // MARK: - Public Methods
+    
+    func loadSettings() {
+        // Load from UserDefaults and managers
+        isKillSwitchEnabled = killSwitchManager.isEnabled
+        isAutoConnectEnabled = UserDefaults.standard.bool(forKey: UserDefaultsKeys.autoConnect)
+        isNotificationsEnabled = UserDefaults.standard.object(forKey: UserDefaultsKeys.notifications) as? Bool ?? true
+        
+        if let protocolRaw = UserDefaults.standard.string(forKey: UserDefaultsKeys.vpnProtocol),
+           let vpnProtocol = VPNProtocolType(rawValue: protocolRaw) {
+            selectedProtocol = vpnProtocol
         }
     }
     
-    private func handleError(_ error: Error) {
-        if let apiError = error as? APIError {
-            errorMessage = apiError.errorDescription
-        } else {
-            errorMessage = error.localizedDescription
-        }
-        showError = true
+    func exportLogs() -> String {
+        return connectionLogger.exportLogs()
     }
     
-    private func clearError() {
-        errorMessage = nil
-        showError = false
+    func clearLogs() {
+        connectionLogger.clearLogs()
+    }
+    
+    func getRecentLogs(count: Int = 100) -> [ConnectionLogEntry] {
+        return connectionLogger.getRecentLogs(count: count)
+    }
+    
+    // MARK: - Kill Switch
+    
+    private func toggleKillSwitch() async {
+        isLoading = true
+        error = nil
+        
+        do {
+            if isKillSwitchEnabled {
+                try await killSwitchManager.enable()
+                connectionLogger.log("Kill switch enabled", level: .info)
+            } else {
+                try await killSwitchManager.disable()
+                connectionLogger.log("Kill switch disabled", level: .info)
+            }
+        } catch let vpnError as VPNError {
+            error = vpnError.localizedDescription
+            showError = true
+            // Revert the toggle
+            isKillSwitchEnabled = !isKillSwitchEnabled
+        } catch {
+            self.error = error.localizedDescription
+            showError = true
+            isKillSwitchEnabled = !isKillSwitchEnabled
+        }
+        
+        isLoading = false
+    }
+    
+    // MARK: - Trusted Networks
+    
+    func getTrustedNetworks() -> [String] {
+        return killSwitchManager.getTrustedNetworks()
+    }
+    
+    func addTrustedNetwork(_ ssid: String) {
+        killSwitchManager.addTrustedNetwork(ssid)
+    }
+    
+    func removeTrustedNetwork(_ ssid: String) {
+        killSwitchManager.removeTrustedNetwork(ssid)
     }
 }
 
-// MARK: - User Notification Import
+// MARK: - VPN Protocol Type
+enum VPNProtocolType: String, CaseIterable, Identifiable {
+    case wireGuard = "WireGuard"
+    case openVPN = "OpenVPN"
+    case ikev2 = "IKEv2"
+    
+    var id: String { rawValue }
+    
+    var description: String {
+        switch self {
+        case .wireGuard:
+            return "Fast and secure, recommended for most users"
+        case .openVPN:
+            return "Widely compatible, good for restricted networks"
+        case .ikev2:
+            return "Built-in iOS support, good battery life"
+        }
+    }
+    
+    var icon: String {
+        switch self {
+        case .wireGuard:
+            return "bolt.shield.fill"
+        case .openVPN:
+            return "lock.shield.fill"
+        case .ikev2:
+            return "shield.fill"
+        }
+    }
+}
 
-import UserNotifications
+// MARK: - Settings Section
+enum SettingsSection: CaseIterable, Identifiable {
+    case connection
+    case security
+    case notifications
+    case support
+    case about
+    
+    var id: String { title }
+    
+    var title: String {
+        switch self {
+        case .connection: return "Connection"
+        case .security: return "Security"
+        case .notifications: return "Notifications"
+        case .support: return "Support"
+        case .about: return "About"
+        }
+    }
+    
+    var icon: String {
+        switch self {
+        case .connection: return "network"
+        case .security: return "lock.shield"
+        case .notifications: return "bell"
+        case .support: return "questionmark.circle"
+        case .about: return "info.circle"
+        }
+    }
+}

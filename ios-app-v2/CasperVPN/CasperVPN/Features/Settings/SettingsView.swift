@@ -3,433 +3,485 @@
 //  CasperVPN
 //
 //  Created by CasperVPN Team
-//  Copyright © 2024 CasperVPN. All rights reserved.
 //
 
 import SwiftUI
 
-/// Settings screen for managing account, preferences, and app options.
+/// Settings view with kill switch toggle and other preferences
 struct SettingsView: View {
-    
-    // MARK: - Properties
-    
     @StateObject private var viewModel = SettingsViewModel()
-    @EnvironmentObject private var authViewModel: AuthViewModel
-    
-    @State private var showingLogoutConfirmation = false
-    @State private var showingDeleteAccountConfirmation = false
-    
-    // MARK: - Body
+    @EnvironmentObject var coordinator: AppCoordinator
     
     var body: some View {
         NavigationStack {
-            List {
-                // Account Section
-                accountSection
+            ZStack {
+                Theme.backgroundGradient
+                    .ignoresSafeArea()
                 
-                // Subscription Section
-                subscriptionSection
-                
-                // VPN Settings Section
-                vpnSettingsSection
-                
-                // App Settings Section
-                appSettingsSection
-                
-                // Support Section
-                supportSection
-                
-                // About Section
-                aboutSection
-                
-                // Sign Out Section
-                signOutSection
-            }
-            .listStyle(.insetGrouped)
-            .navigationTitle("Settings")
-            .alert("Sign Out", isPresented: $showingLogoutConfirmation) {
-                Button("Cancel", role: .cancel) {}
-                Button("Sign Out", role: .destructive) {
-                    Task {
-                        await authViewModel.logout()
+                List {
+                    // Connection Section
+                    Section {
+                        // Kill Switch
+                        SettingsToggleRow(
+                            title: "Kill Switch",
+                            subtitle: "Block internet if VPN disconnects",
+                            icon: "shield.slash",
+                            iconColor: .red,
+                            isOn: $viewModel.isKillSwitchEnabled
+                        )
+                        
+                        // Auto-Connect
+                        SettingsToggleRow(
+                            title: "Auto-Connect",
+                            subtitle: "Connect VPN when app opens",
+                            icon: "bolt",
+                            iconColor: .yellow,
+                            isOn: $viewModel.isAutoConnectEnabled
+                        )
+                        
+                        // Protocol Selection
+                        NavigationLink {
+                            ProtocolSelectionView(selectedProtocol: $viewModel.selectedProtocol)
+                        } label: {
+                            SettingsRow(
+                                title: "Protocol",
+                                subtitle: viewModel.selectedProtocol.rawValue,
+                                icon: "network",
+                                iconColor: .blue
+                            )
+                        }
+                    } header: {
+                        Text("Connection")
                     }
-                }
-            } message: {
-                Text("Are you sure you want to sign out?")
-            }
-            .alert("Delete Account", isPresented: $showingDeleteAccountConfirmation) {
-                Button("Cancel", role: .cancel) {}
-                Button("Delete", role: .destructive) {
-                    Task {
-                        await viewModel.deleteAccount()
-                    }
-                }
-            } message: {
-                Text("This action cannot be undone. All your data will be permanently deleted.")
-            }
-        }
-    }
-    
-    // MARK: - Account Section
-    
-    private var accountSection: some View {
-        Section("Account") {
-            if let user = authViewModel.currentUser {
-                // User info
-                HStack(spacing: 12) {
-                    Image(systemName: "person.circle.fill")
-                        .font(.system(size: 50))
-                        .foregroundColor(Theme.Colors.primary)
+                    .listRowBackground(Color.white.opacity(0.05))
                     
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(user.fullName)
-                            .font(Theme.Fonts.headline)
-                            .foregroundColor(Theme.Colors.textPrimary)
-                        
-                        Text(user.email)
-                            .font(Theme.Fonts.caption)
-                            .foregroundColor(Theme.Colors.textSecondary)
-                        
-                        HStack(spacing: 4) {
-                            Image(systemName: user.role.iconName)
-                            Text(user.role.displayName)
+                    // Security Section
+                    Section {
+                        NavigationLink {
+                            TrustedNetworksView(viewModel: viewModel)
+                        } label: {
+                            SettingsRow(
+                                title: "Trusted Networks",
+                                subtitle: "\(viewModel.getTrustedNetworks().count) networks",
+                                icon: "wifi",
+                                iconColor: .green
+                            )
                         }
-                        .font(Theme.Fonts.caption)
-                        .foregroundColor(Theme.Colors.primary)
+                    } header: {
+                        Text("Security")
                     }
+                    .listRowBackground(Color.white.opacity(0.05))
+                    
+                    // Notifications Section
+                    Section {
+                        SettingsToggleRow(
+                            title: "Notifications",
+                            subtitle: "Connection status alerts",
+                            icon: "bell",
+                            iconColor: .orange,
+                            isOn: $viewModel.isNotificationsEnabled
+                        )
+                    } header: {
+                        Text("Notifications")
+                    }
+                    .listRowBackground(Color.white.opacity(0.05))
+                    
+                    // Support Section
+                    Section {
+                        Button {
+                            viewModel.showLogViewer = true
+                        } label: {
+                            SettingsRow(
+                                title: "View Logs",
+                                subtitle: "Connection history",
+                                icon: "doc.text",
+                                iconColor: .gray
+                            )
+                        }
+                        
+                        Button {
+                            viewModel.showExportLogs = true
+                        } label: {
+                            SettingsRow(
+                                title: "Export Logs",
+                                subtitle: "For support requests",
+                                icon: "square.and.arrow.up",
+                                iconColor: .blue
+                            )
+                        }
+                        
+                        Button {
+                            // Open support URL
+                            if let url = URL(string: "https://caspervpn.com/support") {
+                                UIApplication.shared.open(url)
+                            }
+                        } label: {
+                            SettingsRow(
+                                title: "Get Help",
+                                subtitle: "Contact support",
+                                icon: "questionmark.circle",
+                                iconColor: .purple
+                            )
+                        }
+                    } header: {
+                        Text("Support")
+                    }
+                    .listRowBackground(Color.white.opacity(0.05))
+                    
+                    // About Section
+                    Section {
+                        SettingsRow(
+                            title: "Version",
+                            subtitle: Bundle.main.appVersion,
+                            icon: "info.circle",
+                            iconColor: .gray
+                        )
+                        
+                        Button {
+                            if let url = URL(string: "https://caspervpn.com/privacy") {
+                                UIApplication.shared.open(url)
+                            }
+                        } label: {
+                            SettingsRow(
+                                title: "Privacy Policy",
+                                subtitle: "",
+                                icon: "hand.raised",
+                                iconColor: .blue
+                            )
+                        }
+                        
+                        Button {
+                            if let url = URL(string: "https://caspervpn.com/terms") {
+                                UIApplication.shared.open(url)
+                            }
+                        } label: {
+                            SettingsRow(
+                                title: "Terms of Service",
+                                subtitle: "",
+                                icon: "doc.plaintext",
+                                iconColor: .blue
+                            )
+                        }
+                    } header: {
+                        Text("About")
+                    }
+                    .listRowBackground(Color.white.opacity(0.05))
+                    
+                    // Account Section
+                    Section {
+                        Button {
+                            Task {
+                                await coordinator.logout()
+                            }
+                        } label: {
+                            HStack {
+                                Spacer()
+                                Text("Sign Out")
+                                    .foregroundColor(.red)
+                                Spacer()
+                            }
+                        }
+                    }
+                    .listRowBackground(Color.white.opacity(0.05))
                 }
-                .padding(.vertical, 8)
-                
-                // Edit Profile
-                NavigationLink {
-                    EditProfileView()
-                } label: {
-                    Label("Edit Profile", systemImage: "pencil")
-                }
-                
-                // Change Password
-                NavigationLink {
-                    ChangePasswordView()
-                } label: {
-                    Label("Change Password", systemImage: "lock")
+                .scrollContentBackground(.hidden)
+            }
+            .navigationTitle("Settings")
+            .sheet(isPresented: $viewModel.showLogViewer) {
+                LogViewerView(viewModel: viewModel)
+            }
+            .sheet(isPresented: $viewModel.showExportLogs) {
+                ShareSheet(items: [viewModel.exportLogs()])
+            }
+            .alert("Error", isPresented: $viewModel.showError) {
+                Button("OK", role: .cancel) {}
+            } message: {
+                if let error = viewModel.error {
+                    Text(error)
                 }
             }
         }
     }
+}
+
+// MARK: - Settings Row
+struct SettingsRow: View {
+    let title: String
+    let subtitle: String
+    let icon: String
+    let iconColor: Color
     
-    // MARK: - Subscription Section
+    var body: some View {
+        HStack(spacing: 12) {
+            Image(systemName: icon)
+                .font(.system(size: 18))
+                .foregroundColor(iconColor)
+                .frame(width: 30)
+            
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .foregroundColor(.white)
+                
+                if !subtitle.isEmpty {
+                    Text(subtitle)
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                }
+            }
+            
+            Spacer()
+        }
+        .contentShape(Rectangle())
+    }
+}
+
+// MARK: - Settings Toggle Row
+struct SettingsToggleRow: View {
+    let title: String
+    let subtitle: String
+    let icon: String
+    let iconColor: Color
+    @Binding var isOn: Bool
     
-    private var subscriptionSection: some View {
-        Section("Subscription") {
-            if let user = authViewModel.currentUser {
-                // Current plan
-                HStack {
-                    Label("Current Plan", systemImage: "star")
-                    Spacer()
-                    Text(user.planName ?? "Free")
-                        .foregroundColor(Theme.Colors.textSecondary)
-                }
+    var body: some View {
+        HStack(spacing: 12) {
+            Image(systemName: icon)
+                .font(.system(size: 18))
+                .foregroundColor(iconColor)
+                .frame(width: 30)
+            
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .foregroundColor(.white)
                 
-                // Data usage
-                if !user.hasUnlimitedData {
-                    VStack(alignment: .leading, spacing: 8) {
-                        HStack {
-                            Label("Data Usage", systemImage: "chart.bar")
-                            Spacer()
-                            Text("\(user.formattedDataUsage) / \(user.formattedDataLimit)")
-                                .font(Theme.Fonts.caption)
-                                .foregroundColor(Theme.Colors.textSecondary)
-                        }
-                        
-                        ProgressView(value: user.dataUsagePercentage, total: 100)
-                            .tint(user.dataUsagePercentage > 80 ? Theme.Colors.error : Theme.Colors.primary)
-                    }
-                } else {
-                    HStack {
-                        Label("Data Usage", systemImage: "chart.bar")
-                        Spacer()
-                        Text("Unlimited")
-                            .foregroundColor(Theme.Colors.textSecondary)
-                    }
-                }
-                
-                // Upgrade button (if not premium)
-                if !user.isPremium {
-                    NavigationLink {
-                        UpgradeView()
+                Text(subtitle)
+                    .font(.caption)
+                    .foregroundColor(.gray)
+            }
+            
+            Spacer()
+            
+            Toggle("", isOn: $isOn)
+                .labelsHidden()
+                .tint(Theme.primaryColor)
+        }
+    }
+}
+
+// MARK: - Protocol Selection View
+struct ProtocolSelectionView: View {
+    @Binding var selectedProtocol: VPNProtocolType
+    @Environment(\.dismiss) var dismiss
+    
+    var body: some View {
+        ZStack {
+            Theme.backgroundGradient
+                .ignoresSafeArea()
+            
+            List {
+                ForEach(VPNProtocolType.allCases) { vpnProtocol in
+                    Button {
+                        selectedProtocol = vpnProtocol
+                        dismiss()
                     } label: {
-                        Label("Upgrade to Premium", systemImage: "crown")
-                            .foregroundColor(Theme.Colors.primary)
+                        HStack {
+                            Image(systemName: vpnProtocol.icon)
+                                .foregroundColor(Theme.primaryColor)
+                                .frame(width: 30)
+                            
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(vpnProtocol.rawValue)
+                                    .foregroundColor(.white)
+                                
+                                Text(vpnProtocol.description)
+                                    .font(.caption)
+                                    .foregroundColor(.gray)
+                            }
+                            
+                            Spacer()
+                            
+                            if selectedProtocol == vpnProtocol {
+                                Image(systemName: "checkmark")
+                                    .foregroundColor(Theme.primaryColor)
+                            }
+                        }
+                    }
+                    .listRowBackground(Color.white.opacity(0.05))
+                }
+            }
+            .scrollContentBackground(.hidden)
+        }
+        .navigationTitle("Protocol")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+// MARK: - Trusted Networks View
+struct TrustedNetworksView: View {
+    @ObservedObject var viewModel: SettingsViewModel
+    @State private var newNetwork: String = ""
+    @State private var showAddNetwork: Bool = false
+    
+    var body: some View {
+        ZStack {
+            Theme.backgroundGradient
+                .ignoresSafeArea()
+            
+            List {
+                Section {
+                    Text("VPN will not connect automatically on trusted networks")
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                }
+                .listRowBackground(Color.clear)
+                
+                Section {
+                    ForEach(viewModel.getTrustedNetworks(), id: \.self) { network in
+                        HStack {
+                            Image(systemName: "wifi")
+                                .foregroundColor(.green)
+                            
+                            Text(network)
+                                .foregroundColor(.white)
+                            
+                            Spacer()
+                        }
+                    }
+                    .onDelete { indexSet in
+                        for index in indexSet {
+                            let network = viewModel.getTrustedNetworks()[index]
+                            viewModel.removeTrustedNetwork(network)
+                        }
+                    }
+                } header: {
+                    Text("Trusted Networks")
+                }
+                .listRowBackground(Color.white.opacity(0.05))
+            }
+            .scrollContentBackground(.hidden)
+        }
+        .navigationTitle("Trusted Networks")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    showAddNetwork = true
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
+        }
+        .alert("Add Network", isPresented: $showAddNetwork) {
+            TextField("Network Name (SSID)", text: $newNetwork)
+            Button("Add") {
+                if !newNetwork.isEmpty {
+                    viewModel.addTrustedNetwork(newNetwork)
+                    newNetwork = ""
+                }
+            }
+            Button("Cancel", role: .cancel) {
+                newNetwork = ""
+            }
+        }
+    }
+}
+
+// MARK: - Log Viewer View
+struct LogViewerView: View {
+    @ObservedObject var viewModel: SettingsViewModel
+    @Environment(\.dismiss) var dismiss
+    
+    var body: some View {
+        NavigationStack {
+            ZStack {
+                Theme.backgroundGradient
+                    .ignoresSafeArea()
+                
+                List {
+                    ForEach(viewModel.getRecentLogs()) { entry in
+                        VStack(alignment: .leading, spacing: 4) {
+                            HStack {
+                                Circle()
+                                    .fill(logLevelColor(entry.level))
+                                    .frame(width: 8, height: 8)
+                                
+                                Text(entry.level.description)
+                                    .font(.caption)
+                                    .foregroundColor(.gray)
+                                
+                                Spacer()
+                                
+                                Text(formatDate(entry.timestamp))
+                                    .font(.caption2)
+                                    .foregroundColor(.gray)
+                            }
+                            
+                            Text(entry.message)
+                                .font(.caption)
+                                .foregroundColor(.white)
+                        }
+                        .listRowBackground(Color.white.opacity(0.05))
+                    }
+                }
+                .scrollContentBackground(.hidden)
+            }
+            .navigationTitle("Connection Logs")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Close") {
+                        dismiss()
                     }
                 }
                 
-                // Manage subscription
-                Button {
-                    Task {
-                        await viewModel.openBillingPortal()
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Clear") {
+                        viewModel.clearLogs()
                     }
-                } label: {
-                    Label("Manage Subscription", systemImage: "creditcard")
+                    .foregroundColor(.red)
                 }
             }
         }
     }
     
-    // MARK: - VPN Settings Section
-    
-    private var vpnSettingsSection: some View {
-        Section("VPN Settings") {
-            // Protocol selection
-            Picker(selection: $viewModel.preferredProtocol) {
-                ForEach(VPNProtocolType.allCases, id: \.self) { proto in
-                    Text(proto.displayName).tag(proto)
-                }
-            } label: {
-                Label("Protocol", systemImage: "network")
-            }
-            
-            // Auto-connect
-            Toggle(isOn: $viewModel.autoConnect) {
-                Label("Auto-Connect", systemImage: "bolt")
-            }
-            
-            // Kill switch
-            Toggle(isOn: $viewModel.killSwitch) {
-                Label("Kill Switch", systemImage: "shield.slash")
-            }
-            
-            // DNS settings
-            NavigationLink {
-                DNSSettingsView()
-            } label: {
-                Label("DNS Settings", systemImage: "server.rack")
-            }
+    private func logLevelColor(_ level: LogLevel) -> Color {
+        switch level {
+        case .debug: return .gray
+        case .info: return .blue
+        case .warning: return .yellow
+        case .error: return .red
         }
     }
     
-    // MARK: - App Settings Section
-    
-    private var appSettingsSection: some View {
-        Section("App Settings") {
-            // Notifications
-            Toggle(isOn: $viewModel.notificationsEnabled) {
-                Label("Notifications", systemImage: "bell")
-            }
-            
-            // App appearance
-            Picker(selection: $viewModel.appearance) {
-                Text("System").tag(AppAppearance.system)
-                Text("Light").tag(AppAppearance.light)
-                Text("Dark").tag(AppAppearance.dark)
-            } label: {
-                Label("Appearance", systemImage: "paintbrush")
-            }
-            
-            // Language
-            NavigationLink {
-                LanguageSettingsView()
-            } label: {
-                HStack {
-                    Label("Language", systemImage: "globe")
-                    Spacer()
-                    Text("English")
-                        .foregroundColor(Theme.Colors.textSecondary)
-                }
-            }
-        }
-    }
-    
-    // MARK: - Support Section
-    
-    private var supportSection: some View {
-        Section("Support") {
-            // Help Center
-            Link(destination: URL(string: "https://help.caspervpn.com")!) {
-                Label("Help Center", systemImage: "questionmark.circle")
-            }
-            
-            // Contact Support
-            Link(destination: URL(string: "mailto:support@caspervpn.com")!) {
-                Label("Contact Support", systemImage: "envelope")
-            }
-            
-            // Report a Bug
-            NavigationLink {
-                BugReportView()
-            } label: {
-                Label("Report a Bug", systemImage: "ant")
-            }
-        }
-    }
-    
-    // MARK: - About Section
-    
-    private var aboutSection: some View {
-        Section("About") {
-            // Version
-            HStack {
-                Label("Version", systemImage: "info.circle")
-                Spacer()
-                Text(AppConfig.appVersion)
-                    .foregroundColor(Theme.Colors.textSecondary)
-            }
-            
-            // Privacy Policy
-            Link(destination: URL(string: "https://caspervpn.com/privacy")!) {
-                Label("Privacy Policy", systemImage: "hand.raised")
-            }
-            
-            // Terms of Service
-            Link(destination: URL(string: "https://caspervpn.com/terms")!) {
-                Label("Terms of Service", systemImage: "doc.text")
-            }
-            
-            // Licenses
-            NavigationLink {
-                LicensesView()
-            } label: {
-                Label("Open Source Licenses", systemImage: "doc.plaintext")
-            }
-        }
-    }
-    
-    // MARK: - Sign Out Section
-    
-    private var signOutSection: some View {
-        Section {
-            Button(role: .destructive) {
-                showingLogoutConfirmation = true
-            } label: {
-                Label("Sign Out", systemImage: "rectangle.portrait.and.arrow.right")
-            }
-            
-            Button(role: .destructive) {
-                showingDeleteAccountConfirmation = true
-            } label: {
-                Label("Delete Account", systemImage: "trash")
-            }
-        }
+    private func formatDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm:ss"
+        return formatter.string(from: date)
     }
 }
 
-// MARK: - Supporting Views
-
-struct EditProfileView: View {
-    @Environment(\.dismiss) private var dismiss
-    @EnvironmentObject private var authViewModel: AuthViewModel
+// MARK: - Share Sheet
+struct ShareSheet: UIViewControllerRepresentable {
+    let items: [Any]
     
-    @State private var firstName = ""
-    @State private var lastName = ""
-    @State private var email = ""
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        UIActivityViewController(activityItems: items, applicationActivities: nil)
+    }
     
-    var body: some View {
-        Form {
-            Section("Personal Information") {
-                TextField("First Name", text: $firstName)
-                TextField("Last Name", text: $lastName)
-            }
-            
-            Section("Email") {
-                TextField("Email", text: $email)
-                    .keyboardType(.emailAddress)
-                    .autocapitalization(.none)
-            }
-            
-            Section {
-                Button("Save Changes") {
-                    // Save changes
-                    dismiss()
-                }
-                .frame(maxWidth: .infinity)
-            }
-        }
-        .navigationTitle("Edit Profile")
-        .onAppear {
-            if let user = authViewModel.currentUser {
-                firstName = user.firstName ?? ""
-                lastName = user.lastName ?? ""
-                email = user.email
-            }
-        }
-    }
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }
 
-struct ChangePasswordView: View {
-    @State private var currentPassword = ""
-    @State private var newPassword = ""
-    @State private var confirmPassword = ""
-    
-    var body: some View {
-        Form {
-            Section("Current Password") {
-                SecureField("Current Password", text: $currentPassword)
-            }
-            
-            Section("New Password") {
-                SecureField("New Password", text: $newPassword)
-                SecureField("Confirm Password", text: $confirmPassword)
-            }
-            
-            Section {
-                Button("Change Password") {
-                    // Change password
-                }
-                .frame(maxWidth: .infinity)
-                .disabled(newPassword.isEmpty || newPassword != confirmPassword)
-            }
-        }
-        .navigationTitle("Change Password")
+// MARK: - Bundle Extension
+extension Bundle {
+    var appVersion: String {
+        let version = infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0"
+        let build = infoDictionary?["CFBundleVersion"] as? String ?? "1"
+        return "\(version) (\(build))"
     }
-}
-
-struct UpgradeView: View {
-    var body: some View {
-        Text("Upgrade View")
-            .navigationTitle("Upgrade")
-    }
-}
-
-struct DNSSettingsView: View {
-    var body: some View {
-        Text("DNS Settings")
-            .navigationTitle("DNS Settings")
-    }
-}
-
-struct LanguageSettingsView: View {
-    var body: some View {
-        Text("Language Settings")
-            .navigationTitle("Language")
-    }
-}
-
-struct BugReportView: View {
-    var body: some View {
-        Text("Bug Report")
-            .navigationTitle("Report a Bug")
-    }
-}
-
-struct LicensesView: View {
-    var body: some View {
-        Text("Open Source Licenses")
-            .navigationTitle("Licenses")
-    }
-}
-
-// MARK: - App Appearance
-
-enum AppAppearance: String, CaseIterable {
-    case system
-    case light
-    case dark
 }
 
 // MARK: - Preview
-
-#if DEBUG
 #Preview {
     SettingsView()
-        .environmentObject(AuthViewModel())
+        .environmentObject(AppCoordinator())
 }
-#endif

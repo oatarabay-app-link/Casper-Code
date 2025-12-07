@@ -3,412 +3,366 @@
 //  CasperVPN
 //
 //  Created by CasperVPN Team
-//  Copyright © 2024 CasperVPN. All rights reserved.
 //
 
 import SwiftUI
 
-/// Main connection screen showing VPN status and quick connect functionality.
+/// Main connection view with animated connection button and status display
 struct ConnectionView: View {
-    
-    // MARK: - Properties
-    
-    @EnvironmentObject private var connectionViewModel: ConnectionViewModel
-    @EnvironmentObject private var authViewModel: AuthViewModel
-    
-    @State private var showingServerPicker = false
-    
-    // MARK: - Body
+    @StateObject private var viewModel = ConnectionViewModel()
+    @EnvironmentObject var coordinator: AppCoordinator
     
     var body: some View {
         NavigationStack {
             ZStack {
                 // Background gradient
-                backgroundGradient
+                Theme.backgroundGradient
+                    .ignoresSafeArea()
                 
-                VStack(spacing: 32) {
+                VStack(spacing: 30) {
+                    // Status Header
+                    StatusHeaderView(
+                        state: viewModel.connectionState,
+                        networkStatus: viewModel.networkStatus
+                    )
+                    
                     Spacer()
                     
-                    // Connection status ring
-                    connectionStatusRing
+                    // Connection Button
+                    ConnectionButtonView(
+                        state: viewModel.buttonState,
+                        onTap: {
+                            Task {
+                                await viewModel.toggleConnection()
+                            }
+                        }
+                    )
+                    .disabled(!viewModel.canInteract)
                     
-                    // Status text
-                    statusText
+                    // Server Selection
+                    ServerSelectionView(
+                        serverName: viewModel.serverDisplayName,
+                        isConnected: viewModel.connectionState.isConnected,
+                        onTap: {
+                            viewModel.showServerList = true
+                        }
+                    )
+                    .disabled(viewModel.connectionState.isConnected)
                     
-                    // Server selection
-                    serverSelectionButton
+                    Spacer()
                     
-                    // Connection stats (when connected)
-                    if connectionViewModel.isConnected {
-                        connectionStats
+                    // Connection Info
+                    if viewModel.showStatistics {
+                        ConnectionInfoView(
+                            duration: viewModel.connectionDuration,
+                            statistics: viewModel.statistics,
+                            server: viewModel.connectedServer
+                        )
+                        .transition(.move(edge: .bottom).combined(with: .opacity))
                     }
-                    
-                    Spacer()
-                    
-                    // Connect button
-                    connectButton
-                    
-                    // Quick actions
-                    quickActions
                 }
-                .padding(24)
+                .padding()
             }
             .navigationTitle("CasperVPN")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    userButton
+                    Button {
+                        // Quick disconnect
+                        if viewModel.connectionState.isConnected {
+                            Task {
+                                await viewModel.disconnect()
+                            }
+                        }
+                    } label: {
+                        Image(systemName: viewModel.connectionState.isConnected ? "power" : "info.circle")
+                            .foregroundColor(viewModel.connectionState.isConnected ? .red : .white)
+                    }
                 }
             }
-            .sheet(isPresented: $showingServerPicker) {
-                ServerListView()
+            .sheet(isPresented: $viewModel.showServerList) {
+                ServerListView(onSelect: { server in
+                    viewModel.selectServer(server)
+                })
             }
-            .alert("Error", isPresented: $connectionViewModel.showError) {
-                Button("OK", role: .cancel) {}
+            .alert("Connection Error", isPresented: $viewModel.showError) {
+                Button("Retry") {
+                    Task {
+                        await viewModel.retryConnection()
+                    }
+                }
+                Button("OK", role: .cancel) {
+                    viewModel.clearError()
+                }
             } message: {
-                Text(connectionViewModel.errorMessage ?? "An error occurred")
-            }
-        }
-    }
-    
-    // MARK: - Background Gradient
-    
-    private var backgroundGradient: some View {
-        LinearGradient(
-            colors: [
-                Theme.Colors.background,
-                connectionViewModel.isConnected 
-                    ? Theme.Colors.success.opacity(0.1) 
-                    : Theme.Colors.background
-            ],
-            startPoint: .top,
-            endPoint: .bottom
-        )
-        .ignoresSafeArea()
-    }
-    
-    // MARK: - Connection Status Ring
-    
-    private var connectionStatusRing: some View {
-        ZStack {
-            // Outer ring
-            Circle()
-                .stroke(
-                    connectionViewModel.isConnected 
-                        ? Theme.Colors.success.opacity(0.3) 
-                        : Theme.Colors.textSecondary.opacity(0.2),
-                    lineWidth: 8
-                )
-                .frame(width: 200, height: 200)
-            
-            // Progress ring (when connecting)
-            if connectionViewModel.isConnecting {
-                Circle()
-                    .trim(from: 0, to: 0.7)
-                    .stroke(
-                        Theme.Colors.primary,
-                        style: StrokeStyle(lineWidth: 8, lineCap: .round)
-                    )
-                    .frame(width: 200, height: 200)
-                    .rotationEffect(.degrees(-90))
-                    .animation(
-                        .linear(duration: 1).repeatForever(autoreverses: false),
-                        value: connectionViewModel.isConnecting
-                    )
-            } else if connectionViewModel.isConnected {
-                // Connected ring
-                Circle()
-                    .stroke(
-                        Theme.Colors.success,
-                        lineWidth: 8
-                    )
-                    .frame(width: 200, height: 200)
-            }
-            
-            // Inner content
-            VStack(spacing: 8) {
-                Image(systemName: statusIcon)
-                    .font(.system(size: 50))
-                    .foregroundColor(statusColor)
-                
-                if connectionViewModel.isConnected, let info = connectionViewModel.connectionInfo {
-                    Text(info.formattedDuration)
-                        .font(Theme.Fonts.title2.monospacedDigit())
-                        .foregroundColor(Theme.Colors.textPrimary)
+                if let error = viewModel.error {
+                    Text(error.userFriendlyMessage)
                 }
             }
         }
     }
+}
+
+// MARK: - Status Header View
+struct StatusHeaderView: View {
+    let state: ConnectionState
+    let networkStatus: NetworkStatus?
     
-    // MARK: - Status Text
-    
-    private var statusText: some View {
+    var body: some View {
         VStack(spacing: 8) {
-            Text(connectionViewModel.status.displayName)
-                .font(Theme.Fonts.title)
-                .foregroundColor(Theme.Colors.textPrimary)
-            
-            if connectionViewModel.isConnected, let server = connectionViewModel.selectedServer {
-                HStack(spacing: 8) {
-                    AsyncImage(url: server.flagUrl) { image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                    } placeholder: {
-                        Text(server.countryCode)
-                    }
-                    .frame(width: 24, height: 16)
-                    .clipShape(RoundedRectangle(cornerRadius: 2))
-                    
-                    Text(server.locationString)
-                        .font(Theme.Fonts.body)
-                        .foregroundColor(Theme.Colors.textSecondary)
-                }
-            } else {
-                Text("Your connection is not secure")
-                    .font(Theme.Fonts.body)
-                    .foregroundColor(Theme.Colors.textSecondary)
+            // Status indicator
+            HStack(spacing: 8) {
+                Circle()
+                    .fill(statusColor)
+                    .frame(width: 10, height: 10)
+                    .shadow(color: statusColor.opacity(0.5), radius: 4)
+                
+                Text(state.displayText)
+                    .font(.headline)
+                    .foregroundColor(.white)
             }
+            
+            // Network type indicator
+            if let network = networkStatus {
+                HStack(spacing: 4) {
+                    Image(systemName: network.connectionType.icon)
+                        .font(.caption)
+                    Text(network.connectionType.description)
+                        .font(.caption)
+                }
+                .foregroundColor(.gray)
+            }
+        }
+        .animation(.easeInOut, value: state)
+    }
+    
+    private var statusColor: Color {
+        switch state {
+        case .connected:
+            return .green
+        case .connecting, .reconnecting:
+            return .yellow
+        case .disconnecting:
+            return .orange
+        case .disconnected:
+            return .gray
+        case .invalid:
+            return .red
+        }
+    }
+}
+
+// MARK: - Connection Button View
+struct ConnectionButtonView: View {
+    let state: ConnectionButtonState
+    let onTap: () -> Void
+    
+    @State private var isAnimating = false
+    @State private var pulseScale: CGFloat = 1.0
+    
+    var body: some View {
+        ZStack {
+            // Outer pulse animation for connecting state
+            if state == .connecting || state == .loading {
+                Circle()
+                    .stroke(buttonColor.opacity(0.3), lineWidth: 4)
+                    .frame(width: 200, height: 200)
+                    .scaleEffect(pulseScale)
+                    .opacity(2 - pulseScale)
+            }
+            
+            // Main button
+            Button(action: onTap) {
+                ZStack {
+                    // Background circle
+                    Circle()
+                        .fill(
+                            LinearGradient(
+                                colors: [buttonColor, buttonColor.opacity(0.7)],
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            )
+                        )
+                        .frame(width: 160, height: 160)
+                        .shadow(color: buttonColor.opacity(0.4), radius: 20, x: 0, y: 10)
+                    
+                    // Inner content
+                    VStack(spacing: 8) {
+                        if state == .connecting || state == .loading || state == .disconnecting {
+                            ProgressView()
+                                .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                                .scaleEffect(1.5)
+                        } else {
+                            Image(systemName: state == .connected ? "checkmark.shield.fill" : "shield.fill")
+                                .font(.system(size: 50))
+                                .foregroundColor(.white)
+                        }
+                        
+                        Text(state.title)
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white.opacity(0.9))
+                    }
+                }
+            }
+            .buttonStyle(ScaleButtonStyle())
+        }
+        .onAppear {
+            startPulseAnimation()
+        }
+        .onChange(of: state) { _ in
+            startPulseAnimation()
         }
     }
     
-    // MARK: - Server Selection Button
+    private var buttonColor: Color {
+        switch state {
+        case .disconnected:
+            return Theme.primaryColor
+        case .connecting, .loading:
+            return .orange
+        case .connected:
+            return .green
+        case .disconnecting:
+            return .orange
+        }
+    }
     
-    private var serverSelectionButton: some View {
-        Button {
-            showingServerPicker = true
-        } label: {
+    private func startPulseAnimation() {
+        guard state == .connecting || state == .loading else {
+            return
+        }
+        
+        pulseScale = 1.0
+        withAnimation(.easeInOut(duration: 1.5).repeatForever(autoreverses: false)) {
+            pulseScale = 1.5
+        }
+    }
+}
+
+// MARK: - Server Selection View
+struct ServerSelectionView: View {
+    let serverName: String
+    let isConnected: Bool
+    let onTap: () -> Void
+    
+    var body: some View {
+        Button(action: onTap) {
             HStack {
-                if let server = connectionViewModel.selectedServer {
-                    AsyncImage(url: server.flagUrl) { image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                    } placeholder: {
-                        Image(systemName: "globe")
-                    }
-                    .frame(width: 32, height: 21)
-                    .clipShape(RoundedRectangle(cornerRadius: 3))
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Server")
+                        .font(.caption)
+                        .foregroundColor(.gray)
                     
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text(server.name)
-                            .font(Theme.Fonts.body)
-                            .foregroundColor(Theme.Colors.textPrimary)
-                        Text(server.locationString)
-                            .font(Theme.Fonts.caption)
-                            .foregroundColor(Theme.Colors.textSecondary)
-                    }
-                } else {
-                    Image(systemName: "globe")
-                        .font(.title2)
-                        .foregroundColor(Theme.Colors.primary)
-                    
-                    Text("Select a Server")
-                        .font(Theme.Fonts.body)
-                        .foregroundColor(Theme.Colors.textPrimary)
+                    Text(serverName)
+                        .font(.headline)
+                        .foregroundColor(.white)
                 }
                 
                 Spacer()
                 
-                Image(systemName: "chevron.right")
-                    .font(.caption)
-                    .foregroundColor(Theme.Colors.textSecondary)
+                if !isConnected {
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(.gray)
+                }
             }
             .padding()
-            .background(Theme.Colors.cardBackground)
+            .background(Color.white.opacity(0.1))
             .cornerRadius(12)
         }
-        .disabled(connectionViewModel.isConnecting)
-    }
-    
-    // MARK: - Connection Stats
-    
-    private var connectionStats: some View {
-        HStack(spacing: 32) {
-            VStack(spacing: 4) {
-                Image(systemName: "arrow.down.circle")
-                    .font(.title3)
-                    .foregroundColor(Theme.Colors.success)
-                Text(connectionViewModel.connectionInfo?.formattedBytesReceived ?? "0 B")
-                    .font(Theme.Fonts.body.monospacedDigit())
-                    .foregroundColor(Theme.Colors.textPrimary)
-                Text("Downloaded")
-                    .font(Theme.Fonts.caption)
-                    .foregroundColor(Theme.Colors.textSecondary)
-            }
-            
-            Divider()
-                .frame(height: 50)
-            
-            VStack(spacing: 4) {
-                Image(systemName: "arrow.up.circle")
-                    .font(.title3)
-                    .foregroundColor(Theme.Colors.primary)
-                Text(connectionViewModel.connectionInfo?.formattedBytesSent ?? "0 B")
-                    .font(Theme.Fonts.body.monospacedDigit())
-                    .foregroundColor(Theme.Colors.textPrimary)
-                Text("Uploaded")
-                    .font(Theme.Fonts.caption)
-                    .foregroundColor(Theme.Colors.textSecondary)
-            }
-        }
-        .padding()
-        .background(Theme.Colors.cardBackground)
-        .cornerRadius(12)
-    }
-    
-    // MARK: - Connect Button
-    
-    private var connectButton: some View {
-        CasperButton(
-            title: connectionButtonTitle,
-            style: connectionViewModel.isConnected ? .danger : .primary,
-            isLoading: connectionViewModel.isConnecting || connectionViewModel.isDisconnecting
-        ) {
-            Task {
-                if connectionViewModel.isConnected {
-                    await connectionViewModel.disconnect()
-                } else {
-                    await connectionViewModel.quickConnect()
-                }
-            }
-        }
-    }
-    
-    // MARK: - Quick Actions
-    
-    private var quickActions: some View {
-        HStack(spacing: 24) {
-            QuickActionButton(
-                icon: "bolt.fill",
-                title: "Quick",
-                action: {
-                    Task {
-                        await connectionViewModel.quickConnect()
-                    }
-                }
-            )
-            .disabled(connectionViewModel.isConnected)
-            
-            QuickActionButton(
-                icon: "location.fill",
-                title: "Nearest",
-                action: {
-                    Task {
-                        await connectionViewModel.connectToNearest()
-                    }
-                }
-            )
-            .disabled(connectionViewModel.isConnected)
-            
-            QuickActionButton(
-                icon: "star.fill",
-                title: "Favorites",
-                action: {
-                    // TODO: Implement favorites
-                }
-            )
-        }
-    }
-    
-    // MARK: - User Button
-    
-    private var userButton: some View {
-        Menu {
-            if let user = authViewModel.currentUser {
-                Text(user.email)
-                    .foregroundColor(Theme.Colors.textSecondary)
-                
-                Divider()
-                
-                Button {
-                    // Navigate to account
-                } label: {
-                    Label("Account", systemImage: "person.circle")
-                }
-                
-                Button(role: .destructive) {
-                    Task {
-                        await authViewModel.logout()
-                    }
-                } label: {
-                    Label("Sign Out", systemImage: "rectangle.portrait.and.arrow.right")
-                }
-            }
-        } label: {
-            Image(systemName: "person.circle")
-                .font(.title2)
-        }
-    }
-    
-    // MARK: - Computed Properties
-    
-    private var statusIcon: String {
-        switch connectionViewModel.status {
-        case .connected:
-            return "shield.checkered"
-        case .connecting, .disconnecting, .reasserting:
-            return "shield"
-        default:
-            return "shield.slash"
-        }
-    }
-    
-    private var statusColor: Color {
-        switch connectionViewModel.status {
-        case .connected:
-            return Theme.Colors.success
-        case .connecting, .disconnecting, .reasserting:
-            return Theme.Colors.primary
-        default:
-            return Theme.Colors.textSecondary
-        }
-    }
-    
-    private var connectionButtonTitle: String {
-        if connectionViewModel.isConnecting {
-            return "Connecting..."
-        } else if connectionViewModel.isDisconnecting {
-            return "Disconnecting..."
-        } else if connectionViewModel.isConnected {
-            return "Disconnect"
-        } else {
-            return "Connect"
-        }
+        .disabled(isConnected)
+        .opacity(isConnected ? 0.6 : 1.0)
     }
 }
 
-// MARK: - Quick Action Button
-
-struct QuickActionButton: View {
-    let icon: String
-    let title: String
-    let action: () -> Void
+// MARK: - Connection Info View
+struct ConnectionInfoView: View {
+    let duration: String
+    let statistics: ConnectionStatistics
+    let server: VPNServer?
     
     var body: some View {
-        Button(action: action) {
-            VStack(spacing: 8) {
-                Image(systemName: icon)
-                    .font(.title2)
-                    .foregroundColor(Theme.Colors.primary)
-                
-                Text(title)
-                    .font(Theme.Fonts.caption)
-                    .foregroundColor(Theme.Colors.textSecondary)
+        VStack(spacing: 16) {
+            // Duration
+            HStack {
+                Image(systemName: "clock")
+                    .foregroundColor(.green)
+                Text("Connected for")
+                    .foregroundColor(.gray)
+                Spacer()
+                Text(duration)
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .monospacedDigit()
             }
-            .frame(width: 70, height: 70)
-            .background(Theme.Colors.cardBackground)
-            .cornerRadius(12)
+            
+            Divider()
+                .background(Color.white.opacity(0.2))
+            
+            // Data transferred
+            HStack {
+                VStack(alignment: .leading, spacing: 4) {
+                    HStack {
+                        Image(systemName: "arrow.down")
+                            .foregroundColor(.green)
+                        Text("Download")
+                            .foregroundColor(.gray)
+                    }
+                    Text(statistics.formattedBytesReceived)
+                        .font(.headline)
+                        .foregroundColor(.white)
+                }
+                
+                Spacer()
+                
+                VStack(alignment: .trailing, spacing: 4) {
+                    HStack {
+                        Text("Upload")
+                            .foregroundColor(.gray)
+                        Image(systemName: "arrow.up")
+                            .foregroundColor(.orange)
+                    }
+                    Text(statistics.formattedBytesSent)
+                        .font(.headline)
+                        .foregroundColor(.white)
+                }
+            }
+            
+            // Server info
+            if let server = server {
+                Divider()
+                    .background(Color.white.opacity(0.2))
+                
+                HStack {
+                    Text("\(server.flagEmoji) \(server.name)")
+                        .foregroundColor(.white)
+                    Spacer()
+                    Text("WireGuard")
+                        .font(.caption)
+                        .padding(.horizontal, 8)
+                        .padding(.vertical, 4)
+                        .background(Color.blue.opacity(0.3))
+                        .cornerRadius(8)
+                }
+            }
         }
+        .padding()
+        .background(Color.white.opacity(0.05))
+        .cornerRadius(16)
+    }
+}
+
+// MARK: - Scale Button Style
+struct ScaleButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
+            .animation(.spring(response: 0.3), value: configuration.isPressed)
     }
 }
 
 // MARK: - Preview
-
-#if DEBUG
 #Preview {
     ConnectionView()
-        .environmentObject(ConnectionViewModel())
-        .environmentObject(AuthViewModel())
+        .environmentObject(AppCoordinator())
 }
-#endif

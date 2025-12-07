@@ -3,221 +3,155 @@
 //  CasperVPN
 //
 //  Created by CasperVPN Team
-//  Copyright © 2024 CasperVPN. All rights reserved.
 //
 
 import Foundation
 import Combine
-import CoreLocation
 
-/// ViewModel for managing VPN connection state and operations.
+/// ViewModel for managing VPN connection state and UI updates
 @MainActor
 final class ConnectionViewModel: ObservableObject {
     
     // MARK: - Published Properties
-    
-    /// Current connection status
-    @Published private(set) var status: VPNConnectionStatus = .disconnected
-    
-    /// Currently selected server
+    @Published private(set) var connectionState: ConnectionState = .disconnected
+    @Published private(set) var connectedServer: VPNServer?
     @Published private(set) var selectedServer: VPNServer?
+    @Published private(set) var statistics: ConnectionStatistics = .empty
+    @Published private(set) var isLoading: Bool = false
+    @Published private(set) var error: VPNError?
+    @Published private(set) var connectionDuration: String = "00:00:00"
+    @Published private(set) var networkStatus: NetworkStatus?
     
-    /// Current connection info (when connected)
-    @Published private(set) var connectionInfo: ConnectionInfo?
+    // MARK: - UI State
+    @Published var showError: Bool = false
+    @Published var showServerList: Bool = false
     
-    /// Whether VPN is loading/initializing
-    @Published var isLoading = false
-    
-    /// Current error message
-    @Published var errorMessage: String?
-    
-    /// Whether to show error alert
-    @Published var showError = false
-    
-    // MARK: - Computed Properties
-    
-    /// Whether VPN is currently connected
-    var isConnected: Bool {
-        status == .connected
-    }
-    
-    /// Whether VPN is currently connecting
-    var isConnecting: Bool {
-        status == .connecting || status == .reasserting
-    }
-    
-    /// Whether VPN is currently disconnecting
-    var isDisconnecting: Bool {
-        status == .disconnecting
-    }
-    
-    // MARK: - Properties
-    
-    private let vpnService: VPNServiceProtocol
+    // MARK: - Dependencies
+    private let connectionManager: VPNConnectionManager
     private let serverService: ServerServiceProtocol
+    private let networkMonitor: NetworkMonitor
     private var cancellables = Set<AnyCancellable>()
-    
-    /// Location manager for nearest server selection
-    private let locationManager = CLLocationManager()
+    private var durationTimer: Timer?
     
     // MARK: - Initialization
-    
-    init(
-        vpnService: VPNServiceProtocol = VPNService.shared,
-        serverService: ServerServiceProtocol = ServerService.shared
-    ) {
-        self.vpnService = vpnService
+    init(connectionManager: VPNConnectionManager = .shared,
+         serverService: ServerServiceProtocol = ServerService.shared,
+         networkMonitor: NetworkMonitor = .shared) {
+        self.connectionManager = connectionManager
         self.serverService = serverService
+        self.networkMonitor = networkMonitor
+        
         setupBindings()
     }
     
-    // MARK: - Setup
-    
-    private func setupBindings() {
-        vpnService.statusPublisher
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] status in
-                self?.handleStatusChange(status)
-            }
-            .store(in: &cancellables)
-    }
-    
-    private func handleStatusChange(_ newStatus: VPNConnectionStatus) {
-        let oldStatus = status
-        status = newStatus
-        
-        // Update connection info
-        if newStatus == .connected {
-            connectionInfo = vpnService.currentConnectionInfo
-            selectedServer = vpnService.selectedServer
-        } else if newStatus == .disconnected && oldStatus != .disconnected {
-            connectionInfo = nil
-        }
+    deinit {
+        stopDurationTimer()
     }
     
     // MARK: - Public Methods
     
-    /// Initializes the VPN manager
-    func initializeVPNManager() async {
+    /// Connect to selected server or quick connect to best server
+    func connect() async {
+        guard let server = selectedServer else {
+            // Quick connect - get recommended server
+            await quickConnect()
+            return
+        }
+        
+        await connect(to: server)
+    }
+    
+    /// Connect to a specific server
+    func connect(to server: VPNServer) async {
         isLoading = true
+        error = nil
+        showError = false
         
         do {
-            try await vpnService.initialize()
-            
-            // Update initial state
-            selectedServer = vpnService.selectedServer
-            connectionInfo = vpnService.currentConnectionInfo
+            try await connectionManager.connect(to: server)
+            startDurationTimer()
+        } catch let vpnError as VPNError {
+            self.error = vpnError
+            showError = true
         } catch {
-            handleError(error)
+            self.error = .unknown(reason: error.localizedDescription)
+            showError = true
         }
         
         isLoading = false
     }
     
-    /// Connects to a specific server
-    func connect(to server: VPNServer) async {
-        clearError()
-        
-        guard server.isAvailable else {
-            errorMessage = "This server is currently unavailable"
-            showError = true
-            return
-        }
-        
-        selectedServer = server
-        
-        do {
-            try await vpnService.connect(to: server)
-        } catch {
-            handleError(error)
-        }
-    }
-    
-    /// Disconnects from the current server
-    func disconnect() async {
-        clearError()
-        
-        do {
-            try await vpnService.disconnect()
-        } catch {
-            handleError(error)
-        }
-    }
-    
-    /// Quick connect to the recommended server
+    /// Quick connect to the best available server
     func quickConnect() async {
-        clearError()
+        isLoading = true
+        error = nil
+        showError = false
         
         do {
-            // Get recommended server
-            let server = try await vpnService.getRecommendedServer()
+            guard let recommendedServer = try await serverService.getRecommendedServer() else {
+                self.error = .serverNotSelected
+                showError = true
+                isLoading = false
+                return
+            }
             
-            // Connect to it
-            try await vpnService.connect(to: server)
-        } catch {
-            handleError(error)
-        }
-    }
-    
-    /// Connects to the nearest server based on location
-    func connectToNearest() async {
-        clearError()
-        
-        // Request location permission if needed
-        let authStatus = locationManager.authorizationStatus
-        if authStatus == .notDetermined {
-            locationManager.requestWhenInUseAuthorization()
-            return
-        }
-        
-        guard authStatus == .authorizedWhenInUse || authStatus == .authorizedAlways else {
-            errorMessage = "Location access is required to find the nearest server"
+            selectedServer = recommendedServer
+            try await connectionManager.connect(to: recommendedServer)
+            startDurationTimer()
+        } catch let vpnError as VPNError {
+            self.error = vpnError
             showError = true
-            return
+        } catch {
+            self.error = .unknown(reason: error.localizedDescription)
+            showError = true
         }
         
+        isLoading = false
+    }
+    
+    /// Disconnect from VPN
+    func disconnect() async {
+        isLoading = true
+        error = nil
+        
         do {
-            // Get current location
-            let location = locationManager.location?.coordinate
-            
-            // Create recommendation request
-            let request = RecommendationRequest(
-                latitude: location?.latitude,
-                longitude: location?.longitude,
-                preferredCountry: nil,
-                preferredProtocol: .wireGuard
-            )
-            
-            // Get recommended server
-            let server = try await serverService.getRecommendedServer(request: request)
-            
-            // Connect
-            try await vpnService.connect(to: server)
+            try await connectionManager.disconnect()
+            stopDurationTimer()
+        } catch let vpnError as VPNError {
+            self.error = vpnError
+            showError = true
         } catch {
-            handleError(error)
+            self.error = .unknown(reason: error.localizedDescription)
+            showError = true
+        }
+        
+        isLoading = false
+    }
+    
+    /// Toggle connection state
+    func toggleConnection() async {
+        if connectionState.isConnected || connectionState == .connecting {
+            await disconnect()
+        } else {
+            await connect()
         }
     }
     
-    /// Selects a server without connecting
+    /// Select a server for connection
     func selectServer(_ server: VPNServer) {
         selectedServer = server
-        vpnService.selectServer(server)
+        showServerList = false
     }
     
-    /// Refreshes the connection status
-    func refreshConnectionStatus() async {
-        await vpnService.refreshStatus()
-        
-        // Update local state
-        connectionInfo = vpnService.currentConnectionInfo
-        selectedServer = vpnService.selectedServer
+    /// Clear error state
+    func clearError() {
+        error = nil
+        showError = false
     }
     
-    /// Toggles connection state
-    func toggleConnection() async {
-        if isConnected {
-            await disconnect()
-        } else if let server = selectedServer {
+    /// Retry last failed connection
+    func retryConnection() async {
+        if let server = selectedServer {
             await connect(to: server)
         } else {
             await quickConnect()
@@ -226,35 +160,163 @@ final class ConnectionViewModel: ObservableObject {
     
     // MARK: - Private Methods
     
-    private func handleError(_ error: Error) {
-        if let vpnError = error as? VPNError {
-            errorMessage = vpnError.errorDescription
-        } else if let apiError = error as? APIError {
-            errorMessage = apiError.errorDescription
-        } else {
-            errorMessage = error.localizedDescription
-        }
-        showError = true
+    private func setupBindings() {
+        // Observe connection state
+        connectionManager.$connectionState
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] state in
+                self?.connectionState = state
+                self?.handleStateChange(state)
+            }
+            .store(in: &cancellables)
+        
+        // Observe connected server
+        connectionManager.$connectedServer
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$connectedServer)
+        
+        // Observe statistics
+        connectionManager.$statistics
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$statistics)
+        
+        // Observe connection errors
+        connectionManager.$lastError
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] vpnError in
+                if let error = vpnError {
+                    self?.error = error
+                    self?.showError = true
+                }
+            }
+            .store(in: &cancellables)
+        
+        // Observe network status
+        networkMonitor.pathUpdatePublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] status in
+                self?.networkStatus = status
+            }
+            .store(in: &cancellables)
     }
     
-    private func clearError() {
-        errorMessage = nil
-        showError = false
+    private func handleStateChange(_ state: ConnectionState) {
+        switch state {
+        case .connected:
+            startDurationTimer()
+        case .disconnected:
+            stopDurationTimer()
+            connectionDuration = "00:00:00"
+        default:
+            break
+        }
+    }
+    
+    private func startDurationTimer() {
+        stopDurationTimer()
+        
+        durationTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
+            Task { @MainActor in
+                self?.updateDuration()
+            }
+        }
+    }
+    
+    private func stopDurationTimer() {
+        durationTimer?.invalidate()
+        durationTimer = nil
+    }
+    
+    private func updateDuration() {
+        guard case .connected(let since) = connectionState else { return }
+        
+        let duration = Date().timeIntervalSince(since)
+        connectionDuration = formatDuration(duration)
+    }
+    
+    private func formatDuration(_ duration: TimeInterval) -> String {
+        let hours = Int(duration) / 3600
+        let minutes = (Int(duration) % 3600) / 60
+        let seconds = Int(duration) % 60
+        
+        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
 }
 
-// MARK: - Timer Updates
-
+// MARK: - Connection View State
 extension ConnectionViewModel {
     
-    /// Starts periodic updates for connection info
-    func startConnectionInfoUpdates() {
-        // The VPNService handles this internally with its stats timer
-        // This method is here for future extensibility
+    var buttonState: ConnectionButtonState {
+        if isLoading {
+            return .loading
+        }
+        
+        switch connectionState {
+        case .disconnected, .invalid:
+            return .disconnected
+        case .connecting, .reconnecting:
+            return .connecting
+        case .connected:
+            return .connected
+        case .disconnecting:
+            return .disconnecting
+        }
     }
     
-    /// Stops periodic updates
-    func stopConnectionInfoUpdates() {
-        // Cleanup if needed
+    var statusText: String {
+        if isLoading && connectionState.isDisconnected {
+            return "Connecting..."
+        }
+        return connectionState.displayText
+    }
+    
+    var canInteract: Bool {
+        !isLoading && !connectionState.isTransitioning
+    }
+    
+    var serverDisplayName: String {
+        if let server = connectedServer ?? selectedServer {
+            return "\(server.flagEmoji) \(server.displayName)"
+        }
+        return "Quick Connect"
+    }
+    
+    var showStatistics: Bool {
+        connectionState.isConnected
+    }
+}
+
+// MARK: - Connection Button State
+enum ConnectionButtonState {
+    case disconnected
+    case connecting
+    case connected
+    case disconnecting
+    case loading
+    
+    var title: String {
+        switch self {
+        case .disconnected:
+            return "Connect"
+        case .connecting:
+            return "Connecting..."
+        case .connected:
+            return "Disconnect"
+        case .disconnecting:
+            return "Disconnecting..."
+        case .loading:
+            return "Please wait..."
+        }
+    }
+    
+    var color: String {
+        switch self {
+        case .disconnected:
+            return "green"
+        case .connecting, .disconnecting, .loading:
+            return "yellow"
+        case .connected:
+            return "red"
+        }
     }
 }

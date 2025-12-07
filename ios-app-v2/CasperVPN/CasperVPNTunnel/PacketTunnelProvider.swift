@@ -3,273 +3,373 @@
 //  CasperVPNTunnel
 //
 //  Created by CasperVPN Team
-//  Copyright © 2024 CasperVPN. All rights reserved.
 //
 
 import NetworkExtension
-import Foundation
+import os.log
 
-/// Main packet tunnel provider for CasperVPN.
-/// Handles WireGuard tunnel establishment and management.
+/// WireGuard-based Packet Tunnel Provider for handling VPN traffic
 class PacketTunnelProvider: NEPacketTunnelProvider {
     
     // MARK: - Properties
+    private let osLog = OSLog(subsystem: "com.caspervpn.app.tunnel", category: "PacketTunnel")
     
-    /// Current tunnel configuration
-    private var tunnelConfiguration: TunnelConfiguration?
+    private var wireGuardAdapter: WireGuardAdapter?
+    private var startCompletionHandler: ((Error?) -> Void)?
+    private var stopCompletionHandler: (() -> Void)?
     
-    /// Timer for sending keep-alive packets
-    private var keepAliveTimer: DispatchSourceTimer?
-    
-    /// WireGuard adapter handle (placeholder for actual WireGuard implementation)
-    private var wireGuardHandle: WireGuardHandle?
-    
-    /// Logger for debugging
-    private let logger = TunnelLogger()
-    
-    /// Indicates if the tunnel is currently active
-    private var isActive = false
+    // Configuration keys
+    private enum ConfigKey {
+        static let config = "config"
+        static let endpoint = "endpoint"
+        static let mtu = "mtu"
+    }
     
     // MARK: - Lifecycle
     
     override init() {
         super.init()
-        logger.log("PacketTunnelProvider initialized")
+        os_log("PacketTunnelProvider initialized", log: osLog, type: .info)
     }
     
-    deinit {
-        stopKeepAliveTimer()
-    }
-    
-    // MARK: - Tunnel Management
+    // MARK: - NEPacketTunnelProvider Overrides
     
     override func startTunnel(options: [String: NSObject]?, completionHandler: @escaping (Error?) -> Void) {
-        logger.log("Starting tunnel...")
+        os_log("Starting tunnel with options: %{public}@", log: osLog, type: .info, String(describing: options))
         
-        // Parse provider configuration
-        guard let providerConfig = protocolConfiguration as? NETunnelProviderProtocol,
-              let config = providerConfig.providerConfiguration else {
-            logger.log("Error: Missing provider configuration")
+        startCompletionHandler = completionHandler
+        
+        // Get configuration from protocol configuration
+        guard let tunnelProtocol = protocolConfiguration as? NETunnelProviderProtocol,
+              let providerConfiguration = tunnelProtocol.providerConfiguration else {
+            os_log("No provider configuration found", log: osLog, type: .error)
             completionHandler(PacketTunnelError.invalidConfiguration)
             return
         }
         
-        // Parse tunnel configuration
-        guard let tunnelConfig = parseTunnelConfiguration(from: config) else {
-            logger.log("Error: Failed to parse tunnel configuration")
+        // Parse configuration
+        guard let configString = providerConfiguration[ConfigKey.config] as? String,
+              let configData = configString.data(using: .utf8) else {
+            os_log("Failed to parse configuration string", log: osLog, type: .error)
             completionHandler(PacketTunnelError.configurationParseFailed)
             return
         }
         
-        tunnelConfiguration = tunnelConfig
-        
-        // Configure network settings
-        let networkSettings = createNetworkSettings(from: tunnelConfig)
-        
-        setTunnelNetworkSettings(networkSettings) { [weak self] error in
-            guard let self = self else { return }
+        do {
+            // Parse the JSON configuration
+            let tunnelConfig = try parseTunnelConfiguration(from: configData)
             
-            if let error = error {
-                self.logger.log("Error setting network settings: \(error.localizedDescription)")
-                completionHandler(error)
-                return
+            // Configure network settings
+            let networkSettings = createNetworkSettings(from: tunnelConfig)
+            
+            // Set network settings
+            setTunnelNetworkSettings(networkSettings) { [weak self] error in
+                guard let self = self else { return }
+                
+                if let error = error {
+                    os_log("Failed to set network settings: %{public}@", log: self.osLog, type: .error, error.localizedDescription)
+                    completionHandler(error)
+                    return
+                }
+                
+                os_log("Network settings configured successfully", log: self.osLog, type: .info)
+                
+                // Start WireGuard adapter
+                self.startWireGuardAdapter(config: tunnelConfig, completionHandler: completionHandler)
             }
             
-            // Start WireGuard tunnel
-            do {
-                try self.startWireGuardTunnel(with: tunnelConfig)
-                self.isActive = true
-                self.startKeepAliveTimer()
-                self.logger.log("Tunnel started successfully")
-                completionHandler(nil)
-            } catch {
-                self.logger.log("Error starting WireGuard tunnel: \(error.localizedDescription)")
-                completionHandler(error)
-            }
+        } catch {
+            os_log("Failed to parse tunnel configuration: %{public}@", log: osLog, type: .error, error.localizedDescription)
+            completionHandler(error)
         }
     }
     
     override func stopTunnel(with reason: NEProviderStopReason, completionHandler: @escaping () -> Void) {
-        logger.log("Stopping tunnel with reason: \(reason.rawValue)")
+        os_log("Stopping tunnel with reason: %{public}d", log: osLog, type: .info, reason.rawValue)
         
-        isActive = false
-        stopKeepAliveTimer()
+        stopCompletionHandler = completionHandler
         
-        // Stop WireGuard tunnel
-        stopWireGuardTunnel()
-        
-        // Clear configuration
-        tunnelConfiguration = nil
-        
-        logger.log("Tunnel stopped")
-        completionHandler()
+        // Stop WireGuard adapter
+        stopWireGuardAdapter { [weak self] in
+            guard let self = self else {
+                completionHandler()
+                return
+            }
+            
+            // Clear network settings
+            self.setTunnelNetworkSettings(nil) { error in
+                if let error = error {
+                    os_log("Failed to clear network settings: %{public}@", log: self.osLog, type: .warning, error.localizedDescription)
+                }
+                
+                os_log("Tunnel stopped", log: self.osLog, type: .info)
+                completionHandler()
+            }
+        }
     }
     
     override func handleAppMessage(_ messageData: Data, completionHandler: ((Data?) -> Void)?) {
-        logger.log("Received app message")
+        os_log("Received app message", log: osLog, type: .debug)
         
-        // Handle messages from the main app
-        guard let message = try? JSONDecoder().decode(TunnelMessage.self, from: messageData) else {
+        // Handle IPC messages from the main app
+        guard let message = try? JSONSerialization.jsonObject(with: messageData) as? [String: Any],
+              let command = message["command"] as? String else {
             completionHandler?(nil)
             return
         }
         
-        switch message.type {
-        case .getStatus:
-            let status = TunnelStatus(
-                isConnected: isActive,
-                bytesReceived: wireGuardHandle?.bytesReceived ?? 0,
-                bytesSent: wireGuardHandle?.bytesSent ?? 0
-            )
-            let responseData = try? JSONEncoder().encode(status)
-            completionHandler?(responseData)
+        switch command {
+        case "getStatistics":
+            let stats = getConnectionStatistics()
+            if let responseData = try? JSONSerialization.data(withJSONObject: stats) {
+                completionHandler?(responseData)
+            } else {
+                completionHandler?(nil)
+            }
             
-        case .updateConfiguration:
-            // Handle configuration updates if needed
+        case "getStatus":
+            let status: [String: Any] = [
+                "connected": wireGuardAdapter != nil,
+                "timestamp": Date().timeIntervalSince1970
+            ]
+            if let responseData = try? JSONSerialization.data(withJSONObject: status) {
+                completionHandler?(responseData)
+            } else {
+                completionHandler?(nil)
+            }
+            
+        default:
             completionHandler?(nil)
         }
     }
     
     override func sleep(completionHandler: @escaping () -> Void) {
-        logger.log("Device going to sleep")
-        stopKeepAliveTimer()
+        os_log("Device going to sleep", log: osLog, type: .info)
         completionHandler()
     }
     
     override func wake() {
-        logger.log("Device waking up")
-        if isActive {
-            startKeepAliveTimer()
+        os_log("Device waking up", log: osLog, type: .info)
+    }
+    
+    // MARK: - WireGuard Adapter
+    
+    private func startWireGuardAdapter(config: TunnelConfiguration, completionHandler: @escaping (Error?) -> Void) {
+        os_log("Starting WireGuard adapter", log: osLog, type: .info)
+        
+        do {
+            // Create WireGuard adapter
+            wireGuardAdapter = WireGuardAdapter(
+                with: self,
+                logHandler: { [weak self] level, message in
+                    self?.logWireGuardMessage(level: level, message: message)
+                }
+            )
+            
+            // Start the adapter with configuration
+            try wireGuardAdapter?.start(tunnelConfiguration: config) { [weak self] error in
+                if let error = error {
+                    os_log("WireGuard adapter failed to start: %{public}@", log: self?.osLog ?? .default, type: .error, error.localizedDescription)
+                    completionHandler(error)
+                } else {
+                    os_log("WireGuard adapter started successfully", log: self?.osLog ?? .default, type: .info)
+                    completionHandler(nil)
+                }
+            }
+            
+        } catch {
+            os_log("Failed to create WireGuard adapter: %{public}@", log: osLog, type: .error, error.localizedDescription)
+            completionHandler(error)
         }
     }
     
-    // MARK: - WireGuard Implementation
-    
-    private func startWireGuardTunnel(with config: TunnelConfiguration) throws {
-        logger.log("Starting WireGuard tunnel")
+    private func stopWireGuardAdapter(completionHandler: @escaping () -> Void) {
+        os_log("Stopping WireGuard adapter", log: osLog, type: .info)
         
-        // Create WireGuard handle
-        wireGuardHandle = WireGuardHandle()
-        
-        // Configure WireGuard with the parsed configuration
-        guard let handle = wireGuardHandle else {
-            throw PacketTunnelError.wireGuardInitFailed
+        guard let adapter = wireGuardAdapter else {
+            completionHandler()
+            return
         }
         
-        // Set interface configuration
-        try handle.configure(
-            privateKey: config.interface.privateKey,
-            addresses: [config.interface.address],
-            dns: config.interface.dns ?? [],
-            mtu: config.interface.mtu ?? 1420
-        )
-        
-        // Add peer configuration
-        try handle.addPeer(
-            publicKey: config.peer.publicKey,
-            endpoint: config.peer.endpoint,
-            allowedIPs: config.peer.allowedIPs,
-            persistentKeepalive: config.peer.persistentKeepalive ?? 25,
-            presharedKey: config.peer.presharedKey
-        )
-        
-        // Start the tunnel
-        try handle.start()
-        
-        logger.log("WireGuard tunnel started")
+        adapter.stop { [weak self] error in
+            if let error = error {
+                os_log("WireGuard adapter stop error: %{public}@", log: self?.osLog ?? .default, type: .warning, error.localizedDescription)
+            }
+            
+            self?.wireGuardAdapter = nil
+            completionHandler()
+        }
     }
     
-    private func stopWireGuardTunnel() {
-        logger.log("Stopping WireGuard tunnel")
-        wireGuardHandle?.stop()
-        wireGuardHandle = nil
+    // MARK: - Configuration Parsing
+    
+    private func parseTunnelConfiguration(from data: Data) throws -> TunnelConfiguration {
+        let decoder = JSONDecoder()
+        
+        do {
+            let json = try JSONSerialization.jsonObject(with: data) as? [String: Any]
+            
+            guard let privateKey = json?["privateKey"] as? String,
+                  let publicKey = json?["publicKey"] as? String,
+                  let endpoint = json?["endpoint"] as? String,
+                  let allowedIPs = json?["allowedIPs"] as? [String] else {
+                throw PacketTunnelError.configurationParseFailed
+            }
+            
+            let dns = json?["dns"] as? [String] ?? ["1.1.1.1", "1.0.0.1"]
+            let mtu = json?["mtu"] as? Int ?? 1280
+            let persistentKeepalive = json?["persistentKeepalive"] as? Int ?? 25
+            let presharedKey = json?["presharedKey"] as? String
+            let address = json?["address"] as? String ?? "10.0.0.2/32"
+            
+            return TunnelConfiguration(
+                privateKey: privateKey,
+                publicKey: publicKey,
+                endpoint: endpoint,
+                allowedIPs: allowedIPs,
+                dns: dns,
+                mtu: mtu,
+                persistentKeepalive: persistentKeepalive,
+                presharedKey: presharedKey,
+                address: address
+            )
+            
+        } catch {
+            os_log("Configuration parse error: %{public}@", log: osLog, type: .error, error.localizedDescription)
+            throw PacketTunnelError.configurationParseFailed
+        }
     }
     
     // MARK: - Network Settings
     
     private func createNetworkSettings(from config: TunnelConfiguration) -> NEPacketTunnelNetworkSettings {
-        let settings = NEPacketTunnelNetworkSettings(tunnelRemoteAddress: config.peer.endpoint)
+        // Parse endpoint
+        let endpointComponents = config.endpoint.components(separatedBy: ":")
+        let serverAddress = endpointComponents.first ?? config.endpoint
         
-        // IPv4 Settings
+        let settings = NEPacketTunnelNetworkSettings(tunnelRemoteAddress: serverAddress)
+        
+        // Configure MTU
+        settings.mtu = NSNumber(value: config.mtu)
+        
+        // Configure DNS
+        let dnsSettings = NEDNSSettings(servers: config.dns)
+        dnsSettings.matchDomains = [""] // Route all DNS queries through VPN
+        settings.dnsSettings = dnsSettings
+        
+        // Configure IPv4 settings
         let ipv4Settings = NEIPv4Settings(
-            addresses: [extractIP(from: config.interface.address)],
+            addresses: [extractIPAddress(from: config.address)],
             subnetMasks: ["255.255.255.255"]
         )
         
-        // Include all routes (full tunnel)
-        ipv4Settings.includedRoutes = [NEIPv4Route.default()]
+        // Parse allowed IPs for IPv4
+        var ipv4IncludedRoutes: [NEIPv4Route] = []
+        var ipv4ExcludedRoutes: [NEIPv4Route] = []
+        
+        for allowedIP in config.allowedIPs {
+            if allowedIP.contains(":") { continue } // Skip IPv6
+            
+            let (address, prefix) = parseIPWithPrefix(allowedIP)
+            let mask = prefixToSubnetMask(prefix)
+            
+            if allowedIP == "0.0.0.0/0" {
+                ipv4IncludedRoutes.append(NEIPv4Route.default())
+            } else {
+                ipv4IncludedRoutes.append(NEIPv4Route(destinationAddress: address, subnetMask: mask))
+            }
+        }
+        
+        ipv4Settings.includedRoutes = ipv4IncludedRoutes
+        ipv4Settings.excludedRoutes = ipv4ExcludedRoutes
         settings.ipv4Settings = ipv4Settings
         
-        // IPv6 Settings (if needed)
+        // Configure IPv6 settings
         let ipv6Settings = NEIPv6Settings(
-            addresses: [],
-            networkPrefixLengths: []
+            addresses: ["fd00::1"],
+            networkPrefixLengths: [128]
         )
-        ipv6Settings.includedRoutes = [NEIPv6Route.default()]
+        
+        var ipv6IncludedRoutes: [NEIPv6Route] = []
+        
+        for allowedIP in config.allowedIPs {
+            if !allowedIP.contains(":") { continue } // Skip IPv4
+            
+            if allowedIP == "::/0" {
+                ipv6IncludedRoutes.append(NEIPv6Route.default())
+            } else {
+                let (address, prefix) = parseIPWithPrefix(allowedIP)
+                ipv6IncludedRoutes.append(NEIPv6Route(destinationAddress: address, networkPrefixLength: NSNumber(value: prefix)))
+            }
+        }
+        
+        ipv6Settings.includedRoutes = ipv6IncludedRoutes
         settings.ipv6Settings = ipv6Settings
-        
-        // DNS Settings
-        if let dnsServers = config.interface.dns, !dnsServers.isEmpty {
-            let dnsSettings = NEDNSSettings(servers: dnsServers)
-            dnsSettings.matchDomains = [""] // Match all domains
-            settings.dnsSettings = dnsSettings
-        }
-        
-        // MTU
-        if let mtu = config.interface.mtu {
-            settings.mtu = NSNumber(value: mtu)
-        }
         
         return settings
     }
     
-    private func extractIP(from cidr: String) -> String {
-        cidr.components(separatedBy: "/").first ?? cidr
+    // MARK: - Helper Methods
+    
+    private func extractIPAddress(from address: String) -> String {
+        return address.components(separatedBy: "/").first ?? address
     }
     
-    // MARK: - Keep Alive
+    private func parseIPWithPrefix(_ ip: String) -> (address: String, prefix: Int) {
+        let components = ip.components(separatedBy: "/")
+        let address = components.first ?? ip
+        let prefix = Int(components.last ?? "32") ?? 32
+        return (address, prefix)
+    }
     
-    private func startKeepAliveTimer() {
-        stopKeepAliveTimer()
+    private func prefixToSubnetMask(_ prefix: Int) -> String {
+        guard prefix >= 0 && prefix <= 32 else { return "255.255.255.255" }
         
-        let timer = DispatchSource.makeTimerSource(queue: .main)
-        timer.schedule(deadline: .now() + 25, repeating: 25)
-        timer.setEventHandler { [weak self] in
-            self?.sendKeepAlive()
-        }
-        timer.resume()
-        keepAliveTimer = timer
+        let mask: UInt32 = prefix > 0 ? ~UInt32(0) << (32 - prefix) : 0
+        let bytes = [
+            UInt8((mask >> 24) & 0xFF),
+            UInt8((mask >> 16) & 0xFF),
+            UInt8((mask >> 8) & 0xFF),
+            UInt8(mask & 0xFF)
+        ]
+        return bytes.map { String($0) }.joined(separator: ".")
     }
     
-    private func stopKeepAliveTimer() {
-        keepAliveTimer?.cancel()
-        keepAliveTimer = nil
-    }
-    
-    private func sendKeepAlive() {
-        guard isActive else { return }
-        wireGuardHandle?.sendKeepAlive()
-    }
-    
-    // MARK: - Configuration Parsing
-    
-    private func parseTunnelConfiguration(from config: [String: Any]) -> TunnelConfiguration? {
-        guard let configString = config["config"] as? String else {
-            logger.log("Missing config string in provider configuration")
-            return nil
+    private func getConnectionStatistics() -> [String: Any] {
+        var stats: [String: Any] = [
+            "timestamp": Date().timeIntervalSince1970
+        ]
+        
+        if let adapter = wireGuardAdapter {
+            // Get runtime configuration for statistics
+            // Note: Actual implementation depends on WireGuardKit API
+            stats["bytesReceived"] = 0
+            stats["bytesSent"] = 0
+            stats["lastHandshake"] = 0
         }
         
-        return TunnelConfiguration.parse(from: configString)
+        return stats
+    }
+    
+    private func logWireGuardMessage(level: Int32, message: String) {
+        let osLogType: OSLogType
+        switch level {
+        case 1: osLogType = .error
+        case 2: osLogType = .default
+        default: osLogType = .debug
+        }
+        
+        os_log("[WireGuard] %{public}@", log: osLog, type: osLogType, message)
     }
 }
 
-// MARK: - Tunnel Errors
+// MARK: - Packet Tunnel Error
 
 enum PacketTunnelError: Error, LocalizedError {
     case invalidConfiguration
     case configurationParseFailed
-    case wireGuardInitFailed
-    case connectionFailed
+    case adapterCreationFailed
+    case adapterStartFailed
     case networkSettingsFailed
     
     var errorDescription: String? {
@@ -278,108 +378,57 @@ enum PacketTunnelError: Error, LocalizedError {
             return "Invalid tunnel configuration"
         case .configurationParseFailed:
             return "Failed to parse tunnel configuration"
-        case .wireGuardInitFailed:
-            return "Failed to initialize WireGuard"
-        case .connectionFailed:
-            return "Connection to server failed"
+        case .adapterCreationFailed:
+            return "Failed to create WireGuard adapter"
+        case .adapterStartFailed:
+            return "Failed to start WireGuard adapter"
         case .networkSettingsFailed:
-            return "Failed to configure network settings"
+            return "Failed to apply network settings"
         }
     }
 }
 
-// MARK: - Tunnel Message Types
+// MARK: - WireGuard Adapter (Placeholder)
+// Note: In production, this would use WireGuardKit's actual adapter
 
-struct TunnelMessage: Codable {
-    enum MessageType: String, Codable {
-        case getStatus
-        case updateConfiguration
+class WireGuardAdapter {
+    typealias LogHandler = (Int32, String) -> Void
+    
+    private weak var packetTunnelProvider: NEPacketTunnelProvider?
+    private let logHandler: LogHandler?
+    private var isRunning = false
+    
+    init(with packetTunnelProvider: NEPacketTunnelProvider, logHandler: LogHandler? = nil) {
+        self.packetTunnelProvider = packetTunnelProvider
+        self.logHandler = logHandler
     }
     
-    let type: MessageType
-    let data: Data?
-}
-
-struct TunnelStatus: Codable {
-    let isConnected: Bool
-    let bytesReceived: UInt64
-    let bytesSent: UInt64
-}
-
-// MARK: - Tunnel Logger
-
-class TunnelLogger {
-    func log(_ message: String) {
-        NSLog("[CasperVPNTunnel] \(message)")
-    }
-}
-
-// MARK: - WireGuard Handle (Placeholder)
-
-/// Placeholder for WireGuard implementation.
-/// In a real implementation, this would wrap the WireGuard-Go library or native implementation.
-class WireGuardHandle {
-    
-    private(set) var bytesReceived: UInt64 = 0
-    private(set) var bytesSent: UInt64 = 0
-    
-    private var privateKey: String?
-    private var addresses: [String] = []
-    private var dns: [String] = []
-    private var mtu: Int = 1420
-    
-    private var peerPublicKey: String?
-    private var peerEndpoint: String?
-    private var allowedIPs: [String] = []
-    private var persistentKeepalive: Int = 25
-    private var presharedKey: String?
-    
-    func configure(
-        privateKey: String,
-        addresses: [String],
-        dns: [String],
-        mtu: Int
-    ) throws {
-        self.privateKey = privateKey
-        self.addresses = addresses
-        self.dns = dns
-        self.mtu = mtu
+    func start(tunnelConfiguration: TunnelConfiguration, completionHandler: @escaping (Error?) -> Void) throws {
+        logHandler?(2, "Starting WireGuard with endpoint: \(tunnelConfiguration.endpoint)")
+        
+        // In production, this would initialize the actual WireGuard adapter
+        // using WireGuardKit and start the tunnel
+        
+        isRunning = true
+        
+        // Simulate async start
+        DispatchQueue.global().asyncAfter(deadline: .now() + 0.5) {
+            completionHandler(nil)
+        }
     }
     
-    func addPeer(
-        publicKey: String,
-        endpoint: String,
-        allowedIPs: [String],
-        persistentKeepalive: Int,
-        presharedKey: String?
-    ) throws {
-        self.peerPublicKey = publicKey
-        self.peerEndpoint = endpoint
-        self.allowedIPs = allowedIPs
-        self.persistentKeepalive = persistentKeepalive
-        self.presharedKey = presharedKey
+    func stop(completionHandler: @escaping (Error?) -> Void) {
+        logHandler?(2, "Stopping WireGuard adapter")
+        
+        isRunning = false
+        
+        DispatchQueue.global().asyncAfter(deadline: .now() + 0.2) {
+            completionHandler(nil)
+        }
     }
     
-    func start() throws {
-        // In real implementation, this would:
-        // 1. Initialize WireGuard-Go
-        // 2. Configure the interface
-        // 3. Start the tunnel
-        NSLog("[WireGuardHandle] Tunnel started")
-    }
-    
-    func stop() {
-        // In real implementation, this would stop the WireGuard tunnel
-        NSLog("[WireGuardHandle] Tunnel stopped")
-    }
-    
-    func sendKeepAlive() {
-        // In real implementation, this would send a keep-alive packet
-        NSLog("[WireGuardHandle] Keep-alive sent")
-    }
-    
-    func getStatistics() -> (received: UInt64, sent: UInt64) {
-        // In real implementation, this would query WireGuard for actual stats
-        return (bytesReceived, bytesSent)
+    func update(tunnelConfiguration: TunnelConfiguration) throws {
+        logHandler?(2, "Updating WireGuard configuration")
+        // Update configuration without restarting
     }
 }
