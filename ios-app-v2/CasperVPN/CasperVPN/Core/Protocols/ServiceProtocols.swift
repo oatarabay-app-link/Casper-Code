@@ -10,12 +10,89 @@ import Combine
 import NetworkExtension
 
 // MARK: - Auth Service Protocol
+
+/// Protocol for authentication operations
 protocol AuthServiceProtocol {
+    /// Login with email and password
     func login(email: String, password: String) async throws -> User
+    /// Register a new user
     func register(email: String, password: String, firstName: String?, lastName: String?) async throws -> User
+    /// Logout the current user
     func logout() async throws
+    /// Refresh the authentication token
     func refreshToken() async throws
+    /// Get the currently authenticated user
     func getCurrentUser() async throws -> User
+}
+
+// MARK: - Latency Service Protocol
+
+/// Protocol for measuring server latency
+protocol LatencyServiceProtocol {
+    /// Measure latency to a single server using TCP connection
+    /// - Parameter server: The VPN server to test
+    /// - Returns: Latency in milliseconds, or nil if unreachable
+    func measureLatency(to server: VPNServer) async -> Int?
+    
+    /// Measure latency to multiple servers
+    /// - Parameter servers: Array of VPN servers to test
+    /// - Returns: Dictionary mapping server IDs to latency values
+    func measureLatencyBatch(servers: [VPNServer]) async -> [String: Int]
+    
+    /// Measure latency to a specific host and port
+    /// - Parameters:
+    ///   - host: Hostname or IP address
+    ///   - port: Port number
+    /// - Returns: Latency in milliseconds, or nil if unreachable
+    func measureLatency(host: String, port: Int) async -> Int?
+}
+
+// MARK: - Favorites Manager Protocol
+
+/// Protocol for managing favorite servers
+protocol FavoritesManagerProtocol {
+    /// Publisher for favorites changes
+    var favoritesPublisher: AnyPublisher<Set<String>, Never> { get }
+    
+    /// Add a server to favorites
+    /// - Parameter serverId: The server ID to add
+    func addFavorite(serverId: String)
+    
+    /// Remove a server from favorites
+    /// - Parameter serverId: The server ID to remove
+    func removeFavorite(serverId: String)
+    
+    /// Toggle the favorite status of a server
+    /// - Parameter serverId: The server ID to toggle
+    func toggleFavorite(serverId: String)
+    
+    /// Check if a server is a favorite
+    /// - Parameter serverId: The server ID to check
+    /// - Returns: True if the server is a favorite
+    func isFavorite(serverId: String) -> Bool
+    
+    /// Get all favorite server IDs
+    /// - Returns: Set of favorite server IDs
+    func getAllFavorites() -> Set<String>
+}
+
+// MARK: - Recent Servers Manager Protocol
+
+/// Protocol for managing recently connected servers
+protocol RecentServersManagerProtocol {
+    /// Publisher for recent servers changes
+    var recentServersPublisher: AnyPublisher<[String], Never> { get }
+    
+    /// Add a server to recent connections (maintains max 5)
+    /// - Parameter serverId: The server ID to add
+    func addRecentServer(serverId: String)
+    
+    /// Get all recent server IDs (most recent first)
+    /// - Returns: Array of recent server IDs
+    func getRecentServers() -> [String]
+    
+    /// Clear all recent servers
+    func clearRecentServers()
 }
 
 // MARK: - Keychain Service Protocol
