@@ -1,51 +1,39 @@
-# Stage 1: Build React app
-FROM node:18-alpine AS build
+# Build stage
+FROM node:18-alpine as build
+
 WORKDIR /app
 
 # Copy package files
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci --only=production
+RUN npm ci --silent
 
 # Copy source code
 COPY . .
 
-# Build the app
+# Build arguments for environment variables
+ARG REACT_APP_API_URL=http://localhost:8080
+ENV REACT_APP_API_URL=$REACT_APP_API_URL
+
+# Build the application
 RUN npm run build
 
-# Stage 2: Serve with Nginx
-FROM nginx:1.25-alpine AS final
-
-# Create non-root user
-RUN addgroup -g 101 -S nginx-group && \
-    adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx-group -g nginx-group nginx-user
+# Production stage
+FROM nginx:alpine
 
 # Copy custom nginx config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy built app from build stage
+# Copy built assets from build stage
 COPY --from=build /app/build /usr/share/nginx/html
 
-# Set ownership
-RUN chown -R nginx-user:nginx-group /usr/share/nginx/html && \
-    chown -R nginx-user:nginx-group /var/cache/nginx && \
-    chown -R nginx-user:nginx-group /var/log/nginx && \
-    chown -R nginx-user:nginx-group /etc/nginx/conf.d
-
-# Create PID directory
-RUN mkdir -p /var/run && \
-    chown -R nginx-user:nginx-group /var/run
-
-# Switch to non-root user
-USER nginx-user
-
-# Expose port
-EXPOSE 3000
+# Expose port 80
+EXPOSE 80
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD wget --quiet --tries=1 --spider http://localhost:3000/ || exit 1
+  CMD wget -qO- http://localhost/ || exit 1
 
 # Start nginx
 CMD ["nginx", "-g", "daemon off;"]
