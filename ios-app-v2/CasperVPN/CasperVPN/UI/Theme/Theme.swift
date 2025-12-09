@@ -10,7 +10,7 @@ import SwiftUI
 /// App-wide theme configuration
 enum Theme {
     
-    // MARK: - Colors
+    // MARK: - Colors (Legacy - use Theme.Colors instead)
     static let primaryColor = Color(hex: "7C3AED")      // Purple
     static let secondaryColor = Color(hex: "06B6D4")    // Cyan
     static let accentColor = Color(hex: "F59E0B")       // Amber
@@ -23,6 +23,60 @@ enum Theme {
     static let warningColor = Color(hex: "F59E0B")       // Amber
     static let errorColor = Color(hex: "EF4444")         // Red
     static let infoColor = Color(hex: "3B82F6")          // Blue
+    
+    // MARK: - Colors Namespace
+    
+    /// Organized color definitions for the app
+    enum Colors {
+        // Primary colors
+        static let primary = Color(hex: "7C3AED")       // Purple
+        static let secondary = Color(hex: "06B6D4")     // Cyan
+        static let accent = Color(hex: "F59E0B")        // Amber
+        
+        // Background colors
+        static let background = Color(hex: "0F172A")     // Dark blue
+        static let surface = Color(hex: "1E293B")        // Slate
+        static let cardBackground = Color(hex: "334155") // Lighter slate
+        
+        // Text colors
+        static let textPrimary = Color.white
+        static let textSecondary = Color.gray
+        static let textTertiary = Color.gray.opacity(0.6)
+        
+        // Semantic colors
+        static let success = Color(hex: "22C55E")        // Green
+        static let warning = Color(hex: "F59E0B")        // Amber
+        static let error = Color(hex: "EF4444")          // Red
+        static let info = Color(hex: "3B82F6")           // Blue
+        
+        // Latency colors
+        static let latencyExcellent = Color(hex: "22C55E") // Green
+        static let latencyGood = Color(hex: "22C55E")      // Green
+        static let latencyFair = Color(hex: "F59E0B")      // Yellow/Amber
+        static let latencyPoor = Color(hex: "EF4444")      // Red
+        
+        // Load colors
+        static let loadLow = Color(hex: "22C55E")          // Green
+        static let loadMedium = Color(hex: "F59E0B")       // Yellow/Amber
+        static let loadHigh = Color(hex: "EF4444")         // Red
+    }
+    
+    // MARK: - Fonts Namespace
+    
+    /// Organized font definitions for the app
+    enum Fonts {
+        static let largeTitle = Font.system(size: 34, weight: .bold)
+        static let title = Font.system(size: 28, weight: .bold)
+        static let title2 = Font.system(size: 22, weight: .semibold)
+        static let title3 = Font.system(size: 20, weight: .semibold)
+        static let headline = Font.system(size: 17, weight: .semibold)
+        static let body = Font.system(size: 17, weight: .regular)
+        static let callout = Font.system(size: 16, weight: .regular)
+        static let subheadline = Font.system(size: 15, weight: .regular)
+        static let footnote = Font.system(size: 13, weight: .regular)
+        static let caption = Font.system(size: 12, weight: .regular)
+        static let caption2 = Font.system(size: 11, weight: .regular)
+    }
     
     // MARK: - Gradients
     static var backgroundGradient: LinearGradient {
@@ -56,7 +110,7 @@ enum Theme {
         )
     }
     
-    // MARK: - Typography
+    // MARK: - Typography (Legacy - use Theme.Fonts instead)
     enum Typography {
         static let largeTitle = Font.system(size: 34, weight: .bold)
         static let title = Font.system(size: 28, weight: .bold)

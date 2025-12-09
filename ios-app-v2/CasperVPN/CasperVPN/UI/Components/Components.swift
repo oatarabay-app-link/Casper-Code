@@ -420,6 +420,397 @@ struct ConnectionRing: View {
     }
 }
 
+// MARK: - Latency Badge
+
+/// A badge displaying server latency with color coding.
+///
+/// Colors are based on latency thresholds:
+/// - Green: < 100ms (good)
+/// - Yellow: 100-200ms (fair)
+/// - Red: > 200ms (poor)
+struct LatencyBadge: View {
+    
+    /// Latency value in milliseconds
+    let latency: Int?
+    
+    /// Whether to show compact version
+    var isCompact: Bool = false
+    
+    var body: some View {
+        if let latency = latency {
+            HStack(spacing: 4) {
+                Circle()
+                    .fill(latencyColor)
+                    .frame(width: isCompact ? 6 : 8, height: isCompact ? 6 : 8)
+                
+                Text("\(latency) ms")
+                    .font(isCompact ? Theme.Fonts.caption2 : Theme.Fonts.caption)
+                    .foregroundColor(latencyColor)
+            }
+            .padding(.horizontal, isCompact ? 6 : 8)
+            .padding(.vertical, isCompact ? 2 : 4)
+            .background(latencyColor.opacity(0.15))
+            .cornerRadius(Theme.CornerRadius.small)
+        } else {
+            HStack(spacing: 4) {
+                Circle()
+                    .fill(Color.gray.opacity(0.5))
+                    .frame(width: isCompact ? 6 : 8, height: isCompact ? 6 : 8)
+                
+                Text("--")
+                    .font(isCompact ? Theme.Fonts.caption2 : Theme.Fonts.caption)
+                    .foregroundColor(.gray)
+            }
+            .padding(.horizontal, isCompact ? 6 : 8)
+            .padding(.vertical, isCompact ? 2 : 4)
+            .background(Color.gray.opacity(0.1))
+            .cornerRadius(Theme.CornerRadius.small)
+        }
+    }
+    
+    /// Color based on latency value
+    private var latencyColor: Color {
+        guard let latency = latency else { return .gray }
+        
+        switch latency {
+        case 0..<100:
+            return Theme.Colors.success
+        case 100..<200:
+            return Theme.Colors.warning
+        default:
+            return Theme.Colors.error
+        }
+    }
+}
+
+// MARK: - Server Load Indicator
+
+/// A visual indicator for server load percentage.
+///
+/// Displays as a progress bar with color coding:
+/// - Green: 0-30% (low load)
+/// - Yellow: 30-70% (medium load)
+/// - Red: 70-100% (high load)
+struct ServerLoadIndicator: View {
+    
+    /// Server load percentage (0-100)
+    let load: Int
+    
+    /// Whether to show the percentage text
+    var showPercentage: Bool = true
+    
+    /// Width of the progress bar
+    var barWidth: CGFloat = 60
+    
+    var body: some View {
+        VStack(alignment: .trailing, spacing: 4) {
+            // Progress bar
+            GeometryReader { geometry in
+                ZStack(alignment: .leading) {
+                    // Background
+                    RoundedRectangle(cornerRadius: 3)
+                        .fill(Color.gray.opacity(0.2))
+                    
+                    // Fill
+                    RoundedRectangle(cornerRadius: 3)
+                        .fill(loadColor)
+                        .frame(width: geometry.size.width * CGFloat(min(load, 100)) / 100)
+                }
+            }
+            .frame(width: barWidth, height: 6)
+            
+            // Percentage text
+            if showPercentage {
+                Text("\(load)%")
+                    .font(Theme.Fonts.caption2)
+                    .foregroundColor(loadColor)
+            }
+        }
+    }
+    
+    /// Color based on load value
+    private var loadColor: Color {
+        switch load {
+        case 0..<30:
+            return Theme.Colors.loadLow
+        case 30..<70:
+            return Theme.Colors.loadMedium
+        default:
+            return Theme.Colors.loadHigh
+        }
+    }
+}
+
+// MARK: - Feature Badge
+
+/// A small badge displaying a server feature.
+struct FeatureBadge: View {
+    
+    let feature: ServerFeature
+    
+    var body: some View {
+        HStack(spacing: 4) {
+            Image(systemName: featureIcon)
+                .font(.system(size: 10))
+            
+            Text(feature.rawValue)
+                .font(Theme.Fonts.caption2)
+        }
+        .foregroundColor(featureColor)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 4)
+        .background(featureColor.opacity(0.15))
+        .cornerRadius(Theme.CornerRadius.small)
+    }
+    
+    /// Icon for the feature type
+    private var featureIcon: String {
+        switch feature {
+        case .p2p:
+            return "arrow.left.arrow.right"
+        case .streaming:
+            return "play.tv"
+        case .gaming:
+            return "gamecontroller"
+        case .doublVPN:
+            return "lock.shield"
+        case .obfuscated:
+            return "eye.slash"
+        case .dedicatedIP:
+            return "star.fill"
+        }
+    }
+    
+    /// Color for the feature type
+    private var featureColor: Color {
+        switch feature {
+        case .p2p:
+            return Theme.Colors.info
+        case .streaming:
+            return Theme.Colors.accent
+        case .gaming:
+            return Theme.Colors.primary
+        case .doublVPN:
+            return Theme.Colors.success
+        case .obfuscated:
+            return Theme.Colors.secondary
+        case .dedicatedIP:
+            return Theme.Colors.warning
+        }
+    }
+}
+
+// MARK: - Feature Badge Row
+
+/// A horizontal row of feature badges.
+struct FeatureBadgeRow: View {
+    
+    let features: [ServerFeature]
+    
+    /// Maximum number of features to show
+    var maxVisible: Int = 3
+    
+    var body: some View {
+        HStack(spacing: 4) {
+            ForEach(features.prefix(maxVisible), id: \.self) { feature in
+                FeatureBadge(feature: feature)
+            }
+            
+            if features.count > maxVisible {
+                Text("+\(features.count - maxVisible)")
+                    .font(Theme.Fonts.caption2)
+                    .foregroundColor(Theme.Colors.textSecondary)
+                    .padding(.horizontal, 6)
+                    .padding(.vertical, 4)
+                    .background(Color.gray.opacity(0.15))
+                    .cornerRadius(Theme.CornerRadius.small)
+            }
+        }
+    }
+}
+
+// MARK: - Premium Badge
+
+/// A badge indicating premium server status.
+struct PremiumBadge: View {
+    
+    var isCompact: Bool = false
+    
+    var body: some View {
+        HStack(spacing: 4) {
+            Image(systemName: "crown.fill")
+                .font(.system(size: isCompact ? 8 : 10))
+            
+            if !isCompact {
+                Text("Premium")
+                    .font(Theme.Fonts.caption2)
+            }
+        }
+        .foregroundColor(.yellow)
+        .padding(.horizontal, isCompact ? 4 : 8)
+        .padding(.vertical, isCompact ? 2 : 4)
+        .background(Color.yellow.opacity(0.15))
+        .cornerRadius(Theme.CornerRadius.small)
+    }
+}
+
+// MARK: - Online Status Badge
+
+/// A badge showing server online/offline status.
+struct OnlineStatusBadge: View {
+    
+    let isOnline: Bool
+    
+    var body: some View {
+        HStack(spacing: 4) {
+            Circle()
+                .fill(isOnline ? Theme.Colors.success : Theme.Colors.error)
+                .frame(width: 8, height: 8)
+            
+            Text(isOnline ? "Online" : "Offline")
+                .font(Theme.Fonts.caption2)
+                .foregroundColor(isOnline ? Theme.Colors.success : Theme.Colors.error)
+        }
+    }
+}
+
+// MARK: - Server Card (Enhanced)
+
+/// An enhanced card component for displaying server information.
+struct ServerCard: View {
+    
+    let server: VPNServer
+    let isFavorite: Bool
+    let onTap: () -> Void
+    let onFavoriteTap: () -> Void
+    
+    var body: some View {
+        Button(action: onTap) {
+            HStack(spacing: 12) {
+                // Flag emoji
+                Text(server.flagEmoji)
+                    .font(.system(size: 32))
+                
+                // Server info
+                VStack(alignment: .leading, spacing: 4) {
+                    HStack(spacing: 6) {
+                        Text(server.name)
+                            .font(Theme.Fonts.headline)
+                            .foregroundColor(Theme.Colors.textPrimary)
+                        
+                        if server.isPremium {
+                            PremiumBadge(isCompact: true)
+                        }
+                    }
+                    
+                    Text(server.displayName)
+                        .font(Theme.Fonts.caption)
+                        .foregroundColor(Theme.Colors.textSecondary)
+                    
+                    // Features
+                    if let features = server.features, !features.isEmpty {
+                        FeatureBadgeRow(features: features, maxVisible: 2)
+                    }
+                }
+                
+                Spacer()
+                
+                // Right side info
+                VStack(alignment: .trailing, spacing: 8) {
+                    // Favorite button
+                    Button(action: onFavoriteTap) {
+                        Image(systemName: isFavorite ? "heart.fill" : "heart")
+                            .foregroundColor(isFavorite ? .red : Theme.Colors.textSecondary)
+                    }
+                    .buttonStyle(.plain)
+                    
+                    // Latency badge
+                    LatencyBadge(latency: server.latency, isCompact: true)
+                    
+                    // Load indicator
+                    ServerLoadIndicator(load: server.load, showPercentage: false, barWidth: 40)
+                }
+            }
+            .padding()
+            .background(Theme.cardGradient)
+            .cornerRadius(Theme.CornerRadius.medium)
+            .overlay(
+                RoundedRectangle(cornerRadius: Theme.CornerRadius.medium)
+                    .stroke(
+                        server.isOnline ? Color.clear : Theme.Colors.error.opacity(0.3),
+                        lineWidth: server.isOnline ? 0 : 1
+                    )
+            )
+            .opacity(server.isOnline ? 1.0 : 0.6)
+        }
+        .buttonStyle(.plain)
+    }
+}
+
+// MARK: - Compact Server Row
+
+/// A compact row for displaying server information in lists.
+struct CompactServerRow: View {
+    
+    let server: VPNServer
+    let isFavorite: Bool
+    let onTap: () -> Void
+    
+    var body: some View {
+        Button(action: onTap) {
+            HStack(spacing: 12) {
+                // Online status indicator
+                Circle()
+                    .fill(server.isOnline ? Theme.Colors.success : Theme.Colors.error)
+                    .frame(width: 8, height: 8)
+                
+                // Flag
+                Text(server.flagEmoji)
+                    .font(.system(size: 20))
+                
+                // Server info
+                VStack(alignment: .leading, spacing: 2) {
+                    HStack(spacing: 4) {
+                        Text(server.name)
+                            .font(Theme.Fonts.body)
+                            .foregroundColor(Theme.Colors.textPrimary)
+                        
+                        if server.isPremium {
+                            Image(systemName: "crown.fill")
+                                .font(.system(size: 10))
+                                .foregroundColor(.yellow)
+                        }
+                        
+                        if isFavorite {
+                            Image(systemName: "heart.fill")
+                                .font(.system(size: 10))
+                                .foregroundColor(.red)
+                        }
+                    }
+                    
+                    Text(server.city)
+                        .font(Theme.Fonts.caption)
+                        .foregroundColor(Theme.Colors.textSecondary)
+                }
+                
+                Spacer()
+                
+                // Latency and load
+                VStack(alignment: .trailing, spacing: 4) {
+                    LatencyBadge(latency: server.latency, isCompact: true)
+                    
+                    Text("\(server.load)% load")
+                        .font(Theme.Fonts.caption2)
+                        .foregroundColor(Theme.Colors.textSecondary)
+                }
+            }
+            .padding(.vertical, 8)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+    }
+}
+
 // MARK: - Previews
 
 #if DEBUG
@@ -440,5 +831,39 @@ struct ConnectionRing: View {
         CasperTextField(title: "Password", text: .constant(""), icon: "lock", isSecure: true)
     }
     .padding()
+}
+
+#Preview("Latency Badges") {
+    VStack(spacing: 16) {
+        LatencyBadge(latency: 45)
+        LatencyBadge(latency: 150)
+        LatencyBadge(latency: 250)
+        LatencyBadge(latency: nil)
+        LatencyBadge(latency: 80, isCompact: true)
+    }
+    .padding()
+    .background(Theme.backgroundColor)
+}
+
+#Preview("Load Indicators") {
+    VStack(spacing: 16) {
+        ServerLoadIndicator(load: 15)
+        ServerLoadIndicator(load: 50)
+        ServerLoadIndicator(load: 85)
+        ServerLoadIndicator(load: 30, showPercentage: false, barWidth: 40)
+    }
+    .padding()
+    .background(Theme.backgroundColor)
+}
+
+#Preview("Feature Badges") {
+    VStack(spacing: 16) {
+        FeatureBadge(feature: .p2p)
+        FeatureBadge(feature: .streaming)
+        FeatureBadge(feature: .gaming)
+        FeatureBadgeRow(features: [.p2p, .streaming, .gaming, .doublVPN])
+    }
+    .padding()
+    .background(Theme.backgroundColor)
 }
 #endif
